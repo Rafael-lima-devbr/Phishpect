@@ -4,6 +4,8 @@ Extensão experimental para Microsoft Edge que combina **heurísticas locais** c
 
 **Status:** MVP experimental
 
+<!-- MEDIA: Adicione aqui um GIF curto ou screenshot principal mostrando a extensão classificando uma página e exibindo a tela de aviso. -->
+
 ## Visão geral
 
 O Phishpect analisa URLs antes ou durante a navegação e combina duas fontes de evidência:
@@ -51,6 +53,8 @@ Cliques são avaliados antes de sair da página. Outras navegações, incluindo 
 | `tests/` | Testes automatizados das regras locais |
 | `evaluation/` | Datasets, resultados e registros das execuções |
 | `manifest.json` | Configuração da extensão em Manifest V3 |
+
+<!-- MEDIA: Se quiser usar um diagrama visual de arquitetura no futuro, coloque-o aqui, logo após a tabela de arquitetura. -->
 
 ## Instalação local no Edge
 
@@ -107,6 +111,8 @@ Os resultados registram, entre outros campos:
 - `final_classification`
 
 As execuções em `evaluation/runs/` preservam informações como hashes, horário, versão do Node.js e commit avaliado, permitindo relacionar os resultados ao estado exato do projeto.
+
+<!-- MEDIA: Quando os resultados finais estiverem consolidados, adicione aqui um gráfico ou tabela-resumo com as métricas principais. -->
 
 ## Limitações atuais
 
