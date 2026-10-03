@@ -1,31 +1,56 @@
 # Phishpect
 
-Extensão experimental para Microsoft Edge que combina heurísticas locais com uma base local de reputação e intervém conforme o risco de uma página potencialmente fraudulenta.
+Extensão experimental para Microsoft Edge que combina **heurísticas locais** com uma **base local de reputação** para identificar páginas potencialmente fraudulentas e intervir de acordo com o nível de risco.
 
-## Funcionamento
+**Status:** MVP experimental
 
-O `analyzeUrl(url)` atribui um score a sinais simples, como HTTP, endereço IP, Punycode, URL longa, muitos subdomínios, `@` e termos sensíveis. A decisão resultante é:
+## Visão geral
 
-- `safe`: navegação liberada;
-- `suspicious`: exibe os motivos e permite voltar ou continuar;
-- `blocked`: evidência confirmada local ou correspondência na base de reputação, sem opção de continuar.
+O Phishpect analisa URLs antes ou durante a navegação e combina duas fontes de evidência:
 
-Depois da heurística, `checkExternalReputation(url)` procura a URL normalizada e, quando aplicável, o domínio exato em `reputation/threat-db.json`. A base é gerada a partir do feed ativo `phishing-links-ACTIVE.txt` do projeto open source [Phishing.Database](https://github.com/Phishing-Database/Phishing.Database). URLs de raiz do feed também geram uma entrada de domínio; URLs com caminho não são ampliadas para o domínio inteiro. A ausência de uma entrada nessa base não comprova que o destino seja seguro.
+1. **Análise heurística local** — avalia sinais como HTTP, endereço IP, Punycode, URLs longas, excesso de subdomínios, `@` e termos sensíveis.
+2. **Reputação local** — consulta uma base gerada a partir do feed ativo do projeto open source [Phishing.Database](https://github.com/Phishing-Database/Phishing.Database).
 
-Cliques são analisados antes de sair da página. Outras navegações, inclusive URLs digitadas na barra, são observadas pelo service worker com `webNavigation.onBeforeNavigate` e redirecionadas para a tela de aviso quando necessário.
+A classificação final pode ser:
+
+| Resultado | Comportamento |
+|---|---|
+| `safe` | Navegação liberada |
+| `suspicious` | Exibe os motivos e permite voltar ou continuar |
+| `blocked` | Bloqueia quando há evidência confirmada local ou correspondência na base de reputação |
+
+A ausência de uma URL na base de reputação **não significa que ela seja segura**.
+
+## Fluxo de análise
+
+```text
+URL
+ ├─> Heurísticas locais
+ └─> Reputação local
+          |
+          v
+   Combinação de evidências
+          |
+          v
+ safe / suspicious / blocked
+```
+
+Cliques são avaliados antes de sair da página. Outras navegações, incluindo URLs digitadas na barra, são observadas pelo service worker com `webNavigation.onBeforeNavigate` e redirecionadas para a tela de aviso quando necessário.
 
 ## Arquitetura
 
-- `analysis.js`: motor heurístico central e blacklist local de testes.
-- `reputation.js`: normaliza e consulta a base externa local usando `Set`.
-- `content.js`: intercepta cliques e solicita a avaliação combinada.
-- `background.js`: carrega a base uma vez, combina evidências, observa navegações e controla a exceção de continuar uma vez.
-- `reputation/threat-db.json`: snapshot local gerado dos feeds ativos.
-- `scripts/update-threat-database.js`: atualiza, valida, normaliza e remove duplicatas da base.
-- `scripts/evaluate-dataset.js`: gera CSV e compara métricas da heurística com o método combinado.
-- `warning.html` e `warning.js`: tela de aviso ou bloqueio.
-- `test.html`: links controlados para demonstrar os três resultados.
-- `manifest.json`: configuração Manifest V3.
+| Arquivo / diretório | Responsabilidade |
+|---|---|
+| `analysis.js` | Motor heurístico e regras locais de análise |
+| `reputation.js` | Normalização e consulta da base de reputação |
+| `content.js` | Interceptação de cliques e solicitação da análise |
+| `background.js` | Combinação de evidências, navegação e controle de exceções |
+| `warning.html` / `warning.js` | Interface de aviso e bloqueio |
+| `reputation/threat-db.json` | Snapshot local da base de reputação |
+| `scripts/` | Atualização da base e avaliação experimental |
+| `tests/` | Testes automatizados das regras locais |
+| `evaluation/` | Datasets, resultados e registros das execuções |
+| `manifest.json` | Configuração da extensão em Manifest V3 |
 
 ## Instalação local no Edge
 
@@ -33,60 +58,70 @@ Cliques são analisados antes de sair da página. Outras navegações, inclusive
 2. Ative **Modo do desenvolvedor**.
 3. Clique em **Carregar sem compactação**.
 4. Selecione a pasta deste projeto.
-5. Clique no ícone do Phishpect para abrir os testes controlados.
+5. Use `test.html` ou navegação controlada para testar os diferentes resultados.
 
-Ao atualizar o código, clique em **Recarregar** no cartão da extensão.
+Ao atualizar o código, use **Recarregar** no cartão da extensão.
 
-## Atualização da reputação
+## Atualização da base de reputação
 
-Com Node.js instalado, execute manualmente:
+Com Node.js instalado:
 
 ```bash
 npm run update-threat-db
 ```
 
-O comando baixa somente o feed oficial. Ele não abre, testa ou faz requisições para as URLs contidas nele. HTTP e HTTPS são tratados como a mesma URL; `www.` e fragmentos são removidos; barras finais são normalizadas; parâmetros são preservados e ordenados. Domínios e subdomínios são comparados exatamente para evitar correspondências excessivamente amplas.
+O processo baixa o feed configurado, normaliza as entradas, remove duplicatas e gera o snapshot utilizado pela extensão. O script não abre nem testa as URLs contidas no feed.
 
-Se o arquivo local estiver ausente ou inválido, a extensão continua funcionando somente com `analyzeUrl()`.
+Se a base local estiver ausente ou inválida, a extensão continua funcionando somente com a análise heurística.
 
-## Avaliação
-
-O conjunto independente versionado usa OpenPhish Community Feed para phishing e Majestic Million para sites legítimos. Para reconstruí-lo com os feeds disponíveis no momento da nova execução:
+## Testes
 
 ```bash
-node scripts/build-evaluation-dataset.js
+npm test
 ```
 
-Depois execute:
+Os testes automatizados verificam regras locais do motor de análise sem depender da navegação real do navegador.
+
+## Avaliação experimental
+
+O repositório mantém um conjunto independente para comparar a heurística local com o método combinado. A construção do dataset utiliza fontes separadas para phishing e sites legítimos, e a amostra utilizada em cada execução é versionada.
+
+Para reconstruir o dataset com os feeds disponíveis no momento:
+
+```bash
+npm run build-evaluation-dataset
+```
+
+Para executar a avaliação:
 
 ```bash
 node scripts/evaluate-dataset.js evaluation/datasets/dataset-a.csv evaluation/results/raw/dataset-a-v1.csv
 ```
 
-O resultado registra `local_score`, `local_classification`, `external_listed`, `external_source` e `final_classification`. O terminal apresenta detecções, omissões, falsos alertas, liberações corretas, taxa de detecção, taxa de falso alerta e acurácia separadamente para o método local e o combinado.
+Os resultados registram, entre outros campos:
 
-Como os feeds mudam com o tempo, `evaluation/datasets/dataset-a.csv` preserva exatamente a amostra utilizada e `evaluation/runs/` registra hashes, horário, versão do Node.js e commit avaliado.
+- `local_score`
+- `local_classification`
+- `external_listed`
+- `external_source`
+- `final_classification`
 
-## Estrutura do repositório
+As execuções em `evaluation/runs/` preservam informações como hashes, horário, versão do Node.js e commit avaliado, permitindo relacionar os resultados ao estado exato do projeto.
 
-- Arquivos na raiz: código e configuração carregados diretamente pelo Edge, além dos documentos padrão do projeto.
-- `reputation/`: snapshot da base Phishing.Database usada pela extensão durante a classificação.
-- `scripts/`: utilitários de manutenção da reputação, construção dos datasets e avaliação.
-- `tests/`: verificações automatizadas das regras locais.
-- `evaluation/datasets/`: entradas experimentais e amostras auxiliares.
-- `evaluation/results/`: resultados brutos, derivados e relatórios.
-- `evaluation/runs/`: registros históricos das execuções.
-- `evaluation/docs/`: origem dos datasets e mudanças documentadas entre versões.
+## Limitações atuais
 
-## Limitações do MVP
-
-No Manifest V3, `webNavigation` observa o início da navegação, mas não cancela sincronicamente uma requisição usando lógica JavaScript arbitrária. Assim, em navegações pela barra, uma requisição pode começar antes do redirecionamento para o aviso. O MVP não analisa HTML, formulários ou conteúdo remoto. A reputação pode conter falsos positivos, envelhece entre atualizações e não cobre ameaças ainda desconhecidas.
-
-Os pesos e o limite heurístico são experimentais e ainda precisam ser calibrados com dados de pesquisa.
+- `webNavigation` observa o início da navegação, mas não cancela sincronicamente uma requisição usando lógica JavaScript arbitrária; uma requisição pode começar antes do redirecionamento para o aviso.
+- O MVP não analisa HTML, formulários ou conteúdo remoto da página.
+- A base de reputação pode conter falsos positivos, envelhece entre atualizações e não cobre ameaças ainda desconhecidas.
+- Pesos e limiar heurístico permanecem experimentais e precisam de calibração com dados de pesquisa.
 
 ## Próximos passos
 
-- calibrar pesos, limite e taxa de falsos positivos;
+- calibrar pesos, limiar e taxa de falsos positivos;
 - automatizar e versionar atualizações periódicas da reputação;
-- avaliar regras `declarativeNetRequest` para bloquear previamente domínios conhecidos;
-- estudar sinais do conteúdo da página em uma segunda etapa.
+- avaliar `declarativeNetRequest` para bloqueio prévio de domínios conhecidos;
+- estudar sinais do conteúdo da página em uma etapa posterior.
+
+## Licença e terceiros
+
+O projeto é distribuído sob a licença MIT. Dependências e fontes de dados de terceiros são documentadas em [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
