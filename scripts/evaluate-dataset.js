@@ -1,6 +1,5 @@
 const fs = require("node:fs");
 const path = require("node:path");
-const { analyzeUrl } = require("../analysis.js");
 const { createReputationDatabase, checkExternalReputation } = require("../reputation.js");
 
 function parseCsv(text) {
@@ -41,21 +40,68 @@ function metrics(records, classificationField) {
     else tn += 1;
   }
   const divide = (a, b) => b ? a / b : 0;
+  const recall = divide(tp, tp + fn);
+  const precision = divide(tp, tp + fp);
   return {
-    fraudulent_detected: tp,
-    fraudulent_missed: fn,
-    legitimate_false_alerts: fp,
-    legitimate_correctly_allowed: tn,
-    detection_rate: divide(tp, tp + fn),
+    tp, fn, fp, tn,
+    recall,
+    precision,
+    f1: divide(2 * precision * recall, precision + recall),
     false_alert_rate: divide(fp, fp + tn),
     accuracy: divide(tp + tn, records.length)
   };
 }
 
-function main() {
-  const [, , inputPath, outputPath = "evaluation/results/raw/dataset-a-v1.csv"] = process.argv;
-  if (!inputPath) throw new Error("Uso: npm run evaluate -- entrada.csv [saida.csv]");
+function writeCsv(outputPath, records) {
+  const columns = [
+    "url", "label", "analyzer_version", "local_score", "local_classification",
+    "local_reasons", "local_contributions", "local_signals", "local_features",
+    "external_listed", "external_source", "final_classification"
+  ];
+  const output = [
+    columns.join(","),
+    ...records.map((record) => columns.map((column) => csv(record[column])).join(","))
+  ].join("\n");
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  fs.writeFileSync(outputPath, `${output}\n`);
+}
 
+function mistakePath(outputPath, kind) {
+  const extension = path.extname(outputPath);
+  return path.join(
+    path.dirname(outputPath),
+    `${path.basename(outputPath, extension)}-${kind}${extension || ".csv"}`
+  );
+}
+
+function parseArguments(argv) {
+  let analyzerVersion = "v3";
+  const positional = [];
+  for (const argument of argv) {
+    if (argument.startsWith("--analyzer=")) {
+      analyzerVersion = argument.slice("--analyzer=".length).toLowerCase();
+    } else {
+      positional.push(argument);
+    }
+  }
+  if (!["v2", "v3"].includes(analyzerVersion)) {
+    throw new Error("O analisador deve ser v2 ou v3");
+  }
+  return {
+    analyzerVersion,
+    inputPath: positional[0],
+    outputPath: positional[1] || `evaluation/results/raw/dataset-a-${analyzerVersion}.csv`
+  };
+}
+
+function main() {
+  const { analyzerVersion, inputPath, outputPath } = parseArguments(process.argv.slice(2));
+  if (!inputPath) {
+    throw new Error("Uso: node scripts/evaluate-dataset.js [--analyzer=v2|v3] entrada.csv [saida.csv]");
+  }
+
+  const analyzerModule = analyzerVersion === "v2" ? "../analysis-v2.js" : "../analysis.js";
+  const { analyzeUrl } = require(analyzerModule);
   const rows = parseCsv(fs.readFileSync(inputPath, "utf8"));
   const header = rows.shift().map((value) => value.trim().toLowerCase());
   const urlIndex = header.indexOf("url"), labelIndex = header.indexOf("label");
@@ -74,25 +120,42 @@ function main() {
     const local = analyzeUrl(url);
     const external = checkExternalReputation(url, database);
     return {
-      url, label,
+      url,
+      label,
+      analyzer_version: analyzerVersion,
       local_score: local.score,
       local_classification: local.level,
+      local_reasons: JSON.stringify(local.reasons || []),
+      local_contributions: JSON.stringify(local.contributions || []),
+      local_signals: JSON.stringify(local.signals || {}),
+      local_features: JSON.stringify(local.features || null),
       external_listed: external.listed,
       external_source: external.source,
       final_classification: external.listed ? "blocked" : local.level
     };
   });
 
-  const columns = ["url", "label", "local_score", "local_classification", "external_listed", "external_source", "final_classification"];
-  const output = [columns.join(","), ...records.map((record) => columns.map((column) => csv(record[column])).join(","))].join("\n");
-  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-  fs.writeFileSync(outputPath, `${output}\n`);
+  writeCsv(outputPath, records);
+  const falsePositives = records.filter(
+    (record) => !isFraudulent(record.label) && record.local_classification !== "safe"
+  );
+  const falseNegatives = records.filter(
+    (record) => isFraudulent(record.label) && record.local_classification === "safe"
+  );
+  const falsePositivePath = mistakePath(outputPath, "false-positives");
+  const falseNegativePath = mistakePath(outputPath, "false-negatives");
+  writeCsv(falsePositivePath, falsePositives);
+  writeCsv(falseNegativePath, falseNegatives);
 
-  console.log(JSON.stringify({
+  const result = {
+    analyzer: analyzerVersion,
     local_only: metrics(records, "local_classification"),
-    local_plus_external: metrics(records, "final_classification")
-  }, null, 2));
-  console.log(`Resultados gravados em ${outputPath}`);
+    local_plus_external: metrics(records, "final_classification"),
+    output: outputPath,
+    false_positives: falsePositivePath,
+    false_negatives: falseNegativePath
+  };
+  console.log(JSON.stringify(result, null, 2));
 }
 
 try { main(); } catch (error) { console.error(error.message); process.exitCode = 1; }
