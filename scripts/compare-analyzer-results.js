@@ -32,8 +32,8 @@ function escapeCsv(value) {
 
 function writeCsv(filePath, rows) {
   const columns = [
-    "url", "label", "v3_score", "v3_reasons", "v3_1_score", "v3_1_reasons",
-    "v3_1_categories", "v3_1_category_scores", "v3_1_diversity_bonus"
+    "url", "label", "baseline_score", "baseline_reasons", "candidate_score", "candidate_reasons",
+    "candidate_categories", "candidate_category_scores", "candidate_diversity_bonus"
   ];
   const lines = [columns.join(","), ...rows.map((row) => columns.map((column) => escapeCsv(row[column])).join(","))];
   fs.writeFileSync(filePath, `${lines.join("\n")}\n`);
@@ -43,20 +43,20 @@ function pairedRow(v3, v31) {
   return {
     url: v31.url,
     label: v31.label,
-    v3_score: v3.local_score,
-    v3_reasons: v3.local_reasons,
-    v3_1_score: v31.local_score,
-    v3_1_reasons: v31.local_reasons,
-    v3_1_categories: v31.local_evidence_categories,
-    v3_1_category_scores: v31.local_category_scores,
-    v3_1_diversity_bonus: v31.local_diversity_bonus
+    baseline_score: v3.local_score,
+    baseline_reasons: v3.local_reasons,
+    candidate_score: v31.local_score,
+    candidate_reasons: v31.local_reasons,
+    candidate_categories: v31.local_evidence_categories,
+    candidate_category_scores: v31.local_category_scores,
+    candidate_diversity_bonus: v31.local_diversity_bonus
   };
 }
 
 function patternCounts(rows) {
   const counts = new Map();
   for (const row of rows) {
-    const pattern = JSON.parse(row.v3_1_categories || "[]").join("+") || "none";
+    const pattern = JSON.parse(row.candidate_categories || "[]").join("+") || "none";
     counts.set(pattern, (counts.get(pattern) || 0) + 1);
   }
   return Object.fromEntries([...counts.entries()].sort((left, right) => right[1] - left[1]));
@@ -93,8 +93,8 @@ function main() {
   writeCsv(falsePositivePath, newFalsePositives);
 
   const summary = {
-    v3_source: v3Path,
-    v3_1_source: v31Path,
+    baseline_source: v3Path,
+    candidate_source: v31Path,
     recovered: recovered.length,
     recovered_by_evidence_categories: patternCounts(recovered),
     lost_detections: lostDetections.length,
