@@ -1,0 +1,249 @@
+{
+  "generated_at": "2026-10-05T03:24:20.054Z",
+  "methodology": "Datasets A e B são dados de desenvolvimento da V3/V3.1.",
+  "datasets": [
+    {
+      "source": "evaluation/results/refinement/dataset-a-v3.csv",
+      "totals": {
+        "phishing": 100,
+        "legitimate": 100,
+        "false_negatives": 65
+      },
+      "false_negative_features": {
+        "http": 31,
+        "shared_hosting": 28,
+        "many_digits": 11,
+        "high_digit_ratio": 8,
+        "auth_path": 4,
+        "shortener": 3,
+        "high_entropy": 3,
+        "many_hyphens": 2,
+        "long_url": 0,
+        "long_path": 0,
+        "long_hostname": 0,
+        "many_subdomains": 0,
+        "auth_hostname": 0,
+        "exact_brand_mismatch": 0,
+        "possible_typosquatting": 0,
+        "punycode": 0,
+        "userinfo": 0,
+        "many_query_parameters": 0
+      },
+      "phishing_features": {
+        "shared_hosting": 37,
+        "http": 36,
+        "exact_brand_mismatch": 26,
+        "many_digits": 16,
+        "high_entropy": 12,
+        "many_hyphens": 10,
+        "high_digit_ratio": 10,
+        "auth_path": 4,
+        "long_url": 3,
+        "shortener": 3,
+        "auth_hostname": 1,
+        "long_path": 0,
+        "long_hostname": 0,
+        "many_subdomains": 0,
+        "possible_typosquatting": 0,
+        "punycode": 0,
+        "userinfo": 0,
+        "many_query_parameters": 0
+      },
+      "legitimate_features": {
+        "shared_hosting": 2,
+        "many_subdomains": 1,
+        "http": 0,
+        "long_url": 0,
+        "long_path": 0,
+        "long_hostname": 0,
+        "many_hyphens": 0,
+        "many_digits": 0,
+        "high_digit_ratio": 0,
+        "auth_hostname": 0,
+        "auth_path": 0,
+        "exact_brand_mismatch": 0,
+        "possible_typosquatting": 0,
+        "shortener": 0,
+        "punycode": 0,
+        "userinfo": 0,
+        "many_query_parameters": 0,
+        "high_entropy": 0
+      },
+      "false_negative_category_patterns": [
+        {
+          "pattern": "none",
+          "count": 19
+        },
+        {
+          "pattern": "infrastructure+transport",
+          "count": 12
+        },
+        {
+          "pattern": "transport",
+          "count": 10
+        },
+        {
+          "pattern": "infrastructure",
+          "count": 8
+        },
+        {
+          "pattern": "infrastructure+structure+transport",
+          "count": 5
+        },
+        {
+          "pattern": "infrastructure+structure",
+          "count": 3
+        },
+        {
+          "pattern": "infrastructure+path_query+transport",
+          "count": 2
+        },
+        {
+          "pattern": "structure",
+          "count": 2
+        },
+        {
+          "pattern": "structure+transport",
+          "count": 2
+        },
+        {
+          "pattern": "infrastructure+path_query+structure",
+          "count": 1
+        },
+        {
+          "pattern": "path_query",
+          "count": 1
+        }
+      ],
+      "phishing_category_pairs": {
+        "infrastructure+transport": 20,
+        "infrastructure+structure": 18,
+        "structure+transport": 8,
+        "identity+transport": 4,
+        "infrastructure+path_query": 3,
+        "identity+path_query": 3,
+        "path_query+transport": 2,
+        "path_query+structure": 1,
+        "authentication+infrastructure": 1,
+        "authentication+structure": 1
+      },
+      "legitimate_category_pairs": {}
+    },
+    {
+      "source": "evaluation/results/refinement/dataset-b-v3.csv",
+      "totals": {
+        "phishing": 100,
+        "legitimate": 100,
+        "false_negatives": 81
+      },
+      "false_negative_features": {
+        "http": 40,
+        "shared_hosting": 26,
+        "high_entropy": 11,
+        "many_digits": 10,
+        "high_digit_ratio": 5,
+        "many_hyphens": 3,
+        "shortener": 2,
+        "long_url": 1,
+        "long_hostname": 1,
+        "many_query_parameters": 1,
+        "long_path": 0,
+        "many_subdomains": 0,
+        "auth_hostname": 0,
+        "auth_path": 0,
+        "exact_brand_mismatch": 0,
+        "possible_typosquatting": 0,
+        "punycode": 0,
+        "userinfo": 0
+      },
+      "phishing_features": {
+        "http": 47,
+        "shared_hosting": 35,
+        "high_entropy": 19,
+        "many_digits": 17,
+        "exact_brand_mismatch": 11,
+        "many_hyphens": 9,
+        "high_digit_ratio": 7,
+        "shortener": 2,
+        "long_url": 1,
+        "long_hostname": 1,
+        "auth_hostname": 1,
+        "many_query_parameters": 1,
+        "long_path": 0,
+        "many_subdomains": 0,
+        "auth_path": 0,
+        "possible_typosquatting": 0,
+        "punycode": 0,
+        "userinfo": 0
+      },
+      "legitimate_features": {
+        "many_subdomains": 1,
+        "shared_hosting": 1,
+        "http": 0,
+        "long_url": 0,
+        "long_path": 0,
+        "long_hostname": 0,
+        "many_hyphens": 0,
+        "many_digits": 0,
+        "high_digit_ratio": 0,
+        "auth_hostname": 0,
+        "auth_path": 0,
+        "exact_brand_mismatch": 0,
+        "possible_typosquatting": 0,
+        "shortener": 0,
+        "punycode": 0,
+        "userinfo": 0,
+        "many_query_parameters": 0,
+        "high_entropy": 0
+      },
+      "false_negative_category_patterns": [
+        {
+          "pattern": "none",
+          "count": 22
+        },
+        {
+          "pattern": "transport",
+          "count": 20
+        },
+        {
+          "pattern": "infrastructure+transport",
+          "count": 12
+        },
+        {
+          "pattern": "infrastructure",
+          "count": 7
+        },
+        {
+          "pattern": "structure",
+          "count": 6
+        },
+        {
+          "pattern": "infrastructure+structure",
+          "count": 5
+        },
+        {
+          "pattern": "infrastructure+structure+transport",
+          "count": 4
+        },
+        {
+          "pattern": "structure+transport",
+          "count": 4
+        },
+        {
+          "pattern": "path_query",
+          "count": 1
+        }
+      ],
+      "phishing_category_pairs": {
+        "infrastructure+transport": 21,
+        "infrastructure+structure": 17,
+        "structure+transport": 13,
+        "identity+transport": 2,
+        "authentication+identity": 1,
+        "authentication+infrastructure": 1,
+        "identity+infrastructure": 1
+      },
+      "legitimate_category_pairs": {}
+    }
+  ]
+}
