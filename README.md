@@ -111,7 +111,7 @@ node scripts/evaluate-dataset.js --analyzer=v3.1 evaluation/datasets/dataset-a.c
 
 Os resultados registram score, classificação, reasons, contribuições, scores por categoria, diversidade, sinais, características, reputação e classificação final. O terminal apresenta TP, FN, FP, TN, recall, precision, F1, taxa de falso alerta e acurácia.
 
-As execuções e os resultados versionados permitem relacionar as métricas ao estado exato do projeto. Um futuro Dataset C deve ser coletado depois do congelamento das regras e permanecer reservado até a avaliação final.
+As execuções e os resultados versionados permitem relacionar as métricas ao estado exato do projeto. Como os Datasets A e B foram consultados durante a calibração da V3 e V3.1, ambos são dados de desenvolvimento e não constituem validação independente. Um futuro Dataset C deve ser coletado depois do congelamento das regras e permanecer reservado até a avaliação final.
 
 <!-- MEDIA: Quando os resultados finais estiverem consolidados, adicione aqui um gráfico ou tabela-resumo com as métricas principais. -->
 
