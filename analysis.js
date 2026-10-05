@@ -1,16 +1,17 @@
-const V3_SUSPICIOUS_THRESHOLD = 30;
+const V3_1_SUSPICIOUS_THRESHOLD = 24;
 
-const V3_CONFIRMED_MALICIOUS_DOMAINS = new Set([
+const V3_1_CONFIRMED_MALICIOUS_DOMAINS = new Set([
   "phishing-test.invalid",
   "malware-test.invalid"
 ]);
 
-const V3_AUTHENTICATION_TERMS = new Set([
+const V3_1_AUTHENTICATION_TERMS = new Set([
   "login", "verify", "verification", "account", "password", "senha",
-  "secure", "signin", "bank", "banco", "pix"
+  "secure", "signin", "bank", "banco", "pix", "auth", "oauth",
+  "oauth2", "kyc", "credential", "credentials", "recover", "recovery"
 ]);
 
-const V3_KNOWN_BRANDS = [
+const V3_1_KNOWN_BRANDS = [
   { name: "roblox", officialDomains: ["roblox.com"] },
   { name: "amazon", officialDomains: ["amazon.com"] },
   { name: "netflix", officialDomains: ["netflix.com"] },
@@ -21,78 +22,96 @@ const V3_KNOWN_BRANDS = [
   { name: "whatsapp", officialDomains: ["whatsapp.com"] },
   { name: "airbnb", officialDomains: ["airbnb.com"] },
   { name: "google", officialDomains: ["google.com"] },
-  { name: "paypal", officialDomains: ["paypal.com"] }
+  { name: "paypal", officialDomains: ["paypal.com"] },
+  { name: "facebook", officialDomains: ["facebook.com"] },
+  { name: "discord", officialDomains: ["discord.com", "discord.gg"] },
+  { name: "ledger", officialDomains: ["ledger.com"] },
+  { name: "metamask", officialDomains: ["metamask.io"] },
+  { name: "docusign", officialDomains: ["docusign.com"] },
+  { name: "yahoo", officialDomains: ["yahoo.com"] }
 ];
 
-const V3_SHARED_HOSTING_DOMAINS = [
+const V3_1_SHARED_HOSTING_DOMAINS = [
   "github.io", "vercel.app", "pages.dev", "blogspot.com",
-  "weebly.com", "netlify.app", "replit.app"
+  "weebly.com", "netlify.app", "replit.app", "gitbook.io",
+  "godaddysites.com", "zapier.app", "workers.dev", "duckdns.org",
+  "amplifyapp.com", "edgeone.dev"
 ];
 
-const V3_URL_SHORTENER_DOMAINS = new Set(["u.to", "surl.li", "1url.at"]);
+const V3_1_BRAND_CONTEXT_TERMS = new Set([
+  "login", "verify", "verification", "account", "secure", "signin",
+  "notify", "notification", "support", "suporte", "soporte", "recovery"
+]);
+
+const V3_1_URL_SHORTENER_DOMAINS = new Set(["u.to", "surl.li", "1url.at"]);
+
+const V3_1_CATEGORY_CAPS = {
+  identity: 30,
+  authentication: 12,
+  structure: 15,
+  transport: 6,
+  path_query: 10,
+  infrastructure: 10
+};
 
 function getDomainParser() {
-  if (typeof globalThis !== "undefined" && globalThis.tldts?.parse) {
-    return globalThis.tldts;
-  }
-  if (typeof require === "function") {
-    return require("tldts");
-  }
+  if (typeof globalThis !== "undefined" && globalThis.tldts?.parse) return globalThis.tldts;
+  if (typeof require === "function") return require("tldts");
   throw new Error("Parser de domínio registrável indisponível");
 }
 
 /**
- * V3: análise lexical explicável baseada principalmente na identidade do hostname.
- * Sinais fracos contribuem para o score, mas não atingem o threshold isoladamente.
+ * V3.1: score limitado por categoria e decisão condicionada à diversidade.
+ * Sinais equivalentes na mesma categoria não contam como evidências independentes.
  */
 function analyzeUrl(url) {
   let parsedUrl;
-
   try {
     parsedUrl = new URL(url);
   } catch {
     return invalidUrlResult();
   }
-
-  if (!["http:", "https:"].includes(parsedUrl.protocol)) {
-    return invalidUrlResult();
-  }
+  if (!["http:", "https:"].includes(parsedUrl.protocol)) return invalidUrlResult();
 
   const hostname = parsedUrl.hostname.toLowerCase().replace(/\.$/, "");
   const domainParts = getDomainParser().parse(hostname, { allowPrivateDomains: true });
   const registrableDomain = domainParts.domain || hostname;
   const subdomain = domainParts.subdomain || "";
-  const hostnameTokens = tokenizeHostname(hostname);
-  const registrableTokens = tokenizeHostname(registrableDomain);
-  const subdomainTokens = tokenizeHostname(subdomain);
+  const hostnameTokens = tokenize(hostname);
+  const registrableTokens = tokenize(registrableDomain);
+  const subdomainTokens = tokenize(subdomain);
   const brandCandidateTokens = unique([
     ...subdomainTokens,
-    ...tokenizeHostname(domainParts.domainWithoutSuffix || registrableDomain)
+    ...tokenize(domainParts.domainWithoutSuffix || registrableDomain)
   ]);
   const pathnameText = decodeURIComponentSafe(parsedUrl.pathname).toLowerCase();
   const queryText = decodeURIComponentSafe(parsedUrl.search).toLowerCase();
+  const pathnameTokens = tokenize(pathnameText);
   const pathnameTerms = findTerms(pathnameText);
   const queryTerms = findTerms(queryText);
-  const hostnameTerms = hostnameTokens.filter((token) => V3_AUTHENTICATION_TERMS.has(token));
+  const hostnameTerms = unique(hostnameTokens.filter((token) => V3_1_AUTHENTICATION_TERMS.has(token)));
+  const pathnameBrand = findExactBrand(pathnameTokens);
+  const brandEvidence = findBrandEvidence(hostname, registrableDomain, brandCandidateTokens);
+  const userInfoBrand = findExactBrand(tokenize(decodeURIComponentSafe(parsedUrl.username || "").toLowerCase()));
   const isIpv4 = /^(?:\d{1,3}\.){3}\d{1,3}$/.test(hostname);
   const isIpv6 = hostname.includes(":");
   const isIpAddress = isIpv4 || isIpv6 || domainParts.isIp === true;
-  const brandEvidence = findBrandEvidence(hostname, registrableDomain, brandCandidateTokens);
-  const userInfoBrand = findBrandInUserInfo(parsedUrl.username);
-  const isConfirmedThreat = [...V3_CONFIRMED_MALICIOUS_DOMAINS].some(
+  const usesPunycode = hostname.includes("xn--");
+  const usesSharedHosting = V3_1_SHARED_HOSTING_DOMAINS.some(
     (domain) => hostname === domain || hostname.endsWith(`.${domain}`)
   );
-  const usesSharedHosting = V3_SHARED_HOSTING_DOMAINS.some(
+  const usesShortener = V3_1_URL_SHORTENER_DOMAINS.has(hostname);
+  const isConfirmedThreat = [...V3_1_CONFIRMED_MALICIOUS_DOMAINS].some(
     (domain) => hostname === domain || hostname.endsWith(`.${domain}`)
   );
 
-  const searchParams = [...parsedUrl.searchParams.keys()];
-  const hostnameWithoutDots = hostname.replaceAll(".", "");
   const digitCount = (hostname.match(/\d/g) || []).length;
   const hyphenCount = (hostname.match(/-/g) || []).length;
-  const specialCharacterCount = (
-    `${hostname}${parsedUrl.pathname}${parsedUrl.search}`.match(/[^a-zA-Z0-9./?=&_-]/g) || []
-  ).length;
+  const structuralHyphenCount = hostname.split(".")
+    .map((label) => label.replace(/^xn--/, ""))
+    .reduce((total, label) => total + (label.match(/-/g) || []).length, 0);
+  const hostnameWithoutDots = hostname.replaceAll(".", "");
+  const searchParams = [...parsedUrl.searchParams.keys()];
   const features = {
     protocol: parsedUrl.protocol.slice(0, -1),
     hostname,
@@ -107,15 +126,32 @@ function analyzeUrl(url) {
     parameter_count: searchParams.length,
     subdomain_count: subdomain ? subdomain.split(".").length : 0,
     hyphen_count: hyphenCount,
+    structural_hyphen_count: structuralHyphenCount,
     digit_count: digitCount,
-    hostname_digit_ratio: hostnameWithoutDots.length
-      ? digitCount / hostnameWithoutDots.length
-      : 0,
-    special_character_count: specialCharacterCount,
+    hostname_digit_ratio: hostnameWithoutDots.length ? digitCount / hostnameWithoutDots.length : 0,
+    special_character_count: (
+      `${hostname}${parsedUrl.pathname}${parsedUrl.search}`.match(/[^a-zA-Z0-9./?=&_-]/g) || []
+    ).length,
     hostname_entropy: shannonEntropy(registrableTokens.join("")),
-    hostname_authentication_terms: unique(hostnameTerms),
+    hostname_authentication_terms: hostnameTerms,
     pathname_authentication_terms: pathnameTerms,
-    query_authentication_terms: queryTerms
+    query_authentication_terms: queryTerms,
+    pathname_brand: pathnameBrand
+  };
+
+  const signals = {
+    brand_mismatch: Boolean(brandEvidence),
+    brand: brandEvidence?.brand || null,
+    brand_match_type: brandEvidence?.matchType || null,
+    brand_in_pathname: pathnameBrand,
+    authentication_in_hostname: hostnameTerms.length > 0,
+    authentication_in_pathname: pathnameTerms.length > 0,
+    confirmed_threat: isConfirmedThreat,
+    punycode: usesPunycode,
+    uses_ip: isIpAddress,
+    uses_shared_hosting: usesSharedHosting,
+    uses_shortener: usesShortener,
+    uses_userinfo: Boolean(parsedUrl.username || parsedUrl.password)
   };
 
   if (isConfirmedThreat) {
@@ -123,154 +159,131 @@ function analyzeUrl(url) {
       score: 100,
       level: "blocked",
       reasons: ["Domínio presente na lista local de testes maliciosos"],
-      signals: buildSignals(brandEvidence, hostnameTerms, pathnameTerms, true),
+      contributions: [],
+      category_scores: { identity: 100 },
+      evidence_categories: ["identity"],
+      diversity_bonus: 0,
+      signals,
       features
     };
   }
 
-  let score = 0;
   const reasons = [];
   const contributions = [];
-  const addRisk = (points, code, reason) => {
-    score += points;
+  const addEvidence = (category, points, code, reason) => {
     reasons.push(reason);
-    contributions.push({ code, points, reason });
+    contributions.push({ category, code, points, reason });
   };
 
-  // Sinais fracos: informativos, mas deliberadamente abaixo do threshold quando isolados.
   if (parsedUrl.protocol === "http:") {
-    addRisk(4, "http", "URL utiliza HTTP; isoladamente isso não indica phishing");
+    addEvidence("transport", 6, "http", "URL utiliza HTTP; o sinal só ganha força com outra categoria");
   }
-  if (url.length > 150) {
-    addRisk(5, "long_url", "URL possui mais de 150 caracteres");
-  }
-  if (parsedUrl.pathname.length > 80) {
-    addRisk(4, "long_path", "Caminho da URL é muito longo");
-  }
-  if (features.parameter_count >= 5) {
-    addRisk(4, "many_parameters", "URL possui cinco ou mais parâmetros");
-  }
-  if (hostname.length > 60) {
-    addRisk(5, "long_hostname", "Hostname é excessivamente longo");
-  }
-  if (!isIpAddress && features.subdomain_count >= 3) {
-    addRisk(5, "many_subdomains", "Hostname possui três ou mais níveis de subdomínio");
-  }
-  if (hyphenCount >= 3) {
-    addRisk(4, "many_hyphens", "Hostname contém três ou mais hífens");
-  }
-  if (digitCount >= 4 && features.hostname_digit_ratio >= 0.2) {
-    addRisk(5, "high_digit_ratio", "Hostname combina vários dígitos com alta proporção numérica");
-  }
-  if (features.hostname_entropy >= 3.8 && registrableTokens.join("").length >= 12) {
-    addRisk(5, "high_entropy", "Domínio registrável apresenta alta entropia lexical");
-  }
+  if (url.length > 150) addEvidence("path_query", 5, "long_url", "URL possui mais de 150 caracteres");
+  if (parsedUrl.pathname.length > 80) addEvidence("path_query", 4, "long_path", "Caminho da URL é muito longo");
+  if (features.parameter_count >= 5) addEvidence("path_query", 4, "many_parameters", "URL possui cinco ou mais parâmetros");
   if (pathnameTerms.length > 0) {
-    addRisk(4, "path_auth_terms", `Caminho contém termos de autenticação: ${pathnameTerms.join(", ")}`);
+    addEvidence("path_query", 4, "path_auth_terms", `Caminho contém termos de autenticação: ${pathnameTerms.join(", ")}`);
   }
   if (queryTerms.length > 0) {
-    addRisk(3, "query_auth_terms", `Parâmetros contêm termos de autenticação: ${queryTerms.join(", ")}`);
+    addEvidence("path_query", 3, "query_auth_terms", `Parâmetros contêm termos de autenticação: ${queryTerms.join(", ")}`);
   }
-  if (hostnameTerms.length > 0) {
-    addRisk(8, "hostname_auth_terms", `Hostname contém termos de autenticação: ${unique(hostnameTerms).join(", ")}`);
+  if (pathnameBrand) {
+    addEvidence("path_query", 8, "brand_in_path", `Marca ${pathnameBrand} aparece apenas no caminho da URL`);
   }
 
-  // Sinais moderados e fortes ligados à identidade real do destino.
-  if (isIpAddress) {
-    addRisk(18, "direct_ip", "Destino utiliza endereço IP no lugar de um domínio registrável");
+  if (hostname.length > 60) addEvidence("structure", 5, "long_hostname", "Hostname é excessivamente longo");
+  if (!isIpAddress && features.subdomain_count >= 3) {
+    addEvidence("structure", 5, "many_subdomains", "Hostname possui três ou mais níveis de subdomínio");
   }
-  if (hostname.includes("xn--")) {
-    addRisk(16, "punycode", "Hostname utiliza Punycode");
+  if (structuralHyphenCount >= 3) addEvidence("structure", 5, "many_hyphens", "Hostname contém três ou mais hífens fora do prefixo Punycode");
+  if (digitCount >= 4 && features.hostname_digit_ratio >= 0.2) {
+    addEvidence("structure", 5, "high_digit_ratio", "Hostname combina vários dígitos com alta proporção numérica");
   }
+  if (features.hostname_entropy >= 3.8 && registrableTokens.join("").length >= 12) {
+    addEvidence("structure", 5, "high_entropy", "Domínio registrável apresenta alta entropia lexical");
+  }
+
+  if (hostnameTerms.length > 0) {
+    addEvidence("authentication", 8, "hostname_auth_terms", `Hostname contém termos de autenticação: ${hostnameTerms.join(", ")}`);
+  }
+  if (hostnameTerms.length >= 2) {
+    addEvidence("authentication", 4, "multiple_hostname_auth_terms", "Múltiplos termos de autenticação aparecem no hostname");
+  }
+
+  if (isIpAddress) addEvidence("identity", 18, "direct_ip", "Destino utiliza endereço IP no lugar de domínio registrável");
+  if (usesPunycode) addEvidence("identity", 16, "punycode", "Hostname utiliza Punycode");
   if (parsedUrl.username || parsedUrl.password) {
-    addRisk(20, "userinfo", "URL contém credenciais antes do hostname real");
+    addEvidence("identity", 20, "userinfo", "URL contém credenciais antes do hostname real");
   }
   if (userInfoBrand) {
-    addRisk(20, "brand_in_userinfo", `Marca ${userInfoBrand} aparece antes do hostname real`);
-  }
-  if (V3_URL_SHORTENER_DOMAINS.has(hostname)) {
-    addRisk(10, "shortener", "URL utiliza um encurtador conhecido");
+    addEvidence("identity", 10, "brand_in_userinfo", `Marca ${userInfoBrand} aparece antes do hostname real`);
   }
   if (brandEvidence) {
-    const position = subdomainTokens.includes(brandEvidence.token)
-      ? "em subdomínio"
-      : "no hostname";
-    const matchDescription = brandEvidence.matchType === "typo"
+    const position = subdomainTokens.includes(brandEvidence.token) ? "em subdomínio" : "no hostname";
+    const description = brandEvidence.matchType === "typo"
       ? `possível imitação da marca ${brandEvidence.brand} (${brandEvidence.token})`
       : `marca ${brandEvidence.brand}`;
-    addRisk(
-      brandEvidence.matchType === "typo" ? 22 : 30,
-      "brand_mismatch",
-      `${matchDescription} aparece ${position}, mas o domínio registrável é ${registrableDomain}`
+    addEvidence(
+      "identity",
+      brandEvidence.matchType === "typo" ? 18 : 24,
+      brandEvidence.matchType === "typo" ? "brand_typo" : "brand_mismatch",
+      `${description} aparece ${position}, mas o domínio registrável é ${registrableDomain}`
     );
   }
 
-  const weakStructuralCodes = new Set([
-    "long_url", "long_path", "many_parameters", "long_hostname",
-    "many_subdomains", "many_hyphens", "high_digit_ratio", "high_entropy"
-  ]);
-  const structuralSignalCount = contributions.filter(({ code }) => weakStructuralCodes.has(code)).length;
-  const hostnameStructuralCodes = new Set([
-    "long_hostname", "many_subdomains", "many_hyphens", "high_digit_ratio", "high_entropy"
-  ]);
-  const hostnameStructuralCount = contributions.filter(({ code }) => hostnameStructuralCodes.has(code)).length;
-  if (structuralSignalCount >= 3) {
-    addRisk(6, "structural_cluster", "Três ou mais anomalias estruturais aparecem em conjunto");
+  if (usesSharedHosting) {
+    addEvidence("infrastructure", 9, "shared_hosting", "URL usa hospedagem compartilhada; isoladamente isso não indica phishing");
   }
-  if (parsedUrl.protocol === "http:" && structuralSignalCount >= 3) {
-    addRisk(8, "http_structural_combination", "HTTP aparece combinado com várias anomalias estruturais");
-  }
-  if (hostnameStructuralCount >= 3) {
-    addRisk(17, "hostname_structural_cluster", "Três ou mais anomalias se concentram no hostname");
-  } else if (parsedUrl.protocol === "http:" && hostnameStructuralCount >= 2) {
-    addRisk(17, "http_hostname_structure", "HTTP aparece combinado com múltiplas anomalias no hostname");
+  if (usesShortener) {
+    addEvidence("infrastructure", 10, "shortener", "URL utiliza um encurtador conhecido");
   }
 
-  const contributionCodes = new Set(contributions.map(({ code }) => code));
-  const hasRandomizedHostnamePattern = contributionCodes.has("high_entropy") && (
-    contributionCodes.has("many_hyphens") || contributionCodes.has("high_digit_ratio")
+  const categoryScores = Object.fromEntries(Object.keys(V3_1_CATEGORY_CAPS).map((category) => [category, 0]));
+  for (const contribution of contributions) {
+    categoryScores[contribution.category] += contribution.points;
+  }
+  for (const [category, cap] of Object.entries(V3_1_CATEGORY_CAPS)) {
+    categoryScores[category] = Math.min(categoryScores[category], cap);
+  }
+
+  const evidenceCategories = Object.entries(categoryScores)
+    .filter(([, points]) => points > 0)
+    .map(([category]) => category);
+  const categoryCount = evidenceCategories.length;
+  const diversityBonus = categoryCount >= 4 ? 18 : categoryCount === 3 ? 14 : categoryCount === 2 ? 10 : 0;
+  if (diversityBonus > 0) {
+    reasons.push(`Diversidade de evidências: ${evidenceCategories.join(", ")}`);
+  }
+
+  const hasExactBrandMismatch = brandEvidence?.matchType === "exact";
+  const hasBrandContextCompound = brandEvidence?.matchType === "compound";
+  const hasBrandAuthentication = Boolean(brandEvidence && hostnameTerms.length > 0);
+  const hasPunycodeBrand = Boolean(brandEvidence && usesPunycode);
+  const hasUserInfoBrand = Boolean(userInfoBrand && (parsedUrl.username || parsedUrl.password));
+  const hasContextCategory = evidenceCategories.some((category) =>
+    ["identity", "authentication", "infrastructure"].includes(category)
   );
-  if (hasRandomizedHostnamePattern && usesSharedHosting) {
-    addRisk(21, "shared_hosting_randomized_hostname", "Hospedagem compartilhada combina alta entropia com hostname segmentado ou numérico");
-  } else if (hasRandomizedHostnamePattern && parsedUrl.protocol === "http:") {
-    addRisk(17, "http_randomized_hostname", "HTTP combina alta entropia com hostname segmentado ou numérico");
-  }
+  const hasTransportStructureCombination = evidenceCategories.includes("transport") &&
+    evidenceCategories.includes("structure") && categoryScores.structure >= 8;
+  const hasPathBrandCombination = Boolean(pathnameBrand && categoryCount >= 2);
+  const evidenceEligible = hasExactBrandMismatch || hasBrandContextCompound || hasBrandAuthentication || hasPunycodeBrand ||
+    hasUserInfoBrand || (categoryCount >= 2 && hasContextCategory) ||
+    hasTransportStructureCombination || hasPathBrandCombination || categoryCount >= 3;
 
-  if (unique(hostnameTerms).length >= 2) {
-    addRisk(8, "multiple_hostname_auth_terms", "Múltiplos termos de autenticação aparecem no hostname");
-  }
+  const score = Math.min(
+    Object.values(categoryScores).reduce((total, points) => total + points, 0) + diversityBonus,
+    100
+  );
 
-  if (brandEvidence && hostnameTerms.length > 0) {
-    addRisk(15, "brand_auth_combination", "Imitação de marca e autenticação aparecem juntas no hostname");
-  }
-  if (brandEvidence && hostname.includes("xn--")) {
-    addRisk(15, "punycode_brand_combination", "Punycode aparece combinado com possível imitação de marca");
-  }
-  if (userInfoBrand && (parsedUrl.username || parsedUrl.password)) {
-    addRisk(10, "userinfo_brand_combination", "Marca é usada como credencial para ocultar o hostname real");
-  }
-  if (isIpAddress && (hostnameTerms.length > 0 || pathnameTerms.length > 0)) {
-    addRisk(10, "ip_auth_combination", "Endereço IP aparece combinado com contexto de autenticação");
-  }
-
-  if (usesSharedHosting && (brandEvidence || hostnameTerms.length > 0)) {
-    addRisk(6, "shared_hosting_context", "Hospedagem compartilhada aparece combinada com marca ou autenticação no hostname");
-  }
-  if (usesSharedHosting && unique(hostnameTerms).length >= 2) {
-    addRisk(12, "shared_hosting_auth_combination", "Hospedagem compartilhada combina múltiplos termos de autenticação no hostname");
-  }
-
-  score = Math.min(score, 100);
   return {
     score,
-    level: score >= V3_SUSPICIOUS_THRESHOLD ? "suspicious" : "safe",
+    level: score >= V3_1_SUSPICIOUS_THRESHOLD && evidenceEligible ? "suspicious" : "safe",
     reasons,
     contributions,
-    signals: buildSignals(brandEvidence, hostnameTerms, pathnameTerms, false, {
-      punycode: hostname.includes("xn--"),
-      uses_ip: isIpAddress,
-      uses_shared_hosting: usesSharedHosting
-    }),
+    category_scores: categoryScores,
+    evidence_categories: evidenceCategories,
+    diversity_bonus: diversityBonus,
+    signals,
     features
   };
 }
@@ -280,56 +293,48 @@ function invalidUrlResult() {
     score: 100,
     level: "blocked",
     reasons: ["URL inválida, não HTTP(S) ou impossível de interpretar"],
-    contributions: [{
-      code: "invalid_url",
-      points: 100,
-      reason: "URL inválida, não HTTP(S) ou impossível de interpretar"
-    }],
+    contributions: [{ category: "identity", code: "invalid_url", points: 100, reason: "URL inválida" }],
+    category_scores: { identity: 100 },
+    evidence_categories: ["identity"],
+    diversity_bonus: 0,
     signals: { brand_mismatch: false },
     features: null
   };
 }
 
-function buildSignals(brandEvidence, hostnameTerms, pathnameTerms, confirmedThreat, extra = {}) {
-  return {
-    brand_mismatch: Boolean(brandEvidence),
-    brand: brandEvidence?.brand || null,
-    brand_match_type: brandEvidence?.matchType || null,
-    authentication_in_hostname: hostnameTerms.length > 0,
-    authentication_in_pathname: pathnameTerms.length > 0,
-    confirmed_threat: confirmedThreat,
-    ...extra
-  };
-}
-
-function findBrandEvidence(hostname, registrableDomain, hostnameTokens) {
-  for (const brand of V3_KNOWN_BRANDS) {
-    const belongsToBrand = brand.officialDomains.some(
+function findBrandEvidence(hostname, registrableDomain, tokens) {
+  for (const brand of V3_1_KNOWN_BRANDS) {
+    const official = brand.officialDomains.some(
       (officialDomain) => hostname === officialDomain || hostname.endsWith(`.${officialDomain}`)
     );
-    if (belongsToBrand) continue;
-
-    const exactToken = hostnameTokens.find((token) => token === brand.name);
-    if (exactToken) {
-      return { brand: brand.name, token: exactToken, matchType: "exact", registrableDomain };
-    }
-
-    const typoToken = hostnameTokens.find((token) => isConservativeBrandTypo(token, brand.name));
-    if (typoToken) {
-      return { brand: brand.name, token: typoToken, matchType: "typo", registrableDomain };
-    }
+    if (official) continue;
+    const exactToken = tokens.find((token) => token === brand.name);
+    if (exactToken) return { brand: brand.name, token: exactToken, matchType: "exact", registrableDomain };
+    const compoundToken = tokens.find((token) => isBrandContextCompound(token, brand.name));
+    if (compoundToken) return { brand: brand.name, token: compoundToken, matchType: "compound", registrableDomain };
+    const typoToken = tokens.find((token) => isConservativeBrandTypo(token, brand.name));
+    if (typoToken) return { brand: brand.name, token: typoToken, matchType: "typo", registrableDomain };
   }
   return null;
 }
 
-function findBrandInUserInfo(username) {
-  const tokens = tokenizeHostname(decodeURIComponentSafe(username || "").toLowerCase());
-  return V3_KNOWN_BRANDS.find(({ name }) => tokens.includes(name))?.name || null;
+function isBrandContextCompound(token, brand) {
+  if (!token.includes(brand) || token === brand) return false;
+  const remainder = token.startsWith(brand)
+    ? token.slice(brand.length)
+    : token.endsWith(brand)
+      ? token.slice(0, -brand.length)
+      : "";
+  return V3_1_BRAND_CONTEXT_TERMS.has(remainder);
+}
+
+function findExactBrand(tokens) {
+  return V3_1_KNOWN_BRANDS.find(({ name }) => tokens.includes(name))?.name || null;
 }
 
 function isConservativeBrandTypo(token, brand) {
   if (token.length < 4 || brand.length < 5 || Math.abs(token.length - brand.length) > 1) return false;
-  if (V3_AUTHENTICATION_TERMS.has(token) || token === "www") return false;
+  if (V3_1_AUTHENTICATION_TERMS.has(token) || token === "www") return false;
   return limitedLevenshtein(token, brand, 1) === 1;
 }
 
@@ -354,13 +359,12 @@ function limitedLevenshtein(left, right, limit) {
   return previous[right.length];
 }
 
-function tokenizeHostname(value) {
+function tokenize(value) {
   return value.split(/[^a-z0-9]+/).filter(Boolean);
 }
 
 function findTerms(value) {
-  const tokens = value.split(/[^a-z0-9]+/).filter(Boolean);
-  return unique(tokens.filter((token) => V3_AUTHENTICATION_TERMS.has(token)));
+  return unique(tokenize(value).filter((token) => V3_1_AUTHENTICATION_TERMS.has(token)));
 }
 
 function shannonEntropy(value) {
@@ -388,9 +392,5 @@ function decodeURIComponentSafe(value) {
 }
 
 if (typeof module !== "undefined") {
-  module.exports = {
-    analyzeUrl,
-    limitedLevenshtein,
-    V3_SUSPICIOUS_THRESHOLD
-  };
+  module.exports = { analyzeUrl, limitedLevenshtein, V3_1_SUSPICIOUS_THRESHOLD };
 }
