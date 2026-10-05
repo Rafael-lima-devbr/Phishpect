@@ -1,0 +1,201 @@
+url,label,analyzer_version,local_score,local_classification,local_reasons,local_contributions,local_signals,local_features,external_listed,external_source,final_classification
+https://mit.edu/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://springer.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://bbc.co.uk/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://php.net/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://ibm.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://bing.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://wikimedia.org/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://weibo.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://example.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://harvard.edu/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://discord.gg/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://wiley.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://gnu.org/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://cookiedatabase.org/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://debian.org/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://pubmed.ncbi.nlm.nih.gov/,legitimate,v2,15,safe,"[""Domínio possui muitos níveis de subdomínio""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://cdc.gov/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://un.org/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://discord.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://linktr.ee/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://issuu.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://mp.weixin.qq.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://plesk.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://imdb.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://weebly.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://expireddomains.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://stanford.edu/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://beian.gov.cn/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://wpa.qq.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://dropcatch.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://outlook.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://openai.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://bloomberg.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://www.gov.uk/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://washingtonpost.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://g.page/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://telegram.me/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://calendly.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://stripe.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://miit.gov.cn/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://nasa.gov/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://wsj.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://beian.miit.gov.cn/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://msn.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://unsplash.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://trustpilot.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://cloudfront.net/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://statista.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://arxiv.org/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://businessinsider.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://gitlab.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://ietf.org/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://amzn.to/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://list-manage.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://line.me/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://commons.wikimedia.org/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://bsky.app/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://podcasts.apple.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://canva.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://mysql.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://substack.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://share.google/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://twitch.tv/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://calendar.google.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://cnbc.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://sharepoint.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://eventbrite.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://cloudflare.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://addtoany.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://oup.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://wired.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://aboutads.info/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://etsy.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://windows.microsoft.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://time.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://stackoverflow.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://npr.org/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://googleusercontent.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://mail.google.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://behance.net/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://slideshare.net/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://samsung.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://ebay.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://gouv.fr/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://tandfonline.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://hp.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://hubspot.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://validator.w3.org/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://unesco.org/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://wp.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://squarespace.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://openstreetmap.org/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://outlook.live.com/,legitimate,v2,20,suspicious,"[""Nome de marca conhecido aparece fora do domínio oficial""]",[],"{""brand_mismatch"":true}",null,false,Phishing.Database,suspicious
+https://gc.ca/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://fr.wikipedia.org/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://go.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://aliyun.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://ft.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://techcrunch.com/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://wpguardian.io/,legitimate,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+http://site-2k4k5j4e6.godaddysites.com/,phishing,v2,25,suspicious,"[""URL utiliza HTTP em vez de HTTPS"",""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+http://httpmail-hot.blogspot.com/,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+http://lutfullahnazary35-byte.github.io/freenet/,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+http://gridnevjujea.github.io/src-badge-2/privacy-centers.html,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+http://access-ndaxio.zapier.app/,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://roblox.com.bo/communities/165593527/,phishing,v2,20,suspicious,"[""Nome de marca conhecido aparece fora do domínio oficial""]",[],"{""brand_mismatch"":true}",null,false,Phishing.Database,suspicious
+http://muhammadmaazmushtaq-collab.github.io/amazon-clone,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+http://usdt-send-seven.vercel.app/,phishing,v2,25,suspicious,"[""URL utiliza HTTP em vez de HTTPS"",""Hostname contém dois ou mais hífens""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+http://api.bugcutter.com/rak/email/KYC-1/Compliance/hot,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+http://lcloud-lforgetmaps.click/isignesp.php/,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+http://folio-service.life/isignesp.php/,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://naeq33d-h16d.vercel.app/,phishing,v2,5,safe,"[""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+http://ses-l.com/,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://www.grandprize35.blogspot.com/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+http://norzelo-mpt-belfavo-a9h2ka68.pages.dev/,phishing,v2,30,suspicious,"[""URL utiliza HTTP em vez de HTTPS"",""Hostname contém dois ou mais hífens"",""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+http://www.mmmm-wheat-eight.vercel.app/,phishing,v2,25,suspicious,"[""URL utiliza HTTP em vez de HTTPS"",""Hostname contém dois ou mais hífens""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+http://metamask-docs-p13jojaa8-consensys-ddffed67.vercel.app/metamask-connect/,phishing,v2,30,suspicious,"[""URL utiliza HTTP em vez de HTTPS"",""Hostname contém dois ou mais hífens"",""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://im-token-hk-cdn.xyz/,phishing,v2,5,safe,"[""Hostname contém dois ou mais hífens""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://www.send-bep-usdt-bsc.vercel.app/,phishing,v2,5,safe,"[""Hostname contém dois ou mais hífens""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://promegaofers.com/produto/9950861,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+http://telclcel.sbs/,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://share.lat/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://seydbi.shop/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+http://www.associazionegenia.it/wp-includes/IXR/json/json/import,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://www.groufreeemplisyd.duckdns.org/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+http://ledger-app.my/,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://www.verifiedbadge-lunelle.vercel.app/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://gcdctz.shop/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://cn-feed-whatsapp.com.cn/wp-includes/index.html,phishing,v2,25,suspicious,"[""Nome de marca conhecido aparece fora do domínio oficial"",""Hostname contém dois ou mais hífens""]",[],"{""brand_mismatch"":true}",null,false,Phishing.Database,suspicious
+https://cn-feed-whatsapp.com.cn/administrator/language/index.html,phishing,v2,25,suspicious,"[""Nome de marca conhecido aparece fora do domínio oficial"",""Hostname contém dois ou mais hífens""]",[],"{""brand_mismatch"":true}",null,false,Phishing.Database,suspicious
+https://cn-feed-whatsapp.com.cn/uadmin/adm.php,phishing,v2,25,suspicious,"[""Nome de marca conhecido aparece fora do domínio oficial"",""Hostname contém dois ou mais hífens""]",[],"{""brand_mismatch"":true}",null,false,Phishing.Database,suspicious
+https://cn-feed-whatsapp.com.cn/administrator/components/com_installer/views/install/index.html,phishing,v2,30,suspicious,"[""Nome de marca conhecido aparece fora do domínio oficial"",""Hostname contém dois ou mais hífens"",""Caminho da URL é muito longo""]",[],"{""brand_mismatch"":true}",null,false,Phishing.Database,suspicious
+https://acspof.cfd/ACS_sjahzEN.html/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+http://elo-lowew.github.io/instragram,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://viewreimburapt.com/pages/captcha.php,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://rbcode.net/v/559cdb39c85b695499378193e8efff17,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+http://vormzuri-mpt-zanfelo-c1x9me85.pages.dev/,phishing,v2,30,suspicious,"[""URL utiliza HTTP em vez de HTTPS"",""Hostname contém dois ou mais hífens"",""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://pradyumna-17.github.io/Netflix-Clone/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+http://teams-fl.com/p/fjbd-cbch/rljxblbn,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://jahtisham266-cyber.github.io/CSS1/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+http://www.globalcargospot.com/,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://www.instagram-login-support.vercel.app/,phishing,v2,55,suspicious,"[""URL contém termos sensíveis: login"",""Nome de marca conhecido aparece fora do domínio oficial"",""Hospedagem compartilhada combinada com marca ou autenticação"",""Hostname contém dois ou mais hífens""]",[],"{""brand_mismatch"":true}",null,false,Phishing.Database,suspicious
+http://web3assetbackupledger.vercel.app/dashboard/,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+http://animesh-kashyap.github.io/netflix-clone,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://codewithprinceyadav.github.io/Netflix-Clone/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://s4w.in/LASPT,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://www.roblox.com.do/users/386869938177/profile,phishing,v2,20,suspicious,"[""Nome de marca conhecido aparece fora do domínio oficial""]",[],"{""brand_mismatch"":true}",null,false,Phishing.Database,suspicious
+http://b.bugcutter.com/rak/email/KYC-1/Compliance/hot,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+http://sp-papic.rs/feisbuk-32445546564,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://1url.at/www/roblox-users-358616420035-profile,phishing,v2,10,safe,"[""URL utiliza um encurtador conhecido""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+http://chatgpt0005.eu.org/blog/discord-patch-notes-june-4-2026,phishing,v2,25,suspicious,"[""URL utiliza HTTP em vez de HTTPS"",""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+http://chatgpt0005.eu.org/blog/discord-patch-notes-february-3-2025,phishing,v2,25,suspicious,"[""URL utiliza HTTP em vez de HTTPS"",""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+http://chatgpt0005.eu.org/blog/discord-patch-notes-august-4-2026,phishing,v2,25,suspicious,"[""URL utiliza HTTP em vez de HTTPS"",""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://tokenim.bid/download,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://tokenim.win/download,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://naver.blog.ddgaz0813.com/?naps,phishing,v2,5,safe,"[""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://auth-dealers-autoscout24-com-oauth2-default-v1-authorize.baour.ch/,phishing,v2,25,suspicious,"[""Domínio é excessivamente longo"",""Hostname contém dois ou mais hífens"",""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://applesoporte.services/isignesp.php/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://paymentlbcenligne.pioy.fr/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://knowledge-resource-index.79356278.workers.dev/?naps/,phishing,v2,10,safe,"[""Hostname contém dois ou mais hífens"",""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+http://unifi.bugcutter.com/rak/email/KYC-1/Compliance/hot,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://lkrishnaveni27990.github.io/facebook,phishing,v2,5,safe,"[""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+http://shreenivasulu.github.io/Amazon-Clone,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+http://sp3ct-movsel-biz8-karqik-furan.pages.dev/,phishing,v2,25,suspicious,"[""URL utiliza HTTP em vez de HTTPS"",""Hostname contém dois ou mais hífens""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://burmuri-mpt-qalfeni-r5d7me83.pages.dev/,phishing,v2,10,safe,"[""Hostname contém dois ou mais hífens"",""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://zh-netflix.cn/,phishing,v2,20,suspicious,"[""Nome de marca conhecido aparece fora do domínio oficial""]",[],"{""brand_mismatch"":true}",null,false,Phishing.Database,suspicious
+http://uroojfatimadnp01-hash.github.io/Amazon-Clone,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+http://suhanir7.github.io/Amazon_Clone,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+http://addqo.com/pl,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://main.d3thcdi1mb7dsr.amplifyapp.com/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+http://varsha24-01.github.io/Amazon_Clone,phishing,v2,25,suspicious,"[""URL utiliza HTTP em vez de HTTPS"",""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://ledger-live-downlloadd.blogspot.com/?m=1,phishing,v2,5,safe,"[""Hostname contém dois ou mais hífens""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://imtokex.im/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://webupgrade394949-dp94sdn9spre.edgeone.cool/index.html?eta=kelos@b5869555477501b47d2714b8f14e0f928a04.com,phishing,v2,30,suspicious,"[""URL contém o caractere @"",""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://manav-kappa.vercel.app/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+http://www.8816063365.com/,phishing,v2,25,suspicious,"[""URL utiliza HTTP em vez de HTTPS"",""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://1url.at/www/roblox-users-358617147535-profile,phishing,v2,10,safe,"[""URL utiliza um encurtador conhecido""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://tokenim.date/download,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+http://www.facebooknotify-noreply.com/contact/1789733290899/,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+http://nordinvecrop.github.io/wlkhroenovind,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://berzuni-mpt-qanfelo-c4x7ka82-a21.pages.dev/?naps,phishing,v2,10,safe,"[""Hostname contém dois ou mais hífens"",""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://wetf-share-files.netlify.app/?naps,phishing,v2,5,safe,"[""Hostname contém dois ou mais hífens""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://urban-maroon-cfmc6rpb.edgeone.dev/home,phishing,v2,5,safe,"[""Hostname contém dois ou mais hífens""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+http://web3-cryptogate.com/,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+http://fortgrind.com/,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://www.roblox.ly/users/7562558635/profile,phishing,v2,20,suspicious,"[""Nome de marca conhecido aparece fora do domínio oficial""]",[],"{""brand_mismatch"":true}",null,false,Phishing.Database,suspicious
+http://br-zim.netlify.app/,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+http://instagram-visualizza-post.info/,phishing,v2,45,suspicious,"[""URL utiliza HTTP em vez de HTTPS"",""Nome de marca conhecido aparece fora do domínio oficial"",""Hostname contém dois ou mais hífens""]",[],"{""brand_mismatch"":true}",null,false,Phishing.Database,suspicious
+http://rbxmodes.pro/,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+https://acsftw.cfd/ACS_sjahzEN.html/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://www.app-supportecloud.info/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://app-supportecloud.info/expire/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://app-supportecloud.info/aU4VXCP6/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://tokenim.sarl/download,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://persiasysco.ir/post/post/en.php?rand=13InboxLightaspxn.1774256418&fid.4.1252899642&fid=1&fav.1&rand.13InboxLight.aspxn.1774256418&fid.1252899642&fid.1&fav.1&email=&.rand=13InboxLight.aspx?n=1774256418&fid=4,phishing,v2,20,suspicious,"[""URL é excessivamente longa""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+http://www.roblox.com.mu/users/1778153838/profile/,phishing,v2,40,suspicious,"[""URL utiliza HTTP em vez de HTTPS"",""Nome de marca conhecido aparece fora do domínio oficial""]",[],"{""brand_mismatch"":true}",null,false,Phishing.Database,suspicious
+https://supported-lcloud.help/expire/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+http://supported-lcloud.help/aU4VXCP6/,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+http://samridhiverma10.github.io/amazon/orders.html,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious
+http://samridhiverma10.github.io/amazon/checkout.html,phishing,v2,20,suspicious,"[""URL utiliza HTTP em vez de HTTPS""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious

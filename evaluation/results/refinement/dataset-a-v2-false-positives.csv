@@ -1,0 +1,2 @@
+url,label,analyzer_version,local_score,local_classification,local_reasons,local_contributions,local_signals,local_features,external_listed,external_source,final_classification
+https://accounts.google.com/,legitimate,v2,20,suspicious,"[""URL contém termos sensíveis: account""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,suspicious

@@ -1,0 +1,39 @@
+url,label,analyzer_version,local_score,local_classification,local_reasons,local_contributions,local_signals,local_features,external_listed,external_source,final_classification
+https://www.konto.evergreenfin.ltd/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://cu.arrowbases.com/var/index.php,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://u.to/nmewIg,phishing,v2,10,safe,"[""URL utiliza um encurtador conhecido""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://acselwk.cfd/ACS_sjahzEN.html/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://acswlzis.cfd/ACS_sjahzEN.html/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://acswlzis.cfd/index.html/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://surl.li/xxzwte,phishing,v2,10,safe,"[""URL utiliza um encurtador conhecido""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://mirovo-app.vercel.app/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://queensatlanta.org/awo/mnx/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://vlig-spon-fruk-843-zrat-krostor-vif-690.pages.dev/,phishing,v2,10,safe,"[""Hostname contém dois ou mais hífens"",""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://1url.at/www/roblox-users-358617650035-profile,phishing,v2,10,safe,"[""URL utiliza um encurtador conhecido""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://ageniloggus.gitbook.io/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://adsmarketting-bluetick-request-it-i.vercel.app/,phishing,v2,5,safe,"[""Hostname contém dois ou mais hífens""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://adsmarketting-bluetick-request-it-i.vercel.app/privacy-centers.html,phishing,v2,5,safe,"[""Hostname contém dois ou mais hífens""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://nhnarticles.cafe/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://qavzuri-mpt-farvani-r7d2ka86.pages.dev/,phishing,v2,10,safe,"[""Hostname contém dois ou mais hífens"",""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://vference.spahotel.guru/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://newpage.click/?naps,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://emspro.co.za/jayupdate/dmlkorea.html,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://proxy-test-001.pages.dev/content/dam/edam/applecare/images/en_US,phishing,v2,5,safe,"[""Hostname contém dois ou mais hífens""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://server-security-landing-page--docu-sign.replit.app/...,phishing,v2,5,safe,"[""Hostname contém dois ou mais hífens""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://68777.click/194574184,phishing,v2,5,safe,"[""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://rbcode.net/v/d7b82c3706a817f4097477f8a8eed71d,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://coderlog-two.vercel.app/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://badge-de-200926.vercel.app/live1,phishing,v2,10,safe,"[""Hostname contém dois ou mais hífens"",""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://badge-de-200926.vercel.app/live,phishing,v2,10,safe,"[""Hostname contém dois ou mais hífens"",""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://acselwk.cfd/index.html,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://norzavo-mpt-belfuni-a5d1ka96.pages.dev/,phishing,v2,10,safe,"[""Hostname contém dois ou mais hífens"",""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://acswlewa.cfd/index.html,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://www.allegrosellers.cc/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://acsrozj.cfd/ACS_sjahzEN,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://acsrozj.cfd/ACS_sjahzEN.html,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://hassnain0607.github.io/Assignment/,phishing,v2,5,safe,"[""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://ap7856971-web.github.io/Netflix-Clone/,phishing,v2,5,safe,"[""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://936578.xyz/,phishing,v2,5,safe,"[""Hostname contém quatro ou mais dígitos""]",[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://xxwh.airbnbvip.com/,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://mgstyd-rblx.blogspot.com/?sub=L1K3RR,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe
+https://ams1.vultrobjects.com/scape/index.html,phishing,v2,0,safe,[],[],"{""brand_mismatch"":false}",null,false,Phishing.Database,safe

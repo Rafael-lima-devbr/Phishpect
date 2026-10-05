@@ -1,0 +1,2 @@
+url,label,analyzer_version,local_score,local_classification,local_reasons,local_contributions,local_signals,local_features,external_listed,external_source,final_classification
+https://outlook.live.com/,legitimate,v2,20,suspicious,"[""Nome de marca conhecido aparece fora do domínio oficial""]",[],"{""brand_mismatch"":true}",null,false,Phishing.Database,suspicious
