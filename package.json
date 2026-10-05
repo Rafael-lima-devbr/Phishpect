@@ -7,5 +7,8 @@
     "build-evaluation-dataset": "node scripts/build-evaluation-dataset.js",
     "evaluate": "node scripts/evaluate-dataset.js",
     "test": "node tests/analysis-v2.test.js"
+  },
+  "dependencies": {
+    "tldts": "^7.4.16"
   }
 }
