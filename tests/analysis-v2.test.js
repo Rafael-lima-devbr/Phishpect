@@ -1,5 +1,5 @@
 const assert = require("node:assert/strict");
-const { analyzeUrl } = require("../analysis.js");
+const { analyzeUrl } = require("../analysis-v2.js");
 
 const officialBrand = analyzeUrl("https://roblox.com/");
 assert.equal(officialBrand.signals.brand_mismatch, false);

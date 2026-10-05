@@ -6,7 +6,9 @@
     "update-threat-db": "node scripts/update-threat-database.js",
     "build-evaluation-dataset": "node scripts/build-evaluation-dataset.js",
     "evaluate": "node scripts/evaluate-dataset.js",
-    "test": "node tests/analysis-v2.test.js"
+    "test:v2": "node tests/analysis-v2.test.js",
+    "test:v3": "node tests/analysis-v3.test.js",
+    "test": "node tests/analysis-v2.test.js && node tests/analysis-v3.test.js"
   },
   "dependencies": {
     "tldts": "^7.4.16"
