@@ -1,6 +1,6 @@
 # Phishpect
 
-Extensão experimental para Microsoft Edge que combina **heurísticas locais** com uma **base local de reputação** para identificar páginas potencialmente fraudulentas e intervir de acordo com o nível de risco.
+Extensão experimental para Microsoft Edge que combina **análise local baseada em regras** com uma **base local de reputação** para identificar páginas potencialmente fraudulentas e intervir de acordo com o nível de risco.
 
 **Status:** MVP experimental
 
@@ -10,7 +10,7 @@ Extensão experimental para Microsoft Edge que combina **heurísticas locais** c
 
 O Phishpect analisa URLs antes ou durante a navegação e combina duas fontes de evidência:
 
-1. **Análise heurística local** — a V3.1 separa protocolo, hostname, domínio registrável, subdomínios, caminho e query. O score é limitado por categoria e exige identidade forte ou diversidade de evidências.
+1. **Análise local baseada em regras** — a V3.1 separa protocolo, hostname, domínio registrável, subdomínios, caminho e query. O score é limitado por categoria e exige identidade forte ou diversidade de evidências.
 2. **Reputação local** — consulta uma base gerada a partir do feed ativo do projeto open source [Phishing.Database](https://github.com/Phishing-Database/Phishing.Database).
 
 HTTP, URL longa e termos apenas no caminho permanecem sinais fracos e não geram alerta sozinhos. O domínio registrável é obtido com `tldts` e a Public Suffix List, inclusive para sufixos compostos e privados.
@@ -21,7 +21,7 @@ A classificação final pode ser:
 |---|---|
 | `safe` | Navegação liberada |
 | `suspicious` | Exibe os motivos e permite voltar ou continuar |
-| `blocked` | Bloqueia quando há evidência confirmada local ou correspondência na base de reputação |
+| `blocked` | Bloqueia quando há evidência local de alto risco ou correspondência na base de reputação |
 
 A ausência de uma URL na base de reputação **não significa que ela seja segura**.
 
@@ -29,7 +29,7 @@ A ausência de uma URL na base de reputação **não significa que ela seja segu
 
 ```text
 URL
- ├─> Heurísticas locais
+ ├─> Análise local
  └─> Reputação local
           |
           v
@@ -45,7 +45,7 @@ Cliques são avaliados antes de sair da página. Outras navegações, incluindo 
 
 | Arquivo / diretório | Responsabilidade |
 |---|---|
-| `analysis.js` | Motor heurístico V3.1 usado pela extensão |
+| `analysis.js` | Motor de análise V3.1 usado pela extensão |
 | `analysis-v3.js` | Implementação V3 preservada para comparação |
 | `analysis-v2.js` | Implementação V2 preservada para comparação |
 | `vendor/tldts.umd.min.js` | Parser de domínio registrável com a Public Suffix List incorporada |
@@ -81,7 +81,7 @@ npm run update-threat-db
 
 O processo baixa o feed configurado, normaliza as entradas, remove duplicatas e gera o snapshot utilizado pela extensão. O script não abre nem testa as URLs contidas no feed.
 
-Se a base local estiver ausente ou inválida, a extensão continua funcionando somente com a análise heurística.
+Se a base local estiver ausente ou inválida, a extensão continua funcionando somente com a análise local.
 
 ## Testes
 
@@ -93,7 +93,7 @@ Os testes automatizados verificam V2, V3 e V3.1 sem depender da navegação real
 
 ## Avaliação experimental
 
-O repositório mantém conjuntos versionados para comparar as versões do analisador. Como os Datasets A e B foram consultados durante a calibração da V3 e V3.1, ambos são dados de desenvolvimento e não constituem validação independente.
+O repositório mantém conjuntos versionados para comparar as versões do analisador.
 
 Para reconstruir um dataset com os feeds disponíveis no momento:
 
@@ -122,7 +122,7 @@ As execuções e os resultados versionados permitem relacionar as métricas ao e
 - A base de reputação pode conter falsos positivos, envelhece entre atualizações e não cobre ameaças ainda desconhecidas.
 - A V3.1 recupera recall por diversidade de categorias, mas ainda perde páginas de phishing sem sinais lexicais suficientes.
 - HTTPS não é tratado como garantia de segurança.
-- Os pesos e o limite heurístico permanecem experimentais até validação com dados novos.
+- Os pesos e o limiar da análise local permanecem experimentais até validação com dados novos.
 
 ## Próximos passos
 
