@@ -1,5 +1,5 @@
 const assert = require("node:assert/strict");
-const { analyzeUrl, limitedLevenshtein, V3_SUSPICIOUS_THRESHOLD } = require("../analysis.js");
+const { analyzeUrl, limitedLevenshtein, V3_SUSPICIOUS_THRESHOLD } = require("../analysis-v3.js");
 
 function expectSafe(url) {
   const result = analyzeUrl(url);

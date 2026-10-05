@@ -10,7 +10,8 @@
     "evaluate:v3": "node scripts/evaluate-dataset.js --analyzer=v3",
     "test:v2": "node tests/analysis-v2.test.js",
     "test:v3": "node tests/analysis-v3.test.js",
-    "test": "node tests/analysis-v2.test.js && node tests/analysis-v3.test.js"
+    "test:v3.1": "node tests/analysis-v3-1.test.js",
+    "test": "node tests/analysis-v2.test.js && node tests/analysis-v3.test.js && node tests/analysis-v3-1.test.js"
   },
   "dependencies": {
     "tldts": "^7.4.16"
