@@ -1,0 +1,21 @@
+{
+  "baseline_source": "evaluation/results/refinement/dataset-a-v3.csv",
+  "candidate_source": "evaluation/results/refinement/dataset-a-v3-1.csv",
+  "recovered": 25,
+  "recovered_by_evidence_categories": {
+    "transport+path_query+infrastructure": 8,
+    "transport+infrastructure": 6,
+    "structure+transport+path_query+infrastructure": 4,
+    "structure+infrastructure": 3,
+    "path_query+infrastructure": 2,
+    "structure+transport+infrastructure": 1,
+    "structure+path_query+infrastructure": 1
+  },
+  "lost_detections": 0,
+  "new_false_positives": 0,
+  "files": {
+    "recovered": "evaluation/results/refinement/dataset-a-v3-to-v3-1-recovered.csv",
+    "lost_detections": "evaluation/results/refinement/dataset-a-v3-to-v3-1-lost-detections.csv",
+    "new_false_positives": "evaluation/results/refinement/dataset-a-v3-to-v3-1-new-false-positives.csv"
+  }
+}

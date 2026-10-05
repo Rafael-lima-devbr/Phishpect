@@ -1,0 +1,19 @@
+{
+  "baseline_source": "evaluation/results/refinement/dataset-b-v2.csv",
+  "candidate_source": "evaluation/results/refinement/dataset-b-v3-1.csv",
+  "recovered": 15,
+  "recovered_by_evidence_categories": {
+    "structure+infrastructure": 8,
+    "structure+path_query+infrastructure": 3,
+    "path_query+infrastructure": 2,
+    "identity": 1,
+    "identity+infrastructure": 1
+  },
+  "lost_detections": 19,
+  "new_false_positives": 0,
+  "files": {
+    "recovered": "evaluation/results/refinement/dataset-b-v2-to-v3-1-recovered.csv",
+    "lost_detections": "evaluation/results/refinement/dataset-b-v2-to-v3-1-lost-detections.csv",
+    "new_false_positives": "evaluation/results/refinement/dataset-b-v2-to-v3-1-new-false-positives.csv"
+  }
+}
