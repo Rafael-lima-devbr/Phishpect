@@ -8,6 +8,7 @@
     "evaluate": "node scripts/evaluate-dataset.js",
     "evaluate:v2": "node scripts/evaluate-dataset.js --analyzer=v2",
     "evaluate:v3": "node scripts/evaluate-dataset.js --analyzer=v3",
+    "evaluate:v3.1": "node scripts/evaluate-dataset.js --analyzer=v3.1",
     "test:v2": "node tests/analysis-v2.test.js",
     "test:v3": "node tests/analysis-v3.test.js",
     "test:v3.1": "node tests/analysis-v3-1.test.js",

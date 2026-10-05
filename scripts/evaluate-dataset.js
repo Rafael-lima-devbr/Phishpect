@@ -55,7 +55,8 @@ function metrics(records, classificationField) {
 function writeCsv(outputPath, records) {
   const columns = [
     "url", "label", "analyzer_version", "local_score", "local_classification",
-    "local_reasons", "local_contributions", "local_signals", "local_features",
+    "local_reasons", "local_contributions", "local_category_scores",
+    "local_evidence_categories", "local_diversity_bonus", "local_signals", "local_features",
     "external_listed", "external_source", "final_classification"
   ];
   const output = [
@@ -75,7 +76,7 @@ function mistakePath(outputPath, kind) {
 }
 
 function parseArguments(argv) {
-  let analyzerVersion = "v3";
+  let analyzerVersion = "v3.1";
   const positional = [];
   for (const argument of argv) {
     if (argument.startsWith("--analyzer=")) {
@@ -84,8 +85,8 @@ function parseArguments(argv) {
       positional.push(argument);
     }
   }
-  if (!["v2", "v3"].includes(analyzerVersion)) {
-    throw new Error("O analisador deve ser v2 ou v3");
+  if (!["v2", "v3", "v3.1"].includes(analyzerVersion)) {
+    throw new Error("O analisador deve ser v2, v3 ou v3.1");
   }
   return {
     analyzerVersion,
@@ -97,10 +98,14 @@ function parseArguments(argv) {
 function main() {
   const { analyzerVersion, inputPath, outputPath } = parseArguments(process.argv.slice(2));
   if (!inputPath) {
-    throw new Error("Uso: node scripts/evaluate-dataset.js [--analyzer=v2|v3] entrada.csv [saida.csv]");
+    throw new Error("Uso: node scripts/evaluate-dataset.js [--analyzer=v2|v3|v3.1] entrada.csv [saida.csv]");
   }
 
-  const analyzerModule = analyzerVersion === "v2" ? "../analysis-v2.js" : "../analysis.js";
+  const analyzerModule = {
+    v2: "../analysis-v2.js",
+    v3: "../analysis-v3.js",
+    "v3.1": "../analysis.js"
+  }[analyzerVersion];
   const { analyzeUrl } = require(analyzerModule);
   const rows = parseCsv(fs.readFileSync(inputPath, "utf8"));
   const header = rows.shift().map((value) => value.trim().toLowerCase());
@@ -127,6 +132,9 @@ function main() {
       local_classification: local.level,
       local_reasons: JSON.stringify(local.reasons || []),
       local_contributions: JSON.stringify(local.contributions || []),
+      local_category_scores: JSON.stringify(local.category_scores || {}),
+      local_evidence_categories: JSON.stringify(local.evidence_categories || []),
+      local_diversity_bonus: local.diversity_bonus || 0,
       local_signals: JSON.stringify(local.signals || {}),
       local_features: JSON.stringify(local.features || null),
       external_listed: external.listed,
