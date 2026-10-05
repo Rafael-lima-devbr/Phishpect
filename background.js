@@ -1,4 +1,4 @@
-importScripts("analysis.js", "reputation.js");
+importScripts("vendor/tldts.umd.min.js", "analysis.js", "reputation.js");
 
 const pendingRedirects = new Map();
 let reputationDatabasePromise;
