@@ -4,15 +4,9 @@ Extensão experimental para Microsoft Edge que combina **análise local baseada 
 
 **Status:** MVP experimental
 
-## Interface
-
 <p align="center">
-  <img width="31%" alt="Phishpect interface preview 1" src="https://github.com/user-attachments/assets/d88ee44d-ad87-46ec-b604-99d0219cf3d9" />
-  <img width="31%" alt="Phishpect interface preview 2" src="https://github.com/user-attachments/assets/857dbf90-e6a5-45be-89a4-608ac4f4cead" />
-  <img width="31%" alt="Phishpect interface preview 3" src="https://github.com/user-attachments/assets/59bca49c-ef6c-48df-9bce-f29b186029a7" />
+  <img width="62%" alt="Phishpect browser extension interface" src="https://github.com/user-attachments/assets/d88ee44d-ad87-46ec-b604-99d0219cf3d9" />
 </p>
-
-<p align="center"><sub>Interface and risk-intervention screens from the experimental browser extension.</sub></p>
 
 ## Visão geral
 
@@ -33,6 +27,10 @@ A classificação final pode ser:
 
 A ausência de uma URL na base de reputação **não significa que ela seja segura**.
 
+<p align="center">
+  <img width="58%" alt="Phishpect risk classification screen" src="https://github.com/user-attachments/assets/857dbf90-e6a5-45be-89a4-608ac4f4cead" />
+</p>
+
 ## Fluxo de análise
 
 ```text
@@ -48,6 +46,10 @@ URL
 ```
 
 Cliques são avaliados antes de sair da página. Outras navegações, incluindo URLs digitadas na barra, são observadas pelo service worker com `webNavigation.onBeforeNavigate` e redirecionadas para a tela de aviso quando necessário.
+
+<p align="center">
+  <img width="58%" alt="Phishpect navigation intervention screen" src="https://github.com/user-attachments/assets/59bca49c-ef6c-48df-9bce-f29b186029a7" />
+</p>
 
 ## Arquitetura
 
