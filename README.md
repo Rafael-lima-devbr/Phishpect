@@ -4,7 +4,14 @@ Extensão experimental para Microsoft Edge que combina **análise local baseada 
 
 **Status:** MVP experimental
 
-<!-- MEDIA: Adicione aqui um GIF curto ou screenshot principal mostrando a extensão classificando uma página e exibindo a tela de aviso. -->
+<img width="520" height="472" alt="image" src="https://github.com/user-attachments/assets/d88ee44d-ad87-46ec-b604-99d0219cf3d9" />
+
+<img width="483" height="386" alt="image" src="https://github.com/user-attachments/assets/857dbf90-e6a5-45be-89a4-608ac4f4cead" />
+
+<img width="503" height="313" alt="image" src="https://github.com/user-attachments/assets/59bca49c-ef6c-48df-9bce-f29b186029a7" />
+
+
+
 
 ## Visão geral
 
