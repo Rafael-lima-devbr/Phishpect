@@ -4,14 +4,15 @@ Extensão experimental para Microsoft Edge que combina **análise local baseada 
 
 **Status:** MVP experimental
 
-<img width="520" height="472" alt="image" src="https://github.com/user-attachments/assets/d88ee44d-ad87-46ec-b604-99d0219cf3d9" />
+## Interface
 
-<img width="483" height="386" alt="image" src="https://github.com/user-attachments/assets/857dbf90-e6a5-45be-89a4-608ac4f4cead" />
+<p align="center">
+  <img width="31%" alt="Phishpect interface preview 1" src="https://github.com/user-attachments/assets/d88ee44d-ad87-46ec-b604-99d0219cf3d9" />
+  <img width="31%" alt="Phishpect interface preview 2" src="https://github.com/user-attachments/assets/857dbf90-e6a5-45be-89a4-608ac4f4cead" />
+  <img width="31%" alt="Phishpect interface preview 3" src="https://github.com/user-attachments/assets/59bca49c-ef6c-48df-9bce-f29b186029a7" />
+</p>
 
-<img width="503" height="313" alt="image" src="https://github.com/user-attachments/assets/59bca49c-ef6c-48df-9bce-f29b186029a7" />
-
-
-
+<p align="center"><sub>Interface and risk-intervention screens from the experimental browser extension.</sub></p>
 
 ## Visão geral
 
@@ -65,8 +66,6 @@ Cliques são avaliados antes de sair da página. Outras navegações, incluindo 
 | `tests/` | Testes automatizados das regras V2, V3 e V3.1 |
 | `evaluation/` | Datasets, resultados e registros das execuções |
 | `manifest.json` | Configuração da extensão em Manifest V3 |
-
-<!-- MEDIA: Se quiser usar um diagrama visual de arquitetura no futuro, coloque-o aqui, logo após a tabela de arquitetura. -->
 
 ## Instalação local no Edge
 
