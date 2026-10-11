@@ -10,10 +10,11 @@ Extensão experimental para Microsoft Edge que combina **análise local baseada 
 
 ## Visão geral
 
-O Phishpect analisa URLs antes ou durante a navegação e combina duas fontes de evidência:
+O Phishpect analisa URLs antes ou durante a navegação e acrescenta uma etapa local depois do carregamento:
 
 1. **Análise local baseada em regras** — a V3.1 separa protocolo, hostname, domínio registrável, subdomínios, caminho e query. O score é limitado por categoria e exige identidade forte ou diversidade de evidências.
 2. **Reputação local** — consulta uma base gerada a partir do feed ativo do projeto open source [Phishing.Database](https://github.com/Phishing-Database/Phishing.Database).
+3. **Análise estrutural da página** — depois de `DOMContentLoaded`, observa formulários, tipos de campos, destinos e identidade contextual sem ler o conteúdo digitado pelo usuário.
 
 HTTP, URL longa e termos apenas no caminho permanecem sinais fracos e não geram alerta sozinhos. O domínio registrável é obtido com `tldts` e a Public Suffix List, inclusive para sufixos compostos e privados.
 
@@ -43,6 +44,12 @@ URL
           |
           v
  safe / suspicious / blocked
+
+Página carregada
+ └─> Estrutura de formulários e identidade contextual
+          |
+          v
+ URL_ANALYSIS + PAGE_ANALYSIS -> COMBINED_ANALYSIS
 ```
 
 Cliques são avaliados antes de sair da página. Outras navegações, incluindo URLs digitadas na barra, são observadas pelo service worker com `webNavigation.onBeforeNavigate` e redirecionadas para a tela de aviso quando necessário.
@@ -50,6 +57,8 @@ Cliques são avaliados antes de sair da página. Outras navegações, incluindo 
 <p align="center">
   <img width="58%" alt="Phishpect navigation intervention screen" src="https://github.com/user-attachments/assets/59bca49c-ef6c-48df-9bce-f29b186029a7" />
 </p>
+
+A análise pós-carregamento executa uma vez, localmente, e pode elevar uma página para `suspicious`, mas nunca para `blocked`. Ela não lê valores preenchidos em campos. A arquitetura, regras e limitações estão em [`docs/page-analysis.md`](docs/page-analysis.md).
 
 ## Arquitetura
 
@@ -60,8 +69,10 @@ Cliques são avaliados antes de sair da página. Outras navegações, incluindo 
 | `analysis-v2.js` | Implementação V2 preservada para comparação |
 | `vendor/tldts.umd.min.js` | Parser de domínio registrável com a Public Suffix List incorporada |
 | `reputation.js` | Normalização e consulta da base de reputação |
-| `content.js` | Interceptação de cliques e solicitação da análise |
-| `background.js` | Combinação de evidências, navegação e controle de exceções |
+| `page-analysis.js` | Coleta estrutural e análise pós-carregamento da página |
+| `combined-analysis.js` | Combinação contextual de URL e página |
+| `content.js` | Interceptação de cliques e execução única após o carregamento |
+| `background.js` | Reputação, combinação de evidências, navegação e controle de exceções |
 | `warning.html` / `warning.js` | Interface de aviso e bloqueio |
 | `reputation/threat-db.json` | Snapshot local da base de reputação |
 | `scripts/` | Atualização da base e avaliação experimental |
@@ -97,7 +108,7 @@ Se a base local estiver ausente ou inválida, a extensão continua funcionando s
 npm test
 ```
 
-Os testes automatizados verificam V2, V3 e V3.1 sem depender da navegação real do navegador.
+Os testes automatizados verificam V2, V3, V3.1 e a nova camada de página sem depender da navegação real do navegador. O popup também oferece cinco páginas fictícias em `demo/` para inspeção manual do resultado.
 
 ## Avaliação experimental
 
@@ -126,7 +137,8 @@ As execuções e os resultados versionados permitem relacionar as métricas ao e
 ## Limitações atuais
 
 - `webNavigation` observa o início da navegação, mas não cancela sincronicamente uma requisição usando lógica JavaScript arbitrária; uma requisição pode começar antes do redirecionamento para o aviso.
-- O MVP não analisa HTML, formulários ou conteúdo remoto da página.
+- A análise de página observa somente a estrutura inicial do DOM; alterações tardias de SPA não são acompanhadas nesta etapa.
+- Nomes de campos não padronizados, canvas e imagens sem texto alternativo podem ocultar sinais.
 - A base de reputação pode conter falsos positivos, envelhece entre atualizações e não cobre ameaças ainda desconhecidas.
 - A V3.1 recupera recall por diversidade de categorias, mas ainda perde páginas de phishing sem sinais lexicais suficientes.
 - HTTPS não é tratado como garantia de segurança.
@@ -137,7 +149,7 @@ As execuções e os resultados versionados permitem relacionar as métricas ao e
 - congelar a V3.1 e construir um Dataset C temporalmente posterior, com páginas legítimas difíceis e phishing novo;
 - automatizar e versionar atualizações periódicas da reputação;
 - avaliar `declarativeNetRequest` para bloqueio prévio de domínios conhecidos;
-- estudar sinais do conteúdo da página em uma etapa posterior.
+- avaliar com um corpus futuro de páginas HTML rotuladas, separado dos datasets de URL.
 
 ## Licença e terceiros
 
