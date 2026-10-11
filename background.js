@@ -1,10 +1,14 @@
-importScripts("vendor/tldts.umd.min.js", "analysis.js", "reputation.js");
+importScripts("vendor/tldts.umd.min.js", "analysis.js", "reputation.js", "combined-analysis.js");
 
 const pendingRedirects = new Map();
 let reputationDatabasePromise;
 
 function allowanceKey(tabId) {
   return `allowOnce:${tabId}`;
+}
+
+function postLoadAllowanceKey(tabId) {
+  return `allowPostLoadOnce:${tabId}`;
 }
 
 async function loadReputationDatabase() {
@@ -64,6 +68,7 @@ chrome.webNavigation.onBeforeNavigate.addListener(async (details) => {
   const stored = await chrome.storage.session.get(key);
   if (stored[key] === details.url && evaluation.finalClassification === "suspicious") {
     await chrome.storage.session.remove(key);
+    await chrome.storage.session.set({ [postLoadAllowanceKey(details.tabId)]: details.url });
     return;
   }
 
@@ -91,6 +96,42 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     return true;
   }
 
+  if (message?.type === "evaluate-page" && sender.tab?.id && sender.url === message.url) {
+    const tabId = sender.tab.id;
+    evaluateUrl(message.url).then(async (urlAnalysis) => {
+      const combined = combineAnalyses(urlAnalysis, message.pageAnalysis);
+      const postLoadKey = postLoadAllowanceKey(tabId);
+      const stored = await chrome.storage.session.get(postLoadKey);
+      if (stored[postLoadKey] === message.url) {
+        await chrome.storage.session.remove(postLoadKey);
+        if (combined.finalClassification !== "blocked") {
+          sendResponse({ ok: true, evaluation: combined, redirected: false, allowed: true });
+          return;
+        }
+      }
+
+      const shouldRedirect = combined.finalClassification === "blocked" ||
+        (combined.finalClassification === "suspicious" && combined.COMBINED_ANALYSIS.page_added_risk);
+      if (!shouldRedirect) {
+        sendResponse({ ok: true, evaluation: combined, redirected: false });
+        return;
+      }
+      if (pendingRedirects.get(tabId) === message.url) {
+        sendResponse({ ok: true, evaluation: combined, redirected: false });
+        return;
+      }
+
+      pendingRedirects.set(tabId, message.url);
+      try {
+        await chrome.tabs.update(tabId, { url: buildWarningUrl(message.url, combined) });
+        sendResponse({ ok: true, evaluation: combined, redirected: true });
+      } finally {
+        pendingRedirects.delete(tabId);
+      }
+    }).catch(() => sendResponse({ ok: false }));
+    return true;
+  }
+
   if (message?.type !== "continue-navigation" || !sender.tab?.id) return;
 
   evaluateUrl(message.url).then(async (evaluation) => {
@@ -111,4 +152,5 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 chrome.tabs.onRemoved.addListener((tabId) => {
   pendingRedirects.delete(tabId);
   chrome.storage.session.remove(allowanceKey(tabId));
+  chrome.storage.session.remove(postLoadAllowanceKey(tabId));
 });

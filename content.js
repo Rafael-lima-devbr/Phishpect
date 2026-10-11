@@ -41,6 +41,31 @@ document.addEventListener("click", async (event) => {
   }
 }, true);
 
+let postLoadAnalysisStarted = false;
+
+async function runPostLoadAnalysis() {
+  if (postLoadAnalysisStarted || !["http:", "https:"].includes(window.location.protocol)) return;
+  postLoadAnalysisStarted = true;
+
+  try {
+    const snapshot = collectPageSnapshot(document, window.location.href);
+    const pageAnalysis = analyzePage(snapshot);
+    await chrome.runtime.sendMessage({
+      type: "evaluate-page",
+      url: window.location.href,
+      pageAnalysis
+    });
+  } catch {
+    // A análise pós-carregamento é complementar e nunca deve impedir a navegação.
+  }
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", runPostLoadAnalysis, { once: true });
+} else {
+  runPostLoadAnalysis();
+}
+
 function buildWarningUrl(url, evaluation) {
   const warningUrl = new URL(chrome.runtime.getURL("warning.html"));
   warningUrl.searchParams.set("url", url);

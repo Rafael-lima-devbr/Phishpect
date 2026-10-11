@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Phishpect MVP",
   "version": "0.4.0",
-  "description": "Analisa links localmente antes da navegação e alerta sobre URLs suspeitas.",
+  "description": "Analisa URLs e sinais estruturais das páginas localmente para alertar sobre riscos de phishing.",
   "action": {
     "default_title": "Abrir testes do Phishpect",
     "default_popup": "test.html"
@@ -15,7 +15,7 @@
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["vendor/tldts.umd.min.js", "analysis.js", "content.js"],
+      "js": ["vendor/tldts.umd.min.js", "analysis.js", "page-analysis.js", "content.js"],
       "run_at": "document_start"
     }
   ]
