@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="phishpect-demo-url" content="http://portal.example.com/login">
+    <title>Login HTTP fictício</title>
+    <link rel="stylesheet" href="demo.css">
+  </head>
+  <body>
+    <h1>Acesso inseguro simulado</h1>
+    <form action="/session" method="post">
+      <label>Usuário <input name="username" autocomplete="username"></label>
+      <label>Senha <input type="password" name="password" autocomplete="current-password"></label>
+      <button type="submit">Entrar</button>
+    </form>
+    <script src="../vendor/tldts.umd.min.js"></script>
+    <script src="../page-analysis.js"></script>
+    <script src="page-analysis-demo.js"></script>
+  </body>
+</html>

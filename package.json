@@ -12,7 +12,8 @@
     "test:v2": "node tests/analysis-v2.test.js",
     "test:v3": "node tests/analysis-v3.test.js",
     "test:v3.1": "node tests/analysis-v3-1.test.js",
-    "test": "node tests/analysis-v2.test.js && node tests/analysis-v3.test.js && node tests/analysis-v3-1.test.js"
+    "test:page": "node tests/page-analysis.test.js && node tests/combined-analysis.test.js",
+    "test": "node tests/analysis-v2.test.js && node tests/analysis-v3.test.js && node tests/analysis-v3-1.test.js && node tests/page-analysis.test.js && node tests/combined-analysis.test.js"
   },
   "dependencies": {
     "tldts": "^7.4.16"

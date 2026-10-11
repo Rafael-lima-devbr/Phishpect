@@ -18,6 +18,13 @@
     <a href="https://example.com/" target="_blank">Baixo risco<small>Abre normalmente em nova guia.</small></a>
     <a href="http://192.0.2.1/login/verify-account" target="_blank">Suspeito<small>HTTP + IP + termos sensíveis; permite voltar ou continuar.</small></a>
     <a href="https://phishing-test.invalid/" target="_blank">Malicioso confirmado<small>Domínio fictício da lista local; bloqueia sem permitir continuar.</small></a>
+    <h2>Análise pós-carregamento</h2>
+    <p>As páginas abaixo são demonstrações locais e não enviam dados.</p>
+    <a href="demo/safe-page.html" target="_blank">Página segura<small>Sem formulários ou coleta de dados.</small></a>
+    <a href="demo/legitimate-login.html" target="_blank">Login legítimo<small>Credenciais no mesmo domínio permanecem seguras isoladamente.</small></a>
+    <a href="demo/suspicious-login.html" target="_blank">Login suspeito<small>Página HTTP combinada com solicitação de senha.</small></a>
+    <a href="demo/brand-impersonation.html" target="_blank">Imitação de marca<small>Marca conhecida e senha fora do domínio oficial.</small></a>
+    <a href="demo/external-sensitive-form.html" target="_blank">Dados sensíveis externos<small>Cartão enviado para outro domínio registrável.</small></a>
     <script src="analysis.js"></script>
     <script src="content.js"></script>
   </body>
