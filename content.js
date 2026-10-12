@@ -1,43 +1,38 @@
 document.addEventListener("click", async (event) => {
-  if (event.defaultPrevented || event.button !== 0) return;
-
-  const link = event.target.closest("a[href]");
-  if (!link || link.hasAttribute("download")) return;
-
-  const destination = new URL(link.href, document.baseURI);
-  if (!["http:", "https:"].includes(destination.protocol)) return;
+  const link = event.target?.closest?.("a[href]");
+  const decision = getNavigationDecision(event, link, window.location.href);
+  if (!decision.intercept) return;
+  const destination = decision.destination;
 
   event.preventDefault();
   event.stopImmediatePropagation();
-  const openInNewTab = link.target === "_blank" || event.ctrlKey || event.metaKey || event.shiftKey;
 
   try {
-    const response = await chrome.runtime.sendMessage({ type: "evaluate-url", url: destination.href });
+    const response = await chrome.runtime.sendMessage({ type: "evaluate-url", url: destination });
     if (!response?.ok) throw new Error("Análise indisponível");
 
     const evaluation = response.evaluation;
     const nextUrl = evaluation.finalClassification === "safe"
-      ? destination.href
-      : buildWarningUrl(destination.href, evaluation);
-
-    if (openInNewTab) {
-      await chrome.runtime.sendMessage({ type: "open-result-url", url: nextUrl });
-    } else {
-      window.location.assign(nextUrl);
-    }
+      ? destination
+      : buildWarningUrl(destination, evaluation);
+    window.location.assign(nextUrl);
   } catch {
-    const localAnalysis = analyzeUrl(destination.href);
-    if (localAnalysis.level === "safe") {
-      if (openInNewTab) window.open(destination.href, "_blank", "noopener");
-      else window.location.assign(destination.href);
-      return;
+    try {
+      const localAnalysis = analyzeUrl(destination);
+      if (localAnalysis.level === "safe") {
+        window.location.assign(destination);
+        return;
+      }
+      window.location.assign(buildWarningUrl(destination, {
+        finalClassification: localAnalysis.level,
+        score: localAnalysis.score,
+        reasons: localAnalysis.reasons,
+        externalReputation: { listed: false, available: false }
+      }));
+    } catch {
+      console.warn("Phishpect: análise de URL indisponível; navegação original restaurada");
+      window.location.assign(destination);
     }
-    window.location.assign(buildWarningUrl(destination.href, {
-      finalClassification: localAnalysis.level,
-      score: localAnalysis.score,
-      reasons: localAnalysis.reasons,
-      externalReputation: { listed: false }
-    }));
   }
 }, true);
 
@@ -57,6 +52,7 @@ async function runPostLoadAnalysis() {
     });
   } catch {
     // A análise pós-carregamento é complementar e nunca deve impedir a navegação.
+    console.warn("Phishpect: análise pós-carregamento indisponível");
   }
 }
 
@@ -72,7 +68,7 @@ function buildWarningUrl(url, evaluation) {
   warningUrl.searchParams.set("level", evaluation.finalClassification);
   warningUrl.searchParams.set("score", String(evaluation.score));
   warningUrl.searchParams.set("reasons", JSON.stringify(evaluation.reasons));
-  if (evaluation.externalReputation.listed) {
+  if (evaluation.externalReputation?.listed) {
     warningUrl.searchParams.set("externalSource", evaluation.externalReputation.source);
     warningUrl.searchParams.set("matchType", evaluation.externalReputation.matchType);
   }
