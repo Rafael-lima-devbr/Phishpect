@@ -255,7 +255,6 @@ function analyzeUrl(url) {
     reasons.push(`Diversidade de evidências: ${evidenceCategories.join(", ")}`);
   }
 
-  const hasExactBrandMismatch = brandEvidence?.matchType === "exact";
   const hasBrandContextCompound = brandEvidence?.matchType === "compound";
   const hasBrandAuthentication = Boolean(brandEvidence && hostnameTerms.length > 0);
   const hasPunycodeBrand = Boolean(brandEvidence && usesPunycode);
@@ -266,7 +265,7 @@ function analyzeUrl(url) {
   const hasTransportStructureCombination = evidenceCategories.includes("transport") &&
     evidenceCategories.includes("structure") && categoryScores.structure >= 8;
   const hasPathBrandCombination = Boolean(pathnameBrand && categoryCount >= 2);
-  const evidenceEligible = hasExactBrandMismatch || hasBrandContextCompound || hasBrandAuthentication || hasPunycodeBrand ||
+  const evidenceEligible = hasBrandContextCompound || hasBrandAuthentication || hasPunycodeBrand ||
     hasUserInfoBrand || (categoryCount >= 2 && hasContextCategory) ||
     hasTransportStructureCombination || hasPathBrandCombination || categoryCount >= 3;
 

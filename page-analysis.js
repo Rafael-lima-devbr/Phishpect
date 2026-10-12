@@ -29,16 +29,6 @@ const PAGE_KNOWN_BRANDS = [
   { name: "yahoo", officialDomains: ["yahoo.com"] }
 ];
 
-const PAGE_FIELD_TERMS = {
-  username: ["user", "username", "usuario", "login", "signin", "account"],
-  email: ["email", "e-mail"],
-  card: ["card", "cardnumber", "creditcard", "cartao", "cvv", "cvc", "expiry", "expiration"],
-  phone: ["phone", "telefone", "telephone", "celular", "mobile"],
-  document: ["cpf", "cnpj", "document", "documento", "taxid"],
-  banking: ["bank", "banco", "pix", "iban", "routing", "accountnumber", "agencia"],
-  address: ["address", "endereco", "street", "postal", "postcode", "cep"]
-};
-
 function getPageDomainParser() {
   if (typeof globalThis !== "undefined" && globalThis.tldts?.parse) return globalThis.tldts;
   if (typeof require === "function") return require("tldts");
@@ -49,8 +39,12 @@ function truncateText(value, maximumLength = 240) {
   return String(value || "").replace(/\s+/g, " ").trim().slice(0, maximumLength);
 }
 
+function readAttribute(element, attribute) {
+  return truncateText(element?.getAttribute?.(attribute), 120);
+}
+
 function normalizeAttribute(element, attribute) {
-  return truncateText(element?.getAttribute?.(attribute), 120).toLowerCase();
+  return readAttribute(element, attribute).toLowerCase();
 }
 
 function collectFieldMetadata(field) {
@@ -58,8 +52,8 @@ function collectFieldMetadata(field) {
   return {
     tag,
     type: tag === "input" ? (normalizeAttribute(field, "type") || "text") : tag,
-    name: normalizeAttribute(field, "name"),
-    id: normalizeAttribute(field, "id"),
+    name: readAttribute(field, "name"),
+    id: readAttribute(field, "id"),
     autocomplete: normalizeAttribute(field, "autocomplete")
   };
 }
@@ -136,31 +130,57 @@ function parseFormDestination(rawAction, pageLocation) {
   };
 }
 
-function attributeText(field) {
-  return `${field.name || ""} ${field.id || ""} ${field.autocomplete || ""}`.toLowerCase();
+function normalizeIdentifier(value) {
+  return String(value || "")
+    .replace(/([a-z\d])([A-Z])/g, "$1 $2")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
 }
 
-function includesTerm(text, terms) {
-  return terms.some((term) => text.includes(term));
+function tokenizeIdentifier(value) {
+  return normalizeIdentifier(value).split(/[^a-z0-9]+/).filter(Boolean);
+}
+
+function compactIdentifier(value) {
+  return normalizeIdentifier(value).replace(/[^a-z0-9]+/g, "");
+}
+
+function fieldTokens(field) {
+  return new Set([
+    ...tokenizeIdentifier(field.name),
+    ...tokenizeIdentifier(field.id)
+  ]);
 }
 
 function classifyField(field) {
-  const text = attributeText(field);
   const autocomplete = String(field.autocomplete || "").toLowerCase();
+  const autocompleteTokens = new Set(autocomplete.split(/\s+/).filter(Boolean));
   const type = String(field.type || "").toLowerCase();
+  const tokens = fieldTokens(field);
+  const compactValues = [compactIdentifier(field.name), compactIdentifier(field.id)].filter(Boolean);
+  const hasToken = (...terms) => terms.some((term) => tokens.has(term));
+  const hasCompact = (...terms) => terms.some((term) => compactValues.includes(term));
   const kinds = new Set();
 
-  if (type === "password" || autocomplete.includes("password")) kinds.add("password");
-  if (autocomplete === "username" || includesTerm(text, PAGE_FIELD_TERMS.username)) kinds.add("username");
-  if (type === "email" || autocomplete === "email" || includesTerm(text, PAGE_FIELD_TERMS.email)) kinds.add("email");
-  if (autocomplete.startsWith("cc-") || includesTerm(text, PAGE_FIELD_TERMS.card)) kinds.add("card");
-  if (type === "tel" || autocomplete.startsWith("tel") || includesTerm(text, PAGE_FIELD_TERMS.phone)) kinds.add("phone");
-  if (includesTerm(text, PAGE_FIELD_TERMS.document)) kinds.add("document");
-  if (includesTerm(text, PAGE_FIELD_TERMS.banking)) kinds.add("banking");
-  if (["street-address", "postal-code"].includes(autocomplete) || autocomplete.startsWith("address-line") || includesTerm(text, PAGE_FIELD_TERMS.address)) {
+  if (type === "password" || autocompleteTokens.has("current-password") || autocompleteTokens.has("new-password") || hasToken("password", "senha")) kinds.add("password");
+  if (autocompleteTokens.has("username") || hasToken("user", "username", "usuario", "login", "signin") || hasCompact("account")) kinds.add("username");
+  if (type === "email" || autocompleteTokens.has("email") || hasToken("email")) kinds.add("email");
+  if ([...autocompleteTokens].some((value) => value.startsWith("cc-")) || hasToken("card", "cartao", "cvv", "cvc", "expiry", "expiration") || hasCompact("cardnumber", "creditcard")) kinds.add("card");
+  if (type === "tel" || [...autocompleteTokens].some((value) => value === "tel" || value.startsWith("tel-")) || hasToken("phone", "telefone", "telephone", "celular", "mobile")) kinds.add("phone");
+  if (hasToken("cpf", "cnpj", "document", "documento", "taxid") || hasCompact("taxid")) kinds.add("document");
+  if (hasToken("bank", "banco", "pix", "iban", "routing", "agencia") || hasCompact("accountnumber", "bankaccount", "routingnumber")) kinds.add("banking");
+  const addressAutocomplete = [...autocompleteTokens].some((value) => ["street-address", "postal-code"].includes(value) || value.startsWith("address-line"));
+  if (addressAutocomplete || (!kinds.has("email") && hasToken("address", "endereco", "street", "postal", "postcode", "cep"))) {
     kinds.add("address");
   }
   return [...kinds];
+}
+
+function normalizeFormMethod(value) {
+  const raw = String(value || "GET").trim().toUpperCase() || "GET";
+  if (["GET", "POST", "DIALOG"].includes(raw)) return { method: raw, method_raw: raw };
+  return { method: "OTHER", method_raw: raw.slice(0, 32) };
 }
 
 function findPageBrand(snapshot) {
@@ -194,8 +214,9 @@ function analyzePage(snapshot) {
     const hasPassword = Boolean(kindCounts.password);
     const hasIdentifier = Boolean(kindCounts.username || kindCounts.email);
     const sensitiveKinds = ["card", "phone", "document", "banking", "address"].filter((kind) => kindCounts[kind]);
+    const method = normalizeFormMethod(form.method);
     return {
-      method: String(form.method || "GET").toUpperCase() === "POST" ? "POST" : "GET",
+      ...method,
       field_count: Array.isArray(form.fields) ? form.fields.length : 0,
       field_kind_counts: kindCounts,
       has_password: hasPassword,
@@ -210,6 +231,8 @@ function analyzePage(snapshot) {
     forms: formFeatures.length,
     get_forms: formFeatures.filter((form) => form.method === "GET").length,
     post_forms: formFeatures.filter((form) => form.method === "POST").length,
+    dialog_forms: formFeatures.filter((form) => form.method === "DIALOG").length,
+    other_method_forms: formFeatures.filter((form) => form.method === "OTHER").length,
     password_fields: formFeatures.reduce((total, form) => total + (form.field_kind_counts.password || 0), 0),
     identifier_fields: formFeatures.reduce((total, form) => total + (form.field_kind_counts.username || 0) + (form.field_kind_counts.email || 0), 0),
     external_forms: formFeatures.filter((form) => form.destination.external).length,
@@ -218,6 +241,9 @@ function analyzePage(snapshot) {
   const credentialBundle = formFeatures.some((form) => form.credential_bundle);
   const sensitiveKinds = [...new Set(formFeatures.flatMap((form) => form.sensitive_kinds))];
   const sensitiveExternal = formFeatures.some((form) => form.sensitive_kinds.length > 0 && form.destination.external);
+  const highRiskSensitiveExternal = formFeatures.some((form) =>
+    form.destination.external && form.sensitive_kinds.some((kind) => ["card", "document", "banking"].includes(kind))
+  );
   const credentialExternal = formFeatures.some((form) => form.has_password && form.destination.external);
   const insecureCredentialPage = pageLocation.protocol === "http:" && formFeatures.some((form) => form.has_password);
   const brand = findPageBrand(snapshot || {});
@@ -263,7 +289,7 @@ function analyzePage(snapshot) {
   const diversityBonus = evidenceCategories.length >= 3 ? 10 : evidenceCategories.length === 2 ? 6 : 0;
   const score = Math.min(Object.values(categoryScores).reduce((total, value) => total + value, 0) + diversityBonus, 100);
 
-  const contextualCombination = credentialExternal || sensitiveExternal || insecureCredentialPage ||
+  const contextualCombination = credentialExternal || highRiskSensitiveExternal || insecureCredentialPage ||
     (brandMismatch && (counts.password_fields > 0 || sensitiveKinds.length > 0)) ||
     (counts.downgrade_forms > 0 && (counts.password_fields > 0 || sensitiveKinds.length > 0));
   const level = score >= PAGE_SUSPICIOUS_THRESHOLD && contextualCombination ? "suspicious" : "safe";
@@ -287,6 +313,7 @@ function analyzePage(snapshot) {
       external_form: counts.external_forms > 0,
       credential_external: credentialExternal,
       sensitive_external: sensitiveExternal,
+      high_risk_sensitive_external: highRiskSensitiveExternal,
       https_downgrade: counts.downgrade_forms > 0,
       insecure_credentials: insecureCredentialPage,
       brand_mismatch: brandMismatch,

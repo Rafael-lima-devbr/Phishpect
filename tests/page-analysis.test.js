@@ -100,6 +100,48 @@ const sensitiveExternal = inspect("https://shop.example.com/checkout", {
 });
 assert.equal(sensitiveExternal.level, "suspicious");
 assert.equal(sensitiveExternal.signals.sensitive_external, true);
+assert.equal(sensitiveExternal.signals.high_risk_sensitive_external, true);
+
+for (const [name, fieldAttributes] of [
+  ["telefone", { type: "tel", name: "phone" }],
+  ["endereço", { autocomplete: "street-address" }]
+]) {
+  const contactExternal = inspect("https://example.com/contact", {
+    forms: [form({ action: "https://crm.example.net/collect", method: "post" }, [field(fieldAttributes)])]
+  });
+  assert.equal(contactExternal.level, "safe", `${name} externo isolado não deve ser suficiente`);
+  assert.equal(contactExternal.signals.sensitive_external, true);
+  assert.equal(contactExternal.signals.high_risk_sensitive_external, false);
+}
+
+const controlledTokens = inspect("https://example.com/profile", {
+  forms: [form({ action: "/save" }, [
+    field({ name: "accountNumber" }),
+    field({ name: "documentation" }),
+    field({ name: "discard" }),
+    field({ name: "email_address" })
+  ])]
+});
+const tokenKinds = controlledTokens.features.forms[0].field_kind_counts;
+assert.equal(tokenKinds.username, undefined);
+assert.equal(tokenKinds.document, undefined);
+assert.equal(tokenKinds.card, undefined);
+assert.equal(tokenKinds.email, 1);
+assert.equal(tokenKinds.address, undefined);
+assert.equal(tokenKinds.banking, 1);
+
+const methods = inspect("https://example.com/forms", {
+  forms: [
+    form({}, []),
+    form({ method: "post" }, []),
+    form({ method: "dialog" }, []),
+    form({ method: "patch" }, [])
+  ]
+});
+assert.deepEqual(methods.features.forms.map((item) => item.method), ["GET", "POST", "DIALOG", "OTHER"]);
+assert.equal(methods.features.forms[3].method_raw, "PATCH");
+assert.equal(methods.features.counts.dialog_forms, 1);
+assert.equal(methods.features.counts.other_method_forms, 1);
 
 const multiPart = parseFormDestination("https://collector.example.co.uk/send", {
   url: "https://shop.example.co.uk/checkout",

@@ -30,6 +30,11 @@ expectLevel("https://micros0ft-login.example.com/", "suspicious");
 expectLevel("https://paypa1-secure.example.com/", "suspicious");
 expectLevel("https://amazon.verify-account.example.net/", "suspicious");
 
+const exactBrandOnly = expectLevel("https://microsoft.example/", "safe");
+assert.ok(exactBrandOnly.score >= V3_1_SUSPICIOUS_THRESHOLD);
+assert.equal(exactBrandOnly.signals.brand_match_type, "exact");
+assert.ok(exactBrandOnly.reasons.some((reason) => reason.includes("microsoft")));
+
 const sharedBrandPath = expectLevel("https://demo.github.io/Amazon-Clone", "suspicious");
 assert.equal(sharedBrandPath.signals.brand_in_pathname, "amazon");
 assert.deepEqual(sharedBrandPath.evidence_categories, ["path_query", "infrastructure"]);
