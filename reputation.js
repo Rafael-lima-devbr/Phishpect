@@ -27,13 +27,15 @@ function normalizeUrlForReputation(value) {
   }
 }
 
-function createReputationDatabase(data = {}) {
+function createReputationDatabase(data = null) {
+  const available = Boolean(data && typeof data === "object" && Array.isArray(data.urls) && Array.isArray(data.domains));
   return {
-    urls: new Set(Array.isArray(data.urls) ? data.urls : []),
-    domains: new Set(Array.isArray(data.domains) ? data.domains : []),
+    available,
+    urls: new Set(available ? data.urls : []),
+    domains: new Set(available ? data.domains : []),
     metadata: {
-      generatedAt: data.generatedAt || null,
-      stats: data.stats || { urls: 0, domains: 0 }
+      generatedAt: available ? (data.generatedAt || null) : null,
+      stats: available ? (data.stats || { urls: 0, domains: 0 }) : { urls: 0, domains: 0 }
     }
   };
 }
@@ -48,12 +50,12 @@ function checkExternalReputation(url, database) {
   }
 
   if (normalizedUrl && database?.urls?.has(normalizedUrl)) {
-    return { listed: true, source: REPUTATION_SOURCE, matchType: "exact-url" };
+    return { listed: true, available: Boolean(database?.available), source: REPUTATION_SOURCE, matchType: "exact-url" };
   }
   if (domain && database?.domains?.has(domain)) {
-    return { listed: true, source: REPUTATION_SOURCE, matchType: "domain" };
+    return { listed: true, available: Boolean(database?.available), source: REPUTATION_SOURCE, matchType: "domain" };
   }
-  return { listed: false, source: REPUTATION_SOURCE, matchType: null };
+  return { listed: false, available: Boolean(database?.available), source: REPUTATION_SOURCE, matchType: null };
 }
 
 if (typeof module !== "undefined") {
