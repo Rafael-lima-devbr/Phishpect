@@ -14,7 +14,7 @@ O Phishpect analisa URLs antes ou durante a navegação e acrescenta uma etapa l
 
 1. **Análise local baseada em regras** — a V3.1 separa protocolo, hostname, domínio registrável, subdomínios, caminho e query. O score é limitado por categoria e exige identidade forte ou diversidade de evidências.
 2. **Reputação local** — consulta uma base gerada a partir do feed ativo do projeto open source [Phishing.Database](https://github.com/Phishing-Database/Phishing.Database).
-3. **Análise estrutural da página** — depois de `DOMContentLoaded`, observa formulários, tipos de campos, destinos e identidade contextual sem ler o conteúdo digitado pelo usuário.
+3. **Análise estrutural da página** — uma única vez depois de `DOMContentLoaded`, observa formulários, tipos de campos, destinos e identidade contextual sem ler o conteúdo digitado pelo usuário.
 
 HTTP, URL longa e termos apenas no caminho permanecem sinais fracos e não geram alerta sozinhos. O domínio registrável é obtido com `tldts` e a Public Suffix List, inclusive para sufixos compostos e privados.
 
@@ -58,7 +58,7 @@ Cliques são avaliados antes de sair da página. Outras navegações, incluindo 
   <img width="58%" alt="Phishpect navigation intervention screen" src="https://github.com/user-attachments/assets/59bca49c-ef6c-48df-9bce-f29b186029a7" />
 </p>
 
-A análise pós-carregamento executa uma vez, localmente, e pode elevar uma página para `suspicious`, mas nunca para `blocked`. Ela não lê valores preenchidos em campos. A arquitetura, regras e limitações estão em [`docs/page-analysis.md`](docs/page-analysis.md).
+A análise pós-carregamento executa uma vez, localmente, e pode elevar uma página para `suspicious`, mas nunca para `blocked`. Ela não lê valores preenchidos em campos. Links com modificadores, clique do meio, downloads, novos targets e navegação apenas por fragmento mantêm o comportamento nativo. A arquitetura, regras de privacidade e limitações estão em [`docs/page-analysis.md`](docs/page-analysis.md).
 
 ## Arquitetura
 
@@ -71,12 +71,14 @@ A análise pós-carregamento executa uma vez, localmente, e pode elevar uma pág
 | `reputation.js` | Normalização e consulta da base de reputação |
 | `page-analysis.js` | Coleta estrutural e análise pós-carregamento da página |
 | `combined-analysis.js` | Combinação contextual de URL e página |
+| `navigation-policy.js` | Regras testáveis de compatibilidade para interceptação de links |
+| `navigation-state.js` | TTL, validação e coordenação das exceções de navegação |
 | `content.js` | Interceptação de cliques e execução única após o carregamento |
 | `background.js` | Reputação, combinação de evidências, navegação e controle de exceções |
 | `warning.html` / `warning.js` | Interface de aviso e bloqueio |
 | `reputation/threat-db.json` | Snapshot local da base de reputação |
 | `scripts/` | Atualização da base e avaliação experimental |
-| `tests/` | Testes automatizados das regras V2, V3 e V3.1 |
+| `tests/` | Testes automatizados de V2, V3, V3.1, página, reputação, navegação e privacidade |
 | `evaluation/` | Datasets, resultados e registros das execuções |
 | `manifest.json` | Configuração da extensão em Manifest V3 |
 
