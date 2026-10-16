@@ -21,7 +21,7 @@ function argumentsFrom(argv) {
     if (match) values[match[1]] = match[2];
   }
   if (values.help === "true" || argv.includes("--help")) return { help: true };
-  const required = ["legitimate", "openphish", "phishtank", "output", "manifest"];
+  const required = ["legitimate", "openphish", "output", "manifest"];
   for (const name of required) if (!values[name]) throw new Error(`Parâmetro obrigatório ausente: --${name}=CAMINHO`);
   return {
     ...values,
@@ -42,34 +42,23 @@ function legitimateRows(filePath) {
 }
 
 function openPhishRows(filePath, acquiredAt) {
+  const captureId = path.basename(filePath, path.extname(filePath));
   return fs.readFileSync(filePath, "utf8").split(/\r?\n/)
     .map((url) => url.trim()).filter(Boolean)
     .map((url, index) => ({
       url,
       label: "phishing",
       source: "openphish",
+      capture_id: captureId,
       source_id: String(index + 1),
       source_timestamp: acquiredAt
-    }));
-}
-
-function phishTankRows(filePath) {
-  const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
-  if (!Array.isArray(data)) throw new Error("O arquivo PhishTank deve conter um array JSON");
-  return data.filter((row) => (!row.verified || row.verified === "yes") && (!row.online || row.online === "yes"))
-    .map((row, index) => ({
-      url: row.url,
-      label: "phishing",
-      source: "phishtank",
-      source_id: String(row.phish_id || index + 1),
-      source_timestamp: row.verification_time || row.submission_time || ""
     }));
 }
 
 function main() {
   const options = argumentsFrom(process.argv.slice(2));
   if (options.help) {
-    console.log("Uso: node scripts/build-dataset-c.js --legitimate=CSV --openphish=TXT --phishtank=JSON --output=CSV --manifest=JSON [--seed=VALOR]");
+    console.log("Uso: node scripts/build-dataset-c.js --legitimate=CSV --openphish=CAPTURA1;CAPTURA2 --output=CSV --manifest=JSON [--seed=VALOR]");
     return;
   }
   const history = readHistoricalUrlSets(path.resolve(options.history));
@@ -80,20 +69,21 @@ function main() {
   const legitimateSelected = selectByQuotas(legitimateFiltered.rows, LEGITIMATE_QUOTAS, "stratum");
   const legitimateDomains = new Set(legitimateSelected.rows.map((row) => row.registrable_domain));
 
-  const phishingInput = [
-    ...openPhishRows(options.openphish, options.acquiredAt),
-    ...phishTankRows(options.phishtank)
-  ];
+  const openPhishFiles = options.openphish.split(";").map((filePath) => filePath.trim()).filter(Boolean);
+  const phishingInput = openPhishFiles.flatMap((filePath) => openPhishRows(filePath, options.acquiredAt));
   const phishingFiltered = filterCandidates(phishingInput, { ...baseContext, excludedDomains: legitimateDomains });
   const phishingSelected = selectByQuotas(phishingFiltered.rows, PHISHING_QUOTAS, "source");
 
   const selected = [...legitimateSelected.rows, ...phishingSelected.rows]
     .map(({ registrable_domain, source_category, ...row }) => row);
-  const columns = ["url", "label", "source", "source_id", "source_timestamp", "stratum"];
+  const columns = [
+    "url", "label", "source", "capture_id", "source_id", "source_timestamp",
+    "stratum", "selection_rule", "evidence"
+  ];
   fs.mkdirSync(path.dirname(path.resolve(options.output)), { recursive: true });
   fs.writeFileSync(options.output, stringifyCsv(selected, columns));
 
-  const sourceFiles = [options.legitimate, options.openphish, options.phishtank].map((filePath) => ({
+  const sourceFiles = [options.legitimate, ...openPhishFiles].map((filePath) => ({
     path: path.relative(process.cwd(), path.resolve(filePath)).replaceAll("\\", "/"),
     sha256: sha256File(filePath)
   }));
@@ -120,7 +110,9 @@ function main() {
     },
     composition: {
       legitimate: Object.fromEntries(Object.keys(LEGITIMATE_QUOTAS).map((name) => [name, legitimateSelected.rows.filter((row) => row.stratum === name).length])),
-      phishing: Object.fromEntries(Object.keys(PHISHING_QUOTAS).map((name) => [name, phishingSelected.rows.filter((row) => row.source === name).length]))
+      phishing: Object.fromEntries(Object.keys(PHISHING_QUOTAS).map((name) => [name, phishingSelected.rows.filter((row) => row.source === name).length])),
+      phishing_by_capture: Object.fromEntries([...new Set(phishingSelected.rows.map((row) => row.capture_id))]
+        .sort().map((captureId) => [captureId, phishingSelected.rows.filter((row) => row.capture_id === captureId).length]))
     },
     available_after_filtering: {
       legitimate: legitimateSelected.available,
@@ -137,4 +129,4 @@ if (require.main === module) {
   try { main(); } catch (error) { console.error(error.message); process.exitCode = 1; }
 }
 
-module.exports = { argumentsFrom, legitimateRows, openPhishRows, phishTankRows };
+module.exports = { argumentsFrom, legitimateRows, openPhishRows };

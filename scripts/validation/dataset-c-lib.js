@@ -18,7 +18,7 @@ const LEGITIMATE_QUOTAS = Object.freeze({
   idn_punycode: 15,
   unusual_structure: 30
 });
-const PHISHING_QUOTAS = Object.freeze({ openphish: 150, phishtank: 150 });
+const PHISHING_QUOTAS = Object.freeze({ openphish: 300 });
 const SHARED_HOSTING_SUFFIXES = Object.freeze(["github.io", "vercel.app", "netlify.app"]);
 const AUTHENTICATION_TERMS = new Set(["login", "signin", "sign-in", "account", "verify", "verification", "auth"]);
 
@@ -185,6 +185,9 @@ function filterCandidates(rows, context) {
       source_id: original.source_id || "",
       source_timestamp: original.source_timestamp || "",
       source_category: original.source_category || "",
+      capture_id: original.capture_id || "",
+      selection_rule: original.selection_rule || "",
+      evidence: original.evidence || "",
       stratum,
       registrable_domain: domain
     });
