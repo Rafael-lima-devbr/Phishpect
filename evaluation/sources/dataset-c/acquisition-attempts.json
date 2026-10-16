@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "source": "phishtank",
+      "outcome": "rate-limited",
+      "http_status": 429,
+      "attempt_time_evidence": "Immediately after OpenPhish was saved at 2026-10-15T05:56:09.744Z in the same collector run",
+      "application_key_used": false,
+      "user_agent": "Phishpect FEBRACE validation/0.4 (research dataset preparation)",
+      "retry_performed": false,
+      "notes": "Collection stopped. No automatic source substitution or rate-limit bypass was attempted."
+    }
+  ]
+}

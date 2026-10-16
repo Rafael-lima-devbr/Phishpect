@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "status": "preparation-in-progress-not-sealed",
+  "created_at": "2026-10-15T20:13:01.313Z",
+  "detector_executed": false,
+  "raw_directory": "evaluation/sources/dataset-c/raw",
+  "files": [
+    {
+      "path": "evaluation/sources/dataset-c/raw/common_crawl_collections.json",
+      "sha256": "fdfe1131836096ec8ff6047997a035acbf464036a2ea09887239c949e0df41f9",
+      "bytes": 35226,
+      "file_timestamp": "2026-10-15T06:02:07.479Z",
+      "record_count": 128,
+      "embedded_timestamps": []
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/legitimate-sources/github-pages-search-20261015T0625Z.json",
+      "sha256": "bd70681607e4b9f2e329780392f24277d48f7ab514bbc1d1fbc0fa40f0084c8e",
+      "bytes": 3687628,
+      "file_timestamp": "2026-10-15T06:46:57.490Z",
+      "record_count": 500,
+      "embedded_timestamps": [
+        "2026-10-15T06:46:42.766Z",
+        "2026-10-15T06:46:45.778Z",
+        "2026-10-15T06:46:48.477Z",
+        "2026-10-15T06:46:51.098Z",
+        "2026-10-15T06:46:53.688Z"
+      ]
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/legitimate-sources/wikidata-commerce-finance-20261015T0625Z.json",
+      "sha256": "db8457e9395e95202bbf3e72d2c3ab011a49601d10e8229c9890bf2497cb5a50",
+      "bytes": 297654,
+      "file_timestamp": "2026-10-15T06:46:57.495Z",
+      "record_count": 1000,
+      "embedded_timestamps": [
+        "2026-10-15T06:46:56.552Z",
+        "2026-10-15T06:46:57.469Z"
+      ]
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/openphish-captures/openphish-20261015T0815Z.txt",
+      "sha256": "3ae958e9039cb2d88ab7a039726445ca08936c773820c8c4e4310477a29305f4",
+      "bytes": 21013,
+      "file_timestamp": "2026-10-15T08:12:30.501Z",
+      "record_count": 300,
+      "embedded_timestamps": []
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/openphish-captures/openphish-20261015T2012Z.txt",
+      "sha256": "6fe2e60c4996cea1f1aa7c8e1b33974aa7e7494d70be61709311153cc14dbbfe",
+      "bytes": 16143,
+      "file_timestamp": "2026-10-15T20:12:51.878Z",
+      "record_count": 300,
+      "embedded_timestamps": []
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/openphish.txt",
+      "sha256": "3ae958e9039cb2d88ab7a039726445ca08936c773820c8c4e4310477a29305f4",
+      "bytes": 21013,
+      "file_timestamp": "2026-10-15T05:56:09.745Z",
+      "record_count": 300,
+      "embedded_timestamps": []
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/site-metadata/site-metadata-tranco-general-000.json",
+      "sha256": "1cf54addb55d4a61cd47a2a791e6fc176d05aa2167fee649acd533eb11e5bdf1",
+      "bytes": 147584,
+      "file_timestamp": "2026-10-15T06:55:19.966Z",
+      "record_count": 25,
+      "embedded_timestamps": [
+        "2026-10-15T06:55:19.956Z"
+      ]
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/site-metadata/site-metadata-tranco-general-v2-000.json",
+      "sha256": "6c1559a9ee488829fbc3a8a32b2ea9e63092b2d6c77fdcfaa87436e6039572cf",
+      "bytes": 697195,
+      "file_timestamp": "2026-10-15T07:27:28.226Z",
+      "record_count": 100,
+      "embedded_timestamps": [
+        "2026-10-15T07:27:28.210Z"
+      ]
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/site-metadata/site-metadata-tranco-general-v2-100.json",
+      "sha256": "cfb0acff46a5c3365c36d4845eaaf4fd28ba86366997df9f50394780d9d3ddd1",
+      "bytes": 464960,
+      "file_timestamp": "2026-10-15T07:34:25.139Z",
+      "record_count": 100,
+      "embedded_timestamps": [
+        "2026-10-15T07:34:25.133Z"
+      ]
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/site-metadata/site-metadata-tranco-general-v2-200.json",
+      "sha256": "502c228a4eabc4e971df333114c1310d77cb96c78f73835847cdd2266d7adf19",
+      "bytes": 650738,
+      "file_timestamp": "2026-10-15T07:41:37.476Z",
+      "record_count": 100,
+      "embedded_timestamps": [
+        "2026-10-15T07:41:37.470Z"
+      ]
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/site-metadata/site-metadata-tranco-general-v2-300.json",
+      "sha256": "9051d2b40dad2b253136f736ad8d7200ba1bc79458e407fa47bb7f4585df1f41",
+      "bytes": 753643,
+      "file_timestamp": "2026-10-15T07:53:10.637Z",
+      "record_count": 150,
+      "embedded_timestamps": [
+        "2026-10-15T07:53:10.631Z"
+      ]
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/site-metadata/site-metadata-tranco-general-v2-450.json",
+      "sha256": "f407573dfc57e93757ff6ed6b8d909141686c1a53658b82ab2b1cb11dd380e75",
+      "bytes": 242832,
+      "file_timestamp": "2026-10-15T07:57:13.507Z",
+      "record_count": 50,
+      "embedded_timestamps": [
+        "2026-10-15T07:57:13.503Z"
+      ]
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/site-metadata/site-metadata-tranco-idn-000.json",
+      "sha256": "4dfa60a9bbf6933b5456a09d5c7003b0a5949508c7c2e78d6f71167895cae9cf",
+      "bytes": 111038,
+      "file_timestamp": "2026-10-15T07:00:43.013Z",
+      "record_count": 25,
+      "embedded_timestamps": [
+        "2026-10-15T07:00:43.011Z"
+      ]
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/site-metadata/site-metadata-tranco-idn-025.json",
+      "sha256": "e15de9f135e04a36380d223cf9c0808b3445af63f0bd6869a0b42934a4465bb5",
+      "bytes": 78562,
+      "file_timestamp": "2026-10-15T07:03:42.691Z",
+      "record_count": 30,
+      "embedded_timestamps": [
+        "2026-10-15T07:03:42.689Z"
+      ]
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/site-metadata/site-metadata-tranco-idn-055.json",
+      "sha256": "d14c41a49fe48b1204f83cc03dae0d975a0e4d4d57992a79f9d4792687d1cbd7",
+      "bytes": 143655,
+      "file_timestamp": "2026-10-15T07:11:51.117Z",
+      "record_count": 15,
+      "embedded_timestamps": [
+        "2026-10-15T07:11:51.115Z"
+      ]
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/site-metadata/site-metadata-tranco-unusual-000.json",
+      "sha256": "3147f6e20fc835208673bbd47ea0e4866e5aef495be5f438420b65aedcdb9e30",
+      "bytes": 111927,
+      "file_timestamp": "2026-10-15T07:07:40.322Z",
+      "record_count": 50,
+      "embedded_timestamps": [
+        "2026-10-15T07:07:40.320Z"
+      ]
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/site-metadata/site-metadata-tranco-unusual-content-000.json",
+      "sha256": "21a6d4e8cc49a430cefadc821f7dc90d17d866c66aa3b67de6d8755d3b819618",
+      "bytes": 148956,
+      "file_timestamp": "2026-10-15T07:15:15.376Z",
+      "record_count": 80,
+      "embedded_timestamps": [
+        "2026-10-15T07:15:15.373Z"
+      ]
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/site-metadata/site-metadata-tranco-unusual-content-080.json",
+      "sha256": "03a19af7f4feadfcd301127bf2d3a18b7c74f9d6290b3aa77a6b2ff1eda27490",
+      "bytes": 132673,
+      "file_timestamp": "2026-10-15T07:18:00.203Z",
+      "record_count": 70,
+      "embedded_timestamps": [
+        "2026-10-15T07:18:00.200Z"
+      ]
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/site-metadata/site-metadata-tranco-unusual-content-150.json",
+      "sha256": "d402a8657358516a6b14d6ec47d751669479ef8a4da3ac31831e930a067a5278",
+      "bytes": 111576,
+      "file_timestamp": "2026-10-15T07:20:59.211Z",
+      "record_count": 60,
+      "embedded_timestamps": [
+        "2026-10-15T07:20:59.208Z"
+      ]
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/site-metadata/site-metadata-tranco-unusual-content-210.json",
+      "sha256": "e7ad5164a263ea3788451aba2330c64e1057235c2e815cf5e6c2c5aef258a102",
+      "bytes": 187623,
+      "file_timestamp": "2026-10-15T08:01:30.145Z",
+      "record_count": 100,
+      "embedded_timestamps": [
+        "2026-10-15T08:01:30.142Z"
+      ]
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/site-metadata/site-metadata-tranco-unusual-content-310.json",
+      "sha256": "5aebef7e26c7de563cbee927b20caed1f1b0b9637e80f54b1d943335461b12bd",
+      "bytes": 376755,
+      "file_timestamp": "2026-10-15T08:11:40.048Z",
+      "record_count": 200,
+      "embedded_timestamps": [
+        "2026-10-15T08:11:40.043Z"
+      ]
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/site-metadata/site-metadata-wikidata-ecommerce-000.json",
+      "sha256": "43e5f5197f43b72d7912cd6b8dc020573f11d7d209c9833818b7e79ea0bf75a2",
+      "bytes": 108847,
+      "file_timestamp": "2026-10-15T06:59:20.476Z",
+      "record_count": 25,
+      "embedded_timestamps": [
+        "2026-10-15T06:59:20.473Z"
+      ]
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/site-metadata/site-metadata-wikidata-financial-000.json",
+      "sha256": "60bf128cf5ae8b1c3e2f7a05f6b52a23bb404315c934596b4b99c2f2520e68f6",
+      "bytes": 356743,
+      "file_timestamp": "2026-10-15T06:58:06.848Z",
+      "record_count": 25,
+      "embedded_timestamps": [
+        "2026-10-15T06:58:06.843Z"
+      ]
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/site-metadata/site-metadata-wikidata-financial-025.json",
+      "sha256": "72403e30e058b3a1e9f3452fa356fb3d91507128292edfbb94f355dce1cee385",
+      "bytes": 109625,
+      "file_timestamp": "2026-10-15T07:11:05.414Z",
+      "record_count": 10,
+      "embedded_timestamps": [
+        "2026-10-15T07:11:05.412Z"
+      ]
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/tranco-extracted/top-1m.csv",
+      "sha256": "2c8720e6d2aabc5efce14422621f00e51028d8810d39271b44f8b7ae1d628a2f",
+      "bytes": 25664829,
+      "file_timestamp": "2026-10-15T01:58:56.000Z",
+      "record_count": 1000000,
+      "embedded_timestamps": []
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/tranco.csv.zip",
+      "sha256": "86f43fc6171ed4f8fdfdc88d22abd8e197b89fa10c7461d28004f11f17d1db23",
+      "bytes": 10758410,
+      "file_timestamp": "2026-10-15T06:02:05.161Z",
+      "record_count": null,
+      "embedded_timestamps": []
+    },
+    {
+      "path": "evaluation/sources/dataset-c/raw/tranco_id.txt",
+      "sha256": "9104b1607af5a30e006708a4db9e9afc0a602340edc6f9d9cfbc7af79bf912b3",
+      "bytes": 5,
+      "file_timestamp": "2026-10-15T06:02:06.407Z",
+      "record_count": 1,
+      "embedded_timestamps": []
+    }
+  ]
+}

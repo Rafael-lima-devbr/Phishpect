@@ -1,0 +1,63 @@
+{
+  "crawl": "CC-MAIN-2026-39",
+  "seed": "phishpect-dataset-c-2026-10-15-v1",
+  "selected_domains": 800,
+  "concurrency": 4,
+  "completed_domains": [
+    "jcw87.github.io",
+    "boardexamrankings.vercel.app",
+    "ajaxzip3.github.io",
+    "hammerjs.github.io",
+    "durukanurutpanto.github.io",
+    "googleads.github.io",
+    "sbo2u-web.vercel.app",
+    "ubghyper.github.io",
+    "buttons.github.io"
+  ],
+  "failed_domains": [
+    {
+      "domain": "homebrew.github.io",
+      "error": "Common Crawl HTTP 503 após 3 tentativa(s)"
+    },
+    {
+      "domain": "0x0800.github.io",
+      "error": "Common Crawl HTTP 503 após 3 tentativa(s)"
+    },
+    {
+      "domain": "iptv-org.github.io",
+      "error": "Common Crawl indisponível após 3 tentativa(s): TypeError"
+    },
+    {
+      "domain": "blog-frontend-zeta-mocha.vercel.app",
+      "error": "Common Crawl indisponível após 3 tentativa(s): TypeError"
+    },
+    {
+      "domain": "liturgiadelashoras.github.io",
+      "error": "Common Crawl indisponível após 3 tentativa(s): TypeError"
+    },
+    {
+      "domain": "endo129.github.io",
+      "error": "Common Crawl indisponível após 3 tentativa(s): TypeError"
+    },
+    {
+      "domain": "laksa19.github.io",
+      "error": "Common Crawl indisponível após 3 tentativa(s): TypeError"
+    },
+    {
+      "domain": "mganss.github.io",
+      "error": "Common Crawl indisponível após 3 tentativa(s): TypeError"
+    },
+    {
+      "domain": "battlecatsinfo.github.io",
+      "error": "Common Crawl indisponível após 3 tentativa(s): TypeError"
+    },
+    {
+      "domain": "fluorescent.github.io",
+      "error": "Common Crawl indisponível após 3 tentativa(s): TypeError"
+    },
+    {
+      "domain": "lonelycpp.github.io",
+      "error": "Common Crawl indisponível após 3 tentativa(s): TypeError"
+    }
+  ]
+}

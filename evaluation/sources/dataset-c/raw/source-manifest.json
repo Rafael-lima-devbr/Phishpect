@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "purpose": "Dataset C source acquisition; URLs phishing remain text-only",
+  "created_at": "2026-10-15T20:12:51.879Z",
+  "records": [
+    {
+      "name": "openphish",
+      "url": "https://raw.githubusercontent.com/openphish/public_feed/refs/heads/main/feed.txt",
+      "path": "evaluation/sources/dataset-c/raw/openphish.txt",
+      "acquired_at": "2026-10-15T05:56:09.745Z",
+      "sha256": "3ae958e9039cb2d88ab7a039726445ca08936c773820c8c4e4310477a29305f4",
+      "bytes": 21013,
+      "etag": "W/\"0250f65ea3f95d9ba1e32eb70210a979242b74007602a14c8fa68bffaadf37d9\"",
+      "last_modified": null,
+      "acquisition": "downloaded"
+    },
+    {
+      "name": "tranco",
+      "url": "https://tranco-list.eu/top-1m-incl-subdomains.csv.zip",
+      "path": "evaluation/sources/dataset-c/raw/tranco.csv.zip",
+      "acquired_at": "2026-10-15T06:02:05.161Z",
+      "sha256": "86f43fc6171ed4f8fdfdc88d22abd8e197b89fa10c7461d28004f11f17d1db23",
+      "bytes": 10758410,
+      "etag": null,
+      "last_modified": null,
+      "acquisition": "preserved-existing"
+    },
+    {
+      "name": "tranco_id",
+      "url": "https://tranco-list.eu/top-1m-id?subdomains=true",
+      "path": "evaluation/sources/dataset-c/raw/tranco_id.txt",
+      "acquired_at": "2026-10-15T06:02:06.407Z",
+      "sha256": "9104b1607af5a30e006708a4db9e9afc0a602340edc6f9d9cfbc7af79bf912b3",
+      "bytes": 5,
+      "etag": null,
+      "last_modified": null,
+      "acquisition": "preserved-existing"
+    },
+    {
+      "name": "common_crawl_collections",
+      "url": "https://index.commoncrawl.org/collinfo.json",
+      "path": "evaluation/sources/dataset-c/raw/common_crawl_collections.json",
+      "acquired_at": "2026-10-15T06:02:07.479Z",
+      "sha256": "fdfe1131836096ec8ff6047997a035acbf464036a2ea09887239c949e0df41f9",
+      "bytes": 35226,
+      "etag": null,
+      "last_modified": null,
+      "acquisition": "preserved-existing"
+    },
+    {
+      "name": "openphish",
+      "url": "https://raw.githubusercontent.com/openphish/public_feed/refs/heads/main/feed.txt",
+      "path": "evaluation/sources/dataset-c/raw/openphish-captures/openphish-20261015T0815Z.txt",
+      "acquired_at": "2026-10-15T08:12:30.501Z",
+      "sha256": "3ae958e9039cb2d88ab7a039726445ca08936c773820c8c4e4310477a29305f4",
+      "bytes": 21013,
+      "etag": "W/\"0250f65ea3f95d9ba1e32eb70210a979242b74007602a14c8fa68bffaadf37d9\"",
+      "last_modified": null,
+      "acquisition": "downloaded"
+    },
+    {
+      "name": "openphish",
+      "url": "https://raw.githubusercontent.com/openphish/public_feed/refs/heads/main/feed.txt",
+      "path": "evaluation/sources/dataset-c/raw/openphish-captures/openphish-20261015T2012Z.txt",
+      "acquired_at": "2026-10-15T20:12:51.878Z",
+      "sha256": "6fe2e60c4996cea1f1aa7c8e1b33974aa7e7494d70be61709311153cc14dbbfe",
+      "bytes": 16143,
+      "etag": "W/\"ad5d1b5b8b3ba3d47c74c554c82ae07ba1c5d2ad7855c32a4aa733617666f39d\"",
+      "last_modified": null,
+      "acquisition": "downloaded"
+    }
+  ]
+}

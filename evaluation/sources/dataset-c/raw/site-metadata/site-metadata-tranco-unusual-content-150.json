@@ -1,0 +1,3529 @@
+{
+  "schema_version": 1,
+  "status": "metadata-only-not-evaluated",
+  "created_at": "2026-10-15T07:20:59.208Z",
+  "input": "evaluation/sources/dataset-c/tranco-legitimate-seeds.csv",
+  "input_sha256": "da7c8ee8e6ca4129d60131f46561c06e6cd358b0469687856986997f4ff1f188",
+  "capture_id": "tranco-unusual-content-150",
+  "seed": "phishpect-dataset-c-2026-10-15-v1",
+  "intended_stratum": "unusual_structure",
+  "category": null,
+  "offset": 150,
+  "limit": 60,
+  "detector_executed": false,
+  "records": [
+    {
+      "seed": {
+        "url": "https://amadeus123.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:905270",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "905270",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=905270;domain=amadeus123.com"
+      },
+      "acquired_at": "2026-10-15T07:18:53.991Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://amadeus123.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 404,
+          "url": "https://amadeus123.com/about",
+          "contentType": "text/html; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 404,
+          "url": "https://amadeus123.com/help",
+          "contentType": "text/html; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 404,
+          "url": "https://amadeus123.com/docs",
+          "contentType": "text/html; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": true,
+          "status": 200,
+          "url": "https://amadeus123.com/products",
+          "contentType": "text/html; charset=utf-8",
+          "error": null
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://189.35.bc.googleusercontent.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:645559",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "645559",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=645559;domain=189.35.bc.googleusercontent.com"
+      },
+      "acquired_at": "2026-10-15T07:18:54.023Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://189.35.bc.googleusercontent.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://189.35.bc.googleusercontent.com/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://189.35.bc.googleusercontent.com/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://189.35.bc.googleusercontent.com/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://189.35.bc.googleusercontent.com/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://189.35.bc.googleusercontent.com/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://ssu.elearning.unipd.it/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:982055",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "982055",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=982055;domain=ssu.elearning.unipd.it"
+      },
+      "acquired_at": "2026-10-15T07:18:54.024Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://ssu.elearning.unipd.it/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 404,
+          "url": "https://ssu.elearning.unipd.it/about",
+          "contentType": "text/html; charset=iso-8859-1",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 404,
+          "url": "https://ssu.elearning.unipd.it/help",
+          "contentType": "text/html; charset=iso-8859-1",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 404,
+          "url": "https://ssu.elearning.unipd.it/docs",
+          "contentType": "text/html; charset=iso-8859-1",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": 404,
+          "url": "https://ssu.elearning.unipd.it/products",
+          "contentType": "text/html; charset=iso-8859-1",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 404,
+          "url": "https://ssu.elearning.unipd.it/news",
+          "contentType": "text/html; charset=iso-8859-1",
+          "error": "not-same-domain-html"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://www.omint.com.br/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:975132",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "975132",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=975132;domain=www.omint.com.br"
+      },
+      "acquired_at": "2026-10-15T07:18:54.263Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://www.omint.com.br/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": true,
+          "status": 200,
+          "url": "https://www.omint.com.br/en/travel-insurance/about/",
+          "contentType": "text/html; charset=UTF-8",
+          "error": null
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://prod.bestie.comcast.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:748873",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "748873",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=748873;domain=prod.bestie.comcast.com"
+      },
+      "acquired_at": "2026-10-15T07:18:58.042Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://prod.bestie.comcast.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 404,
+          "url": "https://prod.bestie.comcast.com/about",
+          "contentType": "",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 404,
+          "url": "https://prod.bestie.comcast.com/help",
+          "contentType": "",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 404,
+          "url": "https://prod.bestie.comcast.com/docs",
+          "contentType": "",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": 404,
+          "url": "https://prod.bestie.comcast.com/products",
+          "contentType": "",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 404,
+          "url": "https://prod.bestie.comcast.com/news",
+          "contentType": "",
+          "error": "not-same-domain-html"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://u-bordeaux-montaigne.fr/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:172002",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "172002",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=172002;domain=u-bordeaux-montaigne.fr"
+      },
+      "acquired_at": "2026-10-15T07:18:58.119Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://u-bordeaux-montaigne.fr/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://u-bordeaux-montaigne.fr/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://u-bordeaux-montaigne.fr/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://u-bordeaux-montaigne.fr/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://u-bordeaux-montaigne.fr/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://u-bordeaux-montaigne.fr/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://9o8x7c5k.tranplanet.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:949676",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "949676",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=949676;domain=9o8x7c5k.tranplanet.com"
+      },
+      "acquired_at": "2026-10-15T07:18:58.132Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://9o8x7c5k.tranplanet.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://9o8x7c5k.tranplanet.com/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://9o8x7c5k.tranplanet.com/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://9o8x7c5k.tranplanet.com/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://9o8x7c5k.tranplanet.com/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://9o8x7c5k.tranplanet.com/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://cut-the-knot.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:885434",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "885434",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=885434;domain=cut-the-knot.com"
+      },
+      "acquired_at": "2026-10-15T07:18:58.886Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://cut-the-knot.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 405,
+          "url": "https://cut-the-knot.com/about",
+          "contentType": "text/plain; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 405,
+          "url": "https://cut-the-knot.com/help",
+          "contentType": "text/plain; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 405,
+          "url": "https://cut-the-knot.com/docs",
+          "contentType": "text/plain; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": 405,
+          "url": "https://cut-the-knot.com/products",
+          "contentType": "text/plain; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 405,
+          "url": "https://cut-the-knot.com/news",
+          "contentType": "text/plain; charset=utf-8",
+          "error": "not-same-domain-html"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://mail.tn.gov.in/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:311613",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "311613",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=311613;domain=mail.tn.gov.in"
+      },
+      "acquired_at": "2026-10-15T07:18:59.694Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://mail.tn.gov.in/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 401,
+          "url": "https://mail.tn.gov.in/about",
+          "contentType": "text/html",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 401,
+          "url": "https://mail.tn.gov.in/help",
+          "contentType": "text/html",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 401,
+          "url": "https://mail.tn.gov.in/docs",
+          "contentType": "text/html",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": 401,
+          "url": "https://mail.tn.gov.in/products",
+          "contentType": "text/html",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 401,
+          "url": "https://mail.tn.gov.in/news",
+          "contentType": "text/html",
+          "error": "not-same-domain-html"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://co.nz.preprod.ci.v.gateway-i-php-i33.cgateway-php.hicloudcam.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:909364",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "909364",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=909364;domain=co.nz.preprod.ci.v.gateway-i-php-i33.cgateway-php.hicloudcam.com"
+      },
+      "acquired_at": "2026-10-15T07:19:00.702Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://co.nz.preprod.ci.v.gateway-i-php-i33.cgateway-php.hicloudcam.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://co.nz.preprod.ci.v.gateway-i-php-i33.cgateway-php.hicloudcam.com/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://co.nz.preprod.ci.v.gateway-i-php-i33.cgateway-php.hicloudcam.com/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://co.nz.preprod.ci.v.gateway-i-php-i33.cgateway-php.hicloudcam.com/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://co.nz.preprod.ci.v.gateway-i-php-i33.cgateway-php.hicloudcam.com/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://co.nz.preprod.ci.v.gateway-i-php-i33.cgateway-php.hicloudcam.com/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://lms.mercatorum.multiversity.click/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:273349",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "273349",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=273349;domain=lms.mercatorum.multiversity.click"
+      },
+      "acquired_at": "2026-10-15T07:19:00.713Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://lms.mercatorum.multiversity.click/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": true,
+          "status": 200,
+          "url": "https://lms.mercatorum.multiversity.click/about",
+          "contentType": "text/html",
+          "error": null
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://staraks.bankofindia.bank.in/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:137111",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "137111",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=137111;domain=staraks.bankofindia.bank.in"
+      },
+      "acquired_at": "2026-10-15T07:19:02.455Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://staraks.bankofindia.bank.in/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TimeoutError",
+          "url": "https://staraks.bankofindia.bank.in/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TimeoutError",
+          "url": "https://staraks.bankofindia.bank.in/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TimeoutError",
+          "url": "https://staraks.bankofindia.bank.in/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TimeoutError",
+          "url": "https://staraks.bankofindia.bank.in/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TimeoutError",
+          "url": "https://staraks.bankofindia.bank.in/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://ipatinga.mg.gov.br/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:660189",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "660189",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=660189;domain=ipatinga.mg.gov.br"
+      },
+      "acquired_at": "2026-10-15T07:19:02.700Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://ipatinga.mg.gov.br/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 404,
+          "url": "https://www.ipatinga.mg.gov.br/about",
+          "contentType": "text/html; charset=iso-8859-1",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 404,
+          "url": "https://www.ipatinga.mg.gov.br/help",
+          "contentType": "text/html; charset=iso-8859-1",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 404,
+          "url": "https://www.ipatinga.mg.gov.br/docs",
+          "contentType": "text/html; charset=iso-8859-1",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": 404,
+          "url": "https://www.ipatinga.mg.gov.br/products",
+          "contentType": "text/html; charset=iso-8859-1",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 404,
+          "url": "https://www.ipatinga.mg.gov.br/news",
+          "contentType": "text/html; charset=iso-8859-1",
+          "error": "not-same-domain-html"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://229.217.52.in-addr.arpa/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:723349",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "723349",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=723349;domain=229.217.52.in-addr.arpa"
+      },
+      "acquired_at": "2026-10-15T07:19:07.661Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://229.217.52.in-addr.arpa/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://229.217.52.in-addr.arpa/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://229.217.52.in-addr.arpa/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://229.217.52.in-addr.arpa/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://229.217.52.in-addr.arpa/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://229.217.52.in-addr.arpa/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://pnapi-734192369.us-east-1.elb.amazonaws.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:204774",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "204774",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=204774;domain=pnapi-734192369.us-east-1.elb.amazonaws.com"
+      },
+      "acquired_at": "2026-10-15T07:19:08.887Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://pnapi-734192369.us-east-1.elb.amazonaws.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://pnapi-734192369.us-east-1.elb.amazonaws.com/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://pnapi-734192369.us-east-1.elb.amazonaws.com/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://pnapi-734192369.us-east-1.elb.amazonaws.com/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://pnapi-734192369.us-east-1.elb.amazonaws.com/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://pnapi-734192369.us-east-1.elb.amazonaws.com/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://ok59ed49ddr.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:881441",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "881441",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=881441;domain=ok59ed49ddr.com"
+      },
+      "acquired_at": "2026-10-15T07:19:11.159Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://ok59ed49ddr.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://ok59ed49ddr.com/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://ok59ed49ddr.com/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://ok59ed49ddr.com/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://ok59ed49ddr.com/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://ok59ed49ddr.com/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://modelexecution.api.intuit.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:892293",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "892293",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=892293;domain=modelexecution.api.intuit.com"
+      },
+      "acquired_at": "2026-10-15T07:19:11.289Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://modelexecution.api.intuit.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 404,
+          "url": "https://modelexecution.api.intuit.com/about",
+          "contentType": "text/xml",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 404,
+          "url": "https://modelexecution.api.intuit.com/help",
+          "contentType": "text/xml",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 404,
+          "url": "https://modelexecution.api.intuit.com/docs",
+          "contentType": "text/xml",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": 404,
+          "url": "https://modelexecution.api.intuit.com/products",
+          "contentType": "text/xml",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 404,
+          "url": "https://modelexecution.api.intuit.com/news",
+          "contentType": "text/xml",
+          "error": "not-same-domain-html"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://urhpc49129.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:665567",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "665567",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=665567;domain=urhpc49129.com"
+      },
+      "acquired_at": "2026-10-15T07:19:11.320Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://urhpc49129.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 403,
+          "url": "https://urhpc49129.com/about",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 403,
+          "url": "https://urhpc49129.com/help",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 403,
+          "url": "https://urhpc49129.com/docs",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": 403,
+          "url": "https://urhpc49129.com/products",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 403,
+          "url": "https://urhpc49129.com/news",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://35.83.206.15.in-addr.arpa/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:418861",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "418861",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=418861;domain=35.83.206.15.in-addr.arpa"
+      },
+      "acquired_at": "2026-10-15T07:19:12.116Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://35.83.206.15.in-addr.arpa/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://35.83.206.15.in-addr.arpa/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://35.83.206.15.in-addr.arpa/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://35.83.206.15.in-addr.arpa/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://35.83.206.15.in-addr.arpa/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://35.83.206.15.in-addr.arpa/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://pacman.prod.nam.csc.cisco.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:21421",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "21421",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=21421;domain=pacman.prod.nam.csc.cisco.com"
+      },
+      "acquired_at": "2026-10-15T07:19:14.927Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://pacman.prod.nam.csc.cisco.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 403,
+          "url": "https://pacman.prod.nam.csc.cisco.com/about",
+          "contentType": "application/json",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 403,
+          "url": "https://pacman.prod.nam.csc.cisco.com/help",
+          "contentType": "application/json",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 403,
+          "url": "https://pacman.prod.nam.csc.cisco.com/docs",
+          "contentType": "application/json",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": 403,
+          "url": "https://pacman.prod.nam.csc.cisco.com/products",
+          "contentType": "application/json",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 403,
+          "url": "https://pacman.prod.nam.csc.cisco.com/news",
+          "contentType": "application/json",
+          "error": "not-same-domain-html"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://ais.unmul.ac.id/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:337681",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "337681",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=337681;domain=ais.unmul.ac.id"
+      },
+      "acquired_at": "2026-10-15T07:19:16.375Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://ais.unmul.ac.id/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 404,
+          "url": "https://ais.unmul.ac.id/about",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 404,
+          "url": "https://ais.unmul.ac.id/help",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 404,
+          "url": "https://ais.unmul.ac.id/docs",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": 404,
+          "url": "https://ais.unmul.ac.id/products",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 404,
+          "url": "https://ais.unmul.ac.id/news",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://pull-lls-b13.douyincdn.com.a.bcelive.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:328508",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "328508",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=328508;domain=pull-lls-b13.douyincdn.com.a.bcelive.com"
+      },
+      "acquired_at": "2026-10-15T07:19:17.901Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://pull-lls-b13.douyincdn.com.a.bcelive.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://pull-lls-b13.douyincdn.com.a.bcelive.com/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://pull-lls-b13.douyincdn.com.a.bcelive.com/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://pull-lls-b13.douyincdn.com.a.bcelive.com/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://pull-lls-b13.douyincdn.com.a.bcelive.com/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://pull-lls-b13.douyincdn.com.a.bcelive.com/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://pau2-collabhubrtc.officeapps.live.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:79693",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "79693",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=79693;domain=pau2-collabhubrtc.officeapps.live.com"
+      },
+      "acquired_at": "2026-10-15T07:19:23.705Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://pau2-collabhubrtc.officeapps.live.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 404,
+          "url": "https://pau2-collabhubrtc.officeapps.live.com/about",
+          "contentType": "",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 404,
+          "url": "https://pau2-collabhubrtc.officeapps.live.com/help",
+          "contentType": "",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 404,
+          "url": "https://pau2-collabhubrtc.officeapps.live.com/docs",
+          "contentType": "",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": 404,
+          "url": "https://pau2-collabhubrtc.officeapps.live.com/products",
+          "contentType": "",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 404,
+          "url": "https://pau2-collabhubrtc.officeapps.live.com/news",
+          "contentType": "",
+          "error": "not-same-domain-html"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://c6-prod-alb-uw2-public-430941874.us-west-2.elb.amazonaws.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:490712",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "490712",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=490712;domain=c6-prod-alb-uw2-public-430941874.us-west-2.elb.amazonaws.com"
+      },
+      "acquired_at": "2026-10-15T07:19:23.779Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://c6-prod-alb-uw2-public-430941874.us-west-2.elb.amazonaws.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://c6-prod-alb-uw2-public-430941874.us-west-2.elb.amazonaws.com/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://c6-prod-alb-uw2-public-430941874.us-west-2.elb.amazonaws.com/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://c6-prod-alb-uw2-public-430941874.us-west-2.elb.amazonaws.com/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://c6-prod-alb-uw2-public-430941874.us-west-2.elb.amazonaws.com/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://c6-prod-alb-uw2-public-430941874.us-west-2.elb.amazonaws.com/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://prebid.lax1.adnexus.net/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:608766",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "608766",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=608766;domain=prebid.lax1.adnexus.net"
+      },
+      "acquired_at": "2026-10-15T07:19:26.756Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://prebid.lax1.adnexus.net/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://prebid.lax1.adnexus.net/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://prebid.lax1.adnexus.net/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://prebid.lax1.adnexus.net/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://prebid.lax1.adnexus.net/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://prebid.lax1.adnexus.net/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://94.31.250.142.in-addr.arpa/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:425001",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "425001",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=425001;domain=94.31.250.142.in-addr.arpa"
+      },
+      "acquired_at": "2026-10-15T07:19:28.858Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://94.31.250.142.in-addr.arpa/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://94.31.250.142.in-addr.arpa/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://94.31.250.142.in-addr.arpa/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://94.31.250.142.in-addr.arpa/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://94.31.250.142.in-addr.arpa/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://94.31.250.142.in-addr.arpa/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://2026ws.app/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:895807",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "895807",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=895807;domain=2026ws.app"
+      },
+      "acquired_at": "2026-10-15T07:19:29.032Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://2026ws.app/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://2026ws.app/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://2026ws.app/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://2026ws.app/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://2026ws.app/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://2026ws.app/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://tab.volces.com.bytedns1.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:909989",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "909989",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=909989;domain=tab.volces.com.bytedns1.com"
+      },
+      "acquired_at": "2026-10-15T07:19:29.628Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://tab.volces.com.bytedns1.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://tab.volces.com.bytedns1.com/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://tab.volces.com.bytedns1.com/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://tab.volces.com.bytedns1.com/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://tab.volces.com.bytedns1.com/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://tab.volces.com.bytedns1.com/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://ios.prod.us-east-1.internal.dradis.netflix.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:389592",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "389592",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=389592;domain=ios.prod.us-east-1.internal.dradis.netflix.com"
+      },
+      "acquired_at": "2026-10-15T07:19:30.732Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://ios.prod.us-east-1.internal.dradis.netflix.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://ios.prod.us-east-1.internal.dradis.netflix.com/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://ios.prod.us-east-1.internal.dradis.netflix.com/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://ios.prod.us-east-1.internal.dradis.netflix.com/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://ios.prod.us-east-1.internal.dradis.netflix.com/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://ios.prod.us-east-1.internal.dradis.netflix.com/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://ug7778.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:949128",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "949128",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=949128;domain=ug7778.com"
+      },
+      "acquired_at": "2026-10-15T07:19:32.314Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://ug7778.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": true,
+          "status": 200,
+          "url": "https://www.ug7778.com/about",
+          "contentType": "text/html",
+          "error": null
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://sync-pm.ads.yieldmo.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:66397",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "66397",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=66397;domain=sync-pm.ads.yieldmo.com"
+      },
+      "acquired_at": "2026-10-15T07:19:33.011Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://sync-pm.ads.yieldmo.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 404,
+          "url": "https://sync-pm.ads.yieldmo.com/about",
+          "contentType": "text/html;charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 404,
+          "url": "https://sync-pm.ads.yieldmo.com/help",
+          "contentType": "text/html;charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 404,
+          "url": "https://sync-pm.ads.yieldmo.com/docs",
+          "contentType": "text/html;charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": 404,
+          "url": "https://sync-pm.ads.yieldmo.com/products",
+          "contentType": "text/html;charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 404,
+          "url": "https://sync-pm.ads.yieldmo.com/news",
+          "contentType": "text/html;charset=utf-8",
+          "error": "not-same-domain-html"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://fonape2021.com.br/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:757932",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "757932",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=757932;domain=fonape2021.com.br"
+      },
+      "acquired_at": "2026-10-15T07:19:35.245Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://fonape2021.com.br/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": true,
+          "status": 200,
+          "url": "https://fonape2021.com.br/",
+          "contentType": "text/html; charset=utf-8",
+          "error": null
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://watches-of-switzerland.co.uk/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:428993",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "428993",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=428993;domain=watches-of-switzerland.co.uk"
+      },
+      "acquired_at": "2026-10-15T07:19:35.617Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://watches-of-switzerland.co.uk/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": true,
+          "status": 200,
+          "url": "https://www.watches-of-switzerland.co.uk/about",
+          "contentType": "text/html; charset=UTF-8",
+          "error": null
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://bykcertaaja787.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:556327",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "556327",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=556327;domain=bykcertaaja787.com"
+      },
+      "acquired_at": "2026-10-15T07:19:36.299Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://bykcertaaja787.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TimeoutError",
+          "url": "https://bykcertaaja787.com/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://bykcertaaja787.com/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TimeoutError",
+          "url": "https://bykcertaaja787.com/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://bykcertaaja787.com/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TimeoutError",
+          "url": "https://bykcertaaja787.com/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://926kf.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:480926",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "480926",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=480926;domain=926kf.com"
+      },
+      "acquired_at": "2026-10-15T07:19:39.026Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://926kf.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://926kf.com/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://926kf.com/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://926kf.com/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://926kf.com/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://926kf.com/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://rcs-acs-mcc724.jibe.google.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:353973",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "353973",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=353973;domain=rcs-acs-mcc724.jibe.google.com"
+      },
+      "acquired_at": "2026-10-15T07:19:42.502Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://rcs-acs-mcc724.jibe.google.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 405,
+          "url": "https://rcs-acs-mcc724.jibe.google.com/about",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 405,
+          "url": "https://rcs-acs-mcc724.jibe.google.com/help",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 405,
+          "url": "https://rcs-acs-mcc724.jibe.google.com/docs",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": 405,
+          "url": "https://rcs-acs-mcc724.jibe.google.com/products",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 405,
+          "url": "https://rcs-acs-mcc724.jibe.google.com/news",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://345win7.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:304427",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "304427",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=304427;domain=345win7.com"
+      },
+      "acquired_at": "2026-10-15T07:19:44.022Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://345win7.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 404,
+          "url": "https://345win7.com/about",
+          "contentType": "application/xml",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 404,
+          "url": "https://345win7.com/help",
+          "contentType": "application/xml",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 404,
+          "url": "https://345win7.com/docs",
+          "contentType": "application/xml",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": 404,
+          "url": "https://345win7.com/products",
+          "contentType": "application/xml",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 404,
+          "url": "https://345win7.com/news",
+          "contentType": "application/xml",
+          "error": "not-same-domain-html"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://gcp-na-images.contentstack.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:703703",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "703703",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=703703;domain=gcp-na-images.contentstack.com"
+      },
+      "acquired_at": "2026-10-15T07:19:48.820Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://gcp-na-images.contentstack.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 403,
+          "url": "https://gcp-na-images.contentstack.com/about",
+          "contentType": "application/json; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 403,
+          "url": "https://gcp-na-images.contentstack.com/help",
+          "contentType": "application/json; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 403,
+          "url": "https://gcp-na-images.contentstack.com/docs",
+          "contentType": "application/json; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": 403,
+          "url": "https://gcp-na-images.contentstack.com/products",
+          "contentType": "application/json; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 403,
+          "url": "https://gcp-na-images.contentstack.com/news",
+          "contentType": "application/json; charset=utf-8",
+          "error": "not-same-domain-html"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://3736cvd.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:350310",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "350310",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=350310;domain=3736cvd.com"
+      },
+      "acquired_at": "2026-10-15T07:19:49.944Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://3736cvd.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://3736cvd.com/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://3736cvd.com/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://3736cvd.com/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://3736cvd.com/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://3736cvd.com/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://vac.vap.expedia.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:502278",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "502278",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=502278;domain=vac.vap.expedia.com"
+      },
+      "acquired_at": "2026-10-15T07:19:51.494Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://vac.vap.expedia.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 404,
+          "url": "https://vac.vap.expedia.com/about",
+          "contentType": "application/xml",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 404,
+          "url": "https://vac.vap.expedia.com/help",
+          "contentType": "application/xml",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 404,
+          "url": "https://vac.vap.expedia.com/docs",
+          "contentType": "application/xml",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": 404,
+          "url": "https://vac.vap.expedia.com/products",
+          "contentType": "application/xml",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 404,
+          "url": "https://vac.vap.expedia.com/news",
+          "contentType": "application/xml",
+          "error": "not-same-domain-html"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://24189228.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:498917",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "498917",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=498917;domain=24189228.com"
+      },
+      "acquired_at": "2026-10-15T07:19:52.670Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://24189228.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TimeoutError",
+          "url": "https://24189228.com/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TimeoutError",
+          "url": "https://24189228.com/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TimeoutError",
+          "url": "https://24189228.com/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TimeoutError",
+          "url": "https://24189228.com/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TimeoutError",
+          "url": "https://24189228.com/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://core.prod.geocomply.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:482323",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "482323",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=482323;domain=core.prod.geocomply.com"
+      },
+      "acquired_at": "2026-10-15T07:20:01.879Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://core.prod.geocomply.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 404,
+          "url": "https://core.prod.geocomply.com/about",
+          "contentType": "text/plain",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 404,
+          "url": "https://core.prod.geocomply.com/help",
+          "contentType": "text/plain",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 404,
+          "url": "https://core.prod.geocomply.com/docs",
+          "contentType": "text/plain",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": 404,
+          "url": "https://core.prod.geocomply.com/products",
+          "contentType": "text/plain",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 404,
+          "url": "https://core.prod.geocomply.com/news",
+          "contentType": "text/plain",
+          "error": "not-same-domain-html"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://mcfk02nd3k8q7w75g9yxxcc6yj20.device.marketingcloudapis.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:681610",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "681610",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=681610;domain=mcfk02nd3k8q7w75g9yxxcc6yj20.device.marketingcloudapis.com"
+      },
+      "acquired_at": "2026-10-15T07:20:05.513Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://mcfk02nd3k8q7w75g9yxxcc6yj20.device.marketingcloudapis.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 596,
+          "url": "https://mcfk02nd3k8q7w75g9yxxcc6yj20.device.marketingcloudapis.com/about",
+          "contentType": "text/xml; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 596,
+          "url": "https://mcfk02nd3k8q7w75g9yxxcc6yj20.device.marketingcloudapis.com/help",
+          "contentType": "text/xml; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 596,
+          "url": "https://mcfk02nd3k8q7w75g9yxxcc6yj20.device.marketingcloudapis.com/docs",
+          "contentType": "text/xml; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": 596,
+          "url": "https://mcfk02nd3k8q7w75g9yxxcc6yj20.device.marketingcloudapis.com/products",
+          "contentType": "text/xml; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 596,
+          "url": "https://mcfk02nd3k8q7w75g9yxxcc6yj20.device.marketingcloudapis.com/news",
+          "contentType": "text/xml; charset=utf-8",
+          "error": "not-same-domain-html"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://tdc.thailis.or.th/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:902499",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "902499",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=902499;domain=tdc.thailis.or.th"
+      },
+      "acquired_at": "2026-10-15T07:20:07.825Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://tdc.thailis.or.th/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TimeoutError",
+          "url": "https://tdc.thailis.or.th/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TimeoutError",
+          "url": "https://tdc.thailis.or.th/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TimeoutError",
+          "url": "https://tdc.thailis.or.th/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TimeoutError",
+          "url": "https://tdc.thailis.or.th/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 404,
+          "url": "https://tdc.thailis.or.th/news",
+          "contentType": "text/html; charset=utf-8",
+          "error": "not-same-domain-html"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://1010wcsi.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:990873",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "990873",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=990873;domain=1010wcsi.com"
+      },
+      "acquired_at": "2026-10-15T07:20:10.954Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://1010wcsi.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 404,
+          "url": "https://1010wcsi.com/about",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 404,
+          "url": "https://1010wcsi.com/help",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 404,
+          "url": "https://1010wcsi.com/docs",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": 404,
+          "url": "https://1010wcsi.com/products",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 404,
+          "url": "https://1010wcsi.com/news",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://egazzete.mahaonline.gov.in/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:132142",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "132142",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=132142;domain=egazzete.mahaonline.gov.in"
+      },
+      "acquired_at": "2026-10-15T07:20:16.460Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://egazzete.mahaonline.gov.in/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TimeoutError",
+          "url": "https://egazzete.mahaonline.gov.in/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TimeoutError",
+          "url": "https://egazzete.mahaonline.gov.in/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TimeoutError",
+          "url": "https://egazzete.mahaonline.gov.in/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TimeoutError",
+          "url": "https://egazzete.mahaonline.gov.in/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TimeoutError",
+          "url": "https://egazzete.mahaonline.gov.in/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://a1hw8yzjrki9lz-ats.iot.us-west-2.amazonaws.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:492792",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "492792",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=492792;domain=a1hw8yzjrki9lz-ats.iot.us-west-2.amazonaws.com"
+      },
+      "acquired_at": "2026-10-15T07:20:32.714Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://a1hw8yzjrki9lz-ats.iot.us-west-2.amazonaws.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 404,
+          "url": "https://a1hw8yzjrki9lz-ats.iot.us-west-2.amazonaws.com/about",
+          "contentType": "application/json",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 404,
+          "url": "https://a1hw8yzjrki9lz-ats.iot.us-west-2.amazonaws.com/help",
+          "contentType": "application/json",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 404,
+          "url": "https://a1hw8yzjrki9lz-ats.iot.us-west-2.amazonaws.com/docs",
+          "contentType": "application/json",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": 404,
+          "url": "https://a1hw8yzjrki9lz-ats.iot.us-west-2.amazonaws.com/products",
+          "contentType": "application/json",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 404,
+          "url": "https://a1hw8yzjrki9lz-ats.iot.us-west-2.amazonaws.com/news",
+          "contentType": "application/json",
+          "error": "not-same-domain-html"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://7k3cs9z1no.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:337460",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "337460",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=337460;domain=7k3cs9z1no.com"
+      },
+      "acquired_at": "2026-10-15T07:20:36.768Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://7k3cs9z1no.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": true,
+          "status": 200,
+          "url": "https://7k3cs9z1no.com/about",
+          "contentType": "text/html; charset=utf-8",
+          "error": null
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://casino2769.fun/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:535587",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "535587",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=535587;domain=casino2769.fun"
+      },
+      "acquired_at": "2026-10-15T07:20:38.121Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://casino2769.fun/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 502,
+          "url": "https://casino2769.fun/about",
+          "contentType": "text/html; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 502,
+          "url": "https://casino2769.fun/help",
+          "contentType": "text/html; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 502,
+          "url": "https://casino2769.fun/docs",
+          "contentType": "text/html; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": 502,
+          "url": "https://casino2769.fun/products",
+          "contentType": "text/html; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 502,
+          "url": "https://casino2769.fun/news",
+          "contentType": "text/html; charset=utf-8",
+          "error": "not-same-domain-html"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://onet.hit.gemius.pl/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:535051",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "535051",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=535051;domain=onet.hit.gemius.pl"
+      },
+      "acquired_at": "2026-10-15T07:20:41.463Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://onet.hit.gemius.pl/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": true,
+          "status": 200,
+          "url": "https://onet.hit.gemius.pl/about",
+          "contentType": "text/html;charset=utf-8",
+          "error": null
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://static-gc-lb-apple-com.v.aaplimg.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:42215",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "42215",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=42215;domain=static-gc-lb-apple-com.v.aaplimg.com"
+      },
+      "acquired_at": "2026-10-15T07:20:41.833Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://static-gc-lb-apple-com.v.aaplimg.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://static-gc-lb-apple-com.v.aaplimg.com/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://static-gc-lb-apple-com.v.aaplimg.com/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://static-gc-lb-apple-com.v.aaplimg.com/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://static-gc-lb-apple-com.v.aaplimg.com/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://static-gc-lb-apple-com.v.aaplimg.com/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://ax249.icu/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:518461",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "518461",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=518461;domain=ax249.icu"
+      },
+      "acquired_at": "2026-10-15T07:20:42.695Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://ax249.icu/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 403,
+          "url": "https://ax249.icu/about",
+          "contentType": "text/html; charset=iso-8859-1",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 403,
+          "url": "https://ax249.icu/help",
+          "contentType": "text/html; charset=iso-8859-1",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 403,
+          "url": "https://ax249.icu/docs",
+          "contentType": "text/html; charset=iso-8859-1",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": 403,
+          "url": "https://ax249.icu/products",
+          "contentType": "text/html; charset=iso-8859-1",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 403,
+          "url": "https://ax249.icu/news",
+          "contentType": "text/html; charset=iso-8859-1",
+          "error": "not-same-domain-html"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://d001.global.prod.t100.ter.int.amazonvideo.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:95768",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "95768",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=95768;domain=d001.global.prod.t100.ter.int.amazonvideo.com"
+      },
+      "acquired_at": "2026-10-15T07:20:45.286Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://d001.global.prod.t100.ter.int.amazonvideo.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://d001.global.prod.t100.ter.int.amazonvideo.com/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://d001.global.prod.t100.ter.int.amazonvideo.com/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://d001.global.prod.t100.ter.int.amazonvideo.com/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://d001.global.prod.t100.ter.int.amazonvideo.com/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://d001.global.prod.t100.ter.int.amazonvideo.com/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://partition-cname-trouter.pub-ent-usea2-06.ic3-edf-trouter.eastus2-prod.cosmic.office.net/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:205303",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "205303",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=205303;domain=partition-cname-trouter.pub-ent-usea2-06.ic3-edf-trouter.eastus2-prod.cosmic.office.net"
+      },
+      "acquired_at": "2026-10-15T07:20:46.527Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://partition-cname-trouter.pub-ent-usea2-06.ic3-edf-trouter.eastus2-prod.cosmic.office.net/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://partition-cname-trouter.pub-ent-usea2-06.ic3-edf-trouter.eastus2-prod.cosmic.office.net/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://partition-cname-trouter.pub-ent-usea2-06.ic3-edf-trouter.eastus2-prod.cosmic.office.net/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://partition-cname-trouter.pub-ent-usea2-06.ic3-edf-trouter.eastus2-prod.cosmic.office.net/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://partition-cname-trouter.pub-ent-usea2-06.ic3-edf-trouter.eastus2-prod.cosmic.office.net/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://partition-cname-trouter.pub-ent-usea2-06.ic3-edf-trouter.eastus2-prod.cosmic.office.net/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://120askimages.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:936404",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "936404",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=936404;domain=120askimages.com"
+      },
+      "acquired_at": "2026-10-15T07:20:46.666Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://120askimages.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://120askimages.com/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://120askimages.com/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://120askimages.com/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://120askimages.com/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://120askimages.com/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://observability.app.launchdarkly.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:240806",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "240806",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=240806;domain=observability.app.launchdarkly.com"
+      },
+      "acquired_at": "2026-10-15T07:20:49.478Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://observability.app.launchdarkly.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://observability.app.launchdarkly.com/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://observability.app.launchdarkly.com/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://observability.app.launchdarkly.com/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://observability.app.launchdarkly.com/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://observability.app.launchdarkly.com/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://nz.search.yahoo.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:124380",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "124380",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=124380;domain=nz.search.yahoo.com"
+      },
+      "acquired_at": "2026-10-15T07:20:49.489Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://nz.search.yahoo.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 404,
+          "url": "https://nz.search.yahoo.com/about",
+          "contentType": "text/html; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 404,
+          "url": "https://nz.search.yahoo.com/help",
+          "contentType": "text/html; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 404,
+          "url": "https://nz.search.yahoo.com/docs",
+          "contentType": "text/html; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": 404,
+          "url": "https://nz.search.yahoo.com/products",
+          "contentType": "text/html; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 500,
+          "url": "https://nz.search.yahoo.com/news",
+          "contentType": "",
+          "error": "not-same-domain-html"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://via-appia-mode.de/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:676488",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "676488",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=676488;domain=via-appia-mode.de"
+      },
+      "acquired_at": "2026-10-15T07:20:51.742Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://via-appia-mode.de/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 404,
+          "url": "https://www.via-appia-mode.de/about",
+          "contentType": "text/html; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 404,
+          "url": "https://www.via-appia-mode.de/help",
+          "contentType": "text/html; charset=utf-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": true,
+          "status": 200,
+          "url": "https://www.via-appia-mode.de/docs",
+          "contentType": "text/html; charset=utf-8",
+          "error": null
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://1890095.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:280701",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "280701",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=280701;domain=1890095.com"
+      },
+      "acquired_at": "2026-10-15T07:20:56.357Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://1890095.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://1890095.com/about"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://1890095.com/help"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://1890095.com/docs"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://1890095.com/products"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": null,
+          "error": "TypeError",
+          "url": "https://1890095.com/news"
+        }
+      ]
+    },
+    {
+      "seed": {
+        "url": "https://en-in.support.motorola.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:308354",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "unusual_structure",
+        "tranco_rank": "308354",
+        "selection_rule": "deterministic unusual_structure seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=308354;domain=en-in.support.motorola.com"
+      },
+      "acquired_at": "2026-10-15T07:20:56.371Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://en-in.support.motorola.com/robots.txt",
+        "error": "disabled-for-batch"
+      },
+      "sitemaps": [],
+      "discovered_urls": [],
+      "authentication": [],
+      "content": [
+        {
+          "requested_path": "/about",
+          "ok": false,
+          "status": 404,
+          "url": "https://en-in.support.motorola.com/about",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/help",
+          "ok": false,
+          "status": 404,
+          "url": "https://en-in.support.motorola.com/help",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/docs",
+          "ok": false,
+          "status": 404,
+          "url": "https://en-in.support.motorola.com/docs",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/products",
+          "ok": false,
+          "status": 404,
+          "url": "https://en-in.support.motorola.com/products",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        },
+        {
+          "requested_path": "/news",
+          "ok": false,
+          "status": 404,
+          "url": "https://en-in.support.motorola.com/news",
+          "contentType": "text/html; charset=UTF-8",
+          "error": "not-same-domain-html"
+        }
+      ]
+    }
+  ]
+}

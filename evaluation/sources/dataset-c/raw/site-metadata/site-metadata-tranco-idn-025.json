@@ -1,0 +1,1495 @@
+{
+  "schema_version": 1,
+  "status": "metadata-only-not-evaluated",
+  "created_at": "2026-10-15T07:03:42.689Z",
+  "input": "evaluation/sources/dataset-c/tranco-legitimate-seeds.csv",
+  "input_sha256": "e5a69727938b4c9ca0489c8f8b017df82de661b20fa855678bed5c7ffce9f612",
+  "capture_id": "tranco-idn-025",
+  "seed": "phishpect-dataset-c-2026-10-15-v1",
+  "intended_stratum": "idn_punycode",
+  "category": null,
+  "offset": 25,
+  "limit": 30,
+  "detector_executed": false,
+  "records": [
+    {
+      "seed": {
+        "url": "https://xn--n8j5223ai0c.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:156951",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "156951",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=156951;domain=xn--n8j5223ai0c.com"
+      },
+      "acquired_at": "2026-10-15T07:00:55.826Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://xn--n8j5223ai0c.com/robots.txt",
+        "error": "TypeError"
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn--n8j5223ai0c.com/sitemap.xml",
+          "ok": false,
+          "status": null,
+          "error": "TypeError"
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn--h1ae8a.xn--p1ai/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:218625",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "218625",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=218625;domain=xn--h1ae8a.xn--p1ai"
+      },
+      "acquired_at": "2026-10-15T07:00:55.858Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://xn--h1ae8a.xn--p1ai/robots.txt",
+        "error": "TypeError"
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn--h1ae8a.xn--p1ai/sitemap.xml",
+          "ok": false,
+          "status": null,
+          "error": "TypeError"
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn--h1aeifb.xn--80ao21a/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:350204",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "350204",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=350204;domain=xn--h1aeifb.xn--80ao21a"
+      },
+      "acquired_at": "2026-10-15T07:01:42.653Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://xn--h1aeifb.xn--80ao21a/robots.txt",
+        "error": "TimeoutError"
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn--h1aeifb.xn--80ao21a/sitemap.xml",
+          "ok": false,
+          "status": null,
+          "error": "TimeoutError"
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn--bsum-am-hafen-2-zvb.de/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:551821",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "551821",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=551821;domain=xn--bsum-am-hafen-2-zvb.de"
+      },
+      "acquired_at": "2026-10-15T07:01:42.655Z",
+      "robots": {
+        "ok": true,
+        "status": 200,
+        "url": "https://xn--bsum-am-hafen-2-zvb.de/robots.txt",
+        "error": null
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn--bsum-am-hafen-2-zvb.de/sitemap.xml",
+          "ok": true,
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://xn--bsum-am-hafen-2-zvb.de/post-sitemap.xml",
+          "ok": true,
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://xn--bsum-am-hafen-2-zvb.de/page-sitemap.xml",
+          "ok": true,
+          "status": 200,
+          "error": null
+        }
+      ],
+      "discovered_urls": [
+        "https://xn--bsum-am-hafen-2-zvb.de/",
+        "https://xn--bsum-am-hafen-2-zvb.de/mein-konto/",
+        "https://xn--bsum-am-hafen-2-zvb.de/datenschutz/",
+        "https://xn--bsum-am-hafen-2-zvb.de/kasse/",
+        "https://xn--bsum-am-hafen-2-zvb.de/buesum-am-hafen-no-2/",
+        "https://xn--bsum-am-hafen-2-zvb.de/zahlungsarten/",
+        "https://xn--bsum-am-hafen-2-zvb.de/angebote/",
+        "https://xn--bsum-am-hafen-2-zvb.de/gutscheine/",
+        "https://xn--bsum-am-hafen-2-zvb.de/impressum/",
+        "https://xn--bsum-am-hafen-2-zvb.de/echtheit-von-bewertungen/",
+        "https://xn--bsum-am-hafen-2-zvb.de/warenkorb/",
+        "https://xn--bsum-am-hafen-2-zvb.de/agb-2/",
+        "https://xn--bsum-am-hafen-2-zvb.de/mein-laden-in-buesum/",
+        "https://xn--bsum-am-hafen-2-zvb.de/widerrufsbelehrung-2/",
+        "https://xn--bsum-am-hafen-2-zvb.de/versand-lieferung/"
+      ],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn--80aakefzudug.xn--p1ai/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:941955",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "941955",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=941955;domain=xn--80aakefzudug.xn--p1ai"
+      },
+      "acquired_at": "2026-10-15T07:01:47.979Z",
+      "robots": {
+        "ok": true,
+        "status": 200,
+        "url": "https://xn--80aakefzudug.xn--p1ai/robots.txt",
+        "error": null
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn--80aakefzudug.xn--p1ai/sitemap.xml",
+          "ok": false,
+          "status": 404,
+          "error": "http-404"
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn--24-3qi4duc3a1a7o.ink/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:930250",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "930250",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=930250;domain=xn--24-3qi4duc3a1a7o.ink"
+      },
+      "acquired_at": "2026-10-15T07:01:52.154Z",
+      "robots": {
+        "ok": false,
+        "status": 200,
+        "url": "https://xn--24-3qi4duc3a1a7o.guru/robots.txt",
+        "error": "cross-domain-redirect"
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn--24-3qi4duc3a1a7o.ink/sitemap.xml",
+          "ok": false,
+          "status": 200,
+          "error": "cross-domain-redirect"
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn--j1aaaicu1f.xn--p1ai/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:834008",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "834008",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=834008;domain=xn--j1aaaicu1f.xn--p1ai"
+      },
+      "acquired_at": "2026-10-15T07:01:58.793Z",
+      "robots": {
+        "ok": true,
+        "status": 200,
+        "url": "https://xn--j1aaaicu1f.xn--p1ai/robots.txt",
+        "error": null
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn--j1aaaicu1f.xn--p1ai/sitemap.xml",
+          "ok": true,
+          "status": 200,
+          "error": null
+        }
+      ],
+      "discovered_urls": [
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-telom",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-telom/balzamymozolisustavykashel",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-telom/uhod-za-rukami",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-telom/intimnaya-gigiena",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-telom/gidrolaty",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-telom/dlya-vanny-i-dusha",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-telom/uhod-za-nogami",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-telom/naturalnye-skraby",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-telom/sredstva-dlya-korrektsii-zagara",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-telom/krema-i-slivki",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-telom/maslo-batter",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-telom/naturalnaya-parfyumeriya",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-telom/antitsellyulitnye-sredstva",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-litsom",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-litsom/krymskie-sredstva-dlya-snyatiya-makiyaja",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-litsom/krymskie-toniki-i-dushistye-vody",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-litsom/uhod-za-kojey-vokrug-glaz",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-litsom/gidrolaty",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-litsom/krymskie-naturalnye-krema",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-litsom/naturalnye-maski",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-litsom/skraby-i-ubtany-dlya-litsa",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-litsom/maslo-dlya-litsa---tsarstvo-aromatov-krymskie-naturalnye-kremy",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/mujskaya-kosmetika",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/mujskaya-kosmetika/uhod-za-litsom-brite",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/mujskaya-kosmetika/sredstva-dlya-volos-usov-i-borody",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/efirnye-masla",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/travy-sladosti-balzamy",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/travy-sladosti-balzamy/chay-kofe",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/pakety",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-volosami",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-volosami/shampuni-s-efirnymi-maslami",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-roza/uhod-za-volosami/maski-kondintsionery-balzamy",
+        "https://xn--j1aaaicu1f.xn--p1ai/lekkos",
+        "https://xn--j1aaaicu1f.xn--p1ai/lekkos/balzamy-mazi-geli",
+        "https://xn--j1aaaicu1f.xn--p1ai/lekkos/uhod-za-litsom",
+        "https://xn--j1aaaicu1f.xn--p1ai/lekkos/uhod-za-litsom/krymskie-naturalnye-krema",
+        "https://xn--j1aaaicu1f.xn--p1ai/lekkos/uhod-za-litsom/uhod-za-gubami-i-polostyu-rta",
+        "https://xn--j1aaaicu1f.xn--p1ai/lekkos/uhod-za-telom",
+        "https://xn--j1aaaicu1f.xn--p1ai/lekkos/uhod-za-telom/balzamymozolisustavykashel",
+        "https://xn--j1aaaicu1f.xn--p1ai/lekkos/uhod-za-telom/antiperspiranty",
+        "https://xn--j1aaaicu1f.xn--p1ai/lekkos/uhod-za-telom/uhod-za-rukami",
+        "https://xn--j1aaaicu1f.xn--p1ai/lekkos/uhod-za-telom/uhod-za-nogami",
+        "https://xn--j1aaaicu1f.xn--p1ai/lekkos/protivovirusnye-naturalnye-sredstva",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/travy-sladosti-balzamy",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/travy-sladosti-balzamy/krymskie-sladosti",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/travy-sladosti-balzamy/chay-kofe",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/travy-sladosti-balzamy/balzamy",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-litsom",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-litsom/dlya-brovey-i-resnits",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-litsom/uhod-za-gubami-i-polostyu-rta",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-litsom/uhod-za-kojey-vokrug-glaz",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-litsom/krymskie-toniki-i-dushistye-vody",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-litsom/krymskie-sredstva-dlya-snyatiya-makiyaja",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-litsom/kremy-slivki-i-masla",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-litsom/krymskie-naturalnye-krema",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-litsom/naturalnye-maski",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-litsom/dekorativnaya-naturalnaya-kosmetika",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-telom",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-telom/balzamymozolisustavykashel",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-telom/uhod-za-rukami",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-telom/maslo-batter",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-telom/dlya-vanny-i-dusha",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-telom/krema-i-slivki",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-telom/naturalnaya-parfyumeriya",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-telom/intimnaya-gigiena",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-telom/uhod-za-nogami",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-telom/naturalnye-skraby",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-telom/kosmeticheskie-masla",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-telom/massajnye-masla-kremy-i-balzamy",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-telom/antitsellyulitnye-sredstva",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-volosami",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-volosami/maski-kondintsionery-balzamy",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-volosami/masla-dlya-volos",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-volosami/gidrolaty-i-sprei",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-volosami/syvorotki-i-kontsentraty",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/uhod-za-volosami/shampuni-s-efirnymi-maslami",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/suveniry-i-podarki",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/efirnye-masla",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskaya-naturalnaya-kollektsiya/aromopodushki-i-valiki",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-litsom",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-litsom/naturalnye-maski",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-litsom/uhod-za-gubami-i-polostyu-rta",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-litsom/gidrolaty",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-litsom/skraby-i-ubtany-dlya-litsa",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-litsom/uhod-za-kojey-vokrug-glaz",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-litsom/krymskie-naturalnye-krema",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-litsom/krymskie-sredstva-dlya-snyatiya-makiyaja",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-litsom/kremy-slivki-i-masla",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-litsom/krymskie-toniki-i-dushistye-vody",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-litsom/dekorativnaya-naturalnaya-kosmetika",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-volosami",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-volosami/maski-kondintsionery-balzamy",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-volosami/gidrolaty-i-sprei",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-volosami/shampuni-s-efirnymi-maslami",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-volosami/shampuni-tverdye-naturalnye",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-telom",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-telom/balzamymozolisustavykashel",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-telom/uhod-za-rukami",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-telom/naturalnye-skraby",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-telom/naturalnaya-parfyumeriya",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-telom/sredstva-dlya-korrektsii-zagara",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-telom/massajnye-masla-kremy-i-balzamy",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/uhod-za-telom/dlya-vanny-i-dusha",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/travy-sladosti-balzamy",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/travy-sladosti-balzamy/bylzamy-pitevye",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/travy-sladosti-balzamy/chay-kofe",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/mujskaya-kosmetika",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/mujskaya-kosmetika/sredstva-dlya-volos-usov-i-borody",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/mujskaya-kosmetika/uhod-za-telom",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/efirnye-masla",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/protivovirusnye-naturalnye-sredstva",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/morskaya-jivaya-sol",
+        "https://xn--j1aaaicu1f.xn--p1ai/skifiya/detskaya-i-podrostkovaya",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-litsom",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-litsom/uhod-za-gubami-i-polostyu-rta",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-litsom/krymskie-naturalnye-krema",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-litsom/krymskie-sredstva-dlya-snyatiya-makiyaja",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-litsom/uhod-za-kojey-vokrug-glaz",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-litsom/solntsezaschitnye-sredstva-krymskie",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-litsom/kremy-slivki-i-masla",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-litsom/naturalnye-maski",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-volosami",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-volosami/maski-kondintsionery-balzamy",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-volosami/syvorotki-i-kontsentraty",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-volosami/shampuni-tverdye-naturalnye",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-volosami/shampuni-s-efirnymi-maslami",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-telom",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-telom/sredstva-dlya-korrektsii-zagara",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-telom/balzamymozolisustavykashel",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-telom/dlya-vanny-i-dusha",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-telom/uhod-za-rukami",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-telom/naturalnye-skraby",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-telom/uhod-za-nogami",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-telom/krema-i-slivki",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-telom/jidkoe-mylo",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-telom/antitsellyulitnye-sredstva",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/uhod-za-telom/intimnaya-gigiena",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/mujskaya-kosmetika",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/mujskaya-kosmetika/uhod-za-telom",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/sakskie-lechebnye-gryazi-glina-soda",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/balzamy-mazi-geli",
+        "https://xn--j1aaaicu1f.xn--p1ai/formula-vashego-zdorovya/suveniry-i-podarki",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/uhod-za-litsom",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/uhod-za-litsom/uhod-za-gubami-i-polostyu-rta",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/uhod-za-litsom/gidrolaty",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/uhod-za-litsom/krymskie-naturalnye-krema",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/uhod-za-litsom/naturalnye-maski",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/uhod-za-litsom/dekorativnaya-naturalnaya-kosmetika",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/uhod-za-litsom/dlya-brovey-i-resnits",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/uhod-za-litsom/skraby-i-ubtany-dlya-litsa",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/uhod-za-litsom/uhod-za-kojey-vokrug-glaz",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/uhod-za-litsom/krymskie-sredstva-dlya-snyatiya-makiyaja",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/uhod-za-litsom/maslo-dlya-litsa---tsarstvo-aromatov-krymskie-naturalnye-kremy",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/travy-sladosti-balzamy",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/travy-sladosti-balzamy/med-varene-siropy",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/travy-sladosti-balzamy/travy",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/uhod-za-telom",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/uhod-za-telom/uhod-za-rukami",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/uhod-za-telom/naturalnaya-parfyumeriya",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/uhod-za-telom/krema-i-slivki",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/uhod-za-telom/massajnye-masla-kremy-i-balzamy",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/uhod-za-telom/dlya-vanny-i-dusha",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/uhod-za-volosami",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/uhod-za-volosami/maski-kondintsionery-balzamy",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/morskaya-jivaya-sol",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/balzamy-mazi-geli",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskie-skazki/efirnye-masla",
+        "https://xn--j1aaaicu1f.xn--p1ai/pantika",
+        "https://xn--j1aaaicu1f.xn--p1ai/pantika/efirnye-masla",
+        "https://xn--j1aaaicu1f.xn--p1ai/pantika/uhod-za-litsom",
+        "https://xn--j1aaaicu1f.xn--p1ai/pantika/uhod-za-litsom/uhod-za-kojey-vokrug-glaz",
+        "https://xn--j1aaaicu1f.xn--p1ai/pantika/uhod-za-litsom/krymskie-naturalnye-krema",
+        "https://xn--j1aaaicu1f.xn--p1ai/eko-tavrida",
+        "https://xn--j1aaaicu1f.xn--p1ai/eko-tavrida/uhod-za-litsom",
+        "https://xn--j1aaaicu1f.xn--p1ai/eko-tavrida/uhod-za-litsom/krymskie-naturalnye-krema",
+        "https://xn--j1aaaicu1f.xn--p1ai/eko-tavrida/uhod-za-litsom/naturalnye-maski",
+        "https://xn--j1aaaicu1f.xn--p1ai/eko-tavrida/uhod-za-litsom/uhod-za-kojey-vokrug-glaz",
+        "https://xn--j1aaaicu1f.xn--p1ai/eko-tavrida/uhod-za-litsom/krymskie-toniki-i-dushistye-vody",
+        "https://xn--j1aaaicu1f.xn--p1ai/eko-tavrida/balzamy-mazi-geli",
+        "https://xn--j1aaaicu1f.xn--p1ai/eko-tavrida/sakskie-lechebnye-gryazi-glina-soda",
+        "https://xn--j1aaaicu1f.xn--p1ai/eko-tavrida/uhod-za-volosami",
+        "https://xn--j1aaaicu1f.xn--p1ai/eko-tavrida/uhod-za-volosami/maski-kondintsionery-balzamy",
+        "https://xn--j1aaaicu1f.xn--p1ai/eko-tavrida/uhod-za-volosami/shampuni-s-efirnymi-maslami",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskiy-travnik",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskiy-travnik/travy-sladosti-balzamy",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskiy-travnik/travy-sladosti-balzamy/bylzamy-pitevye",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskiy-travnik/uhod-za-telom",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskiy-travnik/uhod-za-telom/uhod-za-nogami",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskiy-travnik/uhod-za-telom/balzamymozolisustavykashel",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskiy-travnik/uhod-za-telom/uhod-za-rukami",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskiy-travnik/uhod-za-telom/krema-i-slivki",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskiy-travnik/detskaya-i-podrostkovaya",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskiy-travnik/uhod-za-volosami",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskiy-travnik/uhod-za-volosami/maski-kondintsionery-balzamy",
+        "https://xn--j1aaaicu1f.xn--p1ai/krymskiy-travnik/uhod-za-volosami/gidrolaty-i-sprei"
+      ],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn--mto-bmab.fr/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:678838",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "678838",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=678838;domain=xn--mto-bmab.fr"
+      },
+      "acquired_at": "2026-10-15T07:02:08.327Z",
+      "robots": {
+        "ok": true,
+        "status": 200,
+        "url": "https://www.xn--mto-bmab.fr/robots.txt",
+        "error": null
+      },
+      "sitemaps": [
+        {
+          "url": "https://www.www.xn--mto-bmab.fr/sitemap2026-2.xml",
+          "ok": false,
+          "status": null,
+          "error": "TypeError"
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn--80abh7bk0c.xn--p1ai/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:750741",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "750741",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=750741;domain=xn--80abh7bk0c.xn--p1ai"
+      },
+      "acquired_at": "2026-10-15T07:02:14.778Z",
+      "robots": {
+        "ok": true,
+        "status": 200,
+        "url": "https://xn--80abh7bk0c.xn--p1ai/robots.txt",
+        "error": null
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn--80abh7bk0c.xn--p1ai/sitemap.xml",
+          "ok": false,
+          "status": 404,
+          "error": "http-404"
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://pinco.xn--80ao21a/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:365413",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "365413",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=365413;domain=pinco.xn--80ao21a"
+      },
+      "acquired_at": "2026-10-15T07:02:17.935Z",
+      "robots": {
+        "ok": false,
+        "status": 404,
+        "url": "https://pinco.xn--80ao21a/robots.txt",
+        "error": "http-404"
+      },
+      "sitemaps": [
+        {
+          "url": "https://pinco.xn--80ao21a/sitemap.xml",
+          "ok": false,
+          "status": 404,
+          "error": "http-404"
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn--72-jlcep8ct.xn--p1ai/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:601429",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "601429",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=601429;domain=xn--72-jlcep8ct.xn--p1ai"
+      },
+      "acquired_at": "2026-10-15T07:02:21.133Z",
+      "robots": {
+        "ok": false,
+        "status": 404,
+        "url": "https://xn--72-jlcep8ct.xn--p1ai/robots.txt",
+        "error": "http-404"
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn--72-jlcep8ct.xn--p1ai/sitemap.xml",
+          "ok": false,
+          "status": 404,
+          "error": "http-404"
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn--80avnr.xn--p1ai/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:973133",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "973133",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=973133;domain=xn--80avnr.xn--p1ai"
+      },
+      "acquired_at": "2026-10-15T07:02:26.539Z",
+      "robots": {
+        "ok": true,
+        "status": 200,
+        "url": "https://xn--80avnr.xn--p1ai/robots.txt",
+        "error": null
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn--80avnr.xn--p1ai/sitemap-general.xml.gz",
+          "ok": true,
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://xn--80avnr.xn--p1ai/sitemap-reviews-index.xml.gz",
+          "ok": true,
+          "status": 200,
+          "error": null
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://www.xn--72c9ahqu7b4bxb3hpd.cc/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:871367",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "871367",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=871367;domain=www.xn--72c9ahqu7b4bxb3hpd.cc"
+      },
+      "acquired_at": "2026-10-15T07:02:32.956Z",
+      "robots": {
+        "ok": true,
+        "status": 200,
+        "url": "https://www.xn--72c9ahqu7b4bxb3hpd.cc/robots.txt",
+        "error": null
+      },
+      "sitemaps": [
+        {
+          "url": "https://www.xn--72c9ahqu7b4bxb3hpd.cc/sitemap.xml",
+          "ok": false,
+          "status": 404,
+          "error": "http-404"
+        },
+        {
+          "url": "https://www.xn--72c9ahqu7b4bxb3hpd.cc/sitemap.rss",
+          "ok": true,
+          "status": 200,
+          "error": null
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn--90aoijfhv.xn--p1ai/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:909156",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "909156",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=909156;domain=xn--90aoijfhv.xn--p1ai"
+      },
+      "acquired_at": "2026-10-15T07:02:36.943Z",
+      "robots": {
+        "ok": false,
+        "status": 403,
+        "url": "https://xn--90aoijfhv.xn--p1ai/robots.txt",
+        "error": "http-403"
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn--90aoijfhv.xn--p1ai/sitemap.xml",
+          "ok": false,
+          "status": 403,
+          "error": "http-403"
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn--b1afabzvcegckfhg.xn--p1ai/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:75420",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "75420",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=75420;domain=xn--b1afabzvcegckfhg.xn--p1ai"
+      },
+      "acquired_at": "2026-10-15T07:02:38.274Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://xn--b1afabzvcegckfhg.xn--p1ai/robots.txt",
+        "error": "TypeError"
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn--b1afabzvcegckfhg.xn--p1ai/sitemap.xml",
+          "ok": false,
+          "status": null,
+          "error": "TypeError"
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn--l3cacw9jyck.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:142481",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "142481",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=142481;domain=xn--l3cacw9jyck.com"
+      },
+      "acquired_at": "2026-10-15T07:02:46.720Z",
+      "robots": {
+        "ok": true,
+        "status": 200,
+        "url": "https://xn--l3cacw9jyck.com/robots.txt",
+        "error": null
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn--l3cacw9jyck.com/sitemap_index.xml",
+          "ok": true,
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://xn--l3cacw9jyck.com/post-sitemap.xml",
+          "ok": true,
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://xn--l3cacw9jyck.com/post-sitemap2.xml",
+          "ok": true,
+          "status": 200,
+          "error": null
+        }
+      ],
+      "discovered_urls": [
+        "https://xn--l3cacw9jyck.com/%e0%b8%aa%e0%b9%88%e0%b8%ad%e0%b8%87%e0%b8%a7%e0%b8%b2%e0%b8%a3%e0%b9%8c%e0%b8%9b%e0%b8%94%e0%b8%b2%e0%b8%a718-xxx/407/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%88%e0%b8%b5%e0%b8%99-xxx/459/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%88%e0%b8%b5%e0%b8%99-xxx/471/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%88%e0%b8%b5%e0%b8%99-xxx/475/",
+        "https://xn--l3cacw9jyck.com/onlyfans-xxx/478/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%a3%e0%b8%b9%e0%b8%9b%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/710/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%84%e0%b8%a5%e0%b8%b4%e0%b8%9b%e0%b8%ab%e0%b8%a5%e0%b8%b8%e0%b8%94-xxx/716/",
+        "https://xn--l3cacw9jyck.com/av-%e0%b8%8b%e0%b8%b1%e0%b8%9a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/722/",
+        "https://xn--l3cacw9jyck.com/av-%e0%b8%8b%e0%b8%b1%e0%b8%9a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/732/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/735/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/744/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%9d%e0%b8%a3%e0%b8%b1%e0%b9%88%e0%b8%87-xxx/747/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%a3%e0%b8%b9%e0%b8%9b%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/1477/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%88%e0%b8%b5%e0%b8%99-xxx/1485/",
+        "https://xn--l3cacw9jyck.com/av-%e0%b8%8b%e0%b8%b1%e0%b8%9a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/1488/",
+        "https://xn--l3cacw9jyck.com/jav-uncen-xxx/1494/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/1497/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/1500/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/1503/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/1508/",
+        "https://xn--l3cacw9jyck.com/jav-uncen-xxx/1511/",
+        "https://xn--l3cacw9jyck.com/jav-censored-xxx/1514/",
+        "https://xn--l3cacw9jyck.com/jav-xxx/1520/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%84%e0%b8%a5%e0%b8%b4%e0%b8%9b%e0%b8%ab%e0%b8%a5%e0%b8%b8%e0%b8%94-xxx/1525/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%84%e0%b8%a5%e0%b8%b4%e0%b8%9b%e0%b8%ab%e0%b8%a5%e0%b8%b8%e0%b8%94-xxx/1528/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%aa%e0%b9%88%e0%b8%ad%e0%b8%87%e0%b8%a7%e0%b8%b2%e0%b8%a3%e0%b9%8c%e0%b8%9b%e0%b8%94%e0%b8%b2%e0%b8%a718-xxx/1535/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%aa%e0%b9%88%e0%b8%ad%e0%b8%87%e0%b8%a7%e0%b8%b2%e0%b8%a3%e0%b9%8c%e0%b8%9b%e0%b8%94%e0%b8%b2%e0%b8%a718-xxx/1545/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/1556/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/1560/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/1563/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/1569/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%a3%e0%b8%b9%e0%b8%9b%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/1573/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%aa%e0%b9%88%e0%b8%ad%e0%b8%87%e0%b8%a7%e0%b8%b2%e0%b8%a3%e0%b9%8c%e0%b8%9b%e0%b8%94%e0%b8%b2%e0%b8%a718-xxx/1575/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%a3%e0%b8%b9%e0%b8%9b%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/1592/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%84%e0%b8%a5%e0%b8%b4%e0%b8%9b%e0%b8%ab%e0%b8%a5%e0%b8%b8%e0%b8%94-xxx/1600/",
+        "https://xn--l3cacw9jyck.com/jav-censored-xxx/1603/",
+        "https://xn--l3cacw9jyck.com/av-%e0%b8%8b%e0%b8%b1%e0%b8%9a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/1608/",
+        "https://xn--l3cacw9jyck.com/av-%e0%b8%8b%e0%b8%b1%e0%b8%9a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/1607/",
+        "https://xn--l3cacw9jyck.com/av-%e0%b8%8b%e0%b8%b1%e0%b8%9a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/1606/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/1617/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/1616/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/1615/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%88%e0%b8%b5%e0%b8%99-xxx/1624/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%88%e0%b8%b5%e0%b8%99-xxx/1627/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%84%e0%b8%a5%e0%b8%b4%e0%b8%9b%e0%b8%ab%e0%b8%a5%e0%b8%b8%e0%b8%94-xxx/1630/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%aa%e0%b9%88%e0%b8%ad%e0%b8%87%e0%b8%a7%e0%b8%b2%e0%b8%a3%e0%b9%8c%e0%b8%9b%e0%b8%94%e0%b8%b2%e0%b8%a718-xxx/1633/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%88%e0%b8%b5%e0%b8%99-xxx/1652/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%88%e0%b8%b5%e0%b8%99-xxx/1657/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%88%e0%b8%b5%e0%b8%99-xxx/1656/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%88%e0%b8%b5%e0%b8%99-xxx/1664/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%84%e0%b8%a5%e0%b8%b4%e0%b8%9b%e0%b8%ab%e0%b8%a5%e0%b8%b8%e0%b8%94-xxx/1667/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%84%e0%b8%a5%e0%b8%b4%e0%b8%9b%e0%b8%ab%e0%b8%a5%e0%b8%b8%e0%b8%94-xxx/1670/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%84%e0%b8%a5%e0%b8%b4%e0%b8%9b%e0%b8%ab%e0%b8%a5%e0%b8%b8%e0%b8%94-xxx/1673/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%84%e0%b8%a5%e0%b8%b4%e0%b8%9b%e0%b8%ab%e0%b8%a5%e0%b8%b8%e0%b8%94-xxx/1676/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%84%e0%b8%a5%e0%b8%b4%e0%b8%9b%e0%b8%ab%e0%b8%a5%e0%b8%b8%e0%b8%94-xxx/1679/",
+        "https://xn--l3cacw9jyck.com/av-%e0%b8%8b%e0%b8%b1%e0%b8%9a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/1682/",
+        "https://xn--l3cacw9jyck.com/av-%e0%b8%8b%e0%b8%b1%e0%b8%9a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/1685/",
+        "https://xn--l3cacw9jyck.com/av-%e0%b8%8b%e0%b8%b1%e0%b8%9a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/1688/",
+        "https://xn--l3cacw9jyck.com/av-%e0%b8%8b%e0%b8%b1%e0%b8%9a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/1691/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%a3%e0%b8%b9%e0%b8%9b%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/1712/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%aa%e0%b9%88%e0%b8%ad%e0%b8%87%e0%b8%a7%e0%b8%b2%e0%b8%a3%e0%b9%8c%e0%b8%9b%e0%b8%94%e0%b8%b2%e0%b8%a718-xxx/1715/",
+        "https://xn--l3cacw9jyck.com/jav-xxx/1709/",
+        "https://xn--l3cacw9jyck.com/jav-censored-xxx/1706/",
+        "https://xn--l3cacw9jyck.com/jav-censored-xxx/1703/",
+        "https://xn--l3cacw9jyck.com/jav-censored-xxx/1698/",
+        "https://xn--l3cacw9jyck.com/jav-censored-xxx/1695/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%88%e0%b8%b5%e0%b8%99-xxx/1734/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%9d%e0%b8%a3%e0%b8%b1%e0%b9%88%e0%b8%87-xxx/1747/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%9d%e0%b8%a3%e0%b8%b1%e0%b9%88%e0%b8%87-xxx/1750/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%9d%e0%b8%a3%e0%b8%b1%e0%b9%88%e0%b8%87-xxx/1753/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%9d%e0%b8%a3%e0%b8%b1%e0%b9%88%e0%b8%87-xxx/1757/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/1760/",
+        "https://xn--l3cacw9jyck.com/onlyfans-xxx/1763/",
+        "https://xn--l3cacw9jyck.com/onlyfans-xxx/1768/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/1782/",
+        "https://xn--l3cacw9jyck.com/jav-uncen-xxx/1786/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/1778/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/1775/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/1772/",
+        "https://xn--l3cacw9jyck.com/jav-xxx/1792/",
+        "https://xn--l3cacw9jyck.com/jav-xxx/1795/",
+        "https://xn--l3cacw9jyck.com/jav-xxx/1798/",
+        "https://xn--l3cacw9jyck.com/jav-uncen-xxx/1801/",
+        "https://xn--l3cacw9jyck.com/jav-uncen-xxx/1804/",
+        "https://xn--l3cacw9jyck.com/jav-xxx/1807/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%88%e0%b8%b5%e0%b8%99-xxx/1810/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%9d%e0%b8%a3%e0%b8%b1%e0%b9%88%e0%b8%87-xxx/1813/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%9d%e0%b8%a3%e0%b8%b1%e0%b9%88%e0%b8%87-xxx/1814/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/1819/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/1822/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%aa%e0%b9%88%e0%b8%ad%e0%b8%87%e0%b8%a7%e0%b8%b2%e0%b8%a3%e0%b9%8c%e0%b8%9b%e0%b8%94%e0%b8%b2%e0%b8%a718-xxx/1825/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%9d%e0%b8%a3%e0%b8%b1%e0%b9%88%e0%b8%87-xxx/1841/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%9d%e0%b8%a3%e0%b8%b1%e0%b9%88%e0%b8%87-xxx/1844/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%9d%e0%b8%a3%e0%b8%b1%e0%b9%88%e0%b8%87-xxx/1847/",
+        "https://xn--l3cacw9jyck.com/jav-censored-xxx/1850/",
+        "https://xn--l3cacw9jyck.com/jav-censored-xxx/1856/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%84%e0%b8%a5%e0%b8%b4%e0%b8%9b%e0%b8%ab%e0%b8%a5%e0%b8%b8%e0%b8%94-xxx/1859/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/1863/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/1867/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/1870/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/1873/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/1876/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/1879/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/1882/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/1885/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/1888/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%aa%e0%b9%88%e0%b8%ad%e0%b8%87%e0%b8%a7%e0%b8%b2%e0%b8%a3%e0%b9%8c%e0%b8%9b%e0%b8%94%e0%b8%b2%e0%b8%a718-xxx/1892/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%aa%e0%b9%88%e0%b8%ad%e0%b8%87%e0%b8%a7%e0%b8%b2%e0%b8%a3%e0%b9%8c%e0%b8%9b%e0%b8%94%e0%b8%b2%e0%b8%a718-xxx/1901/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/1910/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%9d%e0%b8%a3%e0%b8%b1%e0%b9%88%e0%b8%87-xxx/1913/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%84%e0%b8%a5%e0%b8%b4%e0%b8%9b%e0%b8%ab%e0%b8%a5%e0%b8%b8%e0%b8%94-xxx/1916/",
+        "https://xn--l3cacw9jyck.com/jav-xxx/1919/",
+        "https://xn--l3cacw9jyck.com/jav-uncen-xxx/1922/",
+        "https://xn--l3cacw9jyck.com/jav-uncen-xxx/1923/",
+        "https://xn--l3cacw9jyck.com/jav-uncen-xxx/1924/",
+        "https://xn--l3cacw9jyck.com/jav-uncen-xxx/1925/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%84%e0%b8%a5%e0%b8%b4%e0%b8%9b%e0%b8%ab%e0%b8%a5%e0%b8%b8%e0%b8%94-xxx/1941/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%84%e0%b8%a5%e0%b8%b4%e0%b8%9b%e0%b8%ab%e0%b8%a5%e0%b8%b8%e0%b8%94-xxx/1945/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%84%e0%b8%a5%e0%b8%b4%e0%b8%9b%e0%b8%ab%e0%b8%a5%e0%b8%b8%e0%b8%94-xxx/1948/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%aa%e0%b9%88%e0%b8%ad%e0%b8%87%e0%b8%a7%e0%b8%b2%e0%b8%a3%e0%b9%8c%e0%b8%9b%e0%b8%94%e0%b8%b2%e0%b8%a718-xxx/1952/",
+        "https://xn--l3cacw9jyck.com/jav-censored-xxx/1962/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%84%e0%b8%a5%e0%b8%b4%e0%b8%9b%e0%b8%ab%e0%b8%a5%e0%b8%b8%e0%b8%94-xxx/1965/",
+        "https://xn--l3cacw9jyck.com/jav-xxx/1969/",
+        "https://xn--l3cacw9jyck.com/jav-xxx/1973/",
+        "https://xn--l3cacw9jyck.com/av-%e0%b8%8b%e0%b8%b1%e0%b8%9a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/1977/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%84%e0%b8%a5%e0%b8%b4%e0%b8%9b%e0%b8%ab%e0%b8%a5%e0%b8%b8%e0%b8%94-xxx/1982/",
+        "https://xn--l3cacw9jyck.com/jav-censored-xxx/1987/",
+        "https://xn--l3cacw9jyck.com/jav-xxx/1990/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%aa%e0%b9%88%e0%b8%ad%e0%b8%87%e0%b8%a7%e0%b8%b2%e0%b8%a3%e0%b9%8c%e0%b8%9b%e0%b8%94%e0%b8%b2%e0%b8%a718-xxx/1993/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/2000/",
+        "https://xn--l3cacw9jyck.com/jav-uncen-xxx/2003/",
+        "https://xn--l3cacw9jyck.com/onlyfans-xxx/2008/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/2011/",
+        "https://xn--l3cacw9jyck.com/onlyfans-xxx/2014/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/2017/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/2023/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/2026/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/2029/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/2032/",
+        "https://xn--l3cacw9jyck.com/av-%e0%b8%8b%e0%b8%b1%e0%b8%9a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/2036/",
+        "https://xn--l3cacw9jyck.com/av-%e0%b8%8b%e0%b8%b1%e0%b8%9a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/2040/",
+        "https://xn--l3cacw9jyck.com/av-%e0%b8%8b%e0%b8%b1%e0%b8%9a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/2043/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%84%e0%b8%a5%e0%b8%b4%e0%b8%9b%e0%b8%ab%e0%b8%a5%e0%b8%b8%e0%b8%94-xxx/2046/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%88%e0%b8%b5%e0%b8%99-xxx/2051/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%88%e0%b8%b5%e0%b8%99-xxx/2055/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/2060/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/2063/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/2064/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%aa%e0%b9%88%e0%b8%ad%e0%b8%87%e0%b8%a7%e0%b8%b2%e0%b8%a3%e0%b9%8c%e0%b8%9b%e0%b8%94%e0%b8%b2%e0%b8%a718-xxx/2069/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%aa%e0%b9%88%e0%b8%ad%e0%b8%87%e0%b8%a7%e0%b8%b2%e0%b8%a3%e0%b9%8c%e0%b8%9b%e0%b8%94%e0%b8%b2%e0%b8%a718-xxx/2077/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/2085/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%84%e0%b8%a5%e0%b8%b4%e0%b8%9b%e0%b8%ab%e0%b8%a5%e0%b8%b8%e0%b8%94-xxx/2088/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/2093/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/2096/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/2099/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/2102/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/2105/",
+        "https://xn--l3cacw9jyck.com/av-%e0%b8%8b%e0%b8%b1%e0%b8%9a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/2108/",
+        "https://xn--l3cacw9jyck.com/jav-xxx/2111/",
+        "https://xn--l3cacw9jyck.com/jav-uncen-xxx/2114/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/2117/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/2121/",
+        "https://xn--l3cacw9jyck.com/jav-censored-xxx/2125/",
+        "https://xn--l3cacw9jyck.com/jav-censored-xxx/2128/",
+        "https://xn--l3cacw9jyck.com/av-%e0%b8%8b%e0%b8%b1%e0%b8%9a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/2131/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/2134/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/2137/",
+        "https://xn--l3cacw9jyck.com/av-%e0%b8%8b%e0%b8%b1%e0%b8%9a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/2142/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/2145/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/2148/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/2152/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/2155/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%9d%e0%b8%a3%e0%b8%b1%e0%b9%88%e0%b8%87-xxx/2158/",
+        "https://xn--l3cacw9jyck.com/jav-censored-xxx/2161/",
+        "https://xn--l3cacw9jyck.com/jav-xxx/2164/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%aa%e0%b9%88%e0%b8%ad%e0%b8%87%e0%b8%a7%e0%b8%b2%e0%b8%a3%e0%b9%8c%e0%b8%9b%e0%b8%94%e0%b8%b2%e0%b8%a718-xxx/2167/",
+        "https://xn--l3cacw9jyck.com/onlyfans-xxx/2176/",
+        "https://xn--l3cacw9jyck.com/onlyfans-xxx/2179/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/2182/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%84%e0%b8%a5%e0%b8%b4%e0%b8%9b%e0%b8%ab%e0%b8%a5%e0%b8%b8%e0%b8%94-xxx/2185/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%88%e0%b8%b5%e0%b8%99-xxx/2188/",
+        "https://xn--l3cacw9jyck.com/av-%e0%b8%8b%e0%b8%b1%e0%b8%9a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/2191/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/2194/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%aa%e0%b9%88%e0%b8%ad%e0%b8%87%e0%b8%a7%e0%b8%b2%e0%b8%a3%e0%b9%8c%e0%b8%9b%e0%b8%94%e0%b8%b2%e0%b8%a718-xxx/2197/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/2207/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/2211/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/2214/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/2217/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/2220/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b8%ad%e0%b8%b2%e0%b8%a3%e0%b9%8c-xxx/2223/",
+        "https://xn--l3cacw9jyck.com/jav-censored-xxx/2226/",
+        "https://xn--l3cacw9jyck.com/jav-censored-xxx/2229/",
+        "https://xn--l3cacw9jyck.com/av-%e0%b8%8b%e0%b8%b1%e0%b8%9a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/2232/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%88%e0%b8%b5%e0%b8%99-xxx/2235/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%88%e0%b8%b5%e0%b8%99-xxx/2238/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/2241/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b9%84%e0%b8%97%e0%b8%a2-xxx/2244/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%a3%e0%b8%b9%e0%b8%9b%e0%b9%82%e0%b8%9b%e0%b9%8a-xxx/2247/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%aa%e0%b9%88%e0%b8%ad%e0%b8%87%e0%b8%a7%e0%b8%b2%e0%b8%a3%e0%b9%8c%e0%b8%9b%e0%b8%94%e0%b8%b2%e0%b8%a718-xxx/2259/",
+        "https://xn--l3cacw9jyck.com/%e0%b8%ab%e0%b8%99%e0%b8%b1%e0%b8%87%e0%b9%82%e0%b8%9b%e0%b9%8a%e0%b8%88%e0%b8%b5%e0%b8%99-xxx/2049/"
+      ],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn--80advbdwql.xn--p1ai/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:511855",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "511855",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=511855;domain=xn--80advbdwql.xn--p1ai"
+      },
+      "acquired_at": "2026-10-15T07:03:07.097Z",
+      "robots": {
+        "ok": true,
+        "status": 200,
+        "url": "https://xn--80advbdwql.xn--p1ai/robots.txt",
+        "error": null
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn--80advbdwql.xn--p1ai/sitemap.xml",
+          "ok": false,
+          "status": 404,
+          "error": "http-404"
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn--q3cp0bq6gzaj.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:324624",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "324624",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=324624;domain=xn--q3cp0bq6gzaj.com"
+      },
+      "acquired_at": "2026-10-15T07:03:09.808Z",
+      "robots": {
+        "ok": true,
+        "status": 200,
+        "url": "https://xn--q3cp0bq6gzaj.com/robots.txt",
+        "error": null
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn--q3cp0bq6gzaj.com/sitemap.xml",
+          "ok": true,
+          "status": 200,
+          "error": null
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn--365-9j6nm37bngi.com/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:593520",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "593520",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=593520;domain=xn--365-9j6nm37bngi.com"
+      },
+      "acquired_at": "2026-10-15T07:03:11.236Z",
+      "robots": {
+        "ok": true,
+        "status": 200,
+        "url": "https://xn--365-9j6nm37bngi.com/robots.txt",
+        "error": null
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn--365-9j6nm37bngi.com/sitemap.xml",
+          "ok": true,
+          "status": 200,
+          "error": null
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn-----8kcsdmhjbfddiydglyp5d.xn--p1ai/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:452391",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "452391",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=452391;domain=xn-----8kcsdmhjbfddiydglyp5d.xn--p1ai"
+      },
+      "acquired_at": "2026-10-15T07:03:14.351Z",
+      "robots": {
+        "ok": true,
+        "status": 200,
+        "url": "https://xn-----8kcsdmhjbfddiydglyp5d.xn--p1ai/robots.txt",
+        "error": null
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn-----8kcsdmhjbfddiydglyp5d.xn--p1ai/sitemap.xml",
+          "ok": true,
+          "status": 200,
+          "error": null
+        }
+      ],
+      "discovered_urls": [
+        "https://xn-----8kcsdmhjbfddiydglyp5d.xn--p1ai/"
+      ],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn----dtbjnt0adgb6f4a.xn--p1ai/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:952223",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "952223",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=952223;domain=xn----dtbjnt0adgb6f4a.xn--p1ai"
+      },
+      "acquired_at": "2026-10-15T07:03:18.374Z",
+      "robots": {
+        "ok": true,
+        "status": 200,
+        "url": "https://xn----dtbjnt0adgb6f4a.xn--p1ai/robots.txt",
+        "error": null
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn----dtbjnt0adgb6f4a.xn--p1ai/sitemap.xml",
+          "ok": true,
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://xn----dtbjnt0adgb6f4a.xn--p1ai/sitemap-files.xml",
+          "ok": true,
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://xn----dtbjnt0adgb6f4a.xn--p1ai/sitemap-iblock-1.xml",
+          "ok": true,
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://xn----dtbjnt0adgb6f4a.xn--p1ai/sitemap.xml",
+          "ok": true,
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://xn----dtbjnt0adgb6f4a.xn--p1ai/sitemap-files.xml",
+          "ok": true,
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://xn----dtbjnt0adgb6f4a.xn--p1ai/sitemap-iblock-1.xml",
+          "ok": true,
+          "status": 200,
+          "error": null
+        }
+      ],
+      "discovered_urls": [
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/faq.php",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/svetilniki-optom.php",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/untitled.php",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/about/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/catalog/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/discount/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/news/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/privacy-policy/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/reviews/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/sale/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/about/contacts/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/about/delivery/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/about/guaranty/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/about/howto/dogovor-oferty.php",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/about/howto/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/dio-d-arte/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/chiaro/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/maytoni/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/ambiente-by-brizzi/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/arte-lamp/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/bohemia-ivele-crystal/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/citilux/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/crystal-lux/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/demarkt/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/divinare/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/eglo/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/favourite/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/globo/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/l-arte-luce/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/lightstar/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/loft-it/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/lucide/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/lumion/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/lussole/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/mantra/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/mw-light/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/novotech/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/odeon-light/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/osgona/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/reccagni-angelo/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/st-luce/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/velante/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/wertmark/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/ambrella-light/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/arti-lampadari/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/freya/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/lucia-tucci/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/vele-luce/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/newport/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/omnilux/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/f-promo/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/bohemia-art-classic/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/voltega/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/toplight/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/natali-kovaltseva/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/lumina-deco/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/nowodvorski/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/evoluce/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/aployt/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/arte-perfetto-luce/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/tiffany-lighting/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/stilfort/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/kutek/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/iledex/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/ilamp/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/moderli/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/vitaluce/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/escada/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/indigo/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/woodville/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/dobrin/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/stool-group/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/kink-light/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/myfar/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/arte-milano/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/everprof/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/belfast/",
+        "https://xn----dtbjnt0adgb6f4a.xn--p1ai/brands/lighthall/"
+      ],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn--24-3qi4duc3a1a7o.net/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:620703",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "620703",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=620703;domain=xn--24-3qi4duc3a1a7o.net"
+      },
+      "acquired_at": "2026-10-15T07:03:23.515Z",
+      "robots": {
+        "ok": true,
+        "status": 200,
+        "url": "https://xn--24-3qi4duc3a1a7o.net/robots.txt",
+        "error": null
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn--24-3qi4duc3a1a7o.net/sitemap.xml",
+          "ok": true,
+          "status": 200,
+          "error": null
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn--80aj2abrnat.xn--p1ai/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:296875",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "296875",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=296875;domain=xn--80aj2abrnat.xn--p1ai"
+      },
+      "acquired_at": "2026-10-15T07:03:24.114Z",
+      "robots": {
+        "ok": false,
+        "status": 200,
+        "url": "https://vh428.timeweb.ru/blocked/?ref=xn--80aj2abrnat.xn--p1ai",
+        "error": "cross-domain-redirect"
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn--80aj2abrnat.xn--p1ai/sitemap.xml",
+          "ok": false,
+          "status": 200,
+          "error": "cross-domain-redirect"
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn--e1amhdlg6e.xn--p1ai/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:564089",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "564089",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=564089;domain=xn--e1amhdlg6e.xn--p1ai"
+      },
+      "acquired_at": "2026-10-15T07:03:26.728Z",
+      "robots": {
+        "ok": true,
+        "status": 200,
+        "url": "https://xn--e1amhdlg6e.xn--p1ai/robots.txt",
+        "error": null
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn--e1amhdlg6e.xn--p1ai/sitemap-main.xml",
+          "ok": true,
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://xn--e1amhdlg6e.xn--p1ai/cms-map-1.xml.gz",
+          "ok": true,
+          "status": 200,
+          "error": null
+        },
+        {
+          "url": "https://xn--e1amhdlg6e.xn--p1ai/categories1-map-1.xml.gz",
+          "ok": true,
+          "status": 200,
+          "error": null
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn--80adheabo0bg1cb2j.xn--p1ai/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:358074",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "358074",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=358074;domain=xn--80adheabo0bg1cb2j.xn--p1ai"
+      },
+      "acquired_at": "2026-10-15T07:03:30.256Z",
+      "robots": {
+        "ok": true,
+        "status": 200,
+        "url": "https://xn--80adheabo0bg1cb2j.xn--p1ai/robots.txt",
+        "error": null
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn--80adheabo0bg1cb2j.xn--p1ai/sitemap.xml",
+          "ok": false,
+          "status": 404,
+          "error": "http-404"
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn--pxtr7m.net/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:830077",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "830077",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=830077;domain=xn--pxtr7m.net"
+      },
+      "acquired_at": "2026-10-15T07:03:30.814Z",
+      "robots": {
+        "ok": false,
+        "status": 404,
+        "url": "https://xn--pxtr7m.net/robots.txt",
+        "error": "http-404"
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn--pxtr7m.net/sitemap.xml",
+          "ok": false,
+          "status": 404,
+          "error": "http-404"
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://nic.xn--ngbc5azd/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:752390",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "752390",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=752390;domain=nic.xn--ngbc5azd"
+      },
+      "acquired_at": "2026-10-15T07:03:33.000Z",
+      "robots": {
+        "ok": false,
+        "status": null,
+        "url": "https://nic.xn--ngbc5azd/robots.txt",
+        "error": "TypeError"
+      },
+      "sitemaps": [
+        {
+          "url": "https://nic.xn--ngbc5azd/sitemap.xml",
+          "ok": false,
+          "status": null,
+          "error": "TypeError"
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn----8sbemuhsaeiwd9h5a9c.xn--p1ai/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:765996",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "765996",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=765996;domain=xn----8sbemuhsaeiwd9h5a9c.xn--p1ai"
+      },
+      "acquired_at": "2026-10-15T07:03:34.906Z",
+      "robots": {
+        "ok": true,
+        "status": 200,
+        "url": "https://xn----8sbemuhsaeiwd9h5a9c.xn--p1ai/robots.txt",
+        "error": null
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn----8sbemuhsaeiwd9h5a9c.xn--p1ai/sitemap_index.xml",
+          "ok": true,
+          "status": 200,
+          "error": null
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn--3rc7bwa7a5hpa.xn--2scrj9c/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:489786",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "489786",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=489786;domain=xn--3rc7bwa7a5hpa.xn--2scrj9c"
+      },
+      "acquired_at": "2026-10-15T07:03:39.159Z",
+      "robots": {
+        "ok": true,
+        "status": 200,
+        "url": "https://xn--3rc7bwa7a5hpa.xn--2scrj9c/robots.txt",
+        "error": null
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn--3rc7bwa7a5hpa.xn--2scrj9c/sitemap.xml",
+          "ok": true,
+          "status": 200,
+          "error": null
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    },
+    {
+      "seed": {
+        "url": "https://xn--80akodoacehigf0l.xn--p1ai/",
+        "source": "tranco-direct-metadata",
+        "source_id": "Q2Y54:702949",
+        "source_timestamp": "",
+        "source_category": "",
+        "intended_stratum": "idn_punycode",
+        "tranco_rank": "702949",
+        "selection_rule": "deterministic idn_punycode seed from permanent Tranco list Q2Y54",
+        "evidence": "tranco_id=Q2Y54;rank=702949;domain=xn--80akodoacehigf0l.xn--p1ai"
+      },
+      "acquired_at": "2026-10-15T07:03:40.778Z",
+      "robots": {
+        "ok": false,
+        "status": 403,
+        "url": "https://xn--80akodoacehigf0l.xn--p1ai/robots.txt",
+        "error": "http-403"
+      },
+      "sitemaps": [
+        {
+          "url": "https://xn--80akodoacehigf0l.xn--p1ai/sitemap.xml",
+          "ok": false,
+          "status": 403,
+          "error": "http-403"
+        }
+      ],
+      "discovered_urls": [],
+      "authentication": []
+    }
+  ]
+}

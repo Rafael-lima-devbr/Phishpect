@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "status": "candidate-class-complete-not-sealed",
+  "created_at": "2026-10-15T08:11:58.103Z",
+  "seed": "phishpect-dataset-c-2026-10-15-v1",
+  "detector_executed": false,
+  "inputs": [
+    {
+      "path": "evaluation/sources/dataset-c/auditable-legitimate-seeds.csv",
+      "sha256": "47d1cae6f98acc67195e51714a51372890116eb7b97ccae69cce6b7224dd0aab"
+    },
+    {
+      "path": "evaluation/sources/dataset-c/legitimate-candidates.csv.partial",
+      "sha256": "fd2123ee7793b09b69954de6bdc423d6b33903f3e910ee263915ee8a2b2df4b3"
+    },
+    {
+      "path": "evaluation/sources/dataset-c/site-metadata-tranco-general-000.csv",
+      "sha256": "b9f3ee8c7da3ae81a223c14281f13c995e3f63e040616d757d0cb404f033622c"
+    },
+    {
+      "path": "evaluation/sources/dataset-c/site-metadata-tranco-general-v2-000.csv",
+      "sha256": "f6e1c40b530799d44379b4365e61f18efa22e6c3b054299cd6867f11f2d41454"
+    },
+    {
+      "path": "evaluation/sources/dataset-c/site-metadata-tranco-general-v2-100.csv",
+      "sha256": "43cba2c0a89580a0a9c8528adf06fa42d86b8c2427ab01529b04622ae91b038b"
+    },
+    {
+      "path": "evaluation/sources/dataset-c/site-metadata-tranco-general-v2-200.csv",
+      "sha256": "e648e05266575b837cab348c193ff90e89b89761b176733f371211f293ae3056"
+    },
+    {
+      "path": "evaluation/sources/dataset-c/site-metadata-tranco-general-v2-300.csv",
+      "sha256": "5df540776bc904d01803a290820f7baeabb081554b631ff62f72d5e30d6ccaea"
+    },
+    {
+      "path": "evaluation/sources/dataset-c/site-metadata-tranco-general-v2-450.csv",
+      "sha256": "a52140970dc528cd00eae3358295753cd5dad12888d15e545cec9500c83260b2"
+    },
+    {
+      "path": "evaluation/sources/dataset-c/site-metadata-wikidata-financial-000.csv",
+      "sha256": "b9236bd4e171cc2e82cb3449dea3b621ef6a9bad10c9279626ee5b248e193394"
+    },
+    {
+      "path": "evaluation/sources/dataset-c/site-metadata-wikidata-ecommerce-000.csv",
+      "sha256": "f581cc5562f2e6874c98f7055397a8a77c4551f48d68a6d4cd951c47897d638b"
+    },
+    {
+      "path": "evaluation/sources/dataset-c/site-metadata-wikidata-financial-025.csv",
+      "sha256": "d2c779b463d298daf53295fe0bbb53a94bcabbae56108c98aad42b52701f8847"
+    },
+    {
+      "path": "evaluation/sources/dataset-c/site-metadata-tranco-idn-000.csv",
+      "sha256": "938ff5156ea0df1acb94b5243aa035acf726c055215e803d69012789fda33ce1"
+    },
+    {
+      "path": "evaluation/sources/dataset-c/site-metadata-tranco-idn-025.csv",
+      "sha256": "6c4c4fadba65a0a90b4164c4c13ebfac3788c80cc882ffcfc5a2a86c8df4273a"
+    },
+    {
+      "path": "evaluation/sources/dataset-c/site-metadata-tranco-idn-055.csv",
+      "sha256": "41f67d3a1d04aeb7d4be1943944d93d721d630e3bb4eb28c0bf5eb9580beacb3"
+    },
+    {
+      "path": "evaluation/sources/dataset-c/site-metadata-tranco-unusual-000.csv",
+      "sha256": "0e376a2cc6ae98f7fc35d6c5823dad3788dc45f96e7d5a1fc8014147db823a3a"
+    },
+    {
+      "path": "evaluation/sources/dataset-c/site-metadata-tranco-unusual-content-000.csv",
+      "sha256": "a46298b80ea387cc3dd74035c470fa530494e0b38bc3733035f152869f91a835"
+    },
+    {
+      "path": "evaluation/sources/dataset-c/site-metadata-tranco-unusual-content-080.csv",
+      "sha256": "be3bb8a11cdfc47ef3bb26ce4d1d527ea997ca8dd5896c7c028992336a846a7c"
+    },
+    {
+      "path": "evaluation/sources/dataset-c/site-metadata-tranco-unusual-content-150.csv",
+      "sha256": "46596a1de63b1e38ce96f0816c4d50a3bdb3b90bfecea8f640f663c3b664a62d"
+    },
+    {
+      "path": "evaluation/sources/dataset-c/site-metadata-tranco-unusual-content-210.csv",
+      "sha256": "de704b539ed03915c962d6745fe0377c89f87b263f124713b599080612197fbb"
+    },
+    {
+      "path": "evaluation/sources/dataset-c/site-metadata-tranco-unusual-content-310.csv",
+      "sha256": "8b878ee6532be7e1777b75f3c97e2616d3efbdd66fca872b1a2c259671b5d50f"
+    }
+  ],
+  "filters": {
+    "input": 32691,
+    "invalid_http": 0,
+    "duplicate_normalized": 1502,
+    "duplicate_host_path": 86,
+    "overlap_dataset_ab": 1,
+    "overlap_dataset_ab_normalized": 1,
+    "overlap_dataset_ab_host_path": 0,
+    "overlap_historical": 0,
+    "overlap_historical_normalized": 0,
+    "overlap_historical_host_path": 0,
+    "overlap_reputation": 0,
+    "domain_concentration": 0,
+    "missing_stratum": 90,
+    "accepted": 31012
+  },
+  "available_unique_domains_by_stratum": {
+    "shared_hosting": 354,
+    "idn_punycode": 20,
+    "commerce_finance": 30,
+    "authentication": 89,
+    "long_or_query": 99,
+    "unusual_structure": 33,
+    "internal_general": 184
+  },
+  "quotas": {
+    "internal_general": 90,
+    "authentication": 45,
+    "long_or_query": 45,
+    "shared_hosting": 45,
+    "commerce_finance": 30,
+    "idn_punycode": 15,
+    "unusual_structure": 30
+  },
+  "shortfalls": {},
+  "selected": 300,
+  "unique_domains": 300,
+  "output": "evaluation/sources/dataset-c/legitimate-candidates-filtered.csv",
+  "output_sha256": "a6b4bf3fb256fa98071bc9f17184d2bc8b24e7b8b61e3982f86e1828b1bc9590"
+}

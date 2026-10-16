@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "status": "sealed-not-evaluated",
+  "created_at": "2026-10-15T20:13:01.775Z",
+  "seed": "phishpect-dataset-c-2026-10-15-v1",
+  "detector_executed": false,
+  "official_evaluation": null,
+  "detector_reference": {
+    "branch": "main",
+    "commit": "7e59a5b26e0eaf9f809fa63340ca97e47d2de7ab",
+    "frozenAt": "2026-10-15T00:00:00-03:00",
+    "timezone": "America/Bahia",
+    "extensionVersion": "0.4.0",
+    "packageVersionAtFreeze": "0.3.0",
+    "files": {
+      "analysis.js": "19de0018a92025f7259f2db7c197450697e62db86c8c95a52d7c57d34b82990f",
+      "page-analysis.js": "5ec5328af6446c803916aabcd0b02a9356e9724b0d84920534e0f36e1452fa71",
+      "combined-analysis.js": "29065e7b22bb1650d184267ec77857bcd5ee48618058a1451a5f2c07b2059d19",
+      "reputation.js": "9831a12fb2cb3baf1716748ff6c18a96d2c0b30de2be2f03872fa8ba5aac090f",
+      "content.js": "eceeb2dd386338b81c2f648a5808948567442542f8e699fbdcd4337eabfe78ec",
+      "background.js": "940d88243a5d8bcfda19d831b70d85805eb4dedcb93824445847a3737d849d07",
+      "analysis-v2.js": "623d9bdd29077dee0bf67dbc38ddbe8a1f111105a4ccb45cd5988cf7d775a7c6",
+      "analysis-v3.js": "0609fdcf3211d721627b9c6da734d33e41d513326f78fbf2105ae1f3d4d18d99",
+      "reputation/threat-db.json": "07dd71625e16eaa12d7fe77a085abc0549c51af7e2467f58300b4f2f9c9bfe36",
+      "vendor/tldts.umd.min.js": "a1eba2eb7c344202536f53749456ea1178f2217f1e5e4da110cc36a4cd6162d1"
+    }
+  },
+  "frozen_file_mismatches": [],
+  "dataset": {
+    "path": "evaluation/datasets/dataset-c.csv",
+    "sha256": "2ff32e3206f103e628b52ed46d474f08b09cdccbc47d61e3f1939a61a171dbd0",
+    "total": 600,
+    "legitimate": 300,
+    "phishing": 300
+  },
+  "source_files": [
+    {
+      "path": "evaluation/sources/dataset-c/legitimate-candidates-filtered.csv",
+      "sha256": "a6b4bf3fb256fa98071bc9f17184d2bc8b24e7b8b61e3982f86e1828b1bc9590"
+    },
+    {
+      "path": "evaluation/sources/dataset-c/openphish-candidates-filtered.csv",
+      "sha256": "2863f159263dadbf9b8d89abebbccb981776e5dc9133f95b4810f268368dec3a"
+    }
+  ],
+  "source_reports": [
+    {
+      "path": "evaluation/sources/dataset-c/acquisition-manifest.json",
+      "sha256": "1205804b621065965d6372817463b489c4f5a65c3d7ee793da0e49a5e2779a15"
+    },
+    {
+      "path": "evaluation/sources/dataset-c/legitimate-assembly-report.json",
+      "sha256": "d73e9a1dc5fbe907f6ec8b5aa90af8c08ed36007a83c23c0896a65b71327fd8e"
+    },
+    {
+      "path": "evaluation/sources/dataset-c/openphish-assembly-report.json",
+      "sha256": "f9602d866e664cb38cf5cf4557fb26913ed30bcdabd94595afaaa9b8a9473f94"
+    }
+  ],
+  "openphish_captures": [
+    {
+      "capture_id": "openphish",
+      "path": "evaluation/sources/dataset-c/raw/openphish.txt",
+      "acquired_at": "2026-10-15T05:56:09.745Z",
+      "sha256": "3ae958e9039cb2d88ab7a039726445ca08936c773820c8c4e4310477a29305f4",
+      "bytes": 21013,
+      "counters": {
+        "input": 300,
+        "invalid_http": 0,
+        "duplicate_normalized": 1,
+        "duplicate_host_path": 5,
+        "overlap_dataset_ab": 0,
+        "overlap_dataset_ab_normalized": 0,
+        "overlap_dataset_ab_host_path": 0,
+        "overlap_historical": 0,
+        "overlap_historical_normalized": 0,
+        "overlap_historical_host_path": 0,
+        "overlap_reputation": 1,
+        "overlap_other_class_domain": 0,
+        "domain_concentration": 24,
+        "missing_stratum": 0,
+        "accepted": 269
+      }
+    },
+    {
+      "capture_id": "openphish-20261015T0815Z",
+      "path": "evaluation/sources/dataset-c/raw/openphish-captures/openphish-20261015T0815Z.txt",
+      "acquired_at": "2026-10-15T08:12:30.501Z",
+      "sha256": "3ae958e9039cb2d88ab7a039726445ca08936c773820c8c4e4310477a29305f4",
+      "bytes": 21013,
+      "counters": {
+        "input": 300,
+        "invalid_http": 0,
+        "duplicate_normalized": 1,
+        "duplicate_host_path": 5,
+        "overlap_dataset_ab": 0,
+        "overlap_dataset_ab_normalized": 0,
+        "overlap_dataset_ab_host_path": 0,
+        "overlap_historical": 0,
+        "overlap_historical_normalized": 0,
+        "overlap_historical_host_path": 0,
+        "overlap_reputation": 1,
+        "overlap_other_class_domain": 0,
+        "domain_concentration": 24,
+        "missing_stratum": 0,
+        "accepted": 269
+      }
+    },
+    {
+      "capture_id": "openphish-20261015T2012Z",
+      "path": "evaluation/sources/dataset-c/raw/openphish-captures/openphish-20261015T2012Z.txt",
+      "acquired_at": "2026-10-15T20:12:51.878Z",
+      "sha256": "6fe2e60c4996cea1f1aa7c8e1b33974aa7e7494d70be61709311153cc14dbbfe",
+      "bytes": 16143,
+      "counters": {
+        "input": 300,
+        "invalid_http": 0,
+        "duplicate_normalized": 7,
+        "duplicate_host_path": 0,
+        "overlap_dataset_ab": 0,
+        "overlap_dataset_ab_normalized": 0,
+        "overlap_dataset_ab_host_path": 0,
+        "overlap_historical": 0,
+        "overlap_historical_normalized": 0,
+        "overlap_historical_host_path": 0,
+        "overlap_reputation": 0,
+        "overlap_other_class_domain": 0,
+        "domain_concentration": 39,
+        "missing_stratum": 0,
+        "accepted": 254
+      }
+    }
+  ],
+  "filters": {
+    "legitimate": {
+      "input": 32691,
+      "invalid_http": 0,
+      "duplicate_normalized": 1502,
+      "duplicate_host_path": 86,
+      "overlap_dataset_ab": 1,
+      "overlap_dataset_ab_normalized": 1,
+      "overlap_dataset_ab_host_path": 0,
+      "overlap_historical": 0,
+      "overlap_historical_normalized": 0,
+      "overlap_historical_host_path": 0,
+      "overlap_reputation": 0,
+      "domain_concentration": 0,
+      "missing_stratum": 90,
+      "accepted": 31012
+    },
+    "phishing": {
+      "input": 900,
+      "invalid_http": 0,
+      "duplicate_normalized": 308,
+      "duplicate_host_path": 5,
+      "overlap_dataset_ab": 0,
+      "overlap_dataset_ab_normalized": 0,
+      "overlap_dataset_ab_host_path": 0,
+      "overlap_historical": 0,
+      "overlap_historical_normalized": 0,
+      "overlap_historical_host_path": 0,
+      "overlap_reputation": 1,
+      "overlap_other_class_domain": 0,
+      "domain_concentration": 69,
+      "missing_stratum": 0,
+      "accepted": 517
+    },
+    "final_overlaps": {
+      "dataset_ab": {
+        "total": 0,
+        "normalized": 0,
+        "hostname_path": 0
+      },
+      "historical": {
+        "total": 0,
+        "normalized": 0,
+        "hostname_path": 0
+      },
+      "reputation": {
+        "total": 0
+      }
+    }
+  },
+  "composition": {
+    "legitimate_by_stratum": {
+      "authentication": 45,
+      "commerce_finance": 30,
+      "idn_punycode": 15,
+      "internal_general": 90,
+      "long_or_query": 45,
+      "shared_hosting": 45,
+      "unusual_structure": 30
+    },
+    "phishing_by_capture": {
+      "openphish": 152,
+      "openphish-20261015T2012Z": 148
+    }
+  },
+  "domains": {
+    "unique_by_class": {
+      "legitimate": 300,
+      "phishing": 300
+    },
+    "shared_between_classes": 0,
+    "maximum_per_registrable_domain": 1
+  },
+  "historical_csv_files": [
+    "evaluation/datasets/candidates.csv",
+    "evaluation/datasets/sample.csv",
+    "evaluation/results/derived/dataset-a-v2-false-negatives.csv",
+    "evaluation/results/derived/dataset-a-v2-false-positives.csv",
+    "evaluation/results/derived/dataset-a-v2-metrics.csv",
+    "evaluation/results/derived/dataset-b-v2-false-negatives.csv",
+    "evaluation/results/derived/dataset-b-v2-false-positives.csv",
+    "evaluation/results/raw/dataset-a-v1.csv",
+    "evaluation/results/raw/dataset-a-v2.csv",
+    "evaluation/results/raw/dataset-b-v2.csv",
+    "evaluation/results/refinement/dataset-a-v2-false-negatives.csv",
+    "evaluation/results/refinement/dataset-a-v2-false-positives.csv",
+    "evaluation/results/refinement/dataset-a-v2-to-v3-1-lost-detections.csv",
+    "evaluation/results/refinement/dataset-a-v2-to-v3-1-new-false-positives.csv",
+    "evaluation/results/refinement/dataset-a-v2-to-v3-1-recovered.csv",
+    "evaluation/results/refinement/dataset-a-v2.csv",
+    "evaluation/results/refinement/dataset-a-v3-1-false-negatives.csv",
+    "evaluation/results/refinement/dataset-a-v3-1-false-positives.csv",
+    "evaluation/results/refinement/dataset-a-v3-1.csv",
+    "evaluation/results/refinement/dataset-a-v3-false-negatives.csv",
+    "evaluation/results/refinement/dataset-a-v3-false-positives.csv",
+    "evaluation/results/refinement/dataset-a-v3-to-v3-1-lost-detections.csv",
+    "evaluation/results/refinement/dataset-a-v3-to-v3-1-new-false-positives.csv",
+    "evaluation/results/refinement/dataset-a-v3-to-v3-1-recovered.csv",
+    "evaluation/results/refinement/dataset-a-v3.csv",
+    "evaluation/results/refinement/dataset-b-v2-false-negatives.csv",
+    "evaluation/results/refinement/dataset-b-v2-false-positives.csv",
+    "evaluation/results/refinement/dataset-b-v2-to-v3-1-lost-detections.csv",
+    "evaluation/results/refinement/dataset-b-v2-to-v3-1-new-false-positives.csv",
+    "evaluation/results/refinement/dataset-b-v2-to-v3-1-recovered.csv",
+    "evaluation/results/refinement/dataset-b-v2.csv",
+    "evaluation/results/refinement/dataset-b-v3-1-false-negatives.csv",
+    "evaluation/results/refinement/dataset-b-v3-1-false-positives.csv",
+    "evaluation/results/refinement/dataset-b-v3-1.csv",
+    "evaluation/results/refinement/dataset-b-v3-false-negatives.csv",
+    "evaluation/results/refinement/dataset-b-v3-false-positives.csv",
+    "evaluation/results/refinement/dataset-b-v3-to-v3-1-lost-detections.csv",
+    "evaluation/results/refinement/dataset-b-v3-to-v3-1-new-false-positives.csv",
+    "evaluation/results/refinement/dataset-b-v3-to-v3-1-recovered.csv",
+    "evaluation/results/refinement/dataset-b-v3.csv"
+  ]
+}
