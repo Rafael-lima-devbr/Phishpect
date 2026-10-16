@@ -16,10 +16,46 @@ const {
   calculateMetrics
 } = require("../scripts/validation/dataset-c-lib.js");
 const { createReputationDatabase } = require("../reputation.js");
-const { verifyFrozenFiles, verifySealedDataset } = require("../scripts/evaluate-dataset-c.js");
+const {
+  verifyFrozenFiles,
+  verifySealedDataset,
+  scoreDistributionRows,
+  errorSummaryRows
+} = require("../scripts/evaluate-dataset-c.js");
+const { validateRows } = require("../scripts/seal-dataset-c.js");
+const {
+  USER_AGENT,
+  PHISHTANK_PUBLIC_URL,
+  requestUrl,
+  requestedSources,
+  mergeManifestRecords
+} = require("../scripts/collect-dataset-c-sources.js");
 
 const temporary = fs.mkdtempSync(path.join(os.tmpdir(), "phishpect-dataset-c-"));
 try {
+  assert.match(USER_AGENT, /^Phishpect-validation\/0\.4/);
+  assert.equal(requestUrl("phishtank", {}), PHISHTANK_PUBLIC_URL);
+  const secret = "not-a-real-key";
+  assert.ok(requestUrl("phishtank", { PHISHTANK_APP_KEY: secret }).includes(encodeURIComponent(secret)));
+  assert.ok(!PHISHTANK_PUBLIC_URL.includes(secret));
+  assert.deepEqual(requestedSources(["--sources=tranco,common_crawl_collections"]), ["tranco", "common_crawl_collections"]);
+  const sourceManifestPath = path.join(temporary, "source-manifest.json");
+  fs.writeFileSync(sourceManifestPath, JSON.stringify({ records: [
+    { path: "raw/openphish-first.txt", sha256: "first", acquired_at: "2026-10-15T01:00:00.000Z" }
+  ] }));
+  assert.deepEqual(
+    mergeManifestRecords(sourceManifestPath, [
+      { path: "raw/openphish-second.txt", sha256: "second", acquired_at: "2026-10-15T13:00:00.000Z" }
+    ]).map((record) => record.sha256),
+    ["first", "second"]
+  );
+  fs.writeFileSync(sourceManifestPath, JSON.stringify({ records: [
+    { path: "raw/openphish.txt", sha256: "same", acquired_at: "2026-10-15T01:00:00.000Z", etag: "known", acquisition: "downloaded" }
+  ] }));
+  assert.equal(mergeManifestRecords(sourceManifestPath, [
+    { path: "raw/openphish.txt", sha256: "same", acquired_at: "2026-10-15T01:00:00.000Z", etag: null, acquisition: "preserved-existing" }
+  ])[0].etag, "known");
+
   const historyDirectory = path.join(temporary, "history");
   fs.mkdirSync(historyDirectory);
   fs.writeFileSync(path.join(historyDirectory, "old.csv"), "url,label\nhttps://old.example/login,phishing\n");
@@ -68,6 +104,23 @@ try {
     { label: "legitimate", result: "safe" }
   ], "result");
   assert.deepEqual({ tp: metrics.tp, tn: metrics.tn, fp: metrics.fp, fn: metrics.fn }, { tp: 1, tn: 1, fp: 1, fn: 1 });
+  assert.deepEqual(scoreDistributionRows([
+    { local_score: 0, label: "legitimate" },
+    { local_score: 10, label: "phishing" },
+    { local_score: 10, label: "legitimate" }
+  ]), [
+    { score: 0, legitimate: 1, phishing: 0, total: 1 },
+    { score: 10, legitimate: 1, phishing: 1, total: 2 }
+  ]);
+  assert.deepEqual(errorSummaryRows([
+    { label: "legitimate", final_classification: "safe" },
+    { label: "legitimate", final_classification: "suspicious" },
+    { label: "phishing", final_classification: "safe" },
+    { label: "phishing", final_classification: "blocked" }
+  ]), [
+    { error_type: "false_positive", label: "legitimate", classification: "suspicious", count: 1, proportion_of_class: 0.5 },
+    { error_type: "false_negative", label: "phishing", classification: "safe", count: 1, proportion_of_class: 0.5 }
+  ]);
 
   assert.deepEqual(verifyFrozenFiles(path.resolve(__dirname, "..")), []);
   const sealedRows = [
@@ -93,25 +146,57 @@ try {
   addCandidates(30, (index) => ({ url: `https://commerce-${index}.example/cart`, source: "synthetic", source_category: "ecommerce" }));
   addCandidates(15, (index) => ({ url: `https://${domainToASCII(`bücher${index}.example`)}/page`, source: "synthetic" }));
   addCandidates(30, (index) => ({ url: `https://a-b-c${index}.example/page`, source: "synthetic" }));
+  const validationRows = candidateRows.map((row) => ({
+    ...row,
+    label: "legitimate",
+    stratum: classifyLegitimate(row)
+  }));
+  const validationPhishing = Array.from({ length: 300 }, (_, index) => ({
+    url: `https://phishing-${index}.test/path`,
+    label: "phishing",
+    source: "openphish",
+    capture_id: index < 150 ? "capture-a" : "capture-b"
+  }));
+  const emptySets = { normalized: new Set(), hostPath: new Set() };
+  const finalValidation = validateRows(validationRows, validationPhishing, {
+    datasetAB: emptySets,
+    historical: emptySets,
+    reputation: createReputationDatabase({ urls: [], domains: [] })
+  });
+  assert.deepEqual(finalValidation.errors, []);
+  assert.deepEqual(finalValidation.uniqueDomains, { legitimate: 300, phishing: 300 });
+  assert.deepEqual(finalValidation.phishingComposition, { "capture-a": 150, "capture-b": 150 });
+  assert.match(validateRows(validationRows, validationPhishing.slice(0, 299), {
+    datasetAB: emptySets,
+    historical: emptySets,
+    reputation: createReputationDatabase({ urls: [], domains: [] })
+  }).errors.join("\n"), /Classe phishing: 299\/300/);
+  const sharedDomainPhishing = validationPhishing.map((row, index) => index === 0
+    ? { ...row, url: validationRows[0].url }
+    : row);
+  assert.match(validateRows(validationRows, sharedDomainPhishing, {
+    datasetAB: emptySets,
+    historical: emptySets,
+    reputation: createReputationDatabase({ urls: [], domains: [] })
+  }).errors.join("\n"), /Domínios compartilhados entre classes: 1/);
   const legitimatePath = path.join(temporary, "legitimate.csv");
   const openPhishPath = path.join(temporary, "openphish.txt");
-  const phishTankPath = path.join(temporary, "phishtank.json");
+  const selectedPhishingPath = path.join(temporary, "selected-phishing.csv");
   const builtDatasetPath = path.join(temporary, "built-dataset-c.csv");
   const builtManifestPath = path.join(temporary, "manifest.json");
   const emptyHistory = path.join(temporary, "empty-history");
   const emptyReputation = path.join(temporary, "reputation.json");
   fs.mkdirSync(emptyHistory);
   fs.writeFileSync(legitimatePath, stringifyCsv(candidateRows, ["url", "source", "source_category"]));
-  fs.writeFileSync(openPhishPath, `${Array.from({ length: 150 }, (_, index) => `https://openphish-${index}.test/path`).join("\n")}\n`);
-  fs.writeFileSync(phishTankPath, JSON.stringify(Array.from({ length: 150 }, (_, index) => ({
-    url: `https://phishtank-${index}.test/path`, phish_id: index + 1, verified: "yes", online: "yes"
-  }))));
+  fs.writeFileSync(openPhishPath, `${Array.from({ length: 300 }, (_, index) => `https://openphish-${index}.test/path`).join("\n")}\n`);
+  fs.writeFileSync(selectedPhishingPath, stringifyCsv(validationPhishing, [
+    "url", "label", "source", "capture_id"
+  ]));
   fs.writeFileSync(emptyReputation, JSON.stringify({ urls: [], domains: [] }));
   execFileSync(process.execPath, [
     path.resolve(__dirname, "../scripts/build-dataset-c.js"),
     `--legitimate=${legitimatePath}`,
     `--openphish=${openPhishPath}`,
-    `--phishtank=${phishTankPath}`,
     `--output=${builtDatasetPath}`,
     `--manifest=${builtManifestPath}`,
     `--history=${emptyHistory}`,
@@ -130,6 +215,28 @@ try {
   ], { encoding: "utf8" });
   assert.match(verificationOutput, /verified-not-executed/);
   assert.equal(fs.existsSync(path.join(temporary, "must-not-exist")), false);
+
+  const sealedDatasetPath = path.join(temporary, "sealed-dataset-c.csv");
+  const finalManifestPath = path.join(temporary, "sealed-manifest.json");
+  const selectedLegitimatePath = path.join(temporary, "selected-legitimate.csv");
+  fs.writeFileSync(selectedLegitimatePath, stringifyCsv(validationRows, [
+    "url", "label", "source", "source_category", "stratum"
+  ]));
+  execFileSync(process.execPath, [
+    path.resolve(__dirname, "../scripts/seal-dataset-c.js"),
+    `--legitimate=${selectedLegitimatePath}`,
+    `--phishing=${selectedPhishingPath}`,
+    `--output=${sealedDatasetPath}`,
+    `--manifest=${finalManifestPath}`,
+    `--history=${emptyHistory}`,
+    `--reputation=${emptyReputation}`,
+    "--seed=synthetic-test-seed"
+  ], { stdio: "pipe" });
+  const finalManifest = JSON.parse(fs.readFileSync(finalManifestPath, "utf8"));
+  assert.equal(finalManifest.status, "sealed-not-evaluated");
+  assert.equal(finalManifest.detector_executed, false);
+  assert.deepEqual(finalManifest.frozen_file_mismatches, []);
+  assert.equal(finalManifest.dataset.total, 600);
 } finally {
   fs.rmSync(temporary, { recursive: true, force: true });
 }
