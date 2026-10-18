@@ -1,116 +1,131 @@
-# Análise pós-carregamento
+# Análise pós-carregamento — PAGE_ANALYSIS 2.0
 
-## Objetivo e escopo
+## Estado
 
-A camada pós-carregamento complementa a análise de URL V3.1 com evidências estruturais disponíveis depois de `DOMContentLoaded`. Ela é local, determinística e baseada em regras. Não substitui a V3.1 nem a reputação, não consulta serviços externos e nunca produz a classificação `blocked`.
+A versão atualmente carregada pela extensão é a **PAGE_ANALYSIS 2.0** (`page-analysis-v2.js`). A implementação anterior foi preservada em `page-analysis.js` porque participou da primeira avaliação quantitativa independente da camada pós-carregamento.
 
-Os três resultados permanecem separados:
+A versão 2.0 foi desenvolvida **depois** da inspeção dos erros dessa avaliação. Por isso, qualquer métrica da 2.0 no mesmo corpus é resultado de desenvolvimento e não deve ser apresentada como validação independente.
 
-- `URL_ANALYSIS`: V3.1 e reputação local, calculadas pelo service worker;
-- `PAGE_ANALYSIS`: formulários, tipos de campos, destino dos formulários e identidade visual textual limitada;
-- `COMBINED_ANALYSIS`: decisão contextual sem somar cegamente todos os pontos.
+## Objetivo
 
-`blocked` continua reservado para ameaça confirmada pela lista local de testes ou pela base de reputação. A página pode apenas manter o resultado ou elevá-lo para `suspicious`.
+A camada pós-carregamento complementa a V3.1 com informações estruturais disponíveis após `DOMContentLoaded`. Ela é local, determinística, baseada em regras e nunca gera `blocked` sozinha.
 
-## Fluxo de dados
+Os resultados permanecem separados:
 
-1. `content.js` intercepta apenas cliques primários comuns destinados à aba atual desde `document_start`. Links com modificadores, clique do meio, `download`, `_blank`, targets nomeados e mudanças apenas de fragmento preservam o comportamento nativo.
-2. Depois de `DOMContentLoaded`, ele executa a coleta uma única vez.
-3. `collectPageSnapshot` cria um snapshot limitado da estrutura do documento.
-4. `analyzePage` converte esse snapshot em sinais, categorias, score e motivos explicáveis.
-5. Somente o resultado agregado de `PAGE_ANALYSIS` é enviado ao service worker.
-6. `background.js` recalcula a URL, combina as duas camadas e abre o aviso apenas quando a página acrescenta risco contextual.
+- `URL_ANALYSIS`: V3.1 + reputação local;
+- `PAGE_ANALYSIS`: estrutura e contexto da página;
+- `COMBINED_ANALYSIS`: decisão final contextual.
 
-Não há `MutationObserver` nesta etapa. A análise ocorre exatamente uma vez depois de `DOMContentLoaded`; aplicações SPA que criarem ou alterarem formulários depois da análise inicial podem não ser cobertas.
+## Privacidade
 
-## Garantia de privacidade
+A coleta usa somente metadados necessários à análise, incluindo:
 
-A coleta lê somente:
+- título e identidade textual limitada;
+- cabeçalhos e textos associados a formulários;
+- atributo `alt` de imagens em contexto;
+- método e `action` de formulários;
+- `type`, `name`, `id`, `autocomplete`, `placeholder` e `aria-label` dos campos.
 
-- título do documento;
-- texto de `h1` e `h2`;
-- atributo `alt` de imagens;
-- método e atributo `action` dos formulários;
-- tag, `type`, `name`, `id` e `autocomplete` dos campos.
+O código **não acessa valores digitados** em `input` ou `textarea`. O snapshot bruto permanece no content script e somente o resultado agregado da análise é enviado ao service worker.
 
-O conteúdo preenchido em `input` ou `textarea` nunca é acessado, armazenado ou enviado. Os testes usam um campo cujo acesso ao conteúdo digitado lança uma exceção; a coleta precisa terminar normalmente para o teste passar. O snapshot bruto também não é enviado ao service worker: apenas contagens, booleanos, categorias, destinos normalizados e motivos. Logs internos são genéricos e não incluem URLs completas, conteúdo do DOM nem dados digitados.
+## O que mudou em relação à PAGE_ANALYSIS 1.0
 
-Para limitar custo e exposição, são inspecionados no máximo 30 formulários, 80 campos por formulário, 12 títulos e 20 textos alternativos. Textos coletados são truncados.
+A primeira versão conseguia somar sinais encontrados em regiões diferentes da página. Na avaliação com PhreshPhish isso produziu dois falsos positivos: menções incidentais a Instagram e Google em elementos sociais/aplicativos foram combinadas com formulários legítimos.
 
-## Domínios e destinos de formulário
+A 2.0 introduziu três mudanças principais:
 
-`page-analysis.js` resolve `action` ausente, relativa e absoluta com `URL`. O domínio registrável é calculado por `tldts` com a Public Suffix List e suporte a sufixos privados, como na V3.1.
+1. **Identidade contextual** — rodapés, `nav`, `aside`, links sociais e badges de lojas deixam de representar automaticamente a identidade principal. Título, cabeçalhos de autenticação, logos relevantes e identidade próxima ao formulário recebem maior peso contextual.
+2. **Localização das evidências** — campos, destino e identidade são avaliados por formulário ou grupo estrutural coerente. Sinais de partes independentes da página não são somados como se pertencessem à mesma coleta.
+3. **Campos fora de `form`** — podem ser agrupados por contêiner estrutural, evitando combinar artificialmente email e senha pertencentes a áreas diferentes.
 
-São registrados:
+A identificação de campos também usa `placeholder` e `aria-label`, mantendo a restrição de não ler valores.
 
-- método `GET`, `POST`, `DIALOG` ou `OTHER` (com o método original limitado, quando não reconhecido);
-- destino ausente, relativo ou absoluto;
-- protocolo e domínio registrável do destino;
-- envio para outro domínio registrável;
-- downgrade de página HTTPS para ação HTTP.
+## Categorias e limiar
 
-Um destino externo isolado não basta para alertar.
+Os tetos permanecem:
 
-## Categorias e tetos
+| Categoria | Teto |
+|---|---:|
+| credenciais | 10 |
+| dados sensíveis | 12 |
+| destino do formulário | 14 |
+| identidade | 12 |
+| estrutura da página | 6 |
 
-| Categoria | Exemplos | Teto |
-| --- | --- | ---: |
-| Credenciais | senha, identificador, conjunto identificador + senha | 10 |
-| Dados sensíveis | cartão, telefone, documento, banco/Pix e endereço | 12 |
-| Destino do formulário | domínio externo, downgrade e credenciais em HTTP | 14 |
-| Identidade | marca conhecida fora do domínio oficial em contexto de coleta | 12 |
-| Estrutura da página | muitos formulários ou formulário muito grande | 6 |
+O limiar da PAGE_ANALYSIS continua em **18**. Duas categorias relacionadas recebem bônus de diversidade 6; três ou mais recebem 10.
 
-O threshold da página é 18. Duas categorias recebem bônus de diversidade 6; três ou mais recebem 10. Além do score, é obrigatória uma combinação contextual:
+A classificação `suspicious` exige, além do score, uma combinação contextual, como:
 
-- senha ou credenciais com destino externo;
-- cartão, documento ou dado bancário com destino externo;
+- senha/credenciais enviadas para domínio externo;
+- cartão, documento ou dados bancários enviados externamente;
 - senha em página HTTP;
-- marca fora do domínio oficial combinada com senha ou dados sensíveis;
-- downgrade HTTPS → HTTP combinado com coleta relevante.
+- downgrade HTTPS → HTTP com coleta relevante;
+- identidade incompatível com o domínio ligada a coleta de credenciais ou dados sensíveis.
 
-Assim, senha isolada, formulário externo isolado, telefone/endereço externo isolado, artigo que menciona uma marca e login legítimo no mesmo domínio não geram alerta sozinhos. Senha externa e cartão externo mantêm o comportamento anterior.
+Telefone/endereço externos isolados, login normal, shared hosting isolado e menções de marcas sem contexto não são suficientes.
 
-Os campos são reconhecidos por tokens controlados derivados de `name`, `id`, `type` e `autocomplete`, com separação de `camelCase` e delimitadores. Não é usado substring matching amplo: por exemplo, `documentation` não vira documento, `discard` não vira cartão e `accountNumber` não vira usuário.
+## Public Suffix List
 
-## Combinação com a URL
+`tldts` é usado com suporte a sufixos públicos e privados para calcular domínio registrável. Isso permite comparar corretamente a página e o destino de formulários em estruturas como `com.br`, `co.uk` e hospedagens com sufixos privados.
 
-`combined-analysis.js` conserva `blocked`, mantém qualquer URL já `suspicious` e aceita `PAGE_ANALYSIS=suspicious`. Também há duas combinações entre camadas:
+## Integração
 
-- contexto forte de identidade na URL + coleta de credenciais ou dados sensíveis;
-- infraestrutura/autenticação na URL, uma segunda categoria independente de evidência e formulário completo de identificação e senha.
+`combined-analysis.js` foi mantido inalterado durante o refinamento 2.0. Ele:
 
-Uma única categoria de autenticação em subdomínio ou uma única categoria de shared hosting não eleva um login normal por si só. A evidência de marca exata fora do domínio oficial continua com o mesmo score e motivo na URL, mas precisa de contexto adicional para tornar o endereço `suspicious`.
+- preserva qualquer `blocked` vindo de evidência mais forte;
+- preserva URL já `suspicious`;
+- aceita PAGE `suspicious`;
+- possui combinações adicionais entre identidade da URL e coleta de dados;
+- não soma cegamente os scores das camadas.
 
-O indicador heurístico combinado exibido é o maior score das camadas, não a soma, não é uma probabilidade e não deve ser interpretado como porcentagem de fraude. Os motivos recebem os prefixos `[URL]`, `[Página]` e `[Combinação]`. Objetos de análise recebidos são normalizados antes da combinação; níveis, scores, motivos e sinais inválidos não podem elevar o risco.
+O indicador exibido é heurístico e não representa probabilidade de fraude.
 
-Ao escolher “Continuar mesmo assim”, a exceção temporária dura no máximo 60 segundos e também suprime o alerta pós-carregamento daquela mesma carga, evitando um segundo aviso imediato. Ela é consumida uma vez, expira e é limpa em navegações incompatíveis ou no fechamento da aba. A origem da mensagem é validada como a página de aviso da extensão. A permissão continua válida somente para URL `suspicious`; `blocked` permanece sem exceção.
+## Execução
 
-A reputação distingue base disponível com URL não listada de base indisponível. Em falhas internas de análise, a navegação original é restaurada (fail-open), enquanto a política de `blocked` permanece inalterada quando a reputação está disponível.
+A coleta ocorre uma única vez após `DOMContentLoaded`.
 
-## Testes e demonstrações
+Nesta etapa não há:
 
-Execute:
+- `MutationObserver`;
+- execução de JavaScript de páginas do corpus;
+- inspeção de iframes;
+- travessia de Shadow DOM;
+- análise visual por screenshot/canvas.
 
-```bash
-npm test
-```
+## Avaliação quantitativa da versão 1.0
 
-Para uma medição simples e reproduzível do custo das três camadas com URLs reservadas para documentação, execute `npm run benchmark`. O resultado informa tempo total e média por iteração; não é um limite de desempenho nem substitui profiling no navegador.
+A primeira avaliação independente utilizou 240 pares URL–HTML do PhreshPhish v1.0.1:
 
-Os testes cobrem página segura, login legítimo, tokenização, preservação de métodos, telefone/endereço externos, senha e cartão externos, marca contextual, validação dos objetos combinados, reputação disponível/indisponível, isolamento de tenants, TTL, origem da continuação, corridas de redirecionamento, fragmentos e comportamentos nativos de links. A garantia de privacidade usa campos cujo acesso ao conteúdo digitado lança uma exceção.
+| Modo | TP | TN | FP | FN | Recall | F1 | FAR |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| URL-only | 4 | 120 | 0 | 116 | 3,33% | 6,45% | 0% |
+| PAGE 1.0 | 2 | 118 | 2 | 118 | 1,67% | 3,23% | 1,67% |
+| COMBINED 1.0 | 6 | 118 | 2 | 114 | 5,00% | 9,38% | 1,67% |
 
-O popup `test.html` liga para cinco páginas fictícias em `demo/`. Cada página usa uma URL sintética em metadado, impede o envio do formulário e mostra o `PAGE_ANALYSIS` completo. Os domínios `example.com` e `example.net` são usados apenas como exemplos reservados.
+A combinação recuperou dois phishing e introduziu dois falsos positivos. O ganho de recall e o aumento de FAR foram ambos de 1,67 ponto percentual.
 
-Os Datasets A e B continuam avaliando exclusivamente URLs. Eles não medem esta camada porque não contêm HTML versionado nem rótulos de comportamento da página.
+## Comparação de desenvolvimento da 2.0
+
+Depois da inspeção dos erros, o mesmo corpus passou a ser dado de desenvolvimento.
+
+| Modo | TP | TN | FP | FN | Recall | Precision | F1 | FAR |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| PAGE 2.0 | 1 | 120 | 0 | 119 | 0,83% | 100% | 1,65% | 0% |
+| COMBINED + PAGE 2.0 | 5 | 120 | 0 | 115 | 4,17% | 100% | 8,00% | 0% |
+
+A 2.0 removeu os dois falsos positivos anteriores e não introduziu novos, mas perdeu um verdadeiro positivo. O caso perdido dependia de uma associação global entre uma referência social a Instagram e campos localizados em outro bloco da página, comportamento que foi deliberadamente removido por ser conceitualmente frágil.
+
+O resultado é interpretado como **melhora de coerência contextual**, não como demonstração de aumento de eficácia. Continuar ajustando sobre o mesmo corpus elevaria o risco de overfitting.
+
+Artefatos: [`evaluation/results/page-analysis/development-v2/`](../evaluation/results/page-analysis/development-v2/) e [resumo da avaliação](../evaluation/results/page-analysis/README.md).
 
 ## Limitações
 
-- A análise inicial não acompanha alterações tardias de SPA.
-- Iframes não são analisados (`all_frames` permanece desativado) e Shadow DOM não é percorrido.
-- Campos fora de formulários não entram na coleta estrutural atual.
-- Nomes de campos não padronizados podem ocultar o tipo de dado solicitado.
-- Conteúdo visual renderizado em canvas, imagens sem `alt` e textos fora dos elementos limitados não são interpretados.
-- Formulários legítimos podem usar processadores externos, provedores SSO e gateways; combinações de senha, cartão ou outros sinais fortes com esses destinos ainda podem gerar falso alerta.
-- A lista de marcas é explícita e limitada.
-- Páginas podem mudar depois da coleta inicial.
+- 79/120 páginas de phishing do corpus não possuíam elemento `form`;
+- 82/120 não apresentavam campos na projeção estática;
+- scripts e iframes são frequentes tanto em legítimas quanto em phishing e não podem ser usados isoladamente como sinal;
+- conteúdo criado depois do snapshot pode não ser observado;
+- identidade visual não textual permanece fora do escopo;
+- provedores legítimos de SSO, CRM, pagamento e formulários externos continuam sendo casos difíceis.
+
+A etapa técnica atual foi encerrada sem novo ciclo de tuning.
