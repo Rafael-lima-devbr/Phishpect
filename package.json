@@ -26,12 +26,12 @@
     "test:v2": "node tests/analysis-v2.test.js",
     "test:v3": "node tests/analysis-v3.test.js",
     "test:v3.1": "node tests/analysis-v3-1.test.js",
-    "test:page": "node tests/page-analysis.test.js && node tests/combined-analysis.test.js",
+    "test:page": "node tests/page-analysis.test.js && node tests/page-analysis-v2.test.js && node tests/combined-analysis.test.js",
     "test:navigation": "node tests/navigation-policy.test.js && node tests/navigation-state.test.js",
     "test:reputation": "node tests/reputation.test.js",
     "test:privacy": "node tests/privacy.test.js",
     "test:validation": "node tests/dataset-c-preparation.test.js",
-    "test": "node tests/analysis-v2.test.js && node tests/analysis-v3.test.js && node tests/analysis-v3-1.test.js && node tests/page-analysis.test.js && node tests/combined-analysis.test.js && node tests/reputation.test.js && node tests/navigation-policy.test.js && node tests/navigation-state.test.js && node tests/privacy.test.js && node tests/dataset-c-preparation.test.js"
+    "test": "node tests/analysis-v2.test.js && node tests/analysis-v3.test.js && node tests/analysis-v3-1.test.js && node tests/page-analysis.test.js && node tests/page-analysis-v2.test.js && node tests/combined-analysis.test.js && node tests/reputation.test.js && node tests/navigation-policy.test.js && node tests/navigation-state.test.js && node tests/privacy.test.js && node tests/dataset-c-preparation.test.js"
   },
   "dependencies": {
     "tldts": "^7.4.16"
