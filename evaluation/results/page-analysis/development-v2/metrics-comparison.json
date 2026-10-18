@@ -1,0 +1,260 @@
+{
+  "status": "development-comparison",
+  "source_corpus_sha256": "29574db70b518a4efffafca3d0451b4d3eae26c9d6abe283be54d9030479adab",
+  "page": {
+    "old": {
+      "modality": "page",
+      "samples": 240,
+      "class_balance": {
+        "legitimate": 120,
+        "phishing": 120
+      },
+      "confusion_matrix": {
+        "TP": 2,
+        "TN": 118,
+        "FP": 2,
+        "FN": 118
+      },
+      "metrics": {
+        "recall": 0.016666666666666666,
+        "precision": 0.5,
+        "f1": 0.03225806451612903,
+        "accuracy": 0.5,
+        "false_alert_rate": 0.016666666666666666
+      },
+      "confidence_intervals_95": {
+        "recall": {
+          "estimate": 0.016666666666666666,
+          "lower": 0.004582564565921141,
+          "upper": 0.0587359629721589,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "precision": {
+          "estimate": 0.5,
+          "lower": 0.15003898915214947,
+          "upper": 0.8499610108478506,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "accuracy": {
+          "estimate": 0.5,
+          "lower": 0.43724268978525527,
+          "upper": 0.5627573102147447,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "false_alert_rate": {
+          "estimate": 0.016666666666666666,
+          "lower": 0.004582564565921141,
+          "upper": 0.0587359629721589,
+          "confidence": 0.95,
+          "method": "Wilson"
+        }
+      },
+      "classifications": {
+        "safe": 236,
+        "suspicious": 4,
+        "blocked": 0
+      },
+      "prevalence_warning": "Corpus balanceado artificialmente em 50/50; precision e accuracy não estimam diretamente o desempenho na web real."
+    },
+    "new": {
+      "samples": 240,
+      "confusion_matrix": {
+        "TP": 1,
+        "TN": 120,
+        "FP": 0,
+        "FN": 119
+      },
+      "metrics": {
+        "recall": 0.008333333333333333,
+        "precision": 1,
+        "f1": 0.01652892561983471,
+        "accuracy": 0.5041666666666667,
+        "false_alert_rate": 0
+      },
+      "confidence_intervals_95": {
+        "recall": {
+          "estimate": 0.008333333333333333,
+          "lower": 0.0014725557333420923,
+          "upper": 0.045696291245049675,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "precision": {
+          "estimate": 1,
+          "lower": 0.20654931437723745,
+          "upper": 1,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "accuracy": {
+          "estimate": 0.5041666666666667,
+          "lower": 0.44134585989980735,
+          "upper": 0.5668561907673463,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "false_alert_rate": {
+          "estimate": 0,
+          "lower": 0,
+          "upper": 0.031019166418703486,
+          "confidence": 0.95,
+          "method": "Wilson"
+        }
+      },
+      "classifications": {
+        "safe": 239,
+        "suspicious": 1,
+        "blocked": 0
+      },
+      "prevalence_warning": "Corpus balanceado artificialmente em 50/50; precision e accuracy não estimam diretamente o desempenho na web real."
+    },
+    "transitions": {
+      "FN->FN": 118,
+      "FP->TN": 2,
+      "TN->TN": 118,
+      "TP->FN": 1,
+      "TP->TP": 1
+    }
+  },
+  "combined": {
+    "old": {
+      "modality": "combined",
+      "samples": 240,
+      "class_balance": {
+        "legitimate": 120,
+        "phishing": 120
+      },
+      "confusion_matrix": {
+        "TP": 6,
+        "TN": 118,
+        "FP": 2,
+        "FN": 114
+      },
+      "metrics": {
+        "recall": 0.05,
+        "precision": 0.75,
+        "f1": 0.09375000000000001,
+        "accuracy": 0.5166666666666667,
+        "false_alert_rate": 0.016666666666666666
+      },
+      "confidence_intervals_95": {
+        "recall": {
+          "estimate": 0.05,
+          "lower": 0.023114364414465793,
+          "upper": 0.10480288536236734,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "precision": {
+          "estimate": 0.75,
+          "lower": 0.40927543031016883,
+          "upper": 0.9285207872478909,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "accuracy": {
+          "estimate": 0.5166666666666667,
+          "lower": 0.4536811164159315,
+          "upper": 0.5791270862526832,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "false_alert_rate": {
+          "estimate": 0.016666666666666666,
+          "lower": 0.004582564565921141,
+          "upper": 0.0587359629721589,
+          "confidence": 0.95,
+          "method": "Wilson"
+        }
+      },
+      "classifications": {
+        "safe": 232,
+        "suspicious": 8,
+        "blocked": 0
+      },
+      "prevalence_warning": "Corpus balanceado artificialmente em 50/50; precision e accuracy não estimam diretamente o desempenho na web real."
+    },
+    "new": {
+      "samples": 240,
+      "confusion_matrix": {
+        "TP": 5,
+        "TN": 120,
+        "FP": 0,
+        "FN": 115
+      },
+      "metrics": {
+        "recall": 0.041666666666666664,
+        "precision": 1,
+        "f1": 0.07999999999999999,
+        "accuracy": 0.5208333333333334,
+        "false_alert_rate": 0
+      },
+      "confidence_intervals_95": {
+        "recall": {
+          "estimate": 0.041666666666666664,
+          "lower": 0.017926716880109515,
+          "upper": 0.09384085233703535,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "precision": {
+          "estimate": 1,
+          "lower": 0.5655175352168251,
+          "upper": 1,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "accuracy": {
+          "estimate": 0.5208333333333334,
+          "lower": 0.45780145798620797,
+          "upper": 0.5832087953495604,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "false_alert_rate": {
+          "estimate": 0,
+          "lower": 0,
+          "upper": 0.031019166418703486,
+          "confidence": 0.95,
+          "method": "Wilson"
+        }
+      },
+      "classifications": {
+        "safe": 235,
+        "suspicious": 5,
+        "blocked": 0
+      },
+      "prevalence_warning": "Corpus balanceado artificialmente em 50/50; precision e accuracy não estimam diretamente o desempenho na web real."
+    },
+    "transitions": {
+      "FN->FN": 114,
+      "FP->TN": 2,
+      "TN->TN": 118,
+      "TP->FN": 1,
+      "TP->TP": 5
+    }
+  },
+  "changes": {
+    "page_false_positives_removed": [
+      "PP-L-026",
+      "PP-L-091"
+    ],
+    "page_false_positives_introduced": [],
+    "page_false_negatives_recovered": [],
+    "page_true_positives_lost": [
+      "PP-P-046"
+    ],
+    "combined_false_positives_removed": [
+      "PP-L-026",
+      "PP-L-091"
+    ],
+    "combined_false_positives_introduced": [],
+    "combined_false_negatives_recovered": [],
+    "combined_true_positives_lost": [
+      "PP-P-046"
+    ]
+  }
+}

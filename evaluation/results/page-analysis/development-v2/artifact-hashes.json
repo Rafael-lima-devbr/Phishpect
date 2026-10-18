@@ -1,0 +1,46 @@
+{
+  "algorithm": "SHA-256",
+  "generated_at": "2026-10-18T01:26:05.604Z",
+  "artifacts": [
+    {
+      "name": "changed-errors.csv",
+      "sha256": "acec6134af4e25824a37758ac7356d6266e1e5fb1c3f6609366d2fc2838ba040",
+      "bytes": 10328
+    },
+    {
+      "name": "metrics-comparison.json",
+      "sha256": "acf41b927285e25f6ba2707ebf4df266892a2a68dfa4b219c8c144bf3114bbc7",
+      "bytes": 6961
+    },
+    {
+      "name": "predictions-combined-v2.csv",
+      "sha256": "43a22b7602cc8f12c41233394c23d3690072d38318f77f14ba9d1a12cacad628",
+      "bytes": 219087
+    },
+    {
+      "name": "predictions-page-v2.csv",
+      "sha256": "9d9cf3dceeafde360b499740454ab6656969cc0115475346b04f4d2981b6e0cf",
+      "bytes": 194967
+    },
+    {
+      "name": "run.json",
+      "sha256": "34579dbd95cd5d2de3d1d0af5035cbb1f2722f638860e8a3268245abc98935ab",
+      "bytes": 2834
+    },
+    {
+      "name": "snapshot-manifest.json",
+      "sha256": "77ace0a1b7e57861df4407332f7338827eedf255eb0e29ec6e334796029a4f75",
+      "bytes": 84844
+    },
+    {
+      "name": "transitions-combined-v1-v2.csv",
+      "sha256": "33479e71750abec3e0a427ca6f5935dfd8d9e64a42e8fcf14d32c42476f40857",
+      "bytes": 367711
+    },
+    {
+      "name": "transitions-page-v1-v2.csv",
+      "sha256": "8581c2083d38cc679c45e128c20ef6715838392fe9ff91347aff4044a17d83db",
+      "bytes": 248260
+    }
+  ]
+}

@@ -1,0 +1,1931 @@
+{
+  "schema_version": 1,
+  "status": "development-derivative-prepared",
+  "source_corpus_sha256": "29574db70b518a4efffafca3d0451b4d3eae26c9d6abe283be54d9030479adab",
+  "network_access": false,
+  "javascript_execution": false,
+  "detector_executed": false,
+  "description": "Schema-v2 structural snapshots derived inertly from the sealed corpus originals; the sealed corpus and official results are unchanged.",
+  "samples": [
+    {
+      "sample_id": "PP-L-001",
+      "label": "legitimate",
+      "source_original_sha256": "712f9625668c61546a5045ae5d85c7db251ac842a5185843c788ed5e2526b1e5",
+      "snapshot_path": "derived-snapshots/PP-L-001.json",
+      "snapshot_sha256": "5bd0238949bac3aa47dce47310d6ef389f3a896733513966a2cbf39f6084ae89",
+      "snapshot_bytes": 5564
+    },
+    {
+      "sample_id": "PP-L-002",
+      "label": "legitimate",
+      "source_original_sha256": "16157a688c1ea6922dc711415cc6dbaeb48fb83028aa388db331e36b62e9255e",
+      "snapshot_path": "derived-snapshots/PP-L-002.json",
+      "snapshot_sha256": "c387fb3fdd30b89cb49ae6c1a2abdd8dac3bd17b951308e77f46614f1860d70a",
+      "snapshot_bytes": 5838
+    },
+    {
+      "sample_id": "PP-L-003",
+      "label": "legitimate",
+      "source_original_sha256": "6c0c5864340d20011feaa85fc54012d44fae6e3afc99c125ddb31d468eda581e",
+      "snapshot_path": "derived-snapshots/PP-L-003.json",
+      "snapshot_sha256": "3cdfc762a933ad9ed7b2491b0c3f009a669d6a49fe246aa196f4029d0f74aae9",
+      "snapshot_bytes": 3266
+    },
+    {
+      "sample_id": "PP-L-004",
+      "label": "legitimate",
+      "source_original_sha256": "36b776ad086db32a8503f94fdfdce5c0805bfb7b5b33cc40c881dce1199b4951",
+      "snapshot_path": "derived-snapshots/PP-L-004.json",
+      "snapshot_sha256": "d5c2aeb8a65ff6995d11ba37218f6c8417dfecc99a51a2daa91ac791b747f090",
+      "snapshot_bytes": 2333
+    },
+    {
+      "sample_id": "PP-L-005",
+      "label": "legitimate",
+      "source_original_sha256": "3043b8feb22efd93db6ecbb5faf090d6fef78d97a0318fd9df02e608598026a6",
+      "snapshot_path": "derived-snapshots/PP-L-005.json",
+      "snapshot_sha256": "bc7c666f7a54ff67effc1a1874449e0acbe2ddb429b32b69b58ae526c9c3b90d",
+      "snapshot_bytes": 1658
+    },
+    {
+      "sample_id": "PP-L-006",
+      "label": "legitimate",
+      "source_original_sha256": "d542734d181f888961fbd3ea5ab8fbf34345d923c805c454afff90e9541f400f",
+      "snapshot_path": "derived-snapshots/PP-L-006.json",
+      "snapshot_sha256": "3e9e343214db3b78fa43f401262bed18f0eed9e59af088a8cf70230e74f918cb",
+      "snapshot_bytes": 1066
+    },
+    {
+      "sample_id": "PP-L-007",
+      "label": "legitimate",
+      "source_original_sha256": "9422166e47275840d1a28098083bcadd9d13bdcb4606b6e06a47b3f0d253f068",
+      "snapshot_path": "derived-snapshots/PP-L-007.json",
+      "snapshot_sha256": "bc41153c3a59847ed13b9d65173fb36b9617beb240de2e6ec61f91120f5b992b",
+      "snapshot_bytes": 4760
+    },
+    {
+      "sample_id": "PP-L-008",
+      "label": "legitimate",
+      "source_original_sha256": "30392d648c707f5bea56b87553629c5ebe720634eac12f46cbda3ec3b4e56ee9",
+      "snapshot_path": "derived-snapshots/PP-L-008.json",
+      "snapshot_sha256": "a37699d87501382fadc633ef7c57071d30b110805bd2ea2670bbc4f507c65a3f",
+      "snapshot_bytes": 4155
+    },
+    {
+      "sample_id": "PP-L-009",
+      "label": "legitimate",
+      "source_original_sha256": "38c9da9aefb2679ba79bbfe675d3e5ecbaa97306f378aed99806267c8de084bc",
+      "snapshot_path": "derived-snapshots/PP-L-009.json",
+      "snapshot_sha256": "7900b7c1dd1d1308200678efe083f28e000a342d4055aa086adbb4f983f74d81",
+      "snapshot_bytes": 11348
+    },
+    {
+      "sample_id": "PP-L-010",
+      "label": "legitimate",
+      "source_original_sha256": "ab233cc17c52474eab66dac94352247e98b126fa960d34b58d9387ed912cf3f1",
+      "snapshot_path": "derived-snapshots/PP-L-010.json",
+      "snapshot_sha256": "7d230adcbb98b3dbdf2ac0a12e125db420f1c1f9ce0130f8426138f117399913",
+      "snapshot_bytes": 5023
+    },
+    {
+      "sample_id": "PP-L-011",
+      "label": "legitimate",
+      "source_original_sha256": "e0ff211d089483dad51a04c8d35839de14a6b31589d49d30d583007a0c755581",
+      "snapshot_path": "derived-snapshots/PP-L-011.json",
+      "snapshot_sha256": "19baba217a1b3b2820b17a6169b4b4d310e2232af1cb199e517987c437227abc",
+      "snapshot_bytes": 3744
+    },
+    {
+      "sample_id": "PP-L-012",
+      "label": "legitimate",
+      "source_original_sha256": "bbf3a0db1e5dcf89391236c33a0aab17d2c9d4ebe899580a906a05dc422572c7",
+      "snapshot_path": "derived-snapshots/PP-L-012.json",
+      "snapshot_sha256": "5e6106a09f9c6f86d06d86a3da617364783f6a261fcdbcda22e6f756a1d812e1",
+      "snapshot_bytes": 1076
+    },
+    {
+      "sample_id": "PP-L-013",
+      "label": "legitimate",
+      "source_original_sha256": "13b2c382bbd28519556553df6e074d94219387e58fe7494d07c8a9774ee17931",
+      "snapshot_path": "derived-snapshots/PP-L-013.json",
+      "snapshot_sha256": "0835cf68933890a04ebb22af1ee86248b68ffce62ac1cdd3343a29b53a9a2129",
+      "snapshot_bytes": 3781
+    },
+    {
+      "sample_id": "PP-L-014",
+      "label": "legitimate",
+      "source_original_sha256": "9d7b84aa57f59a9a85a99ac3044c9d7a5a7083da5a7afd9fc91b348c0e6e6060",
+      "snapshot_path": "derived-snapshots/PP-L-014.json",
+      "snapshot_sha256": "1cb548f8f67751ecc939e4ce5c411b08e34682a3916b899ca48434dd257f3801",
+      "snapshot_bytes": 13785
+    },
+    {
+      "sample_id": "PP-L-015",
+      "label": "legitimate",
+      "source_original_sha256": "6bc3dc3f6573d48bc7dc9a9c1352ca08dcc430d6c73b8a0bc6b6e94ccfa58beb",
+      "snapshot_path": "derived-snapshots/PP-L-015.json",
+      "snapshot_sha256": "2671e40bb4e07ea70f796e8fe80754f0dca14f8b2301cae437bb3184b4deeaf0",
+      "snapshot_bytes": 2427
+    },
+    {
+      "sample_id": "PP-L-016",
+      "label": "legitimate",
+      "source_original_sha256": "a626c444f740d6d98303755efd403c22f157bbffb09b064647b21f1f961c407f",
+      "snapshot_path": "derived-snapshots/PP-L-016.json",
+      "snapshot_sha256": "ece6858908769f1b57e1b2814a4fcc1ec81c21a8a8875de9d80990a6fc950cec",
+      "snapshot_bytes": 4344
+    },
+    {
+      "sample_id": "PP-L-017",
+      "label": "legitimate",
+      "source_original_sha256": "6d589e271fa231af6c01efd8012d005fbaae621c0731ed871869cd272d14fc93",
+      "snapshot_path": "derived-snapshots/PP-L-017.json",
+      "snapshot_sha256": "9b65e43d0aef7ed8f75c3a2c1ebf2e9899226463d10602fe8c1d5199b4316ae0",
+      "snapshot_bytes": 9638
+    },
+    {
+      "sample_id": "PP-L-018",
+      "label": "legitimate",
+      "source_original_sha256": "f2c464d9c0355ff5bb8f4b714c592c966095bd756cce7fe56247cd5b33361c69",
+      "snapshot_path": "derived-snapshots/PP-L-018.json",
+      "snapshot_sha256": "334055eed6191bda88a34160e1f629231040288594e12e88162611ec59655b20",
+      "snapshot_bytes": 1492
+    },
+    {
+      "sample_id": "PP-L-019",
+      "label": "legitimate",
+      "source_original_sha256": "918b67cff5653247efd10b6215388a91d621023a66ad2f61acb6bfb50363834f",
+      "snapshot_path": "derived-snapshots/PP-L-019.json",
+      "snapshot_sha256": "6527e697d6fc94f2eb57a10da16b6ac3b902bfa6729c67d79b6a1d3c15397dcd",
+      "snapshot_bytes": 799
+    },
+    {
+      "sample_id": "PP-L-020",
+      "label": "legitimate",
+      "source_original_sha256": "eaac9ee1aee00116f646d1060f6f4a153953f8f7fda23bd15da53aa078e8638e",
+      "snapshot_path": "derived-snapshots/PP-L-020.json",
+      "snapshot_sha256": "3327b737792cf8e94d9a200bf7ff3353217aea4e13bbf68a2a1c9dfa5d7d47a5",
+      "snapshot_bytes": 41991
+    },
+    {
+      "sample_id": "PP-L-021",
+      "label": "legitimate",
+      "source_original_sha256": "35788679dd51ec375cc6a71b548cccadc0c45fe77c589386eeaa8995058d6cb1",
+      "snapshot_path": "derived-snapshots/PP-L-021.json",
+      "snapshot_sha256": "13ec5a197a4af25602e433b5355ac3a6b8b26d1909d0531222ddb61d0908789a",
+      "snapshot_bytes": 968
+    },
+    {
+      "sample_id": "PP-L-022",
+      "label": "legitimate",
+      "source_original_sha256": "a9bcda09d384dffdea4282b5a24a1c4fb2280452ba7d1b55179e4aa60c308ad0",
+      "snapshot_path": "derived-snapshots/PP-L-022.json",
+      "snapshot_sha256": "78b5ce63066b11201af2d3d693e362815149097b500c5ec11837d9ed84e1bd84",
+      "snapshot_bytes": 7418
+    },
+    {
+      "sample_id": "PP-L-023",
+      "label": "legitimate",
+      "source_original_sha256": "c266e49ed8dd3ca7fc437b66c92266303512d3cdb8d43b1c3de6071a8d939dd4",
+      "snapshot_path": "derived-snapshots/PP-L-023.json",
+      "snapshot_sha256": "9dbd53af2e650512d1bdf56c594b0a043fbe89c189ef89eccca7997e96c8735d",
+      "snapshot_bytes": 28391
+    },
+    {
+      "sample_id": "PP-L-024",
+      "label": "legitimate",
+      "source_original_sha256": "d48396ef3569d91b31570a5ef93ecc22114c7229bb2e11685bc0d3611c4c22a3",
+      "snapshot_path": "derived-snapshots/PP-L-024.json",
+      "snapshot_sha256": "c61d76ca1e4427e13be961982178a5fbae579066426d38622fe7c017b254351e",
+      "snapshot_bytes": 3528
+    },
+    {
+      "sample_id": "PP-L-025",
+      "label": "legitimate",
+      "source_original_sha256": "a499ba67b14141aba33d2dadc0d023f5f02a80e8871ccd2a1ae622ac180e9fcf",
+      "snapshot_path": "derived-snapshots/PP-L-025.json",
+      "snapshot_sha256": "e0bfe11a366602d97d464fe9767552f82f2dfb66f4829aaf64b4877b108c8692",
+      "snapshot_bytes": 7092
+    },
+    {
+      "sample_id": "PP-L-026",
+      "label": "legitimate",
+      "source_original_sha256": "5891f3fd71e57dff64d876cdcd4a95d254e2f23e3772a3092f69f1d4aaf81d22",
+      "snapshot_path": "derived-snapshots/PP-L-026.json",
+      "snapshot_sha256": "532d829ddcb317901d4260e356782b302c0bc97e1c691bfd6aa7d3fde25cb8d7",
+      "snapshot_bytes": 16754
+    },
+    {
+      "sample_id": "PP-L-027",
+      "label": "legitimate",
+      "source_original_sha256": "98e46852a6ed27b1d0611ecdb8bb6abe404737a8ae558a14db837dce915fe386",
+      "snapshot_path": "derived-snapshots/PP-L-027.json",
+      "snapshot_sha256": "1f7cb71845b59e3a82ec86fb3d9d4797bcf9566e3fbe2cc3c64e98ae92fe5169",
+      "snapshot_bytes": 140
+    },
+    {
+      "sample_id": "PP-L-028",
+      "label": "legitimate",
+      "source_original_sha256": "87af48f6e557c9b7d365e53df62c3ee2060c848d0cafaf8b242655f1edba09df",
+      "snapshot_path": "derived-snapshots/PP-L-028.json",
+      "snapshot_sha256": "ff36f4d05556a1f572feb56175d787ac8ffbb853323dc6a09c1caf76b877311b",
+      "snapshot_bytes": 682
+    },
+    {
+      "sample_id": "PP-L-029",
+      "label": "legitimate",
+      "source_original_sha256": "5d1007ce2dc6fbc2c53f691b1ae618399e0d1e45bae48aa8742f4c71fa79b5fe",
+      "snapshot_path": "derived-snapshots/PP-L-029.json",
+      "snapshot_sha256": "0e8c10af7cfdf18998da4b6fe83b364dddb28986f3ae0cfb87708b6359b70718",
+      "snapshot_bytes": 5644
+    },
+    {
+      "sample_id": "PP-L-030",
+      "label": "legitimate",
+      "source_original_sha256": "6d4b3bb1f9b2b4f9a9d3efc14377614ec501353b795964a4b3faf6cdf484f2ad",
+      "snapshot_path": "derived-snapshots/PP-L-030.json",
+      "snapshot_sha256": "c26936f22958862eb9f0930d79831e06ddb648f2ad9974967e7493224a16b661",
+      "snapshot_bytes": 7362
+    },
+    {
+      "sample_id": "PP-L-031",
+      "label": "legitimate",
+      "source_original_sha256": "ce4e0469a14772feb176866cd156182da33edae0e883fb2527c67230d353c79f",
+      "snapshot_path": "derived-snapshots/PP-L-031.json",
+      "snapshot_sha256": "5cba3156b976896906fe63724198b5e964846b571da5c3496894c44122e9e6db",
+      "snapshot_bytes": 1289
+    },
+    {
+      "sample_id": "PP-L-032",
+      "label": "legitimate",
+      "source_original_sha256": "985d0d3840774ff4a30586d9163dc413af66924c56f65cc76a9362c0e306d867",
+      "snapshot_path": "derived-snapshots/PP-L-032.json",
+      "snapshot_sha256": "e85734dc9a5694cf9825ae03806f427c712489d6b304b02bf894a0bcbf37109d",
+      "snapshot_bytes": 16304
+    },
+    {
+      "sample_id": "PP-L-033",
+      "label": "legitimate",
+      "source_original_sha256": "a9eb9d070a1750d9e61a36045bac01429ecf09759204ab3287d0dff70c570521",
+      "snapshot_path": "derived-snapshots/PP-L-033.json",
+      "snapshot_sha256": "85db9b65826df763f8b00f706ea5e9c9a4b137f8835015caf2fa4fd028ab1823",
+      "snapshot_bytes": 2164
+    },
+    {
+      "sample_id": "PP-L-034",
+      "label": "legitimate",
+      "source_original_sha256": "1b5a49b934bea1502fcd0618be0a2377b6bb9b6366bc6a7f4cfa5b0fa5fa66af",
+      "snapshot_path": "derived-snapshots/PP-L-034.json",
+      "snapshot_sha256": "a976dbe477cd9ec87f3da53517bf5b9a41b5707b58c524559315ef6855985b30",
+      "snapshot_bytes": 2425
+    },
+    {
+      "sample_id": "PP-L-035",
+      "label": "legitimate",
+      "source_original_sha256": "c474049a95eca0a8bea8350dfa745e5ab48815039984d327bd17a0c1f397fba7",
+      "snapshot_path": "derived-snapshots/PP-L-035.json",
+      "snapshot_sha256": "f77c08db70f30e21b3b8b8cf0126c37e322dffa28b34bdcba4fa7e280422c7c4",
+      "snapshot_bytes": 1908
+    },
+    {
+      "sample_id": "PP-L-036",
+      "label": "legitimate",
+      "source_original_sha256": "a27d88689920c470bbb15562424473df419ccf2dd1f7c06540b848e448927c91",
+      "snapshot_path": "derived-snapshots/PP-L-036.json",
+      "snapshot_sha256": "a034bee73d3664c1c76f6fe084cf7741e2b6a4cf6469cd1d1a8f0ccc1d9092e3",
+      "snapshot_bytes": 1383
+    },
+    {
+      "sample_id": "PP-L-037",
+      "label": "legitimate",
+      "source_original_sha256": "89540ab43bf98a4c63b65e54fe5956cf75f38d084c62fa0fabb6f70390e86dcc",
+      "snapshot_path": "derived-snapshots/PP-L-037.json",
+      "snapshot_sha256": "76466bc79e198a57804c2233fcc71d2054c6720bfda123615cfa4d09326aa4be",
+      "snapshot_bytes": 4172
+    },
+    {
+      "sample_id": "PP-L-038",
+      "label": "legitimate",
+      "source_original_sha256": "7067a0ee6268f2380a1f4f8850269235221f92e3ecb7f40983f2dfa7d61e4ea3",
+      "snapshot_path": "derived-snapshots/PP-L-038.json",
+      "snapshot_sha256": "6c11ae940f896bbb0315197a59308335f1e707145c5f038396659e37bb5d6b5f",
+      "snapshot_bytes": 3355
+    },
+    {
+      "sample_id": "PP-L-039",
+      "label": "legitimate",
+      "source_original_sha256": "64ce08b837db2882c092db9e61cd153a3f4181edf955afa0aac9df5637237167",
+      "snapshot_path": "derived-snapshots/PP-L-039.json",
+      "snapshot_sha256": "a30d7539efa41932e6cccace1a9d8b5ee91e93ef0b5b47d36a3ad760d3060a2c",
+      "snapshot_bytes": 3259
+    },
+    {
+      "sample_id": "PP-L-040",
+      "label": "legitimate",
+      "source_original_sha256": "3791a6cde142b3f93eb8b21afe57e068107b2dd3600a05c65d7a802ae7d8e3bd",
+      "snapshot_path": "derived-snapshots/PP-L-040.json",
+      "snapshot_sha256": "fb97f4b819312f755fdb7ad791b6df14592a7436d2ee26b711a2859f9e1ea4c0",
+      "snapshot_bytes": 3984
+    },
+    {
+      "sample_id": "PP-L-041",
+      "label": "legitimate",
+      "source_original_sha256": "8a37dbbcbb4b94d18a93d23fc73130aae99cad198a8ceb15297c75f9eda07717",
+      "snapshot_path": "derived-snapshots/PP-L-041.json",
+      "snapshot_sha256": "a9e3f590a7bbc5da9e25d3472c7ce71ae5a62ba6e8594cd37543901ea8690bb7",
+      "snapshot_bytes": 1823
+    },
+    {
+      "sample_id": "PP-L-042",
+      "label": "legitimate",
+      "source_original_sha256": "e1b0ce839631ab84f9084daf352a27f7be4babad1a90d3b04f250e6edd69dbd8",
+      "snapshot_path": "derived-snapshots/PP-L-042.json",
+      "snapshot_sha256": "60491b633c8ed06bc94c40a9862e20408eb6fd2ffb7b36cf3b83bb6b02c8ca8b",
+      "snapshot_bytes": 4693
+    },
+    {
+      "sample_id": "PP-L-043",
+      "label": "legitimate",
+      "source_original_sha256": "d8eda757f44f61a641f0056340a52f59ba0558121b08b6b827766b15726c40f6",
+      "snapshot_path": "derived-snapshots/PP-L-043.json",
+      "snapshot_sha256": "966b5449ace3c872a516c3d82e415a089ae95814062beec3fe733df4aae6c527",
+      "snapshot_bytes": 2213
+    },
+    {
+      "sample_id": "PP-L-044",
+      "label": "legitimate",
+      "source_original_sha256": "d10d226c9931a738286f76699d845b1491000ea294b05833128101ff0f7f7663",
+      "snapshot_path": "derived-snapshots/PP-L-044.json",
+      "snapshot_sha256": "cc08ef540f7e7eb4015141fdc8c42e7dce49145d479c1fd7ccde0d2808db1d0f",
+      "snapshot_bytes": 2432
+    },
+    {
+      "sample_id": "PP-L-045",
+      "label": "legitimate",
+      "source_original_sha256": "4e7f9d565e55dc782af464d0a7dae0706073e7049167f8ce5f5060f40a72fc20",
+      "snapshot_path": "derived-snapshots/PP-L-045.json",
+      "snapshot_sha256": "6bcf0dd693fed98083d3628ce2293d137ba96cdb8aa6a6978323187145833f4a",
+      "snapshot_bytes": 2004
+    },
+    {
+      "sample_id": "PP-L-046",
+      "label": "legitimate",
+      "source_original_sha256": "317917f827b06b2e9ee3fbb7f792823a4062ee7dd46ea57826d2e6f30ccb4670",
+      "snapshot_path": "derived-snapshots/PP-L-046.json",
+      "snapshot_sha256": "56cb654324029d6c4a60c9a9e1c8701f89ef7bf77faa77b867cfcad4be922470",
+      "snapshot_bytes": 4795
+    },
+    {
+      "sample_id": "PP-L-047",
+      "label": "legitimate",
+      "source_original_sha256": "15db0008afa9d0433a9ca904dff30c19f01a3baeabb1424df7f45c1cb1619a8e",
+      "snapshot_path": "derived-snapshots/PP-L-047.json",
+      "snapshot_sha256": "c061313f6cd545c1ecd914509078804f55c9c4451c05eb855aa4fa78657bb97f",
+      "snapshot_bytes": 1010
+    },
+    {
+      "sample_id": "PP-L-048",
+      "label": "legitimate",
+      "source_original_sha256": "da6a9bb14c558f977d8b1afed1bf7faae497e0af44a17f4f20683889d8f76a32",
+      "snapshot_path": "derived-snapshots/PP-L-048.json",
+      "snapshot_sha256": "188457961ca9b4fb9cdb68552a939289dc6a56ac377f1ac9b8155abe84f0c9b9",
+      "snapshot_bytes": 3083
+    },
+    {
+      "sample_id": "PP-L-049",
+      "label": "legitimate",
+      "source_original_sha256": "2ff57eea4c255e5943f697ca70b2a9c3b3e4f23c87f22755e654da15d7ab52c4",
+      "snapshot_path": "derived-snapshots/PP-L-049.json",
+      "snapshot_sha256": "01ad5246e8258fec77786063efa3d0e61566bfefd2416de7faa6089a572e9289",
+      "snapshot_bytes": 1116
+    },
+    {
+      "sample_id": "PP-L-050",
+      "label": "legitimate",
+      "source_original_sha256": "4651531364317123f1c2f597a219aa369de3f883257651364f241068730a06d4",
+      "snapshot_path": "derived-snapshots/PP-L-050.json",
+      "snapshot_sha256": "a67242ec0bf6c7c95457b32d6a6a64e7b3888a58d06aac2686b50f79d01000af",
+      "snapshot_bytes": 2636
+    },
+    {
+      "sample_id": "PP-L-051",
+      "label": "legitimate",
+      "source_original_sha256": "89d440e039e0c39d8d9441d6cef44e624a63e4f87c5b9488a14afc5832ea3ee4",
+      "snapshot_path": "derived-snapshots/PP-L-051.json",
+      "snapshot_sha256": "fe997e9bc70903f9b1e7566bec1a841074f2e21bfbdf1baf4a05cd93ed6b2db8",
+      "snapshot_bytes": 2826
+    },
+    {
+      "sample_id": "PP-L-052",
+      "label": "legitimate",
+      "source_original_sha256": "0eb4a55a5eba7a9e6c7e7c92ffd395870a2d8dc6a7efcdde6865b92fd7016fe5",
+      "snapshot_path": "derived-snapshots/PP-L-052.json",
+      "snapshot_sha256": "f7d07723f92330ce1a0eb952c0086abffdf218379b4631649c96a6edaf69f650",
+      "snapshot_bytes": 4341
+    },
+    {
+      "sample_id": "PP-L-053",
+      "label": "legitimate",
+      "source_original_sha256": "254ef175cb4db07cd6ec24aefb83a17acea4c5e0efdec8fd6af2720ecbfc37a4",
+      "snapshot_path": "derived-snapshots/PP-L-053.json",
+      "snapshot_sha256": "49ec3c84f61c3489ac79c317d30a44d4a05a7eb421f4918fff090e75da56ff3b",
+      "snapshot_bytes": 4531
+    },
+    {
+      "sample_id": "PP-L-054",
+      "label": "legitimate",
+      "source_original_sha256": "6b15f63440963d6e7f0eebb61de22c336e5dd00c691a2d876d724a39525b4f9a",
+      "snapshot_path": "derived-snapshots/PP-L-054.json",
+      "snapshot_sha256": "36a05a1407166d417adb235ff33171e50d2d05a625ca1587ee7eed2305a27003",
+      "snapshot_bytes": 1854
+    },
+    {
+      "sample_id": "PP-L-055",
+      "label": "legitimate",
+      "source_original_sha256": "c8700648b839fa5a375a2a4545cd6bb85179c887580a5779b2d823e804adf78b",
+      "snapshot_path": "derived-snapshots/PP-L-055.json",
+      "snapshot_sha256": "e1b3218c37eed2d6c44626af1e1c07cface1e7714cb2e10895fc6df7d6e6b936",
+      "snapshot_bytes": 2336
+    },
+    {
+      "sample_id": "PP-L-056",
+      "label": "legitimate",
+      "source_original_sha256": "c0ca8b5c7b4eed3b2c072746a0c5d9cf91ffd79288a6a291594b56b042722e70",
+      "snapshot_path": "derived-snapshots/PP-L-056.json",
+      "snapshot_sha256": "d78d705e18590c177a59b0cf916b7851cab0ffef293f366458eabec34f84cd1f",
+      "snapshot_bytes": 1341
+    },
+    {
+      "sample_id": "PP-L-057",
+      "label": "legitimate",
+      "source_original_sha256": "02df13fb8a2d6a1ba05cb82abe6ac4d5ed08f5cf602cefe67bdc27791ef8abcc",
+      "snapshot_path": "derived-snapshots/PP-L-057.json",
+      "snapshot_sha256": "bb4a3c95a456d6f686fb34137c16c79276a23bdf6608d2c536d795c977443a58",
+      "snapshot_bytes": 8594
+    },
+    {
+      "sample_id": "PP-L-058",
+      "label": "legitimate",
+      "source_original_sha256": "451a1545fa9178d3aed6a9ea6df63341ed781f50275276707b72def4278b9e5c",
+      "snapshot_path": "derived-snapshots/PP-L-058.json",
+      "snapshot_sha256": "cbb6ab1cc7c76173ab486236e9e49ba535952fc65a8219c5565cde1203ddaf59",
+      "snapshot_bytes": 4622
+    },
+    {
+      "sample_id": "PP-L-059",
+      "label": "legitimate",
+      "source_original_sha256": "e0bb13192016ba29cbcc3b4dc02a9b327e79bcdeba5745756d273a20157c324c",
+      "snapshot_path": "derived-snapshots/PP-L-059.json",
+      "snapshot_sha256": "ae0c26dec1ffe49c73def387cac00c0428fe095dfd71f5978ac9b9345436de96",
+      "snapshot_bytes": 763
+    },
+    {
+      "sample_id": "PP-L-060",
+      "label": "legitimate",
+      "source_original_sha256": "6f131b7598cada91115ce3c76607ba04557fcce2508953655250ae7cc677576c",
+      "snapshot_path": "derived-snapshots/PP-L-060.json",
+      "snapshot_sha256": "8f40605942eac77b7cfc818a7d5446a9e3db499fbff82bb9d7730f379404870c",
+      "snapshot_bytes": 5634
+    },
+    {
+      "sample_id": "PP-L-061",
+      "label": "legitimate",
+      "source_original_sha256": "eae4fbb92fbf784a800679aca2e2dfc72f17c45952788ed7cea741423b56a74b",
+      "snapshot_path": "derived-snapshots/PP-L-061.json",
+      "snapshot_sha256": "5d908239cb3ed0abe9871d8b3448b55863d7f3c3e1aa36a07b4620afbfa15701",
+      "snapshot_bytes": 7102
+    },
+    {
+      "sample_id": "PP-L-062",
+      "label": "legitimate",
+      "source_original_sha256": "09b4986ba776dfd6a2d408afbfc567b602c47b6dcb61f45430d5a6b71242c2d9",
+      "snapshot_path": "derived-snapshots/PP-L-062.json",
+      "snapshot_sha256": "db3233aa97e774876a5bde86755558094b6a1b941684850983a22a2b6251d507",
+      "snapshot_bytes": 8098
+    },
+    {
+      "sample_id": "PP-L-063",
+      "label": "legitimate",
+      "source_original_sha256": "f69cddad57e778c9455f58fa788d78f0f53a81081f1bbb0f270dadba74554acd",
+      "snapshot_path": "derived-snapshots/PP-L-063.json",
+      "snapshot_sha256": "781b4bd06f82abeb64bb15871ddb591a6e1dc34584dc0e772f3e52fed5f1e6ea",
+      "snapshot_bytes": 3635
+    },
+    {
+      "sample_id": "PP-L-064",
+      "label": "legitimate",
+      "source_original_sha256": "d5e91d3f70bb444f33ec769c2c9f6d6ca7d1e6d070864ca439ee109da4eea1b7",
+      "snapshot_path": "derived-snapshots/PP-L-064.json",
+      "snapshot_sha256": "70731183b9bde22ebc2eaa18856f2f5a3347c1b8d84d0f96b879682458840640",
+      "snapshot_bytes": 2898
+    },
+    {
+      "sample_id": "PP-L-065",
+      "label": "legitimate",
+      "source_original_sha256": "0cb019d45b088c6304ae9605dd4b9e7d586832634c2c69028595545744f866d1",
+      "snapshot_path": "derived-snapshots/PP-L-065.json",
+      "snapshot_sha256": "2e67a0bea21165ac93099d232e93a5f60038be74621524ac276b83e3acb27a5e",
+      "snapshot_bytes": 3698
+    },
+    {
+      "sample_id": "PP-L-066",
+      "label": "legitimate",
+      "source_original_sha256": "d023f5e61d81bbe29c21c0ba8aef7eecae49d32876fd3d81bc5db1e5fe1cc159",
+      "snapshot_path": "derived-snapshots/PP-L-066.json",
+      "snapshot_sha256": "1761ca3a6935a6e3bb3c7aad9e435e484152657ebab085c7142afd2fe8c8ab7f",
+      "snapshot_bytes": 7491
+    },
+    {
+      "sample_id": "PP-L-067",
+      "label": "legitimate",
+      "source_original_sha256": "1c74ca0f4bb692db8b72996445f09e64f752358d80f6d18e58276678b794c205",
+      "snapshot_path": "derived-snapshots/PP-L-067.json",
+      "snapshot_sha256": "dfc2df3058e1f72ab598d3f9d06f826756ac609bbf9668846fa48b9d4236f287",
+      "snapshot_bytes": 4736
+    },
+    {
+      "sample_id": "PP-L-068",
+      "label": "legitimate",
+      "source_original_sha256": "8ddfd6cf77460f3356726f3aa811ee55bc93f415c8bd9b900493de4a4f656c5e",
+      "snapshot_path": "derived-snapshots/PP-L-068.json",
+      "snapshot_sha256": "eb861ffe2c23a6c4c2e85aa908be32084c2d100bcdd9ae30584c7ba03358fa6c",
+      "snapshot_bytes": 6598
+    },
+    {
+      "sample_id": "PP-L-069",
+      "label": "legitimate",
+      "source_original_sha256": "5fbf34a519abcd422e05ef5c2d78352d8ca9caeef4ed8e6048b18fdbf0d90da8",
+      "snapshot_path": "derived-snapshots/PP-L-069.json",
+      "snapshot_sha256": "81af268218b993443d7e804558897f4e7ba1990b121c83f272ebb1ac759d8696",
+      "snapshot_bytes": 4896
+    },
+    {
+      "sample_id": "PP-L-070",
+      "label": "legitimate",
+      "source_original_sha256": "94107918684154705695360b2e70f467d56c039eda822a3fd45ba00c70dc0ed3",
+      "snapshot_path": "derived-snapshots/PP-L-070.json",
+      "snapshot_sha256": "d93484528e39cfaa7dce09c20d3a0ee29532d7a2f0df9072aafb2b91d0ddb2ac",
+      "snapshot_bytes": 5485
+    },
+    {
+      "sample_id": "PP-L-071",
+      "label": "legitimate",
+      "source_original_sha256": "dc4d9f26a80f24339873e9ef0c2a48365562cd094eaa12515698eed2a3fbfaad",
+      "snapshot_path": "derived-snapshots/PP-L-071.json",
+      "snapshot_sha256": "b9a095fb6ac05690b079bffcd0d3c4741b471de8363b7a1a26e0e626ee76e853",
+      "snapshot_bytes": 30983
+    },
+    {
+      "sample_id": "PP-L-072",
+      "label": "legitimate",
+      "source_original_sha256": "790f794637860edc381d89fed3ea2443b253931535d769e5a794a178cfbc8661",
+      "snapshot_path": "derived-snapshots/PP-L-072.json",
+      "snapshot_sha256": "ce591e6b0975ca38de6e3a6f47fbb799e6eb9af93a6989045970d041b92d0b94",
+      "snapshot_bytes": 3869
+    },
+    {
+      "sample_id": "PP-L-073",
+      "label": "legitimate",
+      "source_original_sha256": "9963e1f0d3a910d2abc6deb80bf970aec4ba4bfff92cbb56d0da22bc9464ea58",
+      "snapshot_path": "derived-snapshots/PP-L-073.json",
+      "snapshot_sha256": "2b36cd85ed217b597cc7b2316c391fb079a396c59e3ac4631f86cad55e999ee5",
+      "snapshot_bytes": 3195
+    },
+    {
+      "sample_id": "PP-L-074",
+      "label": "legitimate",
+      "source_original_sha256": "aa7bfd5d16eb4eb84f0a5aee5ef9ab6eaf4af34ff9769dd1578aaafce2e8d6c7",
+      "snapshot_path": "derived-snapshots/PP-L-074.json",
+      "snapshot_sha256": "5066bc48b654eb2061fc475ff2e794abc7804b416106a2f195b1f67922ad9696",
+      "snapshot_bytes": 27567
+    },
+    {
+      "sample_id": "PP-L-075",
+      "label": "legitimate",
+      "source_original_sha256": "fbebe036751c03b3a201dc5ae89672964d7d9ab6ed7fdfa520391f4dbcb99697",
+      "snapshot_path": "derived-snapshots/PP-L-075.json",
+      "snapshot_sha256": "dc0cc56e21e8fa70dc5c45c817c9e635684667640f5c17d2a061d9f4b3a67ffc",
+      "snapshot_bytes": 3084
+    },
+    {
+      "sample_id": "PP-L-076",
+      "label": "legitimate",
+      "source_original_sha256": "77103965a34f83b15db8b59d2303b18d0be96d19a03389c849c3c5b4ecd9fab4",
+      "snapshot_path": "derived-snapshots/PP-L-076.json",
+      "snapshot_sha256": "119a91f40d6e8a1bf993c17b4781e6824d12064dcdb6f945d57cb8dbdde87739",
+      "snapshot_bytes": 3266
+    },
+    {
+      "sample_id": "PP-L-077",
+      "label": "legitimate",
+      "source_original_sha256": "efeba1fd58d68dfa87bc08120d34813668a5cf15b6c55853a299aec8bf7c3a2c",
+      "snapshot_path": "derived-snapshots/PP-L-077.json",
+      "snapshot_sha256": "025ef5a548d01b005c75716389cc4b05fdbf6db8b197897d72cbb82bd655fa6c",
+      "snapshot_bytes": 8151
+    },
+    {
+      "sample_id": "PP-L-078",
+      "label": "legitimate",
+      "source_original_sha256": "67ba2521d302caf375dfe332c1b4ce8720682e8f2b785db8cef5d8f014c0c6d6",
+      "snapshot_path": "derived-snapshots/PP-L-078.json",
+      "snapshot_sha256": "dcf330d746a117b6d3b9be8f468ff0feb714545d070a6cd1970a9724901308eb",
+      "snapshot_bytes": 2392
+    },
+    {
+      "sample_id": "PP-L-079",
+      "label": "legitimate",
+      "source_original_sha256": "2b7b0397e10dc278a8fe2399ad686f7e898c2a45eaabb53e6a927b080051b903",
+      "snapshot_path": "derived-snapshots/PP-L-079.json",
+      "snapshot_sha256": "b9a6b03fbd0cedc10032a0607862b9db44e35aab4dbf2a7c6a09484d67f12b28",
+      "snapshot_bytes": 5605
+    },
+    {
+      "sample_id": "PP-L-080",
+      "label": "legitimate",
+      "source_original_sha256": "c9188f125dbf9a1f73001eb20b5114a2d729d53119f22254c1902a6cf39c61cb",
+      "snapshot_path": "derived-snapshots/PP-L-080.json",
+      "snapshot_sha256": "7b13c7752c7578c8af4f026b5da5078bbfd038348a5101b6720e2d79ed5de616",
+      "snapshot_bytes": 975
+    },
+    {
+      "sample_id": "PP-L-081",
+      "label": "legitimate",
+      "source_original_sha256": "6a29ca0093ded94edeab777dda87f389d2a72b36196ccdc372a1b7c281e50f83",
+      "snapshot_path": "derived-snapshots/PP-L-081.json",
+      "snapshot_sha256": "02db14880f59606b057183e937f7e151636194535b457545b29bd130df1b7273",
+      "snapshot_bytes": 3555
+    },
+    {
+      "sample_id": "PP-L-082",
+      "label": "legitimate",
+      "source_original_sha256": "de06ac2841695ce4e7d5b4d2cf98946f9b286c203d191c1bcab7fbbfc73c0802",
+      "snapshot_path": "derived-snapshots/PP-L-082.json",
+      "snapshot_sha256": "62a374fffec2c79ace36129aa981f81f2679b00e16222ef19ba2447217973e95",
+      "snapshot_bytes": 8201
+    },
+    {
+      "sample_id": "PP-L-083",
+      "label": "legitimate",
+      "source_original_sha256": "f672c62ad6098e1afaac2f4e87eac243fb4424e11972eaf4186e5a3892dd9d89",
+      "snapshot_path": "derived-snapshots/PP-L-083.json",
+      "snapshot_sha256": "51c818d587c0e31faf685b3d3cc25c36cd9dd7b34def391caeabd93e9eeb99e2",
+      "snapshot_bytes": 804
+    },
+    {
+      "sample_id": "PP-L-084",
+      "label": "legitimate",
+      "source_original_sha256": "173183e4e681d0d84610843c2d8b3767d695aa97390237c1ebf9be9c190404c6",
+      "snapshot_path": "derived-snapshots/PP-L-084.json",
+      "snapshot_sha256": "d67304dc477a14e5b90ab70dc294f72824b2dd88c5b412ec0e37a8becf249025",
+      "snapshot_bytes": 2709
+    },
+    {
+      "sample_id": "PP-L-085",
+      "label": "legitimate",
+      "source_original_sha256": "7b5cd3d02089c786a831d106e8cd3a500d46c5abbbccfabb920a99f61e02b9e8",
+      "snapshot_path": "derived-snapshots/PP-L-085.json",
+      "snapshot_sha256": "9d1e5496f9702e14c9afe784966b438bf957e3a1627876a0ed4208836d8b2682",
+      "snapshot_bytes": 4230
+    },
+    {
+      "sample_id": "PP-L-086",
+      "label": "legitimate",
+      "source_original_sha256": "29b64e9972d649b40817fd355d48af1e5492920ea720bc7afcd3d18df4c11011",
+      "snapshot_path": "derived-snapshots/PP-L-086.json",
+      "snapshot_sha256": "e102f9f154a19b1018a415f3cdc921d538ab634f43a6d7ee81820773281f7f18",
+      "snapshot_bytes": 2914
+    },
+    {
+      "sample_id": "PP-L-087",
+      "label": "legitimate",
+      "source_original_sha256": "75d372ffacc853d16dd3371607295d3ed7bce2084155c983ee6aa6507333a74a",
+      "snapshot_path": "derived-snapshots/PP-L-087.json",
+      "snapshot_sha256": "944cde483d7689c796a6c8df43200ca7894c6711113f90e60c98d895aac5c9f4",
+      "snapshot_bytes": 2640
+    },
+    {
+      "sample_id": "PP-L-088",
+      "label": "legitimate",
+      "source_original_sha256": "c4640df9e94f69b9b75903dbe7b420ddd912b0691b6412553296f498aeb23c51",
+      "snapshot_path": "derived-snapshots/PP-L-088.json",
+      "snapshot_sha256": "5d817647d90683992d10a02e592c42bb76628cba853e25b855cc6677607337ed",
+      "snapshot_bytes": 10780
+    },
+    {
+      "sample_id": "PP-L-089",
+      "label": "legitimate",
+      "source_original_sha256": "cdc422e1292a43155079f7271ef7d41f65be25f9abff157c4f6b0c2fdc4a5529",
+      "snapshot_path": "derived-snapshots/PP-L-089.json",
+      "snapshot_sha256": "e7f1f108841a2cdf369ae2d537ac347523673c7aa1c9d35df7a25836e722ff37",
+      "snapshot_bytes": 172
+    },
+    {
+      "sample_id": "PP-L-090",
+      "label": "legitimate",
+      "source_original_sha256": "6cd6f3305c13c8ce7bb49b6b28f51b7aed446f2a64abadb5467f949823b61eb0",
+      "snapshot_path": "derived-snapshots/PP-L-090.json",
+      "snapshot_sha256": "70fef6b6cf2d53c1afeb9a8145228ff9896df5792ccbcdc3a7d6e60c663d2406",
+      "snapshot_bytes": 14306
+    },
+    {
+      "sample_id": "PP-L-091",
+      "label": "legitimate",
+      "source_original_sha256": "ccd3db3f80ee183655a3933987babdd22784b0d897238dae792761fd912b0a43",
+      "snapshot_path": "derived-snapshots/PP-L-091.json",
+      "snapshot_sha256": "ecf631080ba1ecbb5ee8b8a5ab48baeb30c4021ab6ced2c88bad63abc4446c07",
+      "snapshot_bytes": 9207
+    },
+    {
+      "sample_id": "PP-L-092",
+      "label": "legitimate",
+      "source_original_sha256": "bb2bf1ad26ec9f75b65c4ad564e83fe5972484e545a674fa2b20ebc156a087b5",
+      "snapshot_path": "derived-snapshots/PP-L-092.json",
+      "snapshot_sha256": "e82ea2a648ba744bdcf44189d1a39d23e8cfcabeb677f7892b24f82b9873d05a",
+      "snapshot_bytes": 1062
+    },
+    {
+      "sample_id": "PP-L-093",
+      "label": "legitimate",
+      "source_original_sha256": "e26a1660ba7eb8653aae6d80fb46f0507da7576bc0f736c7d4d6b62c8123ed8a",
+      "snapshot_path": "derived-snapshots/PP-L-093.json",
+      "snapshot_sha256": "f294191a8d2d4fc6507f89126de0696e27425e913aa5bd518a78c3f511ca7cbe",
+      "snapshot_bytes": 4951
+    },
+    {
+      "sample_id": "PP-L-094",
+      "label": "legitimate",
+      "source_original_sha256": "0475d4e63364829d59c3512daf8f8946d885e1b7a44cc309a5356b22afa60a3d",
+      "snapshot_path": "derived-snapshots/PP-L-094.json",
+      "snapshot_sha256": "3d14c8b5240724d7c3e2a91b772736c073ca7ad66642ce0f06f8bc17f35d4c9c",
+      "snapshot_bytes": 1439
+    },
+    {
+      "sample_id": "PP-L-095",
+      "label": "legitimate",
+      "source_original_sha256": "11296661193072aa98cf8ecd960f39110ccfb5bec8cb45b27ab08654cf840484",
+      "snapshot_path": "derived-snapshots/PP-L-095.json",
+      "snapshot_sha256": "6bfa03101d0e96142d868abbc9cfc159d6c8bd4b33e16a9f238cbce48206d08a",
+      "snapshot_bytes": 6244
+    },
+    {
+      "sample_id": "PP-L-096",
+      "label": "legitimate",
+      "source_original_sha256": "e8dadf019f949aa87b58d32df61b451bc5de90cce79d5c5dff07acb657dc3cc7",
+      "snapshot_path": "derived-snapshots/PP-L-096.json",
+      "snapshot_sha256": "1c52da9a8b01053aac853d7d76c1e3f8be4bcc8b68fe1e24637a7df5660733cd",
+      "snapshot_bytes": 4637
+    },
+    {
+      "sample_id": "PP-L-097",
+      "label": "legitimate",
+      "source_original_sha256": "20f73e44c69ccf5ea76827a11a7de2b9bc3a9209774847705f38494a3719424e",
+      "snapshot_path": "derived-snapshots/PP-L-097.json",
+      "snapshot_sha256": "66a0fb8db0bfea656e56660912e440338ee5f3de046c9ec3542bb6f70db8df02",
+      "snapshot_bytes": 531
+    },
+    {
+      "sample_id": "PP-L-098",
+      "label": "legitimate",
+      "source_original_sha256": "0d3a92e50479a16d44046f5963012c5da5a522decd57d13b621e0af9c411e533",
+      "snapshot_path": "derived-snapshots/PP-L-098.json",
+      "snapshot_sha256": "4b5723e3967f0038be8f39635af158e96fe5776f9b61eddaebf378ddda4fa3cd",
+      "snapshot_bytes": 3896
+    },
+    {
+      "sample_id": "PP-L-099",
+      "label": "legitimate",
+      "source_original_sha256": "ec901c2dd0a9df7bfcfa86d4f548b3c5c63d477909f323c09711296705f215a5",
+      "snapshot_path": "derived-snapshots/PP-L-099.json",
+      "snapshot_sha256": "e10627f7c69889562af28243dedb9a66c256b7454b2a8bd3946b954c1f99dd72",
+      "snapshot_bytes": 2603
+    },
+    {
+      "sample_id": "PP-L-100",
+      "label": "legitimate",
+      "source_original_sha256": "f52bc3d332e0d0a579c2ba3754b550a7058f102e6df5dee4f84db1dfed341f6d",
+      "snapshot_path": "derived-snapshots/PP-L-100.json",
+      "snapshot_sha256": "0f520bd8ceb4e7fe98bcd03456f0ef4c48bc43cc266d788c26a3f0aa671da8b6",
+      "snapshot_bytes": 8554
+    },
+    {
+      "sample_id": "PP-L-101",
+      "label": "legitimate",
+      "source_original_sha256": "6c462f069ac57ec92698e5dc11e0d63f3614337f7e2630171ccbbd3fc3403a32",
+      "snapshot_path": "derived-snapshots/PP-L-101.json",
+      "snapshot_sha256": "41c271cbbefc47189ea542e8e19f1d975707b16889643141c454d2a0684f53e2",
+      "snapshot_bytes": 4026
+    },
+    {
+      "sample_id": "PP-L-102",
+      "label": "legitimate",
+      "source_original_sha256": "7f3e423595a7737c6537c68dd99a896e27ef3de3ca8fac7c5bc5ff5e9d2e8e38",
+      "snapshot_path": "derived-snapshots/PP-L-102.json",
+      "snapshot_sha256": "aba43fa17a928b9fb6604db34369ec23aec7f8b9b6daa4ff18929b4dddee384f",
+      "snapshot_bytes": 1941
+    },
+    {
+      "sample_id": "PP-L-103",
+      "label": "legitimate",
+      "source_original_sha256": "f26b3365fd20fb565b1364a547b4d902026cbb0478594675922b706ca9f04ee7",
+      "snapshot_path": "derived-snapshots/PP-L-103.json",
+      "snapshot_sha256": "d3146ee1fd19e5d7691979eb461bc3dd9349286d18564ade9e23e5cbfc1ae086",
+      "snapshot_bytes": 6330
+    },
+    {
+      "sample_id": "PP-L-104",
+      "label": "legitimate",
+      "source_original_sha256": "12042322c0da54bb475a20f048f89db1d2beec2d61738cc89fbe3e28c9234544",
+      "snapshot_path": "derived-snapshots/PP-L-104.json",
+      "snapshot_sha256": "0474ff98ff6f6c5728630b73ad8385a12174ac34e7fc7e7d335c5d099d52a7eb",
+      "snapshot_bytes": 14160
+    },
+    {
+      "sample_id": "PP-L-105",
+      "label": "legitimate",
+      "source_original_sha256": "4063c90f349ee0e5ca869b8d073ffaedea6620d0bde845566b0bb94e2d0b32d2",
+      "snapshot_path": "derived-snapshots/PP-L-105.json",
+      "snapshot_sha256": "bf97ffdd1dc0850bd62bd7199c475c21ca14507f0baa27a878b7de0f0fdbce4a",
+      "snapshot_bytes": 3632
+    },
+    {
+      "sample_id": "PP-L-106",
+      "label": "legitimate",
+      "source_original_sha256": "eefea4ad845735bf5305d4aa325e7b39bf4eeb7a225048be606ce363795eed63",
+      "snapshot_path": "derived-snapshots/PP-L-106.json",
+      "snapshot_sha256": "8160d9850fe059a44fce6f8f2c76178194b1a0a814605700b2f63de9ab1ee1a4",
+      "snapshot_bytes": 2276
+    },
+    {
+      "sample_id": "PP-L-107",
+      "label": "legitimate",
+      "source_original_sha256": "56fb308030505219a5e10840ec173813a37aef92c20c1cae6233868604d53dca",
+      "snapshot_path": "derived-snapshots/PP-L-107.json",
+      "snapshot_sha256": "a99460a70b4b5927d98499b94bb04077ad134746a73ba1e858f9f571148317ec",
+      "snapshot_bytes": 4443
+    },
+    {
+      "sample_id": "PP-L-108",
+      "label": "legitimate",
+      "source_original_sha256": "85d21c0537a95c3483d05894a49ac0365569716a0ee15097e5b15cb5bd5112b8",
+      "snapshot_path": "derived-snapshots/PP-L-108.json",
+      "snapshot_sha256": "17d60d71f2717edef0b3b87ff6844ef24dd306f9f4eab91239258d6f4dce3693",
+      "snapshot_bytes": 1930
+    },
+    {
+      "sample_id": "PP-L-109",
+      "label": "legitimate",
+      "source_original_sha256": "c0992dbcb9cb1da1184777a681d72018ec5ebcc4a2391372f995ee1e599fe543",
+      "snapshot_path": "derived-snapshots/PP-L-109.json",
+      "snapshot_sha256": "86c69553464f7cc8b45f2547a9760aad6c67f37f31932bf506c1f3213cb87157",
+      "snapshot_bytes": 785
+    },
+    {
+      "sample_id": "PP-L-110",
+      "label": "legitimate",
+      "source_original_sha256": "3907f34b77cbd088c44d667343e462204e68d29d9a9acd4e5f3671dead9ba17a",
+      "snapshot_path": "derived-snapshots/PP-L-110.json",
+      "snapshot_sha256": "c11741f66415e636cfb966572bd456a29d4199f646d3bc7a026a88e9d866e4c6",
+      "snapshot_bytes": 2835
+    },
+    {
+      "sample_id": "PP-L-111",
+      "label": "legitimate",
+      "source_original_sha256": "831bd2e44a60cb7e69e5806f1b8230d6d00b8d62e299af077fbe9e80d53e5b62",
+      "snapshot_path": "derived-snapshots/PP-L-111.json",
+      "snapshot_sha256": "77f8a3c2dcfdeddd58eefdce3a4c477647358f993604f9da9b134d0dd1d4a35a",
+      "snapshot_bytes": 2401
+    },
+    {
+      "sample_id": "PP-L-112",
+      "label": "legitimate",
+      "source_original_sha256": "ba7943cc7b7bc3fa6123fa44acf7f2700bfa44c2268817fe8ad0584e44dfbd10",
+      "snapshot_path": "derived-snapshots/PP-L-112.json",
+      "snapshot_sha256": "0d266bc8a62d6803018fc4e1e5b4ec3b5d61ecdf8b793c36590c300b4c00d4ce",
+      "snapshot_bytes": 5844
+    },
+    {
+      "sample_id": "PP-L-113",
+      "label": "legitimate",
+      "source_original_sha256": "6adae56f72e3d88995ada7914e361e65992f72f0726415d86a07a4528ced9360",
+      "snapshot_path": "derived-snapshots/PP-L-113.json",
+      "snapshot_sha256": "3da632aa2ef8f97bd05848c22dce989a2aa99ac1256e0d532487863e147abdce",
+      "snapshot_bytes": 280
+    },
+    {
+      "sample_id": "PP-L-114",
+      "label": "legitimate",
+      "source_original_sha256": "0109e9396dbaccb1719f52ff6378654f14396b6fb1ea8bf9a204dc8d9edfe95d",
+      "snapshot_path": "derived-snapshots/PP-L-114.json",
+      "snapshot_sha256": "2c083f5aeb661c67e82655759a62f5ea2ea7bc43e5613cf4b99ef420e04bfe0e",
+      "snapshot_bytes": 2577
+    },
+    {
+      "sample_id": "PP-L-115",
+      "label": "legitimate",
+      "source_original_sha256": "593603bfcb2f2f2dfa29607908777a2cacf7a8550b980568024c94cbaf76350c",
+      "snapshot_path": "derived-snapshots/PP-L-115.json",
+      "snapshot_sha256": "07e86e1e6cfee91125f7d33c9e0658ecbb299f81f7463d8b210bccd067234e30",
+      "snapshot_bytes": 2168
+    },
+    {
+      "sample_id": "PP-L-116",
+      "label": "legitimate",
+      "source_original_sha256": "3943bf27e9c18c05686c77ea24725e03a361d3746588086c2866be23aec9fb58",
+      "snapshot_path": "derived-snapshots/PP-L-116.json",
+      "snapshot_sha256": "7dea60a8a309f3e8a14f8c9f02d6015cb93875bc57ab2fc7333713fae82b6c2b",
+      "snapshot_bytes": 6095
+    },
+    {
+      "sample_id": "PP-L-117",
+      "label": "legitimate",
+      "source_original_sha256": "aec25a2bdb433b12ddf301d7f921ecec3ecd05d0cd4c7647b5fabfc1f4ca033e",
+      "snapshot_path": "derived-snapshots/PP-L-117.json",
+      "snapshot_sha256": "3892246ada7f5191ad1f8fa572e974d912d55e906f14fcae9d1a23727b830c5e",
+      "snapshot_bytes": 3905
+    },
+    {
+      "sample_id": "PP-L-118",
+      "label": "legitimate",
+      "source_original_sha256": "68f740f18b99d9d9ae88e66db1cf733333d6882079f744ac8b27b7438da0f870",
+      "snapshot_path": "derived-snapshots/PP-L-118.json",
+      "snapshot_sha256": "2f9ef4388c852c2c90354de2d0b7e0ffd6ae30c127aea65b16b7c10109990173",
+      "snapshot_bytes": 1547
+    },
+    {
+      "sample_id": "PP-L-119",
+      "label": "legitimate",
+      "source_original_sha256": "dad05db0771292b782477a1dca623f464115be2bf53dc2c8e4765a2c9065b4c3",
+      "snapshot_path": "derived-snapshots/PP-L-119.json",
+      "snapshot_sha256": "b3b0b11f9a11d7c65eed7ddc6d6395358e273fdb79350aa41539c8e498fc3350",
+      "snapshot_bytes": 3372
+    },
+    {
+      "sample_id": "PP-L-120",
+      "label": "legitimate",
+      "source_original_sha256": "c857b176d942a0066ad450ba2ff9b8e3d77dff9f6e68ab626c1a01a8fa459c41",
+      "snapshot_path": "derived-snapshots/PP-L-120.json",
+      "snapshot_sha256": "8ae185fdf3812ab4f9da72b6bc521217a525a6e52ae693a69c9ea8c50b1daa4d",
+      "snapshot_bytes": 4542
+    },
+    {
+      "sample_id": "PP-P-001",
+      "label": "phishing",
+      "source_original_sha256": "5bc7c422c1db2c8588bf0cbb3107f3499514ddd899b335697b46e5578fcad323",
+      "snapshot_path": "derived-snapshots/PP-P-001.json",
+      "snapshot_sha256": "a14a1e2b28158ec2e12706830310b2be2b1d2600eff8800131b89eddd7a1263d",
+      "snapshot_bytes": 963
+    },
+    {
+      "sample_id": "PP-P-002",
+      "label": "phishing",
+      "source_original_sha256": "04cb727fdd4d88334962077686e1d965e393622249888b82e8ffb1e6e0df5b35",
+      "snapshot_path": "derived-snapshots/PP-P-002.json",
+      "snapshot_sha256": "d925bc6177728263a4ad4d35c88f7679e0a1b46b3a011ed8a180d79539a68667",
+      "snapshot_bytes": 1274
+    },
+    {
+      "sample_id": "PP-P-003",
+      "label": "phishing",
+      "source_original_sha256": "54e173be753d03b2c163cebbee02be7f4bdc1d6663154d4d60a3833f7ba3436b",
+      "snapshot_path": "derived-snapshots/PP-P-003.json",
+      "snapshot_sha256": "a5027f316f8408e358af37f3660fff452a00fbe4a100cfd5e84498a3b5c36324",
+      "snapshot_bytes": 1514
+    },
+    {
+      "sample_id": "PP-P-004",
+      "label": "phishing",
+      "source_original_sha256": "7441077824c33a69e245618176fe91bd7810318769bbb5bbf73bd4eead03773b",
+      "snapshot_path": "derived-snapshots/PP-P-004.json",
+      "snapshot_sha256": "620845780790a9f6a03362ba8d7107b5193d8e2e8f5a6ebf949e850d0bf1d9c0",
+      "snapshot_bytes": 2163
+    },
+    {
+      "sample_id": "PP-P-005",
+      "label": "phishing",
+      "source_original_sha256": "80a889cfb7c813c0421c271ad017df442f33daa5e73b5e74c35dbd356a527fc0",
+      "snapshot_path": "derived-snapshots/PP-P-005.json",
+      "snapshot_sha256": "e0b2fdb62e32e46ff4301ed5223403d09113bad3df862e4967d2e294fc4e843c",
+      "snapshot_bytes": 328
+    },
+    {
+      "sample_id": "PP-P-006",
+      "label": "phishing",
+      "source_original_sha256": "1c9468645da3381aea1ffb00458296e67278a2cccdcb20143329f077eb4121ab",
+      "snapshot_path": "derived-snapshots/PP-P-006.json",
+      "snapshot_sha256": "b9ec8b51d5a8d382f85b44ad0fb1be1ba3814e886782bf296c316cb2ae86c0b2",
+      "snapshot_bytes": 2144
+    },
+    {
+      "sample_id": "PP-P-007",
+      "label": "phishing",
+      "source_original_sha256": "e4d6a31d642f53c60610b6c9e12b96f751c3c275a1090f8b732b0592557f7519",
+      "snapshot_path": "derived-snapshots/PP-P-007.json",
+      "snapshot_sha256": "10fd82be683acaa87ecb41c99e6897dbcd29d2bf15a7ff677126f9aecc6c19d1",
+      "snapshot_bytes": 289
+    },
+    {
+      "sample_id": "PP-P-008",
+      "label": "phishing",
+      "source_original_sha256": "1e12794c5551420d5fef6aad93ae2f4bae2e35fa8778c75540d4e2b0f776f0cb",
+      "snapshot_path": "derived-snapshots/PP-P-008.json",
+      "snapshot_sha256": "f6a8f703c079e85696f8db3f43b0b20cc5143114239a3b73fac71dbbe9a305ff",
+      "snapshot_bytes": 121
+    },
+    {
+      "sample_id": "PP-P-009",
+      "label": "phishing",
+      "source_original_sha256": "d147f6d7949459b2973effa4dffba28a004ab60bde03ab97db6a84e899a94422",
+      "snapshot_path": "derived-snapshots/PP-P-009.json",
+      "snapshot_sha256": "b13acefa5c45aab305848a71cc4a2c2ff0a922ff29f109b5b34dd2c69beb39ca",
+      "snapshot_bytes": 168
+    },
+    {
+      "sample_id": "PP-P-010",
+      "label": "phishing",
+      "source_original_sha256": "93bd70ac7b35164e13a7d395fa382c7e8bc95f527b3acc9a2c1b8f55e36623b8",
+      "snapshot_path": "derived-snapshots/PP-P-010.json",
+      "snapshot_sha256": "33d0b7da81cd2fd2833e684bbaad731a98f06b4daaae8c4b30ba90065877e86d",
+      "snapshot_bytes": 1180
+    },
+    {
+      "sample_id": "PP-P-011",
+      "label": "phishing",
+      "source_original_sha256": "5616cdf3146de635b7dc3c87b16d94618c663c766f41cc4e84fbac79e7048aca",
+      "snapshot_path": "derived-snapshots/PP-P-011.json",
+      "snapshot_sha256": "54dd9bff7c2e9af6fcf984b97ae0e968e799dfb398d8228638ec87d9a6201aaa",
+      "snapshot_bytes": 351
+    },
+    {
+      "sample_id": "PP-P-012",
+      "label": "phishing",
+      "source_original_sha256": "de5dbc4e66de689cb1e16a49d8b5bd6ab0651b96e513047c634edf7e9c33ffd9",
+      "snapshot_path": "derived-snapshots/PP-P-012.json",
+      "snapshot_sha256": "af2a32a8d910aa334b70641843cce42d495a399ccd7c568ddc87828cc91c93e7",
+      "snapshot_bytes": 140
+    },
+    {
+      "sample_id": "PP-P-013",
+      "label": "phishing",
+      "source_original_sha256": "e24c375e1ca9e7366e560e949e4b92052e4596634a1bd8f3d47bf3a6c30398e4",
+      "snapshot_path": "derived-snapshots/PP-P-013.json",
+      "snapshot_sha256": "5bfe233e2c3da10d03f077cded16a718e4142dc5fc97182591a3d8edd83ef45a",
+      "snapshot_bytes": 583
+    },
+    {
+      "sample_id": "PP-P-014",
+      "label": "phishing",
+      "source_original_sha256": "44c8efad569eed165df42074f52392bcfabbc2ee56ff16b4c7c2ee29f6db40ef",
+      "snapshot_path": "derived-snapshots/PP-P-014.json",
+      "snapshot_sha256": "cde03af769e97f99ce7796d30157567edbae53b845b11c3102ee8ec80f80059c",
+      "snapshot_bytes": 2711
+    },
+    {
+      "sample_id": "PP-P-015",
+      "label": "phishing",
+      "source_original_sha256": "f68c0555332117ba9dae28d7e3f47b162c6e47cefbd741fc78c599df1f0c5099",
+      "snapshot_path": "derived-snapshots/PP-P-015.json",
+      "snapshot_sha256": "16540f56d11720e7eddb4747cde03499cddb9d09c18a597b5f8ecc2da5cde405",
+      "snapshot_bytes": 256
+    },
+    {
+      "sample_id": "PP-P-016",
+      "label": "phishing",
+      "source_original_sha256": "7b9e554e40596cd660616d9609d75ac9e76b782ce3f7be7e17012eb31a4cec63",
+      "snapshot_path": "derived-snapshots/PP-P-016.json",
+      "snapshot_sha256": "56d2434b2178b5e3c8d5d6a54e73ad9803579267bb0dc12a29673f1603e56f1a",
+      "snapshot_bytes": 1882
+    },
+    {
+      "sample_id": "PP-P-017",
+      "label": "phishing",
+      "source_original_sha256": "353005f8309c84700b5db1c9871e1616a131cf284c084cad340c0fd107c2b56c",
+      "snapshot_path": "derived-snapshots/PP-P-017.json",
+      "snapshot_sha256": "9646b788c9594cd276079237cc61353c51a858bd736b72203983718c3b6ae5ab",
+      "snapshot_bytes": 583
+    },
+    {
+      "sample_id": "PP-P-018",
+      "label": "phishing",
+      "source_original_sha256": "861ed5d0df7a3bc8a643ddeaea4740d7cd3cb9249fa8a3d7eaf32c90b02c1802",
+      "snapshot_path": "derived-snapshots/PP-P-018.json",
+      "snapshot_sha256": "2d4379376192cebc38e953b3960eeb4f438e97788201751628e27823a474e974",
+      "snapshot_bytes": 2145
+    },
+    {
+      "sample_id": "PP-P-019",
+      "label": "phishing",
+      "source_original_sha256": "cf1eb494d695ba69fa06a5efe59b967961735b1efdb32e60b12c51acefdea927",
+      "snapshot_path": "derived-snapshots/PP-P-019.json",
+      "snapshot_sha256": "3d88e7faf85848347f9ef143f379d720e078652ff432176da8db72e0b30d1090",
+      "snapshot_bytes": 3220
+    },
+    {
+      "sample_id": "PP-P-020",
+      "label": "phishing",
+      "source_original_sha256": "bce75429f8014bfc6ea45d820dbf4fab5a8db2baa54895995b7da3679965ab06",
+      "snapshot_path": "derived-snapshots/PP-P-020.json",
+      "snapshot_sha256": "06ce86f947d706f530e8daf10f352dd713a0a053159e07d26ac4762cde008466",
+      "snapshot_bytes": 139
+    },
+    {
+      "sample_id": "PP-P-021",
+      "label": "phishing",
+      "source_original_sha256": "8dd73e4db8341941fb92f3a32c7df2f6e42cd8f9b8cadd1782b9e34a2829422d",
+      "snapshot_path": "derived-snapshots/PP-P-021.json",
+      "snapshot_sha256": "9972253d987317a74f060da2511d32b0c904d3dc5dae5cbf49fe28e2865acdf4",
+      "snapshot_bytes": 525
+    },
+    {
+      "sample_id": "PP-P-022",
+      "label": "phishing",
+      "source_original_sha256": "3d1a2e84eacb9dcbf95ec5688498845f46b2fa75befebf4452e968228ddee6da",
+      "snapshot_path": "derived-snapshots/PP-P-022.json",
+      "snapshot_sha256": "2a29b3f3fb9a0d957905a18f16635d3cc86f720ed53447db6c6c060ca9f5fafa",
+      "snapshot_bytes": 474
+    },
+    {
+      "sample_id": "PP-P-023",
+      "label": "phishing",
+      "source_original_sha256": "a30e6984b7ddcec1d012a6b745dfba3323793435e836f662a6291130a121e672",
+      "snapshot_path": "derived-snapshots/PP-P-023.json",
+      "snapshot_sha256": "d01144657c9b8187d64ac03066ec0ef662faf83b86ccb218c24e130833712a29",
+      "snapshot_bytes": 3526
+    },
+    {
+      "sample_id": "PP-P-024",
+      "label": "phishing",
+      "source_original_sha256": "e353d838a5cf3714489fbb9ed480889753df9649c096f53d8a5ebf45688bd85f",
+      "snapshot_path": "derived-snapshots/PP-P-024.json",
+      "snapshot_sha256": "84b803623e5e538257055c967ece498ba34583e71adb85c2cccb990960f92be1",
+      "snapshot_bytes": 214
+    },
+    {
+      "sample_id": "PP-P-025",
+      "label": "phishing",
+      "source_original_sha256": "4e8d3fb079c52e68d79e4c71237e296e7d6cf19707d84942b417408a6bcaad5b",
+      "snapshot_path": "derived-snapshots/PP-P-025.json",
+      "snapshot_sha256": "aecdf391ed02b9b8c938b7cf9a727b6bd4230f15cef32596efc1cba1f0e23c24",
+      "snapshot_bytes": 468
+    },
+    {
+      "sample_id": "PP-P-026",
+      "label": "phishing",
+      "source_original_sha256": "83a73f1b656dd9dd4941b34c7c587e72dc0fc1ea965bb1837da1df9f59952fd7",
+      "snapshot_path": "derived-snapshots/PP-P-026.json",
+      "snapshot_sha256": "38587481a41e279b67176b349dbbd14f664bf6ed429fa27af09cb9cda5d9a692",
+      "snapshot_bytes": 530
+    },
+    {
+      "sample_id": "PP-P-027",
+      "label": "phishing",
+      "source_original_sha256": "927491268dbd51eef604fe5bac0d4c1a6c09a67efebb7a85a30e339faa460be7",
+      "snapshot_path": "derived-snapshots/PP-P-027.json",
+      "snapshot_sha256": "afdb8d3c7e458d92ac17944b9fc2040680841302a8408b89c4fb523d2bc1f2b2",
+      "snapshot_bytes": 406
+    },
+    {
+      "sample_id": "PP-P-028",
+      "label": "phishing",
+      "source_original_sha256": "d315f71435dc2a05e1c4944452fce09634b2712787ef183871f5d62d8d92261f",
+      "snapshot_path": "derived-snapshots/PP-P-028.json",
+      "snapshot_sha256": "95f540b7e4ef6824863dce2e06f72174217367cc1ed14480879de7f73f4046ee",
+      "snapshot_bytes": 4445
+    },
+    {
+      "sample_id": "PP-P-029",
+      "label": "phishing",
+      "source_original_sha256": "14861eca332b8317efed4be0d711923108a2ccad9d52aef2a978e3f10c9b119b",
+      "snapshot_path": "derived-snapshots/PP-P-029.json",
+      "snapshot_sha256": "79eb0fd9e9c524ab1920a9979675265e1646a53a831664dcf76d51e2f2b45633",
+      "snapshot_bytes": 292
+    },
+    {
+      "sample_id": "PP-P-030",
+      "label": "phishing",
+      "source_original_sha256": "ce30ec9a03349ce3fc21129e5f402e148cc04d09be9b794d23ca77a840aac870",
+      "snapshot_path": "derived-snapshots/PP-P-030.json",
+      "snapshot_sha256": "5a43b3400dba48f753c061d26b4192e329661abac06f89d2b9308b5596013dfc",
+      "snapshot_bytes": 369
+    },
+    {
+      "sample_id": "PP-P-031",
+      "label": "phishing",
+      "source_original_sha256": "d24d6e7eee4cebcfba3545ef2c6a9d01732cdb5bfd68f424144bbad8bb550897",
+      "snapshot_path": "derived-snapshots/PP-P-031.json",
+      "snapshot_sha256": "bd26eeb6a00b52ba1c121b90e95e69303bae6e639ad20e7074f14da3d89d913e",
+      "snapshot_bytes": 223
+    },
+    {
+      "sample_id": "PP-P-032",
+      "label": "phishing",
+      "source_original_sha256": "ad308e8be313569b5bc7760ce31bd4b73ace6be207c834e1a22d3b0625e764d3",
+      "snapshot_path": "derived-snapshots/PP-P-032.json",
+      "snapshot_sha256": "d8df9b8a5c0b8d7489e30f3421b13c75af35f94563668a8f813a6d1743ed808d",
+      "snapshot_bytes": 631
+    },
+    {
+      "sample_id": "PP-P-033",
+      "label": "phishing",
+      "source_original_sha256": "5e0c6c3e9b364e600e5e6549008c0df4ad0d4a49349a3ce02c55c7c160398470",
+      "snapshot_path": "derived-snapshots/PP-P-033.json",
+      "snapshot_sha256": "7bd57b29b5eaf6f4b35dfdf228999108309eecb14e7bfb84268563e39110ed1e",
+      "snapshot_bytes": 399
+    },
+    {
+      "sample_id": "PP-P-034",
+      "label": "phishing",
+      "source_original_sha256": "86e5409a0f267c2b102c77f382a6efc80e0ff08b6698aac95845f1f04e6fefe1",
+      "snapshot_path": "derived-snapshots/PP-P-034.json",
+      "snapshot_sha256": "016e86218d99af202009605d27b20561c43e90afd2be91230b487de8f915e876",
+      "snapshot_bytes": 502
+    },
+    {
+      "sample_id": "PP-P-035",
+      "label": "phishing",
+      "source_original_sha256": "c582be6140017f443726a665decac517badf89b83e79fe80fa0227839e644177",
+      "snapshot_path": "derived-snapshots/PP-P-035.json",
+      "snapshot_sha256": "332a8040c0427ba42bc19ffcf90b52a7e9e56380884d170c9f3b1d1e047a7f68",
+      "snapshot_bytes": 1490
+    },
+    {
+      "sample_id": "PP-P-036",
+      "label": "phishing",
+      "source_original_sha256": "488926dc1d7a5544cd7fab6c013ee4097d708ae7ac1797b22536eb1e7fd4cd06",
+      "snapshot_path": "derived-snapshots/PP-P-036.json",
+      "snapshot_sha256": "d35844a6a41c28211f3c4b60bca12024db9f439ca9d00864d38438d4d8f8c6eb",
+      "snapshot_bytes": 319
+    },
+    {
+      "sample_id": "PP-P-037",
+      "label": "phishing",
+      "source_original_sha256": "2f5f9da8c4a260e3387927898939ef0a23c7db6eb30a83efc9936f7d4f65335a",
+      "snapshot_path": "derived-snapshots/PP-P-037.json",
+      "snapshot_sha256": "82b4b29b4927917fa3148e2723a3dcaf5942935cbb550267018c8c18d9deb2d5",
+      "snapshot_bytes": 3820
+    },
+    {
+      "sample_id": "PP-P-038",
+      "label": "phishing",
+      "source_original_sha256": "0cb10b78ff9b9dae99601632497f2c4e323d9cc05b3c8c1c8eb312042e67934e",
+      "snapshot_path": "derived-snapshots/PP-P-038.json",
+      "snapshot_sha256": "5ebcfc544a0eae025f45658974368bcc6ec071b48e373d342038065b3c0e7d0e",
+      "snapshot_bytes": 512
+    },
+    {
+      "sample_id": "PP-P-039",
+      "label": "phishing",
+      "source_original_sha256": "03790ef1fb5e86abec52db4394b4853b7eed0a23d060ee1dde319c842c822221",
+      "snapshot_path": "derived-snapshots/PP-P-039.json",
+      "snapshot_sha256": "981ad56546fb660114cfbce4c1ca4f7f64826380e1f2514653760b5789fbbafe",
+      "snapshot_bytes": 2632
+    },
+    {
+      "sample_id": "PP-P-040",
+      "label": "phishing",
+      "source_original_sha256": "192473458334025442c7f54604d40cc16a7a1544e0800a4db0f20ba185aae0c4",
+      "snapshot_path": "derived-snapshots/PP-P-040.json",
+      "snapshot_sha256": "a5c11a6bd263ac58d1e87ceed4c34e5eb46d340826d5add45d1fc45987e7342e",
+      "snapshot_bytes": 1201
+    },
+    {
+      "sample_id": "PP-P-041",
+      "label": "phishing",
+      "source_original_sha256": "5f30df8cbd047d46ee29caafdc489cbe76ac1008a4ef65ff0b0115acd6b57d4b",
+      "snapshot_path": "derived-snapshots/PP-P-041.json",
+      "snapshot_sha256": "78de490586b16f36e8e975e3562207a8f180e9d332113d24e1394de620c16b5a",
+      "snapshot_bytes": 570
+    },
+    {
+      "sample_id": "PP-P-042",
+      "label": "phishing",
+      "source_original_sha256": "4deb34a70c68618596159dccb70bac55d34c5e84b5d8cd7a764edff5c11cfa64",
+      "snapshot_path": "derived-snapshots/PP-P-042.json",
+      "snapshot_sha256": "548fc5b8c0b8996cef9fb178b48f13276338aa75c07836bb4a35fa740538060e",
+      "snapshot_bytes": 1353
+    },
+    {
+      "sample_id": "PP-P-043",
+      "label": "phishing",
+      "source_original_sha256": "29a9376133a8dc99163e4550cd861230906e8b5e537ab167241cabbb589e1691",
+      "snapshot_path": "derived-snapshots/PP-P-043.json",
+      "snapshot_sha256": "5b35b7367475e73c42023e139b03242ed750753d33fa9938ca127922d7f4498f",
+      "snapshot_bytes": 3203
+    },
+    {
+      "sample_id": "PP-P-044",
+      "label": "phishing",
+      "source_original_sha256": "0959fe1df500d89cc6d8a3b886692fabb74a50b0ca6014edcee6ae0b101f60a6",
+      "snapshot_path": "derived-snapshots/PP-P-044.json",
+      "snapshot_sha256": "adbc36cdce5b55b28a71cd3812bf8d1f3ba39cf6f65a911411302818fb7a1655",
+      "snapshot_bytes": 2731
+    },
+    {
+      "sample_id": "PP-P-045",
+      "label": "phishing",
+      "source_original_sha256": "13bf3e0ff298b02fe16c7e010be90701eb93b591e109de7002e4cd53f4b8b326",
+      "snapshot_path": "derived-snapshots/PP-P-045.json",
+      "snapshot_sha256": "1b8413cd16fd92f6eba039622fa9b52023619106ea9d9655b1517d09392305ca",
+      "snapshot_bytes": 2258
+    },
+    {
+      "sample_id": "PP-P-046",
+      "label": "phishing",
+      "source_original_sha256": "4cb44625279a2c0943a3f6b667cf6a77587c1537b75579bb1aa7cbd9fd501954",
+      "snapshot_path": "derived-snapshots/PP-P-046.json",
+      "snapshot_sha256": "3e1d3949a6d9b230fcd4848fdcb287356807ba21a2acedc15b0f6770365fd6f8",
+      "snapshot_bytes": 10543
+    },
+    {
+      "sample_id": "PP-P-047",
+      "label": "phishing",
+      "source_original_sha256": "9a582a2336a5e8492b58ebbeb855662af913a805c99771d72a2d4733856aa51c",
+      "snapshot_path": "derived-snapshots/PP-P-047.json",
+      "snapshot_sha256": "16df2fade7d58b218400794daa874c67497f968ead840da3603efaa72ea4318e",
+      "snapshot_bytes": 2735
+    },
+    {
+      "sample_id": "PP-P-048",
+      "label": "phishing",
+      "source_original_sha256": "b0c8c076fc3e16ee00a0d4752b505890e5834f4f3e7700e094e4ce64e9c90478",
+      "snapshot_path": "derived-snapshots/PP-P-048.json",
+      "snapshot_sha256": "2c0ac8ce8fc172438e9346ae358079a53f1732f9a119a4f9c0433da19acc4da2",
+      "snapshot_bytes": 1948
+    },
+    {
+      "sample_id": "PP-P-049",
+      "label": "phishing",
+      "source_original_sha256": "90e9d90890432f559282c1679d397b09af39335866a0dce37aef5104c501dacc",
+      "snapshot_path": "derived-snapshots/PP-P-049.json",
+      "snapshot_sha256": "fefae2b4f1e8539293023d5fb5977f97f7426daebfba942e3fafc4477c15eef7",
+      "snapshot_bytes": 721
+    },
+    {
+      "sample_id": "PP-P-050",
+      "label": "phishing",
+      "source_original_sha256": "7e927980e3cb8f6a69e1cb9c6833cca0e634de8c464d0169b72d330774dd6a20",
+      "snapshot_path": "derived-snapshots/PP-P-050.json",
+      "snapshot_sha256": "1d76a41bb100ee40fe70244ad182d5137bac6c5d21851cad338476f22a3b726f",
+      "snapshot_bytes": 1316
+    },
+    {
+      "sample_id": "PP-P-051",
+      "label": "phishing",
+      "source_original_sha256": "2e4a0a196c4de8986cb4f5ea9d4fae7c64df25ece7b59e4c51aee6301c5db554",
+      "snapshot_path": "derived-snapshots/PP-P-051.json",
+      "snapshot_sha256": "b6f68a713373e6eae0346ed11023f95b316b50c5f91858e63246ecd5785942c6",
+      "snapshot_bytes": 3090
+    },
+    {
+      "sample_id": "PP-P-052",
+      "label": "phishing",
+      "source_original_sha256": "b986e5f12450839e0630eca5ac5517ca254f66702ef6f6f82d63560968785ce6",
+      "snapshot_path": "derived-snapshots/PP-P-052.json",
+      "snapshot_sha256": "0dece380840c438fb344c087bdab9cb7addff669e6fa81de52e1eab462a7e6d6",
+      "snapshot_bytes": 134
+    },
+    {
+      "sample_id": "PP-P-053",
+      "label": "phishing",
+      "source_original_sha256": "076db7aa5801e4fa59ce30e0e8f190049d6bb86c9cf774c8545d60ed24bd9fba",
+      "snapshot_path": "derived-snapshots/PP-P-053.json",
+      "snapshot_sha256": "00264cfb310b8bc41999bc842a5e4964ca69922fdec79913e09a916723d52ed7",
+      "snapshot_bytes": 703
+    },
+    {
+      "sample_id": "PP-P-054",
+      "label": "phishing",
+      "source_original_sha256": "a7b37c787e06cd935ec24d5c414790e4f7cede04a382a6d9d551ffdf85627bd8",
+      "snapshot_path": "derived-snapshots/PP-P-054.json",
+      "snapshot_sha256": "47f1ea2db3dcec076aabfd222b682f26295b66fb7f7675ba62a75d3d427ed3c9",
+      "snapshot_bytes": 141
+    },
+    {
+      "sample_id": "PP-P-055",
+      "label": "phishing",
+      "source_original_sha256": "8ef952d559f0ffdf15340a3e955b7838c4b2e5e8352b71f4bce50e798f7e32d3",
+      "snapshot_path": "derived-snapshots/PP-P-055.json",
+      "snapshot_sha256": "1959affaad1f0519f16ce152a5f1a4135b6a5f672a407db7295a2e85c0ae5759",
+      "snapshot_bytes": 2312
+    },
+    {
+      "sample_id": "PP-P-056",
+      "label": "phishing",
+      "source_original_sha256": "8ffef9954d70ae61759949ff6c8487bd10fa0d84a18a7e149377dc724cd02fbc",
+      "snapshot_path": "derived-snapshots/PP-P-056.json",
+      "snapshot_sha256": "eeda2a64788e4a02f3b3bae518a62ef8aeb3a7539b0361cef57e53f329ba023c",
+      "snapshot_bytes": 170
+    },
+    {
+      "sample_id": "PP-P-057",
+      "label": "phishing",
+      "source_original_sha256": "8c25834ce2b57d425c1639f55df334453392b34e2fe5edfe560e868f2f44a699",
+      "snapshot_path": "derived-snapshots/PP-P-057.json",
+      "snapshot_sha256": "4bbb16a7d443016aeff4885a0b2d8faef4a83740d241808604cce88f6cb7fd33",
+      "snapshot_bytes": 235
+    },
+    {
+      "sample_id": "PP-P-058",
+      "label": "phishing",
+      "source_original_sha256": "bb643a67c50e70f1595d31638ce084bdb2d1a9f14d0dfc1f7188c153a9aac69b",
+      "snapshot_path": "derived-snapshots/PP-P-058.json",
+      "snapshot_sha256": "1260dc7aee82259c1515be3a40b93a0c3a4e0f37e0334e5eb102706b3d91d00e",
+      "snapshot_bytes": 531
+    },
+    {
+      "sample_id": "PP-P-059",
+      "label": "phishing",
+      "source_original_sha256": "8b8ac997b87640221f8b49b1d53c5928be8ec4a06fbd0b42be954877316873ed",
+      "snapshot_path": "derived-snapshots/PP-P-059.json",
+      "snapshot_sha256": "4b69380bf87ed04833b0bec524f07385d936aaf931a2cf0ce25dd0af057ab3e9",
+      "snapshot_bytes": 374
+    },
+    {
+      "sample_id": "PP-P-060",
+      "label": "phishing",
+      "source_original_sha256": "073e28b63fbbad0acfedf7ffd9cbc66e103d079f696d0455025bfc359eff6972",
+      "snapshot_path": "derived-snapshots/PP-P-060.json",
+      "snapshot_sha256": "97ed7743b1389d165f0467bd611ada9238eacf65a2d96b9fd2849fa163cd60c9",
+      "snapshot_bytes": 892
+    },
+    {
+      "sample_id": "PP-P-061",
+      "label": "phishing",
+      "source_original_sha256": "8f191486f7e18cac4f3d646f09f344476d8536f5534c2cf70a56b02a0f5b177d",
+      "snapshot_path": "derived-snapshots/PP-P-061.json",
+      "snapshot_sha256": "c1bb143b938b34fd4d0e3608c21db6956fea51dee19798b194c99ca04061150f",
+      "snapshot_bytes": 539
+    },
+    {
+      "sample_id": "PP-P-062",
+      "label": "phishing",
+      "source_original_sha256": "480da4d48e8af831e65a60f60a55125f11a9e0a81fbafd9243e885daa65eb657",
+      "snapshot_path": "derived-snapshots/PP-P-062.json",
+      "snapshot_sha256": "f579a8f47b6689cc36e5418104196189b674a36c804bafdb2b297f28f71a8ece",
+      "snapshot_bytes": 522
+    },
+    {
+      "sample_id": "PP-P-063",
+      "label": "phishing",
+      "source_original_sha256": "0a4b1311394a154402fc55b20770089bccf2fe511dd27e1da95dd61d7195e5b9",
+      "snapshot_path": "derived-snapshots/PP-P-063.json",
+      "snapshot_sha256": "e82de886bf155325c8440d79dafd9b5f604b4e801b22877b903f07b0cc3cd89c",
+      "snapshot_bytes": 673
+    },
+    {
+      "sample_id": "PP-P-064",
+      "label": "phishing",
+      "source_original_sha256": "193f805ee4d978e89d45aa96b355d6904ea2e610048964d97bc03a9ce22e62bd",
+      "snapshot_path": "derived-snapshots/PP-P-064.json",
+      "snapshot_sha256": "cb5961671ada231a97e2b60feba88271f39446fbe86586d0dbbda073ae63f062",
+      "snapshot_bytes": 518
+    },
+    {
+      "sample_id": "PP-P-065",
+      "label": "phishing",
+      "source_original_sha256": "5f71ef71575948407e1dd26aed09bd568e193e571726969516ecc06356182df3",
+      "snapshot_path": "derived-snapshots/PP-P-065.json",
+      "snapshot_sha256": "bb75f324eb98cea46fbd2fcd22068be7454ec2299e3571195e29bf5f74280c55",
+      "snapshot_bytes": 3103
+    },
+    {
+      "sample_id": "PP-P-066",
+      "label": "phishing",
+      "source_original_sha256": "945f2588fe43008af4412c521b6288910b3b0644d1dcc56142f9bb5cd6a7bf21",
+      "snapshot_path": "derived-snapshots/PP-P-066.json",
+      "snapshot_sha256": "ff01be7eeaac19c5a043c2ee1c65c152e80350f22bb35555b9a0b939502901a2",
+      "snapshot_bytes": 1453
+    },
+    {
+      "sample_id": "PP-P-067",
+      "label": "phishing",
+      "source_original_sha256": "d1e6b8ef2955c233ca6dd8ad2cea4fddf6dbb365e4cbf839364896b98965bddd",
+      "snapshot_path": "derived-snapshots/PP-P-067.json",
+      "snapshot_sha256": "04753693b6be0997ae170288afcfd930f21431524eba4fcdcec7d29aac719baa",
+      "snapshot_bytes": 652
+    },
+    {
+      "sample_id": "PP-P-068",
+      "label": "phishing",
+      "source_original_sha256": "c3909539234dfba39350c509fb197674957c0a1bc42789f932636f2f9431bc3f",
+      "snapshot_path": "derived-snapshots/PP-P-068.json",
+      "snapshot_sha256": "a2317c29f82cd1d178439bee17b95fce82a3662d2159d69d2bcf74d1e7dbfaac",
+      "snapshot_bytes": 1068
+    },
+    {
+      "sample_id": "PP-P-069",
+      "label": "phishing",
+      "source_original_sha256": "dedef6603212f4106fe6198316dad2eef2e83a6dd73761b4d8ba286b05267ab9",
+      "snapshot_path": "derived-snapshots/PP-P-069.json",
+      "snapshot_sha256": "c7e241103097178d72268563b753f3de8c4cd7b1a8c804a2cf80127536da1e51",
+      "snapshot_bytes": 570
+    },
+    {
+      "sample_id": "PP-P-070",
+      "label": "phishing",
+      "source_original_sha256": "f0bc2de98d869a39d7357041a330141f7809adf102b09725edc7f6caf01c24bb",
+      "snapshot_path": "derived-snapshots/PP-P-070.json",
+      "snapshot_sha256": "fcc063a32444a668364122b00df7d8bc86c553f42fe12d39cde09484c4883089",
+      "snapshot_bytes": 406
+    },
+    {
+      "sample_id": "PP-P-071",
+      "label": "phishing",
+      "source_original_sha256": "920177e8de8326d3dc851e4f4a26434bc56ba151c6af97dd3487ed644ced8e92",
+      "snapshot_path": "derived-snapshots/PP-P-071.json",
+      "snapshot_sha256": "a4818abf6183154566f77b6eb2468ded0f725df9b2c39275161638cfc3bf08f9",
+      "snapshot_bytes": 415
+    },
+    {
+      "sample_id": "PP-P-072",
+      "label": "phishing",
+      "source_original_sha256": "5b4d9a13d757221ff98a59f48437f865e989eba5c06b3620c84498ff6e9c1eba",
+      "snapshot_path": "derived-snapshots/PP-P-072.json",
+      "snapshot_sha256": "0bc551aaeef108c1160fb96b1b0664adfe7eaee1c841898284010e306938c30e",
+      "snapshot_bytes": 1538
+    },
+    {
+      "sample_id": "PP-P-073",
+      "label": "phishing",
+      "source_original_sha256": "05ffe92ba2aec6ccd5ccad82d882e19ccdd4472c3c694d49d854a4468731f0f9",
+      "snapshot_path": "derived-snapshots/PP-P-073.json",
+      "snapshot_sha256": "dfacc7726d7374696d9235d3a8f0cad7baca5b7e8c63c8cfde1e8d1c5627f476",
+      "snapshot_bytes": 2030
+    },
+    {
+      "sample_id": "PP-P-074",
+      "label": "phishing",
+      "source_original_sha256": "6c64f745dd0457a07c6dc1aed6e992476af65bb6ab7120de1b46faf09c731169",
+      "snapshot_path": "derived-snapshots/PP-P-074.json",
+      "snapshot_sha256": "50ad9c0eec267de383ef9d2faa149d204a214366d363179c68679e03b8a3375e",
+      "snapshot_bytes": 875
+    },
+    {
+      "sample_id": "PP-P-075",
+      "label": "phishing",
+      "source_original_sha256": "87b7f4e9eea1d58a6a2d375986abd83c6a8be212d7160e77935f8b4f842a2215",
+      "snapshot_path": "derived-snapshots/PP-P-075.json",
+      "snapshot_sha256": "baf321ab6c3319a6b3be9d8ff9a7b51e79b7b5dff3cf8f0811aad055eac77dcb",
+      "snapshot_bytes": 466
+    },
+    {
+      "sample_id": "PP-P-076",
+      "label": "phishing",
+      "source_original_sha256": "7f2a0fb6ad6b7719afd4c973096dce67be1a060174fba70c97b419917f053831",
+      "snapshot_path": "derived-snapshots/PP-P-076.json",
+      "snapshot_sha256": "39c5a0758406f7661234b46cff1a9afefad45d856b7fe7fb96f0b329bf5ffbc5",
+      "snapshot_bytes": 2954
+    },
+    {
+      "sample_id": "PP-P-077",
+      "label": "phishing",
+      "source_original_sha256": "6bd72e5b7e936b850a20c78030f10cf570e079e9e3b8427e342de2abbdfae625",
+      "snapshot_path": "derived-snapshots/PP-P-077.json",
+      "snapshot_sha256": "b1d1e3a61a26546259586266b860fa34f0b3a2d2bb10f1bdd35b244c91df7d60",
+      "snapshot_bytes": 2939
+    },
+    {
+      "sample_id": "PP-P-078",
+      "label": "phishing",
+      "source_original_sha256": "b446c494fb8a69268f201e10adfbd3ea7601e8bcc6d358ed4c869b869a4b2b65",
+      "snapshot_path": "derived-snapshots/PP-P-078.json",
+      "snapshot_sha256": "01710c3b2f2d71d3b37a7dd9c53f984966f63dab675f96e994d6f42cea4be447",
+      "snapshot_bytes": 474
+    },
+    {
+      "sample_id": "PP-P-079",
+      "label": "phishing",
+      "source_original_sha256": "f3f16dd5a13076790c3c17726dc2abc623c0f73942d143c3a107b30b82d8ade2",
+      "snapshot_path": "derived-snapshots/PP-P-079.json",
+      "snapshot_sha256": "17e03c8fbdf57838af9a098cbebf1dcb7ae0e50854e902461d841c3dfdacb73e",
+      "snapshot_bytes": 140
+    },
+    {
+      "sample_id": "PP-P-080",
+      "label": "phishing",
+      "source_original_sha256": "ca75196e307a2ebc4d368ffc1154c7f34e2b712163fbd0543208a59adc556ee8",
+      "snapshot_path": "derived-snapshots/PP-P-080.json",
+      "snapshot_sha256": "788466d5167da5315c50c2bbdd8ab231995d17395093c709f40cfd347e278567",
+      "snapshot_bytes": 144
+    },
+    {
+      "sample_id": "PP-P-081",
+      "label": "phishing",
+      "source_original_sha256": "fc95f9d38dccb2f4600d41f40942bcde7f840b8a7196d59cd8049a627cce260f",
+      "snapshot_path": "derived-snapshots/PP-P-081.json",
+      "snapshot_sha256": "3a060dc7cfb1a025320c71560c112a9ad77416421f3332d2d1d37aff720ba761",
+      "snapshot_bytes": 456
+    },
+    {
+      "sample_id": "PP-P-082",
+      "label": "phishing",
+      "source_original_sha256": "8e2f38d47e1b683003eff34c27a4d0a1a034a00402221d3d6ecd46570de223d9",
+      "snapshot_path": "derived-snapshots/PP-P-082.json",
+      "snapshot_sha256": "261c6b85d00071b09ed3ccbd5d9b3bf588b520f2b45ef6f072d91e405cebb668",
+      "snapshot_bytes": 246
+    },
+    {
+      "sample_id": "PP-P-083",
+      "label": "phishing",
+      "source_original_sha256": "147c1f06f71d8cc582d2e1bfbeceb3e877c2d062a56d1d2425935c149c9fe5d2",
+      "snapshot_path": "derived-snapshots/PP-P-083.json",
+      "snapshot_sha256": "4a2e9cd5974ca4f80c68bdfb809d040eb68b79d91ab58d9db10b2e73e3c45f66",
+      "snapshot_bytes": 2258
+    },
+    {
+      "sample_id": "PP-P-084",
+      "label": "phishing",
+      "source_original_sha256": "8e161f6e7d8f922b91107fd33b1bfb15683bd2163d41e0e6e914992187c6ae8e",
+      "snapshot_path": "derived-snapshots/PP-P-084.json",
+      "snapshot_sha256": "2d7cb5f7d2ee11b7f91e6dd25cbdf55899a7fe2191674e075dffff4acc2cd0d1",
+      "snapshot_bytes": 5745
+    },
+    {
+      "sample_id": "PP-P-085",
+      "label": "phishing",
+      "source_original_sha256": "d086df2d9f5a37e0f1f603de6ac3773e0accb1db8d9f0d07ab4335281081676e",
+      "snapshot_path": "derived-snapshots/PP-P-085.json",
+      "snapshot_sha256": "c7eb1b9addfe7bce91b3f94b9af504eeb8cf01461732d2a74bb478c3a7ebbde8",
+      "snapshot_bytes": 226
+    },
+    {
+      "sample_id": "PP-P-086",
+      "label": "phishing",
+      "source_original_sha256": "4d26a87902c16c23c5ce1c90da975571989c0d1d0e2ecede74639cf5fa7b1249",
+      "snapshot_path": "derived-snapshots/PP-P-086.json",
+      "snapshot_sha256": "654a0e499a7e59ae918a6bf7b3592245380a314c750544f20375e1cbbd055528",
+      "snapshot_bytes": 388
+    },
+    {
+      "sample_id": "PP-P-087",
+      "label": "phishing",
+      "source_original_sha256": "5a3f65a906fa1af0e53e8fe9c7e9f7bd4771ed5c308ae360e3c7477582b7a2bb",
+      "snapshot_path": "derived-snapshots/PP-P-087.json",
+      "snapshot_sha256": "b91deb1ece1704361641dadcd95144aa76ab31d5d0d89b62a3640481f51ba896",
+      "snapshot_bytes": 390
+    },
+    {
+      "sample_id": "PP-P-088",
+      "label": "phishing",
+      "source_original_sha256": "ba2dc64113a315128caca0ebcb1a8c12ecd613eb5572b9c832a8df9ad86ac986",
+      "snapshot_path": "derived-snapshots/PP-P-088.json",
+      "snapshot_sha256": "b8f654c0ef1a34394dbd5c27e41334fbdf04d9b550e2a02549afe7b19c6ba345",
+      "snapshot_bytes": 6979
+    },
+    {
+      "sample_id": "PP-P-089",
+      "label": "phishing",
+      "source_original_sha256": "9b8eb518b38d2baca9e961d3928fcffb2a99ae06a691a59f9aa06d2ad9cd5b53",
+      "snapshot_path": "derived-snapshots/PP-P-089.json",
+      "snapshot_sha256": "7573d377ca51c5afb74c49458bb3f6e4d8f08ab9414b533626c73e0616bb676c",
+      "snapshot_bytes": 5468
+    },
+    {
+      "sample_id": "PP-P-090",
+      "label": "phishing",
+      "source_original_sha256": "180f273629554f61ec4adca44897e269273acf1e166bccfa01d8b9f86beb5104",
+      "snapshot_path": "derived-snapshots/PP-P-090.json",
+      "snapshot_sha256": "56c3fa7d78721813d8ee0eb84848af5d3ce7909ea072f69a9e6b0811dac07ab2",
+      "snapshot_bytes": 798
+    },
+    {
+      "sample_id": "PP-P-091",
+      "label": "phishing",
+      "source_original_sha256": "5926676d628dfaec34fe41c3778c9c87ea0fd10aed54b0e15c300e825832c0e9",
+      "snapshot_path": "derived-snapshots/PP-P-091.json",
+      "snapshot_sha256": "9525e4caaadcfa07824d114e58d27b61dcc6cc12b281c4d19315c77aa4111b04",
+      "snapshot_bytes": 145
+    },
+    {
+      "sample_id": "PP-P-092",
+      "label": "phishing",
+      "source_original_sha256": "55fd5ca9c8db5b00e22dcd2614ab2e5c771e37031a27f0cb70d4acba89757120",
+      "snapshot_path": "derived-snapshots/PP-P-092.json",
+      "snapshot_sha256": "5d52d54d7d72653d695a6b7e08a13254dafb42aa319b125be8e0b674e1ea3d0f",
+      "snapshot_bytes": 409
+    },
+    {
+      "sample_id": "PP-P-093",
+      "label": "phishing",
+      "source_original_sha256": "727dd020b56db2e37aff8a39b45f9ab717e1695b9d19f2bbfdd46e99db18844c",
+      "snapshot_path": "derived-snapshots/PP-P-093.json",
+      "snapshot_sha256": "ae2d013aa020cb5771303a32a9c0010d890b21b40ec419df8ede35c1e09d425c",
+      "snapshot_bytes": 4377
+    },
+    {
+      "sample_id": "PP-P-094",
+      "label": "phishing",
+      "source_original_sha256": "c0a8de16128f7f92827f90caf4b57c5e6e0c96f4d1cfa1130935acc8e2c1ba13",
+      "snapshot_path": "derived-snapshots/PP-P-094.json",
+      "snapshot_sha256": "fa69d511643c936cf4d2bd996580c851d156bada3ba9109c4271f691ca704dc0",
+      "snapshot_bytes": 3242
+    },
+    {
+      "sample_id": "PP-P-095",
+      "label": "phishing",
+      "source_original_sha256": "d38116f832193687967eda33fd439fae47d0170018970de969a22d27d06bd8ae",
+      "snapshot_path": "derived-snapshots/PP-P-095.json",
+      "snapshot_sha256": "98234df727dd4c1e39f3d66b3a325329ac3a13f385818757420796a6c07f3b4a",
+      "snapshot_bytes": 123
+    },
+    {
+      "sample_id": "PP-P-096",
+      "label": "phishing",
+      "source_original_sha256": "1fbe3260a8d11e1f8604cd7ca526c4cf4688d9b9f5197a31c54f44b9d5cc6daf",
+      "snapshot_path": "derived-snapshots/PP-P-096.json",
+      "snapshot_sha256": "f0e87be7f5a01b811261c82ce96e4911ec404266fbb70e88314adf6b88ace163",
+      "snapshot_bytes": 3645
+    },
+    {
+      "sample_id": "PP-P-097",
+      "label": "phishing",
+      "source_original_sha256": "2cf33d8963bb9bf714b6e7b2eac2eda88ca750621ede34343508a21c80c0c9e4",
+      "snapshot_path": "derived-snapshots/PP-P-097.json",
+      "snapshot_sha256": "5d4933a876d11ee612fdc523b238ba5e8982886d706198c237587ad316bdef5b",
+      "snapshot_bytes": 623
+    },
+    {
+      "sample_id": "PP-P-098",
+      "label": "phishing",
+      "source_original_sha256": "62a2cbc1370d065e2f34abe508d6f9208a1e54ce9d09ced7be55232f50b05df0",
+      "snapshot_path": "derived-snapshots/PP-P-098.json",
+      "snapshot_sha256": "2e78ad2e6abcc75e21d31d67503d3c0ea5330b5e29724d38ad24ccb0e78147fb",
+      "snapshot_bytes": 229
+    },
+    {
+      "sample_id": "PP-P-099",
+      "label": "phishing",
+      "source_original_sha256": "9346ed99185177a1cc3d46b20c8f5f5fbb03e136ea20c987b9d737035c25b890",
+      "snapshot_path": "derived-snapshots/PP-P-099.json",
+      "snapshot_sha256": "1c028ae4e68cc01c4aeb015dcbca95dcc74e31b13191cb41fba67035ec791d08",
+      "snapshot_bytes": 978
+    },
+    {
+      "sample_id": "PP-P-100",
+      "label": "phishing",
+      "source_original_sha256": "90de82d3bb91d6f725845c2f4fa5b504ab408daa73b01bb2c62f91f8a0e0272e",
+      "snapshot_path": "derived-snapshots/PP-P-100.json",
+      "snapshot_sha256": "67b5c630e7df503c405b3862ed1f537f8449f23daccdd8d0503cff12a2a2c5bd",
+      "snapshot_bytes": 6536
+    },
+    {
+      "sample_id": "PP-P-101",
+      "label": "phishing",
+      "source_original_sha256": "5fd564707fe81ce0153bb1cf67e34c188c13c8300a031b603669ef23e326fa1d",
+      "snapshot_path": "derived-snapshots/PP-P-101.json",
+      "snapshot_sha256": "3b7723eaf4663bbd6d86c32db1ce5c2759c5d3a3b4551c970fccc6d3c1fbf6bd",
+      "snapshot_bytes": 1131
+    },
+    {
+      "sample_id": "PP-P-102",
+      "label": "phishing",
+      "source_original_sha256": "bfe6496e0e28e3a3891f9b4a38aee77a81896fe58f271ecc2ed59326ac72491f",
+      "snapshot_path": "derived-snapshots/PP-P-102.json",
+      "snapshot_sha256": "667c497c439e876c02ff909dd45ad628b2f4ad8b0f77222bdf5f35abccb8b2b3",
+      "snapshot_bytes": 5106
+    },
+    {
+      "sample_id": "PP-P-103",
+      "label": "phishing",
+      "source_original_sha256": "7e845c6112710ee4d71e33f2f39277ae626121f4c96d86e85bbfa32f10aa3fd3",
+      "snapshot_path": "derived-snapshots/PP-P-103.json",
+      "snapshot_sha256": "1ac9a6588f2a623a37c5b6cd127eaa31a1c0a8a4cdbee7fde203699380323998",
+      "snapshot_bytes": 116
+    },
+    {
+      "sample_id": "PP-P-104",
+      "label": "phishing",
+      "source_original_sha256": "978abade560b8c438f50211524053fc7e00225d6aee4199ce266ea621dfaa759",
+      "snapshot_path": "derived-snapshots/PP-P-104.json",
+      "snapshot_sha256": "c63154bf6ec72261fa920b7d7090c6d756b69341d082ac2e6f4f954056779eb3",
+      "snapshot_bytes": 334
+    },
+    {
+      "sample_id": "PP-P-105",
+      "label": "phishing",
+      "source_original_sha256": "afee3a7668464ed605d5879434e9845d4c32297e3beaf779002f15d3849d82af",
+      "snapshot_path": "derived-snapshots/PP-P-105.json",
+      "snapshot_sha256": "83777e7d761cb7dd8766eb6c3c74d37028d0ce78ec8b9136aa6fbd61030368a8",
+      "snapshot_bytes": 130
+    },
+    {
+      "sample_id": "PP-P-106",
+      "label": "phishing",
+      "source_original_sha256": "519db4335c967d78667ac2270cb3a7b96aa7d05cdbe70465f13b4cbdf9d191ac",
+      "snapshot_path": "derived-snapshots/PP-P-106.json",
+      "snapshot_sha256": "91b1974c4a1b1f23a1b7402f3257ca0c64f16d3003ffa1f5a29284008db932b3",
+      "snapshot_bytes": 961
+    },
+    {
+      "sample_id": "PP-P-107",
+      "label": "phishing",
+      "source_original_sha256": "bb6868994a07d016593c4c4b0db1b68b67698eff9d30ccce61917313382b18aa",
+      "snapshot_path": "derived-snapshots/PP-P-107.json",
+      "snapshot_sha256": "a0f3064f0c9c09e190e7c17c0aa20d54c50b21f540ee7880edca6e99c55e4760",
+      "snapshot_bytes": 4419
+    },
+    {
+      "sample_id": "PP-P-108",
+      "label": "phishing",
+      "source_original_sha256": "5be2beb24323024950aade0d3f54967bacfd9b0b4ac6d36f339c717a54787521",
+      "snapshot_path": "derived-snapshots/PP-P-108.json",
+      "snapshot_sha256": "a0576d59a50e5ed40a19be3ba20133333b07c03d4bc3f6f81277504d25eb0fd6",
+      "snapshot_bytes": 1092
+    },
+    {
+      "sample_id": "PP-P-109",
+      "label": "phishing",
+      "source_original_sha256": "0f6373bf4cb024a0b58ad5cdbfbd48af50497b62765fbc1bdb8fd2157b578de8",
+      "snapshot_path": "derived-snapshots/PP-P-109.json",
+      "snapshot_sha256": "fe9566bec013c0ec78ca0bbfd6c112444199f91809380633243262d907abfebe",
+      "snapshot_bytes": 379
+    },
+    {
+      "sample_id": "PP-P-110",
+      "label": "phishing",
+      "source_original_sha256": "aae24124364c9c643f6842aa6057bb1c33f3b8005f29f9e4c95adb2f9539b10e",
+      "snapshot_path": "derived-snapshots/PP-P-110.json",
+      "snapshot_sha256": "2d346347d54ac451d95d9827adb118618babfa7e21411dca6f48c77b3607c992",
+      "snapshot_bytes": 642
+    },
+    {
+      "sample_id": "PP-P-111",
+      "label": "phishing",
+      "source_original_sha256": "1860733fbcd993c6c931eff1d976bca1202c643bf513f03591c56f572bb4e65d",
+      "snapshot_path": "derived-snapshots/PP-P-111.json",
+      "snapshot_sha256": "94e9dc072a3c6a57a9a3f58531ea7209cf58eb971c7cb6d6ef1d025bedbb107f",
+      "snapshot_bytes": 1778
+    },
+    {
+      "sample_id": "PP-P-112",
+      "label": "phishing",
+      "source_original_sha256": "93969c2f52c499b2397ee34d9a0ff1202483d78661a9c62fc63c6596133680fe",
+      "snapshot_path": "derived-snapshots/PP-P-112.json",
+      "snapshot_sha256": "0a54bc98d4cca0e0a2d1ef370b85e2dbb3d6ed85dfe78d94d93e7558d14273ad",
+      "snapshot_bytes": 2714
+    },
+    {
+      "sample_id": "PP-P-113",
+      "label": "phishing",
+      "source_original_sha256": "3630217367aaf14522fe2dcac6a9c68c4f0bbb8c7c5006ccbdc6c0507c7f6734",
+      "snapshot_path": "derived-snapshots/PP-P-113.json",
+      "snapshot_sha256": "30d4705b49c8f4079c43c67f166712d9847863099a81728bc10deec115101d1e",
+      "snapshot_bytes": 3622
+    },
+    {
+      "sample_id": "PP-P-114",
+      "label": "phishing",
+      "source_original_sha256": "890f5e0c154a534b0cfdb7cbeecbbe76eaead8b487f413c7fd4e94eca70fd91d",
+      "snapshot_path": "derived-snapshots/PP-P-114.json",
+      "snapshot_sha256": "3123f33b66837021978567ed2b770871de8f3d0a6ba91cd20c8afe721afdf154",
+      "snapshot_bytes": 1916
+    },
+    {
+      "sample_id": "PP-P-115",
+      "label": "phishing",
+      "source_original_sha256": "42e78d381532c76ab0db4262505eb392ffbdd5e09a32482bd7064774e723e7c9",
+      "snapshot_path": "derived-snapshots/PP-P-115.json",
+      "snapshot_sha256": "2b7b83c47b64e163ce783a1c076996e3e4893f0f009704a15e24a96f77ea904a",
+      "snapshot_bytes": 1332
+    },
+    {
+      "sample_id": "PP-P-116",
+      "label": "phishing",
+      "source_original_sha256": "a843ebf452b5b0c8ef41d73636be426bf6cb3217efd3e0b9a082ec1051a4f660",
+      "snapshot_path": "derived-snapshots/PP-P-116.json",
+      "snapshot_sha256": "89fd22a318d62dbe9c3c3e06b92239af2a853c54d63284c0223374924b256267",
+      "snapshot_bytes": 244
+    },
+    {
+      "sample_id": "PP-P-117",
+      "label": "phishing",
+      "source_original_sha256": "bafcc8b3a599419cbe6a3b8d522cfb553f56d2e39173b2832607ef180a1e6f85",
+      "snapshot_path": "derived-snapshots/PP-P-117.json",
+      "snapshot_sha256": "934780ebcf4ea03e83932e71f6c7d5993dd32b1df9621c9fd2b17efd1f4deff9",
+      "snapshot_bytes": 1320
+    },
+    {
+      "sample_id": "PP-P-118",
+      "label": "phishing",
+      "source_original_sha256": "86d1007081bf17cb911715de0865865d005116e771360a54d9f7f0a303dd4d9a",
+      "snapshot_path": "derived-snapshots/PP-P-118.json",
+      "snapshot_sha256": "d912f7eba9b51d87819e37e36add9c4cd1bab867ea4462595d5865beae640fab",
+      "snapshot_bytes": 605
+    },
+    {
+      "sample_id": "PP-P-119",
+      "label": "phishing",
+      "source_original_sha256": "8825805d570bb1c1b84affc77d733fbb667fedd24a0a0b1c737f7ed0183778fb",
+      "snapshot_path": "derived-snapshots/PP-P-119.json",
+      "snapshot_sha256": "7b57241c8751736639a6449542b04cb95d20069fbd89b2ac343c0f429891e7e8",
+      "snapshot_bytes": 1421
+    },
+    {
+      "sample_id": "PP-P-120",
+      "label": "phishing",
+      "source_original_sha256": "cfdf798515d5d6377f728b24802001de0642e8638bcd62a675968c292f860a9f",
+      "snapshot_path": "derived-snapshots/PP-P-120.json",
+      "snapshot_sha256": "91a13b6208dfe3347866102fab42aa9b5feebb9a170775d1819fdfe06fecf09b",
+      "snapshot_bytes": 1181
+    }
+  ]
+}
