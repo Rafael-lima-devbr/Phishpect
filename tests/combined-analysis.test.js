@@ -1,6 +1,7 @@
 const assert = require("node:assert/strict");
 const { combineAnalyses } = require("../combined-analysis.js");
 const { analyzeUrl } = require("../analysis.js");
+const { analyzePage: analyzePageV2 } = require("../page-analysis-v2.js");
 
 function urlAnalysis(level = "safe", overrides = {}) {
   return {
@@ -102,5 +103,36 @@ const falseLikeStrings = combineAnalyses(
   pageAnalysis("safe", { credential_bundle: "false" })
 );
 assert.equal(falseLikeStrings.finalClassification, "safe");
+
+const incidentalBrandPage = analyzePageV2({
+  schema_version: 2,
+  page_url: "https://example.com/account",
+  identity_evidence: [{
+    text: "Instagram, opens in a new window", source: "image_alt", region: "footer",
+    auxiliary: true, logo_like: false
+  }],
+  forms: [{
+    action: "/session", method: "POST", region: "main", context: [],
+    fields: [{ tag: "input", type: "email", name: "email" }, { tag: "input", type: "password", name: "password" }]
+  }],
+  orphan_fields: []
+});
+assert.equal(combineAnalyses(urlAnalysis(), incidentalBrandPage).finalClassification, "safe");
+
+const relatedIdentityPage = analyzePageV2({
+  schema_version: 2,
+  page_url: "https://example.net/login",
+  identity_evidence: [{
+    text: "PayPal verification", source: "title", region: "document",
+    auxiliary: false, logo_like: false
+  }],
+  forms: [{
+    action: "/session", method: "POST", region: "main", context: [],
+    fields: [{ tag: "input", type: "password", name: "password" }]
+  }],
+  orphan_fields: []
+});
+assert.equal(relatedIdentityPage.level, "suspicious");
+assert.equal(combineAnalyses(urlAnalysis(), relatedIdentityPage).finalClassification, "suspicious");
 
 console.log("Combinação URL + página: OK");

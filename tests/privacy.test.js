@@ -1,28 +1,37 @@
 const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
-const { collectPageSnapshot } = require("../page-analysis.js");
+const { collectPageSnapshot: collectV1Snapshot } = require("../page-analysis.js");
+const { collectPageSnapshot: collectV2Snapshot } = require("../page-analysis-v2.js");
 
 const secret = "segredo-que-nao-pode-sair";
 const sensitiveField = {
   tagName: "TEXTAREA",
   getAttribute(name) { return name === "name" ? "message" : null; },
+  closest(selector) { return selector === "form" ? form : null; },
   get value() { throw new Error(secret); },
   textContent: secret
 };
 const form = {
   getAttribute() { return null; },
-  querySelectorAll() { return [sensitiveField]; }
+  closest() { return null; },
+  querySelectorAll(selector) {
+    if (selector === "input, textarea, select") return [sensitiveField];
+    return [];
+  }
 };
 const documentFixture = {
   title: "Contato",
   querySelectorAll(selector) {
     if (selector === "form") return [form];
+    if (selector === "input, textarea, select") return [sensitiveField];
     return [];
   }
 };
-const snapshot = collectPageSnapshot(documentFixture, "https://example.com/contact");
-assert.equal(JSON.stringify(snapshot).includes(secret), false);
+for (const collectPageSnapshot of [collectV1Snapshot, collectV2Snapshot]) {
+  const snapshot = collectPageSnapshot(documentFixture, "https://example.com/contact");
+  assert.equal(JSON.stringify(snapshot).includes(secret), false);
+}
 
 for (const file of ["background.js", "content.js"]) {
   const source = fs.readFileSync(path.join(__dirname, "..", file), "utf8");
