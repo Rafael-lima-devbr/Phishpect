@@ -1,4 +1,11 @@
-importScripts("vendor/tldts.umd.min.js", "analysis.js", "reputation.js", "combined-analysis.js", "navigation-state.js");
+importScripts(
+  "vendor/tldts.umd.min.js",
+  "analysis.js", "analysis-v4.js",
+  "reputation.js",
+  "page-analysis-v2.js", "page-analysis-v4.js",
+  "combined-analysis-v4.js",
+  "navigation-state.js", "warning-state.js"
+);
 
 const pendingRedirects = new Map();
 const pendingRedirectTracker = createPendingRedirectTracker(pendingRedirects);
@@ -6,9 +13,21 @@ let reputationDatabasePromise;
 
 function allowanceKey(tabId) { return `allowOnce:${tabId}`; }
 function postLoadAllowanceKey(tabId) { return `allowPostLoadOnce:${tabId}`; }
+function warningStateKey(token) { return `warning:${token}`; }
 
 function isWebUrl(value) {
   try { return ["http:", "https:"].includes(new URL(value).protocol); } catch { return false; }
+}
+
+function validSenderTab(sender) {
+  return Number.isInteger(sender?.tab?.id) && sender.tab.id >= 0;
+}
+
+function createOpaqueToken() {
+  if (globalThis.crypto?.randomUUID) return crypto.randomUUID();
+  const bytes = new Uint8Array(16);
+  crypto.getRandomValues(bytes);
+  return [...bytes].map((value) => value.toString(16).padStart(2, "0")).join("");
 }
 
 async function loadReputationDatabase() {
@@ -27,41 +46,39 @@ async function loadReputationDatabase() {
   return reputationDatabasePromise;
 }
 
-async function evaluateUrl(url) {
-  const localAnalysis = analyzeUrl(url);
+async function evaluateUrlV4(url) {
+  const localAnalysis = analyzeUrlV4(url);
   const database = await loadReputationDatabase();
   const externalReputation = checkExternalReputation(url, database);
-  let finalClassification = localAnalysis.level;
-  const reasons = [...localAnalysis.reasons];
-  if (externalReputation.listed) {
-    finalClassification = "blocked";
-    reasons.push("Esta URL foi identificada em uma base externa de reputação de phishing");
-  }
-  return { localAnalysis, externalReputation, finalClassification, score: localAnalysis.score, reasons };
+  return combineV4Evidence(localAnalysis, null, externalReputation);
 }
 
-function buildWarningUrl(url, evaluation) {
+async function createWarningUrl(url, evaluation) {
+  const token = createOpaqueToken();
+  await chrome.storage.session.set({ [warningStateKey(token)]: createWarningState(url, evaluation) });
   const warningUrl = new URL(chrome.runtime.getURL("warning.html"));
-  warningUrl.searchParams.set("url", url);
-  warningUrl.searchParams.set("level", evaluation.finalClassification);
-  warningUrl.searchParams.set("score", String(evaluation.score));
-  warningUrl.searchParams.set("reasons", JSON.stringify(evaluation.reasons));
-  if (evaluation.externalReputation?.listed) {
-    warningUrl.searchParams.set("externalSource", evaluation.externalReputation.source);
-    warningUrl.searchParams.set("matchType", evaluation.externalReputation.matchType);
-  }
+  warningUrl.searchParams.set("token", token);
   return warningUrl.href;
 }
 
+async function loadWarningState(token) {
+  if (!validWarningToken(token)) return null;
+  const key = warningStateKey(token);
+  const stored = await chrome.storage.session.get(key);
+  const state = normalizeWarningState(stored[key]);
+  if (!state && stored[key] !== undefined) await chrome.storage.session.remove(key);
+  return state;
+}
+
 async function redirectToWarning(tabId, url, evaluation) {
-  const token = pendingRedirectTracker.begin(tabId, url);
+  const redirectToken = pendingRedirectTracker.begin(tabId, url);
   try {
-    await Promise.resolve();
-    if (!pendingRedirectTracker.isCurrent(tabId, token)) return false;
-    await chrome.tabs.update(tabId, { url: buildWarningUrl(url, evaluation) });
+    const warningUrl = await createWarningUrl(url, evaluation);
+    if (!pendingRedirectTracker.isCurrent(tabId, redirectToken)) return false;
+    await chrome.tabs.update(tabId, { url: warningUrl });
     return true;
   } finally {
-    pendingRedirectTracker.finish(tabId, token);
+    pendingRedirectTracker.finish(tabId, redirectToken);
   }
 }
 
@@ -74,9 +91,9 @@ async function readAllowance(key, url) {
 }
 
 chrome.webNavigation.onBeforeNavigate.addListener(async (details) => {
-  if (details.frameId !== 0) return;
+  if (details.frameId !== 0 || !isWebUrl(details.url)) return;
   try {
-    const evaluation = await evaluateUrl(details.url);
+    const evaluation = await evaluateUrlV4(details.url);
     const allowKey = allowanceKey(details.tabId);
     const postLoadKey = postLoadAllowanceKey(details.tabId);
     if (evaluation.finalClassification === "safe") {
@@ -90,8 +107,7 @@ chrome.webNavigation.onBeforeNavigate.addListener(async (details) => {
     }
     await chrome.storage.session.remove(postLoadKey);
     if (evaluation.finalClassification !== "suspicious") await chrome.storage.session.remove(allowKey);
-    const pending = pendingRedirectTracker.current(details.tabId);
-    if (pending?.url === details.url) return;
+    if (pendingRedirectTracker.current(details.tabId)?.url === details.url) return;
     await redirectToWarning(details.tabId, details.url, evaluation);
   } catch {
     console.warn("Phishpect: verificação de navegação indisponível");
@@ -99,22 +115,23 @@ chrome.webNavigation.onBeforeNavigate.addListener(async (details) => {
 }, { url: [{ schemes: ["http", "https"] }] });
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  if (message?.type === "evaluate-url") {
-    if (!isWebUrl(message.url)) { sendResponse({ ok: false }); return; }
-    evaluateUrl(message.url)
-      .then((evaluation) => sendResponse({ ok: true, evaluation }))
-      .catch(() => sendResponse({ ok: false }));
+  if (message?.type === "evaluate-url-v4") {
+    if (!validSenderTab(sender) || !isWebUrl(message.url)) { sendResponse({ ok: false }); return; }
+    evaluateUrlV4(message.url).then(async (evaluation) => {
+      const warningUrl = evaluation.finalClassification === "safe" ? null : await createWarningUrl(message.url, evaluation);
+      sendResponse({ ok: true, evaluation, warningUrl });
+    }).catch(() => sendResponse({ ok: false }));
     return true;
   }
 
-  if (message?.type === "evaluate-page") {
-    if (!sender.tab?.id || !isWebUrl(message.url) || !sameDocumentUrl(sender.url, message.url)) {
+  if (message?.type === "evaluate-page-v4") {
+    if (!validSenderTab(sender) || !isWebUrl(message.url) || !sameDocumentUrl(sender.url, message.url)) {
       sendResponse({ ok: false });
       return;
     }
     const tabId = sender.tab.id;
-    evaluateUrl(message.url).then(async (urlAnalysis) => {
-      const combined = combineAnalyses(urlAnalysis, message.pageAnalysis);
+    evaluateUrlV4(message.url).then(async (urlEvaluation) => {
+      const combined = combineV4Evidence(urlEvaluation.URL, message.pageAnalysis, urlEvaluation.REPUTATION);
       const postLoadKey = postLoadAllowanceKey(tabId);
       if (await readAllowance(postLoadKey, message.url)) {
         await chrome.storage.session.remove(postLoadKey);
@@ -123,8 +140,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
           return;
         }
       }
-      const shouldRedirect = combined.finalClassification === "blocked" ||
-        (combined.finalClassification === "suspicious" && combined.COMBINED_ANALYSIS.page_added_risk);
+      const pageAddedRisk = urlEvaluation.finalClassification === "safe" && combined.finalClassification !== "safe";
+      const shouldRedirect = combined.finalClassification === "blocked" || pageAddedRisk;
       if (!shouldRedirect || pendingRedirects.has(tabId)) {
         sendResponse({ ok: true, evaluation: combined, redirected: false });
         return;
@@ -135,18 +152,32 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     return true;
   }
 
-  if (message?.type !== "continue-navigation") return;
-  if (!sender.tab?.id || !isWebUrl(message.url) || !isWarningPageUrl(sender.url, chrome.runtime.getURL("warning.html"))) {
+  if (message?.type === "get-warning-state") {
+    if (!isWarningPageUrl(sender.url, chrome.runtime.getURL("warning.html")) || !validWarningToken(message.token)) {
+      sendResponse({ ok: false });
+      return;
+    }
+    loadWarningState(message.token)
+      .then((state) => sendResponse(state ? { ok: true, state } : { ok: false }))
+      .catch(() => sendResponse({ ok: false }));
+    return true;
+  }
+
+  if (message?.type !== "continue-navigation-v4") return;
+  if (!validSenderTab(sender) || !isWarningPageUrl(sender.url, chrome.runtime.getURL("warning.html")) || !validWarningToken(message.token)) {
     sendResponse({ ok: false });
     return;
   }
-  evaluateUrl(message.url).then(async (evaluation) => {
+  loadWarningState(message.token).then(async (state) => {
+    if (!state) { sendResponse({ ok: false }); return; }
+    const evaluation = await evaluateUrlV4(state.url);
     if (evaluation.finalClassification !== "suspicious") { sendResponse({ ok: false }); return; }
     const tabId = sender.tab.id;
     const key = allowanceKey(tabId);
-    await chrome.storage.session.set({ [key]: createNavigationAllowance(message.url) });
+    await chrome.storage.session.set({ [key]: createNavigationAllowance(state.url) });
     try {
-      await chrome.tabs.update(tabId, { url: message.url });
+      await chrome.tabs.update(tabId, { url: state.url });
+      await chrome.storage.session.remove(warningStateKey(message.token));
       sendResponse({ ok: true });
     } catch {
       await chrome.storage.session.remove(key);

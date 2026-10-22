@@ -8,69 +8,52 @@ document.addEventListener("click", async (event) => {
   event.stopImmediatePropagation();
 
   try {
-    const response = await chrome.runtime.sendMessage({ type: "evaluate-url", url: destination });
+    const response = await chrome.runtime.sendMessage({ type: "evaluate-url-v4", url: destination });
     if (!response?.ok) throw new Error("Análise indisponível");
-
-    const evaluation = response.evaluation;
-    const nextUrl = evaluation.finalClassification === "safe"
+    window.location.assign(response.evaluation.finalClassification === "safe"
       ? destination
-      : buildWarningUrl(destination, evaluation);
-    window.location.assign(nextUrl);
+      : response.warningUrl);
   } catch {
+    // Sem o background não é possível criar estado de aviso autenticado. A
+    // navegação original é restaurada para não quebrar o comportamento nativo.
     try {
-      const localAnalysis = analyzeUrl(destination);
-      if (localAnalysis.level === "safe") {
-        window.location.assign(destination);
-        return;
+      const localAnalysis = analyzeUrlV4(destination);
+      if (localAnalysis.level !== "safe") {
+        console.warn("Phishpect: background indisponível; navegação original restaurada");
       }
-      window.location.assign(buildWarningUrl(destination, {
-        finalClassification: localAnalysis.level,
-        score: localAnalysis.score,
-        reasons: localAnalysis.reasons,
-        externalReputation: { listed: false, available: false }
-      }));
     } catch {
       console.warn("Phishpect: análise de URL indisponível; navegação original restaurada");
-      window.location.assign(destination);
     }
+    window.location.assign(destination);
   }
 }, true);
 
 let postLoadAnalysisStarted = false;
 
-async function runPostLoadAnalysis() {
+function waitForLateObservation() {
+  return new Promise((resolve) => setTimeout(resolve, V4_LATE_OBSERVATION_DELAY_MS));
+}
+
+async function runPostLoadAnalysisV4() {
   if (postLoadAnalysisStarted || !["http:", "https:"].includes(window.location.protocol)) return;
   postLoadAnalysisStarted = true;
+  const observedUrl = window.location.href;
 
   try {
-    const snapshot = collectPageSnapshot(document, window.location.href);
-    const pageAnalysis = analyzePage(snapshot);
-    await chrome.runtime.sendMessage({
-      type: "evaluate-page",
-      url: window.location.href,
-      pageAnalysis
-    });
+    const initial = collectPageSnapshotV4(document, observedUrl, "initial");
+    await waitForLateObservation();
+    if (window.location.href !== observedUrl) return;
+    const late = collectPageSnapshotV4(document, observedUrl, "late");
+    const pageAnalysis = analyzePageV4(mergePageSnapshotsV4(initial, late));
+    await chrome.runtime.sendMessage({ type: "evaluate-page-v4", url: observedUrl, pageAnalysis });
   } catch {
-    // A análise pós-carregamento é complementar e nunca deve impedir a navegação.
+    // A camada pós-carregamento é complementar e nunca impede a navegação.
     console.warn("Phishpect: análise pós-carregamento indisponível");
   }
 }
 
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", runPostLoadAnalysis, { once: true });
+  document.addEventListener("DOMContentLoaded", runPostLoadAnalysisV4, { once: true });
 } else {
-  runPostLoadAnalysis();
-}
-
-function buildWarningUrl(url, evaluation) {
-  const warningUrl = new URL(chrome.runtime.getURL("warning.html"));
-  warningUrl.searchParams.set("url", url);
-  warningUrl.searchParams.set("level", evaluation.finalClassification);
-  warningUrl.searchParams.set("score", String(evaluation.score));
-  warningUrl.searchParams.set("reasons", JSON.stringify(evaluation.reasons));
-  if (evaluation.externalReputation?.listed) {
-    warningUrl.searchParams.set("externalSource", evaluation.externalReputation.source);
-    warningUrl.searchParams.set("matchType", evaluation.externalReputation.matchType);
-  }
-  return warningUrl.href;
+  runPostLoadAnalysisV4();
 }

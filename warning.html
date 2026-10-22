@@ -12,6 +12,7 @@
       .malicious { background: #ffe0e0; color: #8b1010; }
       .url { padding: 12px; background: #f3f5f8; border-radius: 8px; overflow-wrap: anywhere; }
       li { margin: 8px 0; }
+      h3 { margin-bottom: 6px; color: #344054; }
       .actions { display: flex; gap: 12px; margin-top: 28px; }
       button { border: 0; border-radius: 8px; padding: 11px 18px; font: inherit; font-weight: 650; cursor: pointer; }
       #back { background: #155eef; color: white; }
@@ -20,19 +21,22 @@
   </head>
   <body>
     <main>
-      <span id="level" class="badge"></span>
-      <h1 id="title"></h1>
-      <p>Destino solicitado:</p>
-      <p id="destination" class="url"></p>
-      <p><strong>Indicador heurístico:</strong> <span id="score"></span>/100</p>
-      <h2>Motivos encontrados</h2>
-      <ul id="reasons"></ul>
-      <p id="external-evidence" hidden>
-        Fonte da reputação externa: <strong id="external-source"></strong>
-      </p>
-      <div class="actions">
-        <button id="back" type="button">Voltar</button>
-        <button id="continue" type="button">Continuar mesmo assim</button>
+      <p id="loading">Validando o aviso…</p>
+      <div id="warning-content" hidden>
+        <span id="level" class="badge"></span>
+        <h1 id="title"></h1>
+        <p>Destino solicitado:</p>
+        <p id="destination" class="url"></p>
+        <p><strong>Indicador contextual:</strong> <span id="score"></span>/100</p>
+        <h2>Evidências encontradas</h2>
+        <div id="reason-groups"></div>
+        <p id="external-evidence" hidden>
+          Fonte da reputação: <strong id="external-source"></strong>
+        </p>
+        <div class="actions">
+          <button id="back" type="button">Voltar</button>
+          <button id="continue" type="button">Continuar mesmo assim</button>
+        </div>
       </div>
     </main>
     <script src="warning.js"></script>

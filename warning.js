@@ -1,43 +1,63 @@
-const params = new URLSearchParams(window.location.search);
-const destinationUrl = params.get("url") || "";
-const level = params.get("level") === "blocked" ? "blocked" : "suspicious";
-const score = Number(params.get("score")) || 0;
-const externalSource = params.get("externalSource");
-
-let reasons = [];
-try {
-  reasons = JSON.parse(params.get("reasons") || "[]");
-} catch {
-  reasons = ["Não foi possível ler os motivos da análise"];
-}
-
+const token = new URLSearchParams(window.location.search).get("token") || "";
 const levelElement = document.querySelector("#level");
 const continueButton = document.querySelector("#continue");
-document.querySelector("#destination").textContent = destinationUrl;
-document.querySelector("#score").textContent = String(score);
+const reasonGroups = document.querySelector("#reason-groups");
+let warningState = null;
 
-for (const reason of reasons) {
-  const item = document.createElement("li");
-  item.textContent = reason;
-  document.querySelector("#reasons").append(item);
+const groupLabels = { url: "URL", page: "Página", reputation: "Reputação", integration: "Integração" };
+
+function appendReasons(title, reasons) {
+  if (!Array.isArray(reasons) || reasons.length === 0) return;
+  const section = document.createElement("section");
+  const heading = document.createElement("h3");
+  heading.textContent = title;
+  const list = document.createElement("ul");
+  for (const reason of reasons) {
+    const item = document.createElement("li");
+    item.textContent = reason;
+    list.append(item);
+  }
+  section.append(heading, list);
+  reasonGroups.append(section);
 }
 
-if (externalSource) {
-  document.querySelector("#external-source").textContent = externalSource;
-  document.querySelector("#external-evidence").hidden = false;
+function render(state) {
+  warningState = state;
+  document.querySelector("#destination").textContent = state.url;
+  document.querySelector("#score").textContent = String(state.score);
+  if (state.groupedReasons) {
+    for (const [group, label] of Object.entries(groupLabels)) appendReasons(label, state.groupedReasons[group]);
+  } else {
+    appendReasons("Evidências", state.reasons);
+  }
+  if (state.externalReputation?.listed) {
+    document.querySelector("#external-source").textContent = state.externalReputation.source || "base local";
+    document.querySelector("#external-evidence").hidden = false;
+  }
+  if (state.level === "blocked") {
+    levelElement.textContent = state.externalReputation?.listed ? "LISTADO EM BASE DE PHISHING" : "AMEAÇA CONFIRMADA";
+    levelElement.classList.add("malicious");
+    document.querySelector("#title").textContent = "Navegação bloqueada";
+    continueButton.hidden = true;
+  } else {
+    levelElement.textContent = "SUSPEITO";
+    document.querySelector("#title").textContent = "Este link apresenta sinais de risco";
+  }
+  document.querySelector("#loading").hidden = true;
+  document.querySelector("#warning-content").hidden = false;
 }
 
-if (level === "blocked") {
-  levelElement.textContent = externalSource ? "LISTADO EM BASE DE PHISHING" : "AMEAÇA CONFIRMADA LOCALMENTE";
-  levelElement.classList.add("malicious");
-  document.querySelector("#title").textContent = externalSource
-    ? "Navegação bloqueada por reputação"
-    : "Navegação bloqueada";
+chrome.runtime.sendMessage({ type: "get-warning-state", token }).then((response) => {
+  if (!response?.ok) throw new Error("Estado indisponível");
+  render(response.state);
+}).catch(() => {
+  document.querySelector("#loading").hidden = true;
+  document.querySelector("#warning-content").hidden = false;
+  levelElement.textContent = "AVISO EXPIRADO";
+  document.querySelector("#title").textContent = "Este aviso não pôde ser validado";
+  document.querySelector("#destination").textContent = "O destino não foi recuperado.";
   continueButton.hidden = true;
-} else {
-  levelElement.textContent = "SUSPEITO";
-  document.querySelector("#title").textContent = "Este link apresenta sinais de risco";
-}
+});
 
 document.querySelector("#back").addEventListener("click", () => {
   if (history.length > 1) history.back();
@@ -45,13 +65,9 @@ document.querySelector("#back").addEventListener("click", () => {
 });
 
 continueButton.addEventListener("click", () => {
-  if (!destinationUrl) return;
-
+  if (!warningState || warningState.level !== "suspicious") return;
   continueButton.disabled = true;
-  chrome.runtime.sendMessage({
-    type: "continue-navigation",
-    url: destinationUrl
-  }).then((response) => {
+  chrome.runtime.sendMessage({ type: "continue-navigation-v4", token }).then((response) => {
     if (!response?.ok) continueButton.disabled = false;
-  });
+  }).catch(() => { continueButton.disabled = false; });
 });

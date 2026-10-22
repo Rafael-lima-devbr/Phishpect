@@ -2,7 +2,7 @@ const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const os = require("node:os");
 const path = require("node:path");
-const { execFileSync } = require("node:child_process");
+const { execFileSync, spawnSync } = require("node:child_process");
 const { domainToASCII } = require("node:url");
 const {
   sha256File,
@@ -122,7 +122,8 @@ try {
     { error_type: "false_negative", label: "phishing", classification: "safe", count: 1, proportion_of_class: 0.5 }
   ]);
 
-  assert.deepEqual(verifyFrozenFiles(path.resolve(__dirname, "..")), []);
+  const historicalMismatches = verifyFrozenFiles(path.resolve(__dirname, ".."));
+  assert.deepEqual(historicalMismatches.map((item) => item.path).sort(), ["background.js", "content.js"]);
   const sealedRows = [
     ...Array.from({ length: 300 }, (_, index) => ({ url: `https://legitimate-${index}.example/page`, label: "legitimate" })),
     ...Array.from({ length: 300 }, (_, index) => ({ url: `https://phishing-${index}.example/page`, label: "phishing" }))
@@ -207,13 +208,16 @@ try {
   assert.equal(builtRows.length, 600);
   assert.equal(builtRows.filter((row) => row.label === "legitimate").length, 300);
   assert.equal(builtRows.filter((row) => row.label === "phishing").length, 300);
-  const verificationOutput = execFileSync(process.execPath, [
+  const verificationRun = spawnSync(process.execPath, [
     path.resolve(__dirname, "../scripts/evaluate-dataset-c.js"),
     `--dataset=${builtDatasetPath}`,
     `--manifest=${builtManifestPath}`,
     `--output-dir=${path.join(temporary, "must-not-exist")}`
   ], { encoding: "utf8" });
-  assert.match(verificationOutput, /verified-not-executed/);
+  assert.equal(verificationRun.status, 2);
+  assert.match(verificationRun.stderr, /frozen_file_mismatches/);
+  assert.match(verificationRun.stderr, /background\.js/);
+  assert.match(verificationRun.stderr, /content\.js/);
   assert.equal(fs.existsSync(path.join(temporary, "must-not-exist")), false);
 
   const sealedDatasetPath = path.join(temporary, "sealed-dataset-c.csv");
@@ -222,7 +226,7 @@ try {
   fs.writeFileSync(selectedLegitimatePath, stringifyCsv(validationRows, [
     "url", "label", "source", "source_category", "stratum"
   ]));
-  execFileSync(process.execPath, [
+  const sealRun = spawnSync(process.execPath, [
     path.resolve(__dirname, "../scripts/seal-dataset-c.js"),
     `--legitimate=${selectedLegitimatePath}`,
     `--phishing=${selectedPhishingPath}`,
@@ -231,12 +235,10 @@ try {
     `--history=${emptyHistory}`,
     `--reputation=${emptyReputation}`,
     "--seed=synthetic-test-seed"
-  ], { stdio: "pipe" });
-  const finalManifest = JSON.parse(fs.readFileSync(finalManifestPath, "utf8"));
-  assert.equal(finalManifest.status, "sealed-not-evaluated");
-  assert.equal(finalManifest.detector_executed, false);
-  assert.deepEqual(finalManifest.frozen_file_mismatches, []);
-  assert.equal(finalManifest.dataset.total, 600);
+  ], { encoding: "utf8" });
+  assert.equal(sealRun.status, 1);
+  assert.match(sealRun.stderr, /Detector congelado divergiu em 2 arquivo/);
+  assert.equal(fs.existsSync(finalManifestPath), false);
 } finally {
   fs.rmSync(temporary, { recursive: true, force: true });
 }

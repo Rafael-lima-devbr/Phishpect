@@ -3,6 +3,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { collectPageSnapshot: collectV1Snapshot } = require("../page-analysis.js");
 const { collectPageSnapshot: collectV2Snapshot } = require("../page-analysis-v2.js");
+const { collectPageSnapshotV4 } = require("../page-analysis-v4.js");
 
 const secret = "segredo-que-nao-pode-sair";
 const sensitiveField = {
@@ -28,10 +29,21 @@ const documentFixture = {
     return [];
   }
 };
-for (const collectPageSnapshot of [collectV1Snapshot, collectV2Snapshot]) {
+for (const collectPageSnapshot of [collectV1Snapshot, collectV2Snapshot, collectPageSnapshotV4]) {
   const snapshot = collectPageSnapshot(documentFixture, "https://example.com/contact");
   assert.equal(JSON.stringify(snapshot).includes(secret), false);
 }
+
+for (const file of ["page-analysis.js", "page-analysis-v2.js", "page-analysis-v4.js", "content.js", "background.js"]) {
+  const source = fs.readFileSync(path.join(__dirname, "..", file), "utf8");
+  assert.equal(/(?:input|textarea|field)\.value\b/.test(source), false, `${file} não pode ler valores digitados`);
+  assert.equal(/outerHTML|innerHTML/.test(source), false, `${file} não pode serializar HTML bruto`);
+}
+
+const manifest = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "manifest.json"), "utf8"));
+assert.equal(JSON.stringify(manifest).includes("http://localhost"), false);
+assert.equal(JSON.stringify(manifest).includes("https://localhost"), false);
+assert.equal(Object.hasOwn(manifest, "externally_connectable"), false);
 
 for (const file of ["background.js", "content.js"]) {
   const source = fs.readFileSync(path.join(__dirname, "..", file), "utf8");
