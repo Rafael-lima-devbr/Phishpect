@@ -65,6 +65,26 @@ function main() {
     detector_hashes: Object.fromEntries([
       "analysis-v4.js", "combined-analysis-v4.js", "reputation.js", "reputation/threat-db.json"
     ].map((relative) => [relative, sha256File(path.join(ROOT, relative))])),
+    engineering_history: [
+      {
+        status: "rejected",
+        reason: "Eligibility required excessive diversity and caused an unacceptable recall collapse.",
+        confusion_matrices: {
+          dataset_a: { TP: 10, TN: 100, FP: 0, FN: 90 },
+          dataset_b: { TP: 14, TN: 100, FP: 0, FN: 86 },
+          dataset_c: { TP: 84, TN: 300, FP: 0, FN: 216 }
+        }
+      },
+      {
+        status: "rejected",
+        reason: "Structural recovery exposed an OAuth redirect false positive in the synthetic suite; the general OAuth/SSO context was corrected before acceptance.",
+        confusion_matrices: {
+          dataset_a: { TP: 19, TN: 100, FP: 0, FN: 81 },
+          dataset_b: { TP: 19, TN: 100, FP: 0, FN: 81 },
+          dataset_c: { TP: 171, TN: 298, FP: 2, FN: 129 }
+        }
+      }
+    ],
     summary
   };
   fs.writeFileSync(path.join(OUTPUT, "run.json"), `${JSON.stringify(run, null, 2)}\n`);
