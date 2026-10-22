@@ -1,0 +1,40 @@
+{
+  "algorithm": "SHA-256",
+  "artifacts": [
+    {
+      "name": "dataset-a-metrics.json",
+      "sha256": "35c345173d3c2ced0a392dfd147db8a75bcbb8ecfb357078680d81e2de6452ae",
+      "bytes": 1367
+    },
+    {
+      "name": "dataset-a-predictions.csv",
+      "sha256": "98325d5f66e30af9ce51b1dba0e3f7053da60a26e8f0c556aee001ed503dae49",
+      "bytes": 133232
+    },
+    {
+      "name": "dataset-b-metrics.json",
+      "sha256": "e5c56ad60806774a4e71a9aa3a77d5654b6866f92c9fd4b6c368b707431dffe7",
+      "bytes": 1366
+    },
+    {
+      "name": "dataset-b-predictions.csv",
+      "sha256": "6e5cd1a88b4c40d1c31c925a77e63350f7ef4481e4f90fd0f9b9149298aac290",
+      "bytes": 136456
+    },
+    {
+      "name": "dataset-c-metrics.json",
+      "sha256": "6c47718b5e4d301d11da926e145904180d654ac28d19e015013c80ea77704e2a",
+      "bytes": 1484
+    },
+    {
+      "name": "dataset-c-predictions.csv",
+      "sha256": "38118f95a806d79ca105674f52a489484cefb1fcce345c32914c53489135f4fe",
+      "bytes": 494260
+    },
+    {
+      "name": "run.json",
+      "sha256": "0710e79c46ca1afbd6a71ca251a65e492ace9d5b5d5ed85ac9055e85c5d2a7fd",
+      "bytes": 6794
+    }
+  ]
+}

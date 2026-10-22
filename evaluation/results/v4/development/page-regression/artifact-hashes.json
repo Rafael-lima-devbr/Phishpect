@@ -1,0 +1,20 @@
+{
+  "algorithm": "SHA-256",
+  "artifacts": [
+    {
+      "name": "ablation-metrics.json",
+      "sha256": "082fabd8b841a127e35103ca8afcce5cc1ea750a945c18db676b6ca5b8488188",
+      "bytes": 8621
+    },
+    {
+      "name": "predictions.csv",
+      "sha256": "89b728c39f9bda773ed927c8d512533a06cb5a46f9950153f2439c14e768d2da",
+      "bytes": 315248
+    },
+    {
+      "name": "run.json",
+      "sha256": "cd1cce5f92a2eaacc56ef352ac015f1c6b48baa7f2adfb79e0cdc266e77ba41a",
+      "bytes": 1084
+    }
+  ]
+}

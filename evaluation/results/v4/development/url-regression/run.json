@@ -1,0 +1,236 @@
+{
+  "status": "development-regression-complete",
+  "independent_validation": false,
+  "executed_at": "2026-10-22T19:29:47.869Z",
+  "timezone": "America/Bahia",
+  "node": "v24.19.0",
+  "platform": {
+    "type": "Windows_NT",
+    "release": "10.0.22631",
+    "architecture": "x64"
+  },
+  "repository_head": "1eb130bdfa6a94d0d22785cb95fdd967088e95f9",
+  "detector_hashes": {
+    "analysis-v4.js": "516eae1541855564938f98ce6e96af231677a331e4abe1bad2bbcbec4ea92d8d",
+    "combined-analysis-v4.js": "272610248e5309dc356ad08e88cd21ace7d59211a29edcb6622133cff889f650",
+    "reputation.js": "9831a12fb2cb3baf1716748ff6c18a96d2c0b30de2be2f03872fa8ba5aac090f",
+    "reputation/threat-db.json": "07dd71625e16eaa12d7fe77a085abc0549c51af7e2467f58300b4f2f9c9bfe36"
+  },
+  "engineering_history": [
+    {
+      "status": "rejected",
+      "reason": "Eligibility required excessive diversity and caused an unacceptable recall collapse.",
+      "confusion_matrices": {
+        "dataset_a": {
+          "TP": 10,
+          "TN": 100,
+          "FP": 0,
+          "FN": 90
+        },
+        "dataset_b": {
+          "TP": 14,
+          "TN": 100,
+          "FP": 0,
+          "FN": 86
+        },
+        "dataset_c": {
+          "TP": 84,
+          "TN": 300,
+          "FP": 0,
+          "FN": 216
+        }
+      }
+    },
+    {
+      "status": "rejected",
+      "reason": "Structural recovery exposed an OAuth redirect false positive in the synthetic suite; the general OAuth/SSO context was corrected before acceptance.",
+      "confusion_matrices": {
+        "dataset_a": {
+          "TP": 19,
+          "TN": 100,
+          "FP": 0,
+          "FN": 81
+        },
+        "dataset_b": {
+          "TP": 19,
+          "TN": 100,
+          "FP": 0,
+          "FN": 81
+        },
+        "dataset_c": {
+          "TP": 171,
+          "TN": 298,
+          "FP": 2,
+          "FN": 129
+        }
+      }
+    }
+  ],
+  "summary": [
+    {
+      "dataset": "dataset-a",
+      "role": "development-regression-url-only; not independent V4 validation",
+      "input_sha256": "565bb79af28e80de721ff32a52efbe39eb38701edff31610fc0d8e75628625c6",
+      "samples": 200,
+      "confusion_matrix": {
+        "TP": 31,
+        "TN": 100,
+        "FP": 0,
+        "FN": 69
+      },
+      "metrics": {
+        "recall": 0.31,
+        "precision": 1,
+        "f1": 0.47328244274809156,
+        "accuracy": 0.655,
+        "false_alert_rate": 0
+      },
+      "confidence_intervals_95": {
+        "recall": {
+          "estimate": 0.31,
+          "lower": 0.22779697212376038,
+          "upper": 0.40626055719489407,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "precision": {
+          "estimate": 1,
+          "lower": 0.889744604539564,
+          "upper": 1,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "accuracy": {
+          "estimate": 0.655,
+          "lower": 0.5867558925905368,
+          "upper": 0.7174020562325106,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "false_alert_rate": {
+          "estimate": 0,
+          "lower": 3.469446951953614e-18,
+          "upper": 0.03699349820698568,
+          "confidence": 0.95,
+          "method": "Wilson"
+        }
+      },
+      "classifications": {
+        "safe": 169,
+        "suspicious": 31,
+        "blocked": 0
+      },
+      "prevalence_warning": "Conjunto artificialmente balanceado; precision e accuracy não estimam diretamente o desempenho esperado na web real."
+    },
+    {
+      "dataset": "dataset-b",
+      "role": "development-regression-url-only; not independent V4 validation",
+      "input_sha256": "6a1832ba954e8bf1d7b96f5764966ee1a7e8a8ce1d809221a26edd74a617e5f0",
+      "samples": 200,
+      "confusion_matrix": {
+        "TP": 29,
+        "TN": 100,
+        "FP": 0,
+        "FN": 71
+      },
+      "metrics": {
+        "recall": 0.29,
+        "precision": 1,
+        "f1": 0.44961240310077516,
+        "accuracy": 0.645,
+        "false_alert_rate": 0
+      },
+      "confidence_intervals_95": {
+        "recall": {
+          "estimate": 0.29,
+          "lower": 0.2101483574912227,
+          "upper": 0.3853889117557111,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "precision": {
+          "estimate": 1,
+          "lower": 0.8830302015002593,
+          "upper": 1,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "accuracy": {
+          "estimate": 0.645,
+          "lower": 0.5765211307549043,
+          "upper": 0.7080137245956883,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "false_alert_rate": {
+          "estimate": 0,
+          "lower": 3.469446951953614e-18,
+          "upper": 0.03699349820698568,
+          "confidence": 0.95,
+          "method": "Wilson"
+        }
+      },
+      "classifications": {
+        "safe": 171,
+        "suspicious": 29,
+        "blocked": 0
+      },
+      "prevalence_warning": "Conjunto artificialmente balanceado; precision e accuracy não estimam diretamente o desempenho esperado na web real."
+    },
+    {
+      "dataset": "dataset-c",
+      "role": "development-regression-url-only; not independent V4 validation",
+      "input_sha256": "2ff32e3206f103e628b52ed46d474f08b09cdccbc47d61e3f1939a61a171dbd0",
+      "samples": 600,
+      "confusion_matrix": {
+        "TP": 174,
+        "TN": 298,
+        "FP": 2,
+        "FN": 126
+      },
+      "metrics": {
+        "recall": 0.58,
+        "precision": 0.9886363636363636,
+        "f1": 0.7310924369747899,
+        "accuracy": 0.7866666666666666,
+        "false_alert_rate": 0.006666666666666667
+      },
+      "confidence_intervals_95": {
+        "recall": {
+          "estimate": 0.58,
+          "lower": 0.5234831499847111,
+          "upper": 0.6344939746193615,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "precision": {
+          "estimate": 0.9886363636363636,
+          "lower": 0.9595198066945496,
+          "upper": 0.9968781291756648,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "accuracy": {
+          "estimate": 0.7866666666666666,
+          "lower": 0.7521174440924547,
+          "upper": 0.8175685139930235,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "false_alert_rate": {
+          "estimate": 0.006666666666666667,
+          "lower": 0.0018301483579117855,
+          "upper": 0.023977583250306973,
+          "confidence": 0.95,
+          "method": "Wilson"
+        }
+      },
+      "classifications": {
+        "safe": 424,
+        "suspicious": 176,
+        "blocked": 0
+      },
+      "prevalence_warning": "Conjunto artificialmente balanceado; precision e accuracy não estimam diretamente o desempenho esperado na web real."
+    }
+  ]
+}

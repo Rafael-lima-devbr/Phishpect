@@ -1,0 +1,25 @@
+{
+  "status": "development-page-regression-complete",
+  "independent_validation": false,
+  "executed_at": "2026-10-22T19:29:48.218Z",
+  "timezone": "America/Bahia",
+  "node": "v24.19.0",
+  "platform": {
+    "type": "Windows_NT",
+    "release": "10.0.22631",
+    "architecture": "x64"
+  },
+  "repository_head": "1eb130bdfa6a94d0d22785cb95fdd967088e95f9",
+  "corpus_sha256": "29574db70b518a4efffafca3d0451b4d3eae26c9d6abe283be54d9030479adab",
+  "limitations": [
+    "Snapshots are static and do not reproduce the V4 late DOM observation.",
+    "Scripts, iframes, Shadow DOM and network-loaded content remain inert.",
+    "This known corpus is development/regression data for V4."
+  ],
+  "detector_hashes": {
+    "analysis-v4.js": "516eae1541855564938f98ce6e96af231677a331e4abe1bad2bbcbec4ea92d8d",
+    "page-analysis-v4.js": "f6ab8cc2662608d23d3fc8f4465bb829ff7d08c6cbf0bbbba69f0ad6cffe633e",
+    "combined-analysis-v4.js": "272610248e5309dc356ad08e88cd21ace7d59211a29edcb6622133cff889f650",
+    "reputation.js": "9831a12fb2cb3baf1716748ff6c18a96d2c0b30de2be2f03872fa8ba5aac090f"
+  }
+}

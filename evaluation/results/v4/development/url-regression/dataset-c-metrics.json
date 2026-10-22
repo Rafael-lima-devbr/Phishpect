@@ -1,0 +1,55 @@
+{
+  "dataset": "dataset-c",
+  "role": "development-regression-url-only; not independent V4 validation",
+  "input_sha256": "2ff32e3206f103e628b52ed46d474f08b09cdccbc47d61e3f1939a61a171dbd0",
+  "samples": 600,
+  "confusion_matrix": {
+    "TP": 174,
+    "TN": 298,
+    "FP": 2,
+    "FN": 126
+  },
+  "metrics": {
+    "recall": 0.58,
+    "precision": 0.9886363636363636,
+    "f1": 0.7310924369747899,
+    "accuracy": 0.7866666666666666,
+    "false_alert_rate": 0.006666666666666667
+  },
+  "confidence_intervals_95": {
+    "recall": {
+      "estimate": 0.58,
+      "lower": 0.5234831499847111,
+      "upper": 0.6344939746193615,
+      "confidence": 0.95,
+      "method": "Wilson"
+    },
+    "precision": {
+      "estimate": 0.9886363636363636,
+      "lower": 0.9595198066945496,
+      "upper": 0.9968781291756648,
+      "confidence": 0.95,
+      "method": "Wilson"
+    },
+    "accuracy": {
+      "estimate": 0.7866666666666666,
+      "lower": 0.7521174440924547,
+      "upper": 0.8175685139930235,
+      "confidence": 0.95,
+      "method": "Wilson"
+    },
+    "false_alert_rate": {
+      "estimate": 0.006666666666666667,
+      "lower": 0.0018301483579117855,
+      "upper": 0.023977583250306973,
+      "confidence": 0.95,
+      "method": "Wilson"
+    }
+  },
+  "classifications": {
+    "safe": 424,
+    "suspicious": 176,
+    "blocked": 0
+  },
+  "prevalence_warning": "Conjunto artificialmente balanceado; precision e accuracy não estimam diretamente o desempenho esperado na web real."
+}
