@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "status": "official-complete",
+  "executed_at": "2026-10-16T20:41:40.941Z",
+  "timezone": "America/Bahia",
+  "detector_reference": {
+    "branch": "main",
+    "commit": "7e59a5b26e0eaf9f809fa63340ca97e47d2de7ab",
+    "frozenAt": "2026-10-15T00:00:00-03:00",
+    "timezone": "America/Bahia",
+    "extensionVersion": "0.4.0",
+    "packageVersionAtFreeze": "0.3.0",
+    "files": {
+      "analysis.js": "19de0018a92025f7259f2db7c197450697e62db86c8c95a52d7c57d34b82990f",
+      "page-analysis.js": "5ec5328af6446c803916aabcd0b02a9356e9724b0d84920534e0f36e1452fa71",
+      "combined-analysis.js": "29065e7b22bb1650d184267ec77857bcd5ee48618058a1451a5f2c07b2059d19",
+      "reputation.js": "9831a12fb2cb3baf1716748ff6c18a96d2c0b30de2be2f03872fa8ba5aac090f",
+      "content.js": "eceeb2dd386338b81c2f648a5808948567442542f8e699fbdcd4337eabfe78ec",
+      "background.js": "940d88243a5d8bcfda19d831b70d85805eb4dedcb93824445847a3737d849d07",
+      "analysis-v2.js": "623d9bdd29077dee0bf67dbc38ddbe8a1f111105a4ccb45cd5988cf7d775a7c6",
+      "analysis-v3.js": "0609fdcf3211d721627b9c6da734d33e41d513326f78fbf2105ae1f3d4d18d99",
+      "reputation/threat-db.json": "07dd71625e16eaa12d7fe77a085abc0549c51af7e2467f58300b4f2f9c9bfe36",
+      "vendor/tldts.umd.min.js": "a1eba2eb7c344202536f53749456ea1178f2217f1e5e4da110cc36a4cd6162d1"
+    }
+  },
+  "dataset_sha256": "2ff32e3206f103e628b52ed46d474f08b09cdccbc47d61e3f1939a61a171dbd0",
+  "manifest_sha256": "bcfa9059dda2f6b72e14a533b7d4feb284f63d9b452c98a350abb1e77f060031",
+  "repository_head": "d0da1dc04839d73f7ad02c454bef7bd05fd34f4b",
+  "command": "\"C:\\\\Users\\\\Leonardo\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\node\\\\bin\\\\node.exe\" \"C:\\\\Users\\\\Rafael\\\\Programacao\\\\PhishGuard\\\\scripts\\\\evaluate-dataset-c.js\" \"--dataset=evaluation/datasets/dataset-c.csv\" \"--manifest=evaluation/sources/dataset-c/manifest.json\" \"--output-dir=evaluation/results/dataset-c/official\" \"--expected-dataset-sha256=2ff32e3206f103e628b52ed46d474f08b09cdccbc47d61e3f1939a61a171dbd0\" \"--expected-seed=phishpect-dataset-c-2026-10-15-v1\" \"--confirm-official\"",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "release": "10.0.22631",
+    "architecture": "x64",
+    "cpu": "AMD Ryzen 5 5600GT with Radeon Graphics        ",
+    "ram_bytes": 17048215552
+  },
+  "parameters": {
+    "output_directory": "evaluation/results/dataset-c/official",
+    "expected_dataset_sha256": "2ff32e3206f103e628b52ed46d474f08b09cdccbc47d61e3f1939a61a171dbd0",
+    "expected_seed": "phishpect-dataset-c-2026-10-15-v1"
+  },
+  "verification": {
+    "detector_reference": "7e59a5b26e0eaf9f809fa63340ca97e47d2de7ab",
+    "dataset_sha256": "2ff32e3206f103e628b52ed46d474f08b09cdccbc47d61e3f1939a61a171dbd0",
+    "dataset_errors": [],
+    "frozen_file_mismatches": [],
+    "seed": "phishpect-dataset-c-2026-10-15-v1",
+    "final_overlaps": {
+      "dataset_ab": {
+        "total": 0,
+        "normalized": 0,
+        "hostname_path": 0
+      },
+      "historical": {
+        "total": 0,
+        "normalized": 0,
+        "hostname_path": 0
+      },
+      "reputation": {
+        "total": 0
+      }
+    },
+    "unique_domains": {
+      "legitimate": 300,
+      "phishing": 300
+    },
+    "shared_domains_between_classes": 0
+  },
+  "outputs": [
+    "predictions.csv",
+    "false-positives.csv",
+    "false-negatives.csv",
+    "metrics.json",
+    "score-distribution.csv",
+    "error-summary.csv",
+    "artifact-hashes.json"
+  ]
+}

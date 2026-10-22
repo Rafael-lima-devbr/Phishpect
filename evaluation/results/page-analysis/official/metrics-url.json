@@ -1,0 +1,57 @@
+{
+  "modality": "url",
+  "samples": 240,
+  "class_balance": {
+    "legitimate": 120,
+    "phishing": 120
+  },
+  "confusion_matrix": {
+    "TP": 4,
+    "TN": 120,
+    "FP": 0,
+    "FN": 116
+  },
+  "metrics": {
+    "recall": 0.03333333333333333,
+    "precision": 1,
+    "f1": 0.06451612903225806,
+    "accuracy": 0.5166666666666667,
+    "false_alert_rate": 0
+  },
+  "confidence_intervals_95": {
+    "recall": {
+      "estimate": 0.03333333333333333,
+      "lower": 0.0130375510983506,
+      "upper": 0.082580337559106,
+      "confidence": 0.95,
+      "method": "Wilson"
+    },
+    "precision": {
+      "estimate": 1,
+      "lower": 0.5101091635454027,
+      "upper": 1,
+      "confidence": 0.95,
+      "method": "Wilson"
+    },
+    "accuracy": {
+      "estimate": 0.5166666666666667,
+      "lower": 0.4536811164159315,
+      "upper": 0.5791270862526832,
+      "confidence": 0.95,
+      "method": "Wilson"
+    },
+    "false_alert_rate": {
+      "estimate": 0,
+      "lower": 0,
+      "upper": 0.031019166418703486,
+      "confidence": 0.95,
+      "method": "Wilson"
+    }
+  },
+  "classifications": {
+    "safe": 236,
+    "suspicious": 4,
+    "blocked": 0
+  },
+  "prevalence_warning": "Corpus balanceado artificialmente em 50/50; precision e accuracy não estimam diretamente o desempenho na web real."
+}

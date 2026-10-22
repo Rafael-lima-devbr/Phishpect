@@ -8,3 +8,8 @@ coverage/
 .vscode/
 *.tmp
 *.temp
+
+# Local source material for the inert page-analysis corpus. Manifests retain
+# immutable hashes; only sanitized projections and snapshots are versioned.
+evaluation/page-corpus/source/
+evaluation/page-corpus/original/

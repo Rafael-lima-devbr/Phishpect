@@ -1,0 +1,92 @@
+{
+  "algorithm": "SHA-256",
+  "generated_at": "2026-10-16T21:36:43.526Z",
+  "corpus_sha256": "29574db70b518a4efffafca3d0451b4d3eae26c9d6abe283be54d9030479adab",
+  "artifacts": [
+    {
+      "name": "category-summary.csv",
+      "sha256": "40801372ad8f28dbc6d4dd315c64eedeb373a29687092c88da728507efec94fe",
+      "bytes": 4062
+    },
+    {
+      "name": "false-negatives-combined.csv",
+      "sha256": "60d8994f59d4628f905a9343fa2458205582beb2d64ddba59d8cfe5d52fabe41",
+      "bytes": 123360
+    },
+    {
+      "name": "false-negatives-page.csv",
+      "sha256": "e2088aff0e9ef69ae8ead8c406d64cab853b5e11a9324e9769ba02eae7fa2ba0",
+      "bytes": 71137
+    },
+    {
+      "name": "false-positives-combined.csv",
+      "sha256": "cce8b1d04d4fcf53e3125f2dde1ea90eeb0d2d0758c494808a7ac80ae741ab31",
+      "bytes": 3331
+    },
+    {
+      "name": "false-positives-page.csv",
+      "sha256": "0473c476b6dbd511192f60e4ca43f4cf87158b8b82684f9e0e6366f9197a3fdc",
+      "bytes": 2373
+    },
+    {
+      "name": "introduced-false-positives.csv",
+      "sha256": "16e939bbfe03a9d3d64f161e2aade6a78519438f26b145c7dba46be7d9ffe603",
+      "bytes": 1988
+    },
+    {
+      "name": "metrics-combined.json",
+      "sha256": "0197ec45efd407ec1c61eea74f6a8e6cd72094f057aeb30d5a5c47008303c7d5",
+      "bytes": 1359
+    },
+    {
+      "name": "metrics-page.json",
+      "sha256": "e33e7ac2a9b52fe8f0808b6feeab754fa1e58521baf886abce62c1407e996ae5",
+      "bytes": 1355
+    },
+    {
+      "name": "metrics-url.json",
+      "sha256": "3799b3c924b3ea5f666fedd1c8604660851f095dcb31aab3d514058ea4ec806d",
+      "bytes": 1301
+    },
+    {
+      "name": "predictions-combined.csv",
+      "sha256": "f670cabc72e4931cf85154b6f45792aa53c8192814ba434d2bb8307b122c1507",
+      "bytes": 259329
+    },
+    {
+      "name": "predictions-page.csv",
+      "sha256": "0eb52904fc89e5f2c55157e95b8d38c4a5d7831aae939096adb8fed2cd844d57",
+      "bytes": 149619
+    },
+    {
+      "name": "predictions-url.csv",
+      "sha256": "90b7528f08c90168a9ad4971c0efba675a64f0806d23707ea5e04096bc9ec915",
+      "bytes": 142848
+    },
+    {
+      "name": "recovered-false-negatives.csv",
+      "sha256": "1dab5f224cd219be435c948b2af6c63d72a76d1058afc3b762b1932f22230340",
+      "bytes": 2239
+    },
+    {
+      "name": "run.json",
+      "sha256": "6e9189ca981902f6dbf762aa01be18740abed9767395d7e0aac6c6dbb8bea48c",
+      "bytes": 3700
+    },
+    {
+      "name": "score-distribution-page.csv",
+      "sha256": "47f384c764153d58fbcf2f179a57f43215f2e8ebfd25cc7b371884f20e5e48b9",
+      "bytes": 503
+    },
+    {
+      "name": "score-distribution-url.csv",
+      "sha256": "b0a0e8bc5efbc6d64cfe07b053c91fd52d78f578331bec2846eec42cc000b168",
+      "bytes": 462
+    },
+    {
+      "name": "transition-analysis.csv",
+      "sha256": "2539ca306edd6a89d7d4555291961453a8caa0180ab0d6ba45ac43cae43043cd",
+      "bytes": 71971
+    }
+  ]
+}

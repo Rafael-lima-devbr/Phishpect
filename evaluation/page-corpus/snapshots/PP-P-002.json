@@ -1,0 +1,1 @@
+{"forms":[{"action":"send.php","fields":[{"autocomplete":"","id":"email","name":"email","tag":"input","type":"email"},{"autocomplete":"","id":"password","name":"password","tag":"input","type":"password"}],"method":"POST"}],"headings":["Connexion"],"image_alts":["Logo","Image Laposte"],"page_url":"https://documents.is-a-soxfan.org/010203","title":"Page de Connexion"}

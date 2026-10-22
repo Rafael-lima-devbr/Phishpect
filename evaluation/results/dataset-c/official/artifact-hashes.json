@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-16T20:41:40.999Z",
+  "dataset_sha256": "2ff32e3206f103e628b52ed46d474f08b09cdccbc47d61e3f1939a61a171dbd0",
+  "artifacts": {
+    "predictions.csv": {
+      "sha256": "93e26ce5685bd6e48e8b6e3293210d015de6126df755cc70312fc0e14e74ad11",
+      "bytes": 1077425
+    },
+    "false-positives.csv": {
+      "sha256": "d47e5cddb6b3bca6d5f6f51a265de31439d223e24ec8e4b254c770b2961a2994",
+      "bytes": 39836
+    },
+    "false-negatives.csv": {
+      "sha256": "9936f22153a1cedfc8a614b3377591c45c7144f9e8fb7e2069510f73f61ce0cf",
+      "bytes": 139480
+    },
+    "metrics.json": {
+      "sha256": "207aed00a914193eb8cb306c9bae7f6b1e37c32d94d37afd39b5e9f9b6025868",
+      "bytes": 12269
+    },
+    "score-distribution.csv": {
+      "sha256": "d91e3cef2bfdf312fc1b54be8d0f746c0e4054570e22bf16af641dffee8ea131",
+      "bytes": 313
+    },
+    "error-summary.csv": {
+      "sha256": "de1944bbcc41114ee6936246f00042ac7189af12040557a1d961d031cfd826de",
+      "bytes": 155
+    },
+    "run.json": {
+      "sha256": "bd2d58dcd90915e8a699aebddcf951fd9078717be3da28c2d4295b49830aba74",
+      "bytes": 3522
+    }
+  }
+}

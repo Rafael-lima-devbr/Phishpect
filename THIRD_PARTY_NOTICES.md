@@ -16,6 +16,18 @@ copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to inclusion of the copyright and permission
 notice. The software is provided "as is", without warranty of any kind.
 
+## PhreshPhish
+
+The sanitized HTML projections and structural snapshots under
+`evaluation/page-corpus/` are derived from the test split of
+[PhreshPhish v1.0.1](https://huggingface.co/datasets/phreshphish/phreshphish),
+revision `eabec4b7a66324b79cc8a0ad856d1731dc26fe1a`.
+
+PhreshPhish is distributed under the Creative Commons Attribution 4.0
+International license (CC BY 4.0). The original HTML and source export are
+kept outside Git; acquisition hashes and transformation details are retained
+in the corpus manifests.
+
 ## tldts
 
 The browser bundle `vendor/tldts.umd.min.js` is generated from

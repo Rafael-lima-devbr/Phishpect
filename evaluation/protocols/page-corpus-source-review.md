@@ -1,6 +1,25 @@
 # Investigação prévia — corpus HTML
 
-Status: investigação documental; nenhum corpus foi baixado ou executado.
+Status: investigação concluída para a avaliação quantitativa de análise pós-carregamento.
+
+## Decisão desta rodada — PhreshPhish
+
+Foi selecionado o split `test` do PhreshPhish v1.0.1, revisão `eabec4b7a66324b79cc8a0ad856d1731dc26fe1a`.
+
+Motivos:
+
+- licença explícita CC BY 4.0;
+- pares URL–HTML para as duas classes;
+- rótulos `benign` e `phish` na mesma fonte, reduzindo viés de formato entre classes;
+- export Parquet auditável;
+- split de teste já separado pelo publicador;
+- artigo e dataset card públicos.
+
+Fonte: https://huggingface.co/datasets/phreshphish/phreshphish
+
+Artigo: https://arxiv.org/abs/2507.10854
+
+O corpus do Phishpect usa 120 amostras de cada classe, selecionadas deterministicamente antes da execução do detector. A seleção, a sanitização e suas limitações estão definidas em `evaluation/protocols/page-analysis-evaluation.md`.
 
 ## Phishpedia
 
@@ -26,11 +45,11 @@ Fonte: https://sites.google.com/view/phishintention/experiment-structure
 
 Como muitos conjuntos são derivados do Phishpedia, eles não devem ser tratados como uma segunda origem independente sem verificar IDs e sobreposição.
 
-## Recomendação preliminar
+## Recomendação preliminar anterior
 
-Usar Phishpedia como primeira alternativa técnica, porque a documentação afirma explicitamente a presença de HTML e URL. PhishIntention pode fornecer rótulos/subconjuntos úteis, mas provavelmente compartilha amostras e exige controle de sobreposição.
+Phishpedia havia sido a primeira alternativa técnica, porque a documentação afirma explicitamente a presença de HTML e URL. Ela não foi adotada nesta rodada porque a licença do arquivo externo não ficou tão explícita quanto a licença do repositório e a distribuição por Google Drive dificultava uma aquisição mínima e reproduzível.
 
-Tamanho de 120 legítimas + 120 phishing permanece apenas referência, não decisão final.
+PhishIntention não foi tratado como origem independente porque deriva partes de seus conjuntos do Phishpedia. Phish360 e LNU-Phish também foram considerados, mas não superaram a combinação de licença explícita, associação URL–HTML e acesso reprodutível oferecida pelo PhreshPhish.
 
 ## Modelo seguro de processamento
 
@@ -47,11 +66,10 @@ Tamanho de 120 legítimas + 120 phishing permanece apenas referência, não deci
 
 Conteúdo criado dinamicamente, iframe, Shadow DOM e envio por JavaScript serão limitações observadas. Não serão reconstruídos artificialmente.
 
-## Questões ainda abertas
+## Limitações registradas
 
-1. Licença específica dos arquivos do dataset.
-2. Tamanho e formato do download.
-3. Se cada amostra possui HTML bruto, assets e URL em formato facilmente associável.
-4. Proporção de páginas cujo HTML depende de recursos externos.
-5. Permissão para armazenar amostras no Git ou apenas manifests/hashes.
-6. Tamanho definitivo e método de amostragem do corpus.
+1. Uma única fonte não representa toda a diversidade da web.
+2. A amostra usa somente um shard do split de teste, embora aplique seleção determinística e domínio registrável único.
+3. A projeção estática não executa scripts, iframes, Shadow DOM nem recursos externos.
+4. Páginas cujo conteúdo relevante surge dinamicamente podem perder sinais.
+5. O conjunto balanceado 50/50 não representa a prevalência real de phishing.

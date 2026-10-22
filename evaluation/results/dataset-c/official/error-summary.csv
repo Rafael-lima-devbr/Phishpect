@@ -1,0 +1,3 @@
+error_type,label,classification,count,proportion_of_class
+false_positive,legitimate,suspicious,19,0.06333333333333334
+false_negative,phishing,safe,93,0.31

@@ -1,0 +1,57 @@
+{
+  "modality": "combined",
+  "samples": 240,
+  "class_balance": {
+    "legitimate": 120,
+    "phishing": 120
+  },
+  "confusion_matrix": {
+    "TP": 6,
+    "TN": 118,
+    "FP": 2,
+    "FN": 114
+  },
+  "metrics": {
+    "recall": 0.05,
+    "precision": 0.75,
+    "f1": 0.09375000000000001,
+    "accuracy": 0.5166666666666667,
+    "false_alert_rate": 0.016666666666666666
+  },
+  "confidence_intervals_95": {
+    "recall": {
+      "estimate": 0.05,
+      "lower": 0.023114364414465793,
+      "upper": 0.10480288536236734,
+      "confidence": 0.95,
+      "method": "Wilson"
+    },
+    "precision": {
+      "estimate": 0.75,
+      "lower": 0.40927543031016883,
+      "upper": 0.9285207872478909,
+      "confidence": 0.95,
+      "method": "Wilson"
+    },
+    "accuracy": {
+      "estimate": 0.5166666666666667,
+      "lower": 0.4536811164159315,
+      "upper": 0.5791270862526832,
+      "confidence": 0.95,
+      "method": "Wilson"
+    },
+    "false_alert_rate": {
+      "estimate": 0.016666666666666666,
+      "lower": 0.004582564565921141,
+      "upper": 0.0587359629721589,
+      "confidence": 0.95,
+      "method": "Wilson"
+    }
+  },
+  "classifications": {
+    "safe": 232,
+    "suspicious": 8,
+    "blocked": 0
+  },
+  "prevalence_warning": "Corpus balanceado artificialmente em 50/50; precision e accuracy não estimam diretamente o desempenho na web real."
+}
