@@ -34,7 +34,7 @@ function main() {
       signals: JSON.stringify(result.URL.signals), reasons: JSON.stringify(result.reasons), reputation_available: rep.available,
       reputation_listed: rep.listed, reputation_match_type: rep.matchType || "" };
   });
-  fs.mkdirSync(output, { recursive: false });
+  fs.mkdirSync(output, { recursive: true });
   writeCsv(path.join(output, "predictions.csv"), predictions, Object.keys(predictions[0]));
   const resultMetrics = metrics(predictions);
   fs.writeFileSync(path.join(output, "metrics.json"), `${JSON.stringify(resultMetrics, null, 2)}\n`);
