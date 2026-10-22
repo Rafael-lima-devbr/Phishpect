@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "status": "sealed-not-evaluated",
+  "sealed_at": "2026-10-22T19:35:41.609Z",
+  "seed": "phishpect-dataset-d-2026-10-22-v1",
+  "detector_reference": {
+    "version": "Phishpect V4",
+    "detector_commit": "d69368632f7c32be5dbb5878d0ce675e6425027b",
+    "files": {
+      "analysis-v4.js": "516eae1541855564938f98ce6e96af231677a331e4abe1bad2bbcbec4ea92d8d",
+      "page-analysis-v4.js": "f6ab8cc2662608d23d3fc8f4465bb829ff7d08c6cbf0bbbba69f0ad6cffe633e",
+      "combined-analysis-v4.js": "272610248e5309dc356ad08e88cd21ace7d59211a29edcb6622133cff889f650",
+      "reputation.js": "9831a12fb2cb3baf1716748ff6c18a96d2c0b30de2be2f03872fa8ba5aac090f",
+      "reputation/threat-db.json": "07dd71625e16eaa12d7fe77a085abc0549c51af7e2467f58300b4f2f9c9bfe36",
+      "background.js": "7de55157bd2244012ae1e81ad26ced9d9675afd9daee9c06e87e0c6be04269a2",
+      "content.js": "25f3bcee9eb3c791da531c80bb5575d5c9f91d9eeadb0eb92ed793016f140a20",
+      "warning-state.js": "08522794d4fb23cc2bf2fded191f641382cccfca2a16d529275d68444a41a0f5"
+    }
+  },
+  "dataset": {
+    "path": "evaluation/datasets/dataset-d.csv",
+    "sha256": "828c6d4d6c297d05da6f986350615fb00ed454590944ef3cce8d76af2c946cfc",
+    "rows": 200,
+    "composition": {
+      "legitimate": 100,
+      "phishing": 100
+    },
+    "unique_domains": {
+      "legitimate": 100,
+      "phishing": 100
+    },
+    "shared_domains": 0
+  },
+  "sources": {
+    "acquisition_manifest": {
+      "path": "evaluation/sources/dataset-d/acquisition-manifest.json",
+      "sha256": "7b8817e04e1288f8dc3f2e3e60f8dd072007cd4a450014805b8715e76812aafd"
+    },
+    "legitimate": [
+      {
+        "path": "evaluation/sources/dataset-c/auditable-legitimate-seeds.csv",
+        "sha256": "47d1cae6f98acc67195e51714a51372890116eb7b97ccae69cce6b7224dd0aab"
+      },
+      {
+        "path": "evaluation/sources/dataset-c/site-metadata-tranco-general-000.csv",
+        "sha256": "b9f3ee8c7da3ae81a223c14281f13c995e3f63e040616d757d0cb404f033622c"
+      },
+      {
+        "path": "evaluation/sources/dataset-c/site-metadata-tranco-general-v2-000.csv",
+        "sha256": "f6e1c40b530799d44379b4365e61f18efa22e6c3b054299cd6867f11f2d41454"
+      },
+      {
+        "path": "evaluation/sources/dataset-c/site-metadata-tranco-general-v2-100.csv",
+        "sha256": "43cba2c0a89580a0a9c8528adf06fa42d86b8c2427ab01529b04622ae91b038b"
+      },
+      {
+        "path": "evaluation/sources/dataset-c/site-metadata-tranco-general-v2-200.csv",
+        "sha256": "e648e05266575b837cab348c193ff90e89b89761b176733f371211f293ae3056"
+      },
+      {
+        "path": "evaluation/sources/dataset-c/site-metadata-tranco-general-v2-300.csv",
+        "sha256": "5df540776bc904d01803a290820f7baeabb081554b631ff62f72d5e30d6ccaea"
+      },
+      {
+        "path": "evaluation/sources/dataset-c/site-metadata-tranco-general-v2-450.csv",
+        "sha256": "a52140970dc528cd00eae3358295753cd5dad12888d15e545cec9500c83260b2"
+      },
+      {
+        "path": "evaluation/sources/dataset-c/site-metadata-tranco-idn-000.csv",
+        "sha256": "938ff5156ea0df1acb94b5243aa035acf726c055215e803d69012789fda33ce1"
+      },
+      {
+        "path": "evaluation/sources/dataset-c/site-metadata-tranco-idn-025.csv",
+        "sha256": "6c4c4fadba65a0a90b4164c4c13ebfac3788c80cc882ffcfc5a2a86c8df4273a"
+      },
+      {
+        "path": "evaluation/sources/dataset-c/site-metadata-tranco-idn-055.csv",
+        "sha256": "41f67d3a1d04aeb7d4be1943944d93d721d630e3bb4eb28c0bf5eb9580beacb3"
+      },
+      {
+        "path": "evaluation/sources/dataset-c/site-metadata-tranco-unusual-000.csv",
+        "sha256": "0e376a2cc6ae98f7fc35d6c5823dad3788dc45f96e7d5a1fc8014147db823a3a"
+      },
+      {
+        "path": "evaluation/sources/dataset-c/site-metadata-tranco-unusual-content-000.csv",
+        "sha256": "a46298b80ea387cc3dd74035c470fa530494e0b38bc3733035f152869f91a835"
+      },
+      {
+        "path": "evaluation/sources/dataset-c/site-metadata-tranco-unusual-content-080.csv",
+        "sha256": "be3bb8a11cdfc47ef3bb26ce4d1d527ea997ca8dd5896c7c028992336a846a7c"
+      },
+      {
+        "path": "evaluation/sources/dataset-c/site-metadata-tranco-unusual-content-150.csv",
+        "sha256": "46596a1de63b1e38ce96f0816c4d50a3bdb3b90bfecea8f640f663c3b664a62d"
+      },
+      {
+        "path": "evaluation/sources/dataset-c/site-metadata-tranco-unusual-content-210.csv",
+        "sha256": "de704b539ed03915c962d6745fe0377c89f87b263f124713b599080612197fbb"
+      },
+      {
+        "path": "evaluation/sources/dataset-c/site-metadata-tranco-unusual-content-310.csv",
+        "sha256": "8b878ee6532be7e1777b75f3c97e2616d3efbdd66fca872b1a2c259671b5d50f"
+      },
+      {
+        "path": "evaluation/sources/dataset-c/site-metadata-wikidata-ecommerce-000.csv",
+        "sha256": "f581cc5562f2e6874c98f7055397a8a77c4551f48d68a6d4cd951c47897d638b"
+      },
+      {
+        "path": "evaluation/sources/dataset-c/site-metadata-wikidata-financial-000.csv",
+        "sha256": "b9236bd4e171cc2e82cb3449dea3b621ef6a9bad10c9279626ee5b248e193394"
+      },
+      {
+        "path": "evaluation/sources/dataset-c/site-metadata-wikidata-financial-025.csv",
+        "sha256": "d2c779b463d298daf53295fe0bbb53a94bcabbae56108c98aad42b52701f8847"
+      }
+    ]
+  },
+  "filters": {
+    "legitimate": {
+      "input": 33669,
+      "invalid": 0,
+      "duplicate_normalized": 1529,
+      "duplicate_host_path": 87,
+      "historical_overlap": 303,
+      "historical_host_path_overlap": 1,
+      "reputation_overlap": 0,
+      "domain_concentration": 30302,
+      "opposite_class_domain": 0,
+      "missing_stratum": 14,
+      "accepted": 1433
+    },
+    "phishing": {
+      "input": 300,
+      "invalid": 0,
+      "duplicate_normalized": 10,
+      "duplicate_host_path": 0,
+      "historical_overlap": 0,
+      "historical_host_path_overlap": 0,
+      "reputation_overlap": 0,
+      "domain_concentration": 27,
+      "opposite_class_domain": 0,
+      "missing_stratum": 0,
+      "accepted": 263
+    }
+  },
+  "composition": {
+    "legitimate_by_stratum": {
+      "authentication": 10,
+      "commerce_finance": 15,
+      "shared_hosting": 15,
+      "long_or_query": 22,
+      "idn_punycode": 10,
+      "unusual_structure": 3,
+      "internal_general": 25
+    },
+    "phishing_by_capture": {
+      "openphish-20261022T193439277Z": 100
+    }
+  },
+  "historical_files": [
+    "evaluation/datasets/dataset-a.csv",
+    "evaluation/datasets/dataset-b.csv",
+    "evaluation/datasets/dataset-c.csv",
+    "evaluation/datasets/candidates.csv",
+    "evaluation/datasets/sample.csv",
+    "evaluation/page-corpus/corpus-manifest.json"
+  ],
+  "detector_executed": false
+}

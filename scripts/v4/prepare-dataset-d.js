@@ -104,21 +104,27 @@ function seal() {
   const phishing = filter(phishingInput, { history, reputation });
   if (phishing.rows.length < 100) throw new Error(`Phishing elegível insuficiente: ${phishing.rows.length}/100`);
   const phishingSelected = phishing.rows.slice(0, 100), phishingDomains = new Set(phishingSelected.map((row) => row.registrable_domain));
-  const legitimateInput = parseCsv(fs.readFileSync("evaluation/sources/dataset-c/auditable-legitimate-seeds.csv", "utf8"))
+  const legitimateFiles = [
+    "evaluation/sources/dataset-c/auditable-legitimate-seeds.csv",
+    ...fs.readdirSync("evaluation/sources/dataset-c")
+      .filter((name) => name.startsWith("site-metadata-") && name.endsWith(".csv"))
+      .map((name) => `evaluation/sources/dataset-c/${name}`)
+  ];
+  const legitimateInput = legitimateFiles.flatMap((file) => parseCsv(fs.readFileSync(file, "utf8")))
     .map((row) => ({ ...row, label: "legitimate" }));
   const legitimate = filter(legitimateInput, { history, reputation, oppositeDomains: phishingDomains });
   if (legitimate.rows.length < 100) throw new Error(`Legítimas elegíveis insuficientes: ${legitimate.rows.length}/100`);
-  const desired = ["authentication", "commerce_finance", "shared_hosting", "long_or_query", "idn_punycode", "unusual_structure", "internal_general"];
+  const quotas = { authentication: 10, commerce_finance: 15, shared_hosting: 15, long_or_query: 22,
+    idn_punycode: 10, unusual_structure: 3, internal_general: 25 };
   const selected = [], selectedDomains = new Set();
-  for (let round = 0; selected.length < 100; round++) {
-    let progressed = false;
-    for (const stratum of desired) {
-      const candidate = legitimate.rows.filter((row) => row.stratum === stratum && !selectedDomains.has(row.registrable_domain))[round];
-      if (candidate && selected.length < 100) { selected.push(candidate); selectedDomains.add(candidate.registrable_domain); progressed = true; }
+  for (const [stratum, quota] of Object.entries(quotas)) {
+    const candidates = legitimate.rows.filter((row) => row.stratum === stratum && !selectedDomains.has(row.registrable_domain));
+    if (candidates.length < quota) throw new Error(`Estrato legítimo ${stratum}: ${candidates.length}/${quota}`);
+    for (const candidate of candidates) {
+      if (selected.filter((row) => row.stratum === stratum).length >= quota) break;
+      if (!selectedDomains.has(candidate.registrable_domain)) { selected.push(candidate); selectedDomains.add(candidate.registrable_domain); }
     }
-    if (!progressed) break;
   }
-  if (selected.length < 100) throw new Error(`Seleção legítima diversificada insuficiente: ${selected.length}/100`);
   const columns = ["url", "label", "source", "capture_id", "source_id", "source_timestamp", "source_category", "stratum", "selection_rule", "evidence", "registrable_domain"];
   const rows = [...selected, ...phishingSelected]; fs.mkdirSync(path.dirname(DATASET), { recursive: true });
   fs.writeFileSync(DATASET, stringifyCsv(rows, columns));
@@ -127,7 +133,7 @@ function seal() {
     detector_reference: reference, dataset: { path: "evaluation/datasets/dataset-d.csv", sha256: sha256File(DATASET), rows: 200,
       composition: { legitimate: 100, phishing: 100 }, unique_domains: { legitimate: selectedDomains.size, phishing: phishingDomains.size }, shared_domains: 0 },
     sources: { acquisition_manifest: { path: path.relative(process.cwd(), acquisitionPath).replaceAll("\\", "/"), sha256: sha256File(acquisitionPath) },
-      legitimate: "evaluation/sources/dataset-c/auditable-legitimate-seeds.csv", legitimate_sha256: sha256File("evaluation/sources/dataset-c/auditable-legitimate-seeds.csv") },
+      legitimate: legitimateFiles.map((file) => ({ path: file, sha256: sha256File(file) })) },
     filters: { legitimate: legitimate.counters, phishing: phishing.counters }, composition: { legitimate_by_stratum: count(selected, "stratum"), phishing_by_capture: count(phishingSelected, "capture_id") },
     historical_files: history.files, detector_executed: false };
   fs.mkdirSync(ROOT, { recursive: true }); fs.writeFileSync(MANIFEST, `${JSON.stringify(manifest, null, 2)}\n`);

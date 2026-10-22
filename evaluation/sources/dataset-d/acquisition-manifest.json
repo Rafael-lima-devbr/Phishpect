@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "captures": [
+    {
+      "source": "OpenPhish Community Feed",
+      "url": "https://openphish.com/feed.txt",
+      "acquired_at": "2026-10-22T19:34:39.276Z",
+      "path": "evaluation/sources/dataset-d/raw/openphish-20261022T193439277Z.txt",
+      "sha256": "7f1d3bd7ed0cdbcf240538578b4c73314b145cca9167a15fef48c23f1c21d693",
+      "bytes": 14600,
+      "lines": 300,
+      "user_agent": "Phishpect-validation/4.0 (+project repository)"
+    }
+  ],
+  "updated_at": "2026-10-22T19:34:39.276Z"
+}
