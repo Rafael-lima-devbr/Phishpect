@@ -1,1 +1,5 @@
 evaluation/sources/dataset-c/raw/** -diff
+*.js text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.md text eol=lf
