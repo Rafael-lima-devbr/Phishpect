@@ -1,0 +1,10 @@
+{
+  "algorithm": "SHA-256",
+  "artifacts": [
+    {
+      "name": "benchmark.json",
+      "sha256": "b36fc6972ebf0f7e3914fad56a94fc5ea2610336d99cf217ae185eac0039dd9f",
+      "bytes": 3410
+    }
+  ]
+}

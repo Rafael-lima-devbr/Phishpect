@@ -1,0 +1,109 @@
+{
+  "status": "development-benchmark",
+  "independent_validation": false,
+  "executed_at": "2026-10-22T19:29:50.030Z",
+  "timezone": "America/Bahia",
+  "repository_head": "1eb130bdfa6a94d0d22785cb95fdd967088e95f9",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "release": "10.0.22631",
+    "architecture": "x64"
+  },
+  "configured_late_observation_delay_ms": 1200,
+  "delay_excluded_from_cpu_pipeline": true,
+  "stages": [
+    {
+      "stage": "url_analysis",
+      "iterations": 5000,
+      "average_ms": 0.03633974000000015,
+      "median_ms": 0.03499999999999659,
+      "p95_ms": 0.06550000000001432,
+      "minimum_ms": 0.019599999999996953,
+      "maximum_ms": 0.44429999999999836
+    },
+    {
+      "stage": "reputation_lookup",
+      "iterations": 5000,
+      "average_ms": 0.003315860000000396,
+      "median_ms": 0.002999999999985903,
+      "p95_ms": 0.004500000000007276,
+      "minimum_ms": 0.002399999999965985,
+      "maximum_ms": 0.16859999999996944
+    },
+    {
+      "stage": "initial_snapshot",
+      "iterations": 5000,
+      "average_ms": 0.006436400000000162,
+      "median_ms": 0.005300000000033833,
+      "p95_ms": 0.009000000000014552,
+      "minimum_ms": 0.004899999999963711,
+      "maximum_ms": 0.30759999999997945
+    },
+    {
+      "stage": "late_snapshot",
+      "iterations": 5000,
+      "average_ms": 0.005451600000000258,
+      "median_ms": 0.0049999999999954525,
+      "p95_ms": 0.00580000000002201,
+      "minimum_ms": 0.004799999999988813,
+      "maximum_ms": 0.19170000000002574
+    },
+    {
+      "stage": "snapshot_merge",
+      "iterations": 5000,
+      "average_ms": 0.02082151999999986,
+      "median_ms": 0.019499999999993634,
+      "p95_ms": 0.024400000000014188,
+      "minimum_ms": 0.018499999999960437,
+      "maximum_ms": 0.36309999999997444
+    },
+    {
+      "stage": "page_analysis",
+      "iterations": 5000,
+      "average_ms": 0.07140645999999996,
+      "median_ms": 0.0625,
+      "p95_ms": 0.11180000000001655,
+      "minimum_ms": 0.058400000000006,
+      "maximum_ms": 0.6030999999999835
+    },
+    {
+      "stage": "evidence_integration",
+      "iterations": 5000,
+      "average_ms": 0.0017157400000000053,
+      "median_ms": 0.0013000000000147338,
+      "p95_ms": 0.0026000000000294676,
+      "minimum_ms": 0.001199999999926149,
+      "maximum_ms": 0.1490000000000009
+    },
+    {
+      "stage": "complete_cpu_pipeline",
+      "iterations": 5000,
+      "average_ms": 0.17362122000000016,
+      "median_ms": 0.16000000000008185,
+      "p95_ms": 0.28330000000005384,
+      "minimum_ms": 0.13760000000002037,
+      "maximum_ms": 0.6123000000000047
+    }
+  ],
+  "memory_bytes": {
+    "rss": 109649920,
+    "heapTotal": 58339328,
+    "heapUsed": 36206248,
+    "external": 2391256,
+    "arrayBuffers": 261480
+  },
+  "reputation_database": {
+    "path": "reputation/threat-db.json",
+    "sha256": "07dd71625e16eaa12d7fe77a085abc0549c51af7e2467f58300b4f2f9c9bfe36",
+    "bytes": 4599749,
+    "urls": 58710,
+    "domains": 16111
+  },
+  "detector_hashes": {
+    "analysis-v4.js": "516eae1541855564938f98ce6e96af231677a331e4abe1bad2bbcbec4ea92d8d",
+    "page-analysis-v4.js": "f6ab8cc2662608d23d3fc8f4465bb829ff7d08c6cbf0bbbba69f0ad6cffe633e",
+    "combined-analysis-v4.js": "272610248e5309dc356ad08e88cd21ace7d59211a29edcb6622133cff889f650",
+    "reputation.js": "9831a12fb2cb3baf1716748ff6c18a96d2c0b30de2be2f03872fa8ba5aac090f"
+  }
+}
