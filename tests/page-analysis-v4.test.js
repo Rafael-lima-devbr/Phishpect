@@ -83,4 +83,37 @@ const socialFooter = analyzePageV4(snapshot({
 assert.strictEqual(socialFooter.level, "safe");
 assert.deepStrictEqual(socialFooter.signals.presented_brands, []);
 
+for (const legitimate of [
+  {
+    title: "Checkout",
+    forms: [{ method: "POST", action: "https://payments.example.test/checkout", context: [], fields: [
+      { tag: "input", type: "text", name: "cardholder", autocomplete: "cc-name" },
+      { tag: "input", type: "text", name: "card", autocomplete: "cc-number" }
+    ] }]
+  },
+  {
+    title: "CRM lead",
+    forms: [{ method: "POST", action: "https://forms.example/lead", context: [], fields: [
+      { tag: "input", type: "tel", name: "phone", autocomplete: "tel" },
+      { tag: "textarea", type: "textarea", name: "message", autocomplete: "" }
+    ] }]
+  },
+  {
+    title: "Single sign-on",
+    forms: [{ method: "POST", action: "https://identity.example/saml", context: [], fields: [
+      { tag: "input", type: "email", name: "username", autocomplete: "username" }
+    ] }]
+  }
+]) {
+  assert.strictEqual(analyzePageV4(snapshot(legitimate)).level, "safe");
+}
+
+const insecurePassword = analyzePageV4(snapshot({
+  page_url: "http://portal.test/login",
+  forms: [{ method: "POST", action: "/session", context: [], fields: [
+    { tag: "input", type: "password", name: "password", autocomplete: "current-password" }
+  ] }]
+}));
+assert.strictEqual(insecurePassword.level, "suspicious");
+
 console.log("Análise integrada V4 de página: OK");
