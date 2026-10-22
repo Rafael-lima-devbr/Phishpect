@@ -1,0 +1,1909 @@
+{
+  "generated_at": "2026-10-22T20:00:25.054Z",
+  "role": "V4.1 development error analysis; not independent validation",
+  "datasets": {
+    "A": {
+      "all": {
+        "count": 200,
+        "features": {
+          "shared_hosting": 40,
+          "http": 36,
+          "brand_mismatch": 26,
+          "high_entropy": 12,
+          "high_digit_ratio": 10,
+          "many_hyphens": 10,
+          "auth_path": 5,
+          "long_url": 3,
+          "shortener": 3,
+          "auth_hostname": 1,
+          "many_subdomains": 1
+        },
+        "categories": {
+          "infrastructure": 43,
+          "transport": 36,
+          "identity": 26,
+          "structure": 23,
+          "path_query": 21,
+          "authentication": 1
+        },
+        "category_combinations": {
+          "none": 115,
+          "identity": 19,
+          "infrastructure": 9,
+          "infrastructure+structure": 9,
+          "transport": 9,
+          "infrastructure+path_query+transport": 8,
+          "infrastructure+transport": 6,
+          "identity+transport": 4,
+          "infrastructure+path_query+structure+transport": 4,
+          "identity+path_query": 3,
+          "structure": 3,
+          "infrastructure+path_query": 2,
+          "infrastructure+path_query+structure": 2,
+          "infrastructure+structure+transport": 2,
+          "structure+transport": 2,
+          "authentication+infrastructure+structure": 1,
+          "path_query": 1,
+          "path_query+transport": 1
+        },
+        "score_bands": {
+          "0-4": 116,
+          "20-24": 25,
+          "5-9": 19,
+          "25-29": 14,
+          "35-39": 9,
+          "40-44": 8,
+          "45-49": 5,
+          "10-14": 2,
+          "30-34": 2
+        }
+      },
+      "legitimate": {
+        "count": 100,
+        "features": {
+          "shared_hosting": 2,
+          "many_subdomains": 1
+        },
+        "categories": {
+          "infrastructure": 2,
+          "structure": 1
+        },
+        "category_combinations": {
+          "none": 97,
+          "infrastructure": 2,
+          "structure": 1
+        },
+        "score_bands": {
+          "0-4": 97,
+          "5-9": 3
+        }
+      },
+      "phishing": {
+        "count": 100,
+        "features": {
+          "shared_hosting": 38,
+          "http": 36,
+          "brand_mismatch": 26,
+          "high_entropy": 12,
+          "high_digit_ratio": 10,
+          "many_hyphens": 10,
+          "auth_path": 5,
+          "long_url": 3,
+          "shortener": 3,
+          "auth_hostname": 1
+        },
+        "categories": {
+          "infrastructure": 41,
+          "transport": 36,
+          "identity": 26,
+          "structure": 22,
+          "path_query": 21,
+          "authentication": 1
+        },
+        "category_combinations": {
+          "identity": 19,
+          "none": 18,
+          "infrastructure+structure": 9,
+          "transport": 9,
+          "infrastructure+path_query+transport": 8,
+          "infrastructure": 7,
+          "infrastructure+transport": 6,
+          "identity+transport": 4,
+          "infrastructure+path_query+structure+transport": 4,
+          "identity+path_query": 3,
+          "infrastructure+path_query": 2,
+          "infrastructure+path_query+structure": 2,
+          "infrastructure+structure+transport": 2,
+          "structure": 2,
+          "structure+transport": 2,
+          "authentication+infrastructure+structure": 1,
+          "path_query": 1,
+          "path_query+transport": 1
+        },
+        "score_bands": {
+          "20-24": 25,
+          "0-4": 19,
+          "5-9": 16,
+          "25-29": 14,
+          "35-39": 9,
+          "40-44": 8,
+          "45-49": 5,
+          "10-14": 2,
+          "30-34": 2
+        }
+      },
+      "false_positive": {
+        "count": 0,
+        "features": {},
+        "categories": {},
+        "category_combinations": {},
+        "score_bands": {}
+      },
+      "false_negative": {
+        "count": 69,
+        "features": {
+          "brand_mismatch": 19,
+          "http": 18,
+          "shared_hosting": 15,
+          "high_digit_ratio": 6,
+          "auth_path": 2,
+          "shortener": 2,
+          "many_hyphens": 1
+        },
+        "categories": {
+          "identity": 19,
+          "transport": 18,
+          "infrastructure": 17,
+          "structure": 7,
+          "path_query": 3
+        },
+        "category_combinations": {
+          "identity": 19,
+          "none": 18,
+          "transport": 9,
+          "infrastructure": 7,
+          "infrastructure+transport": 6,
+          "infrastructure+structure": 3,
+          "structure": 2,
+          "structure+transport": 2,
+          "infrastructure+path_query": 1,
+          "path_query": 1,
+          "path_query+transport": 1
+        },
+        "score_bands": {
+          "20-24": 25,
+          "0-4": 19,
+          "5-9": 16,
+          "25-29": 7,
+          "10-14": 2
+        }
+      },
+      "true_positive": {
+        "count": 31,
+        "features": {
+          "shared_hosting": 23,
+          "http": 18,
+          "high_entropy": 12,
+          "many_hyphens": 9,
+          "brand_mismatch": 7,
+          "high_digit_ratio": 4,
+          "auth_path": 3,
+          "long_url": 3,
+          "auth_hostname": 1,
+          "shortener": 1
+        },
+        "categories": {
+          "infrastructure": 24,
+          "path_query": 18,
+          "transport": 18,
+          "structure": 15,
+          "identity": 7,
+          "authentication": 1
+        },
+        "category_combinations": {
+          "infrastructure+path_query+transport": 8,
+          "infrastructure+structure": 6,
+          "identity+transport": 4,
+          "infrastructure+path_query+structure+transport": 4,
+          "identity+path_query": 3,
+          "infrastructure+path_query+structure": 2,
+          "infrastructure+structure+transport": 2,
+          "authentication+infrastructure+structure": 1,
+          "infrastructure+path_query": 1
+        },
+        "score_bands": {
+          "35-39": 9,
+          "40-44": 8,
+          "25-29": 7,
+          "45-49": 5,
+          "30-34": 2
+        }
+      },
+      "true_negative": {
+        "count": 100,
+        "features": {
+          "shared_hosting": 2,
+          "many_subdomains": 1
+        },
+        "categories": {
+          "infrastructure": 2,
+          "structure": 1
+        },
+        "category_combinations": {
+          "none": 97,
+          "infrastructure": 2,
+          "structure": 1
+        },
+        "score_bands": {
+          "0-4": 97,
+          "5-9": 3
+        }
+      }
+    },
+    "B": {
+      "all": {
+        "count": 200,
+        "features": {
+          "http": 47,
+          "shared_hosting": 42,
+          "high_entropy": 19,
+          "brand_mismatch": 16,
+          "many_hyphens": 9,
+          "high_digit_ratio": 7,
+          "auth_path": 3,
+          "auth_hostname": 2,
+          "shortener": 2,
+          "long_hostname": 1,
+          "long_url": 1,
+          "many_subdomains": 1
+        },
+        "categories": {
+          "transport": 47,
+          "infrastructure": 44,
+          "structure": 28,
+          "path_query": 21,
+          "identity": 16,
+          "authentication": 2
+        },
+        "category_combinations": {
+          "none": 118,
+          "transport": 13,
+          "infrastructure+transport": 10,
+          "identity": 9,
+          "infrastructure+structure": 8,
+          "infrastructure": 6,
+          "identity+transport": 4,
+          "infrastructure+path_query+structure+transport": 4,
+          "infrastructure+path_query+transport": 4,
+          "infrastructure+structure+transport": 4,
+          "infrastructure+path_query+structure": 3,
+          "path_query+structure+transport": 3,
+          "path_query+transport": 3,
+          "structure": 3,
+          "infrastructure+path_query": 2,
+          "authentication+identity+infrastructure": 1,
+          "authentication+structure": 1,
+          "identity+infrastructure": 1,
+          "identity+infrastructure+path_query+structure+transport": 1,
+          "path_query": 1,
+          "structure+transport": 1
+        },
+        "score_bands": {
+          "0-4": 118,
+          "5-9": 23,
+          "20-24": 19,
+          "25-29": 14,
+          "35-39": 9,
+          "40-44": 6,
+          "30-34": 5,
+          "45-49": 3,
+          "50-54": 1,
+          "55-59": 1,
+          "75-79": 1
+        }
+      },
+      "legitimate": {
+        "count": 100,
+        "features": {
+          "many_subdomains": 1,
+          "shared_hosting": 1
+        },
+        "categories": {
+          "infrastructure": 1,
+          "structure": 1
+        },
+        "category_combinations": {
+          "none": 98,
+          "infrastructure": 1,
+          "structure": 1
+        },
+        "score_bands": {
+          "0-4": 98,
+          "5-9": 2
+        }
+      },
+      "phishing": {
+        "count": 100,
+        "features": {
+          "http": 47,
+          "shared_hosting": 41,
+          "high_entropy": 19,
+          "brand_mismatch": 16,
+          "many_hyphens": 9,
+          "high_digit_ratio": 7,
+          "auth_path": 3,
+          "auth_hostname": 2,
+          "shortener": 2,
+          "long_hostname": 1,
+          "long_url": 1
+        },
+        "categories": {
+          "transport": 47,
+          "infrastructure": 43,
+          "structure": 27,
+          "path_query": 21,
+          "identity": 16,
+          "authentication": 2
+        },
+        "category_combinations": {
+          "none": 20,
+          "transport": 13,
+          "infrastructure+transport": 10,
+          "identity": 9,
+          "infrastructure+structure": 8,
+          "infrastructure": 5,
+          "identity+transport": 4,
+          "infrastructure+path_query+structure+transport": 4,
+          "infrastructure+path_query+transport": 4,
+          "infrastructure+structure+transport": 4,
+          "infrastructure+path_query+structure": 3,
+          "path_query+structure+transport": 3,
+          "path_query+transport": 3,
+          "infrastructure+path_query": 2,
+          "structure": 2,
+          "authentication+identity+infrastructure": 1,
+          "authentication+structure": 1,
+          "identity+infrastructure": 1,
+          "identity+infrastructure+path_query+structure+transport": 1,
+          "path_query": 1,
+          "structure+transport": 1
+        },
+        "score_bands": {
+          "5-9": 21,
+          "0-4": 20,
+          "20-24": 19,
+          "25-29": 14,
+          "35-39": 9,
+          "40-44": 6,
+          "30-34": 5,
+          "45-49": 3,
+          "50-54": 1,
+          "55-59": 1,
+          "75-79": 1
+        }
+      },
+      "false_positive": {
+        "count": 0,
+        "features": {},
+        "categories": {},
+        "category_combinations": {},
+        "score_bands": {}
+      },
+      "false_negative": {
+        "count": 71,
+        "features": {
+          "http": 27,
+          "shared_hosting": 21,
+          "brand_mismatch": 9,
+          "high_entropy": 5,
+          "auth_path": 3,
+          "many_hyphens": 3,
+          "high_digit_ratio": 2,
+          "auth_hostname": 1,
+          "long_hostname": 1,
+          "long_url": 1
+        },
+        "categories": {
+          "transport": 27,
+          "infrastructure": 21,
+          "structure": 10,
+          "identity": 9,
+          "path_query": 4,
+          "authentication": 1
+        },
+        "category_combinations": {
+          "none": 20,
+          "transport": 13,
+          "infrastructure+transport": 10,
+          "identity": 9,
+          "infrastructure+structure": 6,
+          "infrastructure": 5,
+          "path_query+transport": 3,
+          "structure": 2,
+          "authentication+structure": 1,
+          "path_query": 1,
+          "structure+transport": 1
+        },
+        "score_bands": {
+          "5-9": 21,
+          "0-4": 20,
+          "20-24": 19,
+          "25-29": 10,
+          "30-34": 1
+        }
+      },
+      "true_positive": {
+        "count": 29,
+        "features": {
+          "http": 20,
+          "shared_hosting": 20,
+          "high_entropy": 14,
+          "brand_mismatch": 7,
+          "many_hyphens": 6,
+          "high_digit_ratio": 5,
+          "shortener": 2,
+          "auth_hostname": 1
+        },
+        "categories": {
+          "infrastructure": 22,
+          "transport": 20,
+          "path_query": 17,
+          "structure": 17,
+          "identity": 7,
+          "authentication": 1
+        },
+        "category_combinations": {
+          "identity+transport": 4,
+          "infrastructure+path_query+structure+transport": 4,
+          "infrastructure+path_query+transport": 4,
+          "infrastructure+structure+transport": 4,
+          "infrastructure+path_query+structure": 3,
+          "path_query+structure+transport": 3,
+          "infrastructure+path_query": 2,
+          "infrastructure+structure": 2,
+          "authentication+identity+infrastructure": 1,
+          "identity+infrastructure": 1,
+          "identity+infrastructure+path_query+structure+transport": 1
+        },
+        "score_bands": {
+          "35-39": 9,
+          "40-44": 6,
+          "25-29": 4,
+          "30-34": 4,
+          "45-49": 3,
+          "50-54": 1,
+          "55-59": 1,
+          "75-79": 1
+        }
+      },
+      "true_negative": {
+        "count": 100,
+        "features": {
+          "many_subdomains": 1,
+          "shared_hosting": 1
+        },
+        "categories": {
+          "infrastructure": 1,
+          "structure": 1
+        },
+        "category_combinations": {
+          "none": 98,
+          "infrastructure": 1,
+          "structure": 1
+        },
+        "score_bands": {
+          "0-4": 98,
+          "5-9": 2
+        }
+      }
+    },
+    "C": {
+      "all": {
+        "count": 600,
+        "features": {
+          "shared_hosting": 265,
+          "high_entropy": 183,
+          "many_hyphens": 166,
+          "http": 141,
+          "high_digit_ratio": 61,
+          "auth_path": 50,
+          "long_path": 28,
+          "punycode": 15,
+          "brand_mismatch": 12,
+          "long_url": 8,
+          "auth_hostname": 6,
+          "brand_typo": 3,
+          "many_subdomains": 2,
+          "nested_url": 2,
+          "long_hostname": 1,
+          "redirect_parameter": 1
+        },
+        "categories": {
+          "infrastructure": 265,
+          "structure": 212,
+          "transport": 141,
+          "path_query": 89,
+          "identity": 27,
+          "authentication": 6
+        },
+        "category_combinations": {
+          "none": 195,
+          "infrastructure+structure": 86,
+          "infrastructure+structure+transport": 86,
+          "path_query": 72,
+          "infrastructure": 58,
+          "infrastructure+transport": 24,
+          "transport": 15,
+          "structure": 14,
+          "identity": 10,
+          "structure+transport": 8,
+          "identity+structure": 6,
+          "infrastructure+path_query": 4,
+          "authentication+path_query": 3,
+          "identity+path_query+structure": 3,
+          "identity+structure+transport": 3,
+          "infrastructure+path_query+structure": 3,
+          "authentication": 1,
+          "authentication+identity+structure+transport": 1,
+          "authentication+infrastructure+structure": 1,
+          "identity+infrastructure": 1,
+          "identity+infrastructure+transport": 1,
+          "identity+path_query": 1,
+          "identity+transport": 1,
+          "infrastructure+path_query+transport": 1,
+          "path_query+structure": 1,
+          "path_query+transport": 1
+        },
+        "score_bands": {
+          "0-4": 261,
+          "5-9": 93,
+          "25-29": 85,
+          "35-39": 62,
+          "30-34": 39,
+          "40-44": 25,
+          "20-24": 23,
+          "15-19": 6,
+          "45-49": 3,
+          "10-14": 1,
+          "50-54": 1,
+          "70-74": 1
+        }
+      },
+      "legitimate": {
+        "count": 300,
+        "features": {
+          "auth_path": 48,
+          "shared_hosting": 45,
+          "long_path": 28,
+          "punycode": 15,
+          "high_digit_ratio": 14,
+          "high_entropy": 8,
+          "http": 4,
+          "long_url": 4,
+          "auth_hostname": 3,
+          "many_hyphens": 2,
+          "many_subdomains": 2,
+          "nested_url": 2,
+          "brand_mismatch": 1,
+          "brand_typo": 1
+        },
+        "categories": {
+          "path_query": 77,
+          "infrastructure": 45,
+          "structure": 23,
+          "identity": 16,
+          "transport": 4,
+          "authentication": 3
+        },
+        "category_combinations": {
+          "none": 155,
+          "path_query": 69,
+          "infrastructure": 37,
+          "structure": 12,
+          "identity": 6,
+          "identity+structure": 6,
+          "authentication+path_query": 3,
+          "infrastructure+structure": 3,
+          "infrastructure+transport": 3,
+          "identity+path_query+structure": 2,
+          "identity+infrastructure": 1,
+          "identity+path_query": 1,
+          "infrastructure+path_query": 1,
+          "path_query+transport": 1
+        },
+        "score_bands": {
+          "0-4": 220,
+          "5-9": 52,
+          "30-34": 7,
+          "15-19": 6,
+          "25-29": 5,
+          "20-24": 4,
+          "35-39": 3,
+          "40-44": 2,
+          "10-14": 1
+        }
+      },
+      "phishing": {
+        "count": 300,
+        "features": {
+          "shared_hosting": 220,
+          "high_entropy": 175,
+          "many_hyphens": 164,
+          "http": 137,
+          "high_digit_ratio": 47,
+          "brand_mismatch": 11,
+          "long_url": 4,
+          "auth_hostname": 3,
+          "auth_path": 2,
+          "brand_typo": 2,
+          "long_hostname": 1,
+          "redirect_parameter": 1
+        },
+        "categories": {
+          "infrastructure": 220,
+          "structure": 189,
+          "transport": 137,
+          "path_query": 12,
+          "identity": 11,
+          "authentication": 3
+        },
+        "category_combinations": {
+          "infrastructure+structure+transport": 86,
+          "infrastructure+structure": 83,
+          "none": 40,
+          "infrastructure": 21,
+          "infrastructure+transport": 21,
+          "transport": 15,
+          "structure+transport": 8,
+          "identity": 4,
+          "identity+structure+transport": 3,
+          "infrastructure+path_query": 3,
+          "infrastructure+path_query+structure": 3,
+          "path_query": 3,
+          "structure": 2,
+          "authentication": 1,
+          "authentication+identity+structure+transport": 1,
+          "authentication+infrastructure+structure": 1,
+          "identity+infrastructure+transport": 1,
+          "identity+path_query+structure": 1,
+          "identity+transport": 1,
+          "infrastructure+path_query+transport": 1,
+          "path_query+structure": 1
+        },
+        "score_bands": {
+          "25-29": 80,
+          "35-39": 59,
+          "0-4": 41,
+          "5-9": 41,
+          "30-34": 32,
+          "40-44": 23,
+          "20-24": 19,
+          "45-49": 3,
+          "50-54": 1,
+          "70-74": 1
+        }
+      },
+      "false_positive": {
+        "count": 2,
+        "features": {
+          "auth_hostname": 2,
+          "nested_url": 2,
+          "auth_path": 1
+        },
+        "categories": {
+          "authentication": 2,
+          "path_query": 2
+        },
+        "category_combinations": {
+          "authentication+path_query": 2
+        },
+        "score_bands": {
+          "25-29": 1,
+          "30-34": 1
+        }
+      },
+      "false_negative": {
+        "count": 126,
+        "features": {
+          "shared_hosting": 54,
+          "http": 42,
+          "high_entropy": 11,
+          "many_hyphens": 5,
+          "brand_mismatch": 4,
+          "high_digit_ratio": 3,
+          "long_url": 3,
+          "auth_hostname": 1,
+          "auth_path": 1
+        },
+        "categories": {
+          "infrastructure": 54,
+          "transport": 42,
+          "structure": 18,
+          "path_query": 7,
+          "identity": 4,
+          "authentication": 1
+        },
+        "category_combinations": {
+          "none": 40,
+          "infrastructure": 21,
+          "infrastructure+transport": 21,
+          "transport": 15,
+          "infrastructure+structure": 9,
+          "structure+transport": 6,
+          "identity": 4,
+          "infrastructure+path_query": 3,
+          "path_query": 3,
+          "structure": 2,
+          "authentication": 1,
+          "path_query+structure": 1
+        },
+        "score_bands": {
+          "0-4": 41,
+          "5-9": 41,
+          "25-29": 25,
+          "20-24": 19
+        }
+      },
+      "true_positive": {
+        "count": 174,
+        "features": {
+          "shared_hosting": 166,
+          "high_entropy": 164,
+          "many_hyphens": 159,
+          "http": 95,
+          "high_digit_ratio": 44,
+          "brand_mismatch": 7,
+          "auth_hostname": 2,
+          "brand_typo": 2,
+          "auth_path": 1,
+          "long_hostname": 1,
+          "long_url": 1,
+          "redirect_parameter": 1
+        },
+        "categories": {
+          "structure": 171,
+          "infrastructure": 166,
+          "transport": 95,
+          "identity": 7,
+          "path_query": 5,
+          "authentication": 2
+        },
+        "category_combinations": {
+          "infrastructure+structure+transport": 86,
+          "infrastructure+structure": 74,
+          "identity+structure+transport": 3,
+          "infrastructure+path_query+structure": 3,
+          "structure+transport": 2,
+          "authentication+identity+structure+transport": 1,
+          "authentication+infrastructure+structure": 1,
+          "identity+infrastructure+transport": 1,
+          "identity+path_query+structure": 1,
+          "identity+transport": 1,
+          "infrastructure+path_query+transport": 1
+        },
+        "score_bands": {
+          "35-39": 59,
+          "25-29": 55,
+          "30-34": 32,
+          "40-44": 23,
+          "45-49": 3,
+          "50-54": 1,
+          "70-74": 1
+        }
+      },
+      "true_negative": {
+        "count": 298,
+        "features": {
+          "auth_path": 47,
+          "shared_hosting": 45,
+          "long_path": 28,
+          "punycode": 15,
+          "high_digit_ratio": 14,
+          "high_entropy": 8,
+          "http": 4,
+          "long_url": 4,
+          "many_hyphens": 2,
+          "many_subdomains": 2,
+          "auth_hostname": 1,
+          "brand_mismatch": 1,
+          "brand_typo": 1
+        },
+        "categories": {
+          "path_query": 75,
+          "infrastructure": 45,
+          "structure": 23,
+          "identity": 16,
+          "transport": 4,
+          "authentication": 1
+        },
+        "category_combinations": {
+          "none": 155,
+          "path_query": 69,
+          "infrastructure": 37,
+          "structure": 12,
+          "identity": 6,
+          "identity+structure": 6,
+          "infrastructure+structure": 3,
+          "infrastructure+transport": 3,
+          "identity+path_query+structure": 2,
+          "authentication+path_query": 1,
+          "identity+infrastructure": 1,
+          "identity+path_query": 1,
+          "infrastructure+path_query": 1,
+          "path_query+transport": 1
+        },
+        "score_bands": {
+          "0-4": 220,
+          "5-9": 52,
+          "15-19": 6,
+          "30-34": 6,
+          "20-24": 4,
+          "25-29": 4,
+          "35-39": 3,
+          "40-44": 2,
+          "10-14": 1
+        }
+      }
+    },
+    "D": {
+      "all": {
+        "count": 200,
+        "features": {
+          "shared_hosting": 85,
+          "high_entropy": 51,
+          "many_hyphens": 47,
+          "http": 46,
+          "high_digit_ratio": 20,
+          "long_path": 17,
+          "auth_path": 13,
+          "punycode": 10,
+          "brand_mismatch": 7,
+          "auth_hostname": 5,
+          "long_url": 5,
+          "brand_typo": 1,
+          "long_hostname": 1,
+          "redirect_parameter": 1
+        },
+        "categories": {
+          "infrastructure": 85,
+          "structure": 66,
+          "transport": 46,
+          "path_query": 30,
+          "identity": 17,
+          "authentication": 5
+        },
+        "category_combinations": {
+          "none": 57,
+          "infrastructure": 25,
+          "infrastructure+structure+transport": 25,
+          "path_query": 25,
+          "infrastructure+structure": 23,
+          "structure": 8,
+          "transport": 8,
+          "identity": 5,
+          "infrastructure+transport": 5,
+          "identity+path_query": 3,
+          "identity+infrastructure": 2,
+          "identity+infrastructure+structure+transport": 2,
+          "identity+path_query+structure": 2,
+          "identity+structure": 2,
+          "structure+transport": 2,
+          "authentication": 1,
+          "authentication+infrastructure+structure": 1,
+          "authentication+infrastructure+structure+transport": 1,
+          "authentication+infrastructure+transport": 1,
+          "authentication+transport": 1,
+          "identity+transport": 1
+        },
+        "score_bands": {
+          "0-4": 78,
+          "5-9": 43,
+          "35-39": 19,
+          "25-29": 17,
+          "30-34": 13,
+          "40-44": 10,
+          "20-24": 9,
+          "15-19": 6,
+          "10-14": 2,
+          "60-64": 2,
+          "45-49": 1
+        }
+      },
+      "legitimate": {
+        "count": 100,
+        "features": {
+          "long_path": 17,
+          "shared_hosting": 15,
+          "auth_path": 12,
+          "punycode": 10,
+          "high_digit_ratio": 6,
+          "high_entropy": 5,
+          "long_url": 5,
+          "http": 1,
+          "many_hyphens": 1
+        },
+        "categories": {
+          "path_query": 29,
+          "infrastructure": 15,
+          "identity": 10,
+          "structure": 10,
+          "transport": 1
+        },
+        "category_combinations": {
+          "none": 47,
+          "path_query": 25,
+          "infrastructure": 11,
+          "identity": 4,
+          "infrastructure+structure": 4,
+          "identity+path_query": 2,
+          "identity+path_query+structure": 2,
+          "identity+structure": 2,
+          "structure": 2,
+          "transport": 1
+        },
+        "score_bands": {
+          "0-4": 68,
+          "5-9": 17,
+          "15-19": 4,
+          "20-24": 4,
+          "30-34": 4,
+          "40-44": 2,
+          "10-14": 1
+        }
+      },
+      "phishing": {
+        "count": 100,
+        "features": {
+          "shared_hosting": 70,
+          "high_entropy": 46,
+          "many_hyphens": 46,
+          "http": 45,
+          "high_digit_ratio": 14,
+          "brand_mismatch": 7,
+          "auth_hostname": 5,
+          "auth_path": 1,
+          "brand_typo": 1,
+          "long_hostname": 1,
+          "redirect_parameter": 1
+        },
+        "categories": {
+          "infrastructure": 70,
+          "structure": 56,
+          "transport": 45,
+          "identity": 7,
+          "authentication": 5,
+          "path_query": 1
+        },
+        "category_combinations": {
+          "infrastructure+structure+transport": 25,
+          "infrastructure+structure": 19,
+          "infrastructure": 14,
+          "none": 10,
+          "transport": 7,
+          "structure": 6,
+          "infrastructure+transport": 5,
+          "identity+infrastructure": 2,
+          "identity+infrastructure+structure+transport": 2,
+          "structure+transport": 2,
+          "authentication": 1,
+          "authentication+infrastructure+structure": 1,
+          "authentication+infrastructure+structure+transport": 1,
+          "authentication+infrastructure+transport": 1,
+          "authentication+transport": 1,
+          "identity": 1,
+          "identity+path_query": 1,
+          "identity+transport": 1
+        },
+        "score_bands": {
+          "5-9": 26,
+          "35-39": 19,
+          "25-29": 17,
+          "0-4": 10,
+          "30-34": 9,
+          "40-44": 8,
+          "20-24": 5,
+          "15-19": 2,
+          "60-64": 2,
+          "10-14": 1,
+          "45-49": 1
+        }
+      },
+      "false_positive": {
+        "count": 0,
+        "features": {},
+        "categories": {},
+        "category_combinations": {},
+        "score_bands": {}
+      },
+      "false_negative": {
+        "count": 50,
+        "features": {
+          "shared_hosting": 22,
+          "http": 16,
+          "high_entropy": 5,
+          "high_digit_ratio": 4,
+          "auth_hostname": 3,
+          "many_hyphens": 3,
+          "brand_mismatch": 1,
+          "brand_typo": 1,
+          "long_hostname": 1
+        },
+        "categories": {
+          "infrastructure": 22,
+          "transport": 16,
+          "structure": 10,
+          "authentication": 3,
+          "identity": 1
+        },
+        "category_combinations": {
+          "infrastructure": 14,
+          "none": 10,
+          "transport": 7,
+          "structure": 6,
+          "infrastructure+transport": 5,
+          "infrastructure+structure": 2,
+          "structure+transport": 2,
+          "authentication": 1,
+          "authentication+infrastructure+transport": 1,
+          "authentication+transport": 1,
+          "identity": 1
+        },
+        "score_bands": {
+          "5-9": 26,
+          "0-4": 10,
+          "20-24": 5,
+          "25-29": 5,
+          "15-19": 2,
+          "10-14": 1,
+          "35-39": 1
+        }
+      },
+      "true_positive": {
+        "count": 50,
+        "features": {
+          "shared_hosting": 48,
+          "many_hyphens": 43,
+          "high_entropy": 41,
+          "http": 29,
+          "high_digit_ratio": 10,
+          "brand_mismatch": 6,
+          "auth_hostname": 2,
+          "auth_path": 1,
+          "redirect_parameter": 1
+        },
+        "categories": {
+          "infrastructure": 48,
+          "structure": 46,
+          "transport": 29,
+          "identity": 6,
+          "authentication": 2,
+          "path_query": 1
+        },
+        "category_combinations": {
+          "infrastructure+structure+transport": 25,
+          "infrastructure+structure": 17,
+          "identity+infrastructure": 2,
+          "identity+infrastructure+structure+transport": 2,
+          "authentication+infrastructure+structure": 1,
+          "authentication+infrastructure+structure+transport": 1,
+          "identity+path_query": 1,
+          "identity+transport": 1
+        },
+        "score_bands": {
+          "35-39": 18,
+          "25-29": 12,
+          "30-34": 9,
+          "40-44": 8,
+          "60-64": 2,
+          "45-49": 1
+        }
+      },
+      "true_negative": {
+        "count": 100,
+        "features": {
+          "long_path": 17,
+          "shared_hosting": 15,
+          "auth_path": 12,
+          "punycode": 10,
+          "high_digit_ratio": 6,
+          "high_entropy": 5,
+          "long_url": 5,
+          "http": 1,
+          "many_hyphens": 1
+        },
+        "categories": {
+          "path_query": 29,
+          "infrastructure": 15,
+          "identity": 10,
+          "structure": 10,
+          "transport": 1
+        },
+        "category_combinations": {
+          "none": 47,
+          "path_query": 25,
+          "infrastructure": 11,
+          "identity": 4,
+          "infrastructure+structure": 4,
+          "identity+path_query": 2,
+          "identity+path_query+structure": 2,
+          "identity+structure": 2,
+          "structure": 2,
+          "transport": 1
+        },
+        "score_bands": {
+          "0-4": 68,
+          "5-9": 17,
+          "15-19": 4,
+          "20-24": 4,
+          "30-34": 4,
+          "40-44": 2,
+          "10-14": 1
+        }
+      }
+    }
+  },
+  "global": {
+    "all": {
+      "count": 1200,
+      "features": {
+        "shared_hosting": 432,
+        "http": 270,
+        "high_entropy": 265,
+        "many_hyphens": 232,
+        "high_digit_ratio": 98,
+        "auth_path": 71,
+        "brand_mismatch": 61,
+        "long_path": 45,
+        "punycode": 25,
+        "long_url": 17,
+        "auth_hostname": 14,
+        "shortener": 5,
+        "brand_typo": 4,
+        "many_subdomains": 4,
+        "long_hostname": 3,
+        "nested_url": 2,
+        "redirect_parameter": 2
+      },
+      "categories": {
+        "infrastructure": 437,
+        "structure": 329,
+        "transport": 270,
+        "path_query": 161,
+        "identity": 86,
+        "authentication": 14
+      },
+      "category_combinations": {
+        "none": 485,
+        "infrastructure+structure": 126,
+        "infrastructure+structure+transport": 117,
+        "path_query": 99,
+        "infrastructure": 98,
+        "infrastructure+transport": 45,
+        "transport": 45,
+        "identity": 43,
+        "structure": 28,
+        "infrastructure+path_query+transport": 13,
+        "structure+transport": 13,
+        "identity+transport": 10,
+        "identity+structure": 8,
+        "infrastructure+path_query": 8,
+        "infrastructure+path_query+structure": 8,
+        "infrastructure+path_query+structure+transport": 8,
+        "identity+path_query": 7,
+        "identity+path_query+structure": 5,
+        "path_query+transport": 5,
+        "identity+infrastructure": 4,
+        "authentication+infrastructure+structure": 3,
+        "authentication+path_query": 3,
+        "identity+structure+transport": 3,
+        "path_query+structure+transport": 3,
+        "authentication": 2,
+        "identity+infrastructure+structure+transport": 2,
+        "authentication+identity+infrastructure": 1,
+        "authentication+identity+structure+transport": 1,
+        "authentication+infrastructure+structure+transport": 1,
+        "authentication+infrastructure+transport": 1,
+        "authentication+structure": 1,
+        "authentication+transport": 1,
+        "identity+infrastructure+path_query+structure+transport": 1,
+        "identity+infrastructure+transport": 1,
+        "path_query+structure": 1
+      },
+      "score_bands": {
+        "0-4": 573,
+        "5-9": 178,
+        "25-29": 130,
+        "35-39": 99,
+        "20-24": 76,
+        "30-34": 59,
+        "40-44": 49,
+        "15-19": 12,
+        "45-49": 12,
+        "10-14": 5,
+        "50-54": 2,
+        "60-64": 2,
+        "55-59": 1,
+        "70-74": 1,
+        "75-79": 1
+      }
+    },
+    "legitimate": {
+      "count": 600,
+      "features": {
+        "shared_hosting": 63,
+        "auth_path": 60,
+        "long_path": 45,
+        "punycode": 25,
+        "high_digit_ratio": 20,
+        "high_entropy": 13,
+        "long_url": 9,
+        "http": 5,
+        "many_subdomains": 4,
+        "auth_hostname": 3,
+        "many_hyphens": 3,
+        "nested_url": 2,
+        "brand_mismatch": 1,
+        "brand_typo": 1
+      },
+      "categories": {
+        "path_query": 106,
+        "infrastructure": 63,
+        "structure": 35,
+        "identity": 26,
+        "transport": 5,
+        "authentication": 3
+      },
+      "category_combinations": {
+        "none": 397,
+        "path_query": 94,
+        "infrastructure": 51,
+        "structure": 16,
+        "identity": 10,
+        "identity+structure": 8,
+        "infrastructure+structure": 7,
+        "identity+path_query+structure": 4,
+        "authentication+path_query": 3,
+        "identity+path_query": 3,
+        "infrastructure+transport": 3,
+        "identity+infrastructure": 1,
+        "infrastructure+path_query": 1,
+        "path_query+transport": 1,
+        "transport": 1
+      },
+      "score_bands": {
+        "0-4": 483,
+        "5-9": 74,
+        "30-34": 11,
+        "15-19": 10,
+        "20-24": 8,
+        "25-29": 5,
+        "40-44": 4,
+        "35-39": 3,
+        "10-14": 2
+      }
+    },
+    "phishing": {
+      "count": 600,
+      "features": {
+        "shared_hosting": 369,
+        "http": 265,
+        "high_entropy": 252,
+        "many_hyphens": 229,
+        "high_digit_ratio": 78,
+        "brand_mismatch": 60,
+        "auth_hostname": 11,
+        "auth_path": 11,
+        "long_url": 8,
+        "shortener": 5,
+        "brand_typo": 3,
+        "long_hostname": 3,
+        "redirect_parameter": 2
+      },
+      "categories": {
+        "infrastructure": 374,
+        "structure": 294,
+        "transport": 265,
+        "identity": 60,
+        "path_query": 55,
+        "authentication": 11
+      },
+      "category_combinations": {
+        "infrastructure+structure": 119,
+        "infrastructure+structure+transport": 117,
+        "none": 88,
+        "infrastructure": 47,
+        "transport": 44,
+        "infrastructure+transport": 42,
+        "identity": 33,
+        "infrastructure+path_query+transport": 13,
+        "structure+transport": 13,
+        "structure": 12,
+        "identity+transport": 10,
+        "infrastructure+path_query+structure": 8,
+        "infrastructure+path_query+structure+transport": 8,
+        "infrastructure+path_query": 7,
+        "path_query": 5,
+        "identity+path_query": 4,
+        "path_query+transport": 4,
+        "authentication+infrastructure+structure": 3,
+        "identity+infrastructure": 3,
+        "identity+structure+transport": 3,
+        "path_query+structure+transport": 3,
+        "authentication": 2,
+        "identity+infrastructure+structure+transport": 2,
+        "authentication+identity+infrastructure": 1,
+        "authentication+identity+structure+transport": 1,
+        "authentication+infrastructure+structure+transport": 1,
+        "authentication+infrastructure+transport": 1,
+        "authentication+structure": 1,
+        "authentication+transport": 1,
+        "identity+infrastructure+path_query+structure+transport": 1,
+        "identity+infrastructure+transport": 1,
+        "identity+path_query+structure": 1,
+        "path_query+structure": 1
+      },
+      "score_bands": {
+        "25-29": 125,
+        "5-9": 104,
+        "35-39": 96,
+        "0-4": 90,
+        "20-24": 68,
+        "30-34": 48,
+        "40-44": 45,
+        "45-49": 12,
+        "10-14": 3,
+        "15-19": 2,
+        "50-54": 2,
+        "60-64": 2,
+        "55-59": 1,
+        "70-74": 1,
+        "75-79": 1
+      }
+    },
+    "false_positive": {
+      "count": 2,
+      "features": {
+        "auth_hostname": 2,
+        "nested_url": 2,
+        "auth_path": 1
+      },
+      "categories": {
+        "authentication": 2,
+        "path_query": 2
+      },
+      "category_combinations": {
+        "authentication+path_query": 2
+      },
+      "score_bands": {
+        "25-29": 1,
+        "30-34": 1
+      }
+    },
+    "false_negative": {
+      "count": 316,
+      "features": {
+        "shared_hosting": 112,
+        "http": 103,
+        "brand_mismatch": 33,
+        "high_entropy": 21,
+        "high_digit_ratio": 15,
+        "many_hyphens": 12,
+        "auth_path": 6,
+        "auth_hostname": 5,
+        "long_url": 4,
+        "long_hostname": 2,
+        "shortener": 2,
+        "brand_typo": 1
+      },
+      "categories": {
+        "infrastructure": 114,
+        "transport": 103,
+        "structure": 45,
+        "identity": 33,
+        "path_query": 14,
+        "authentication": 5
+      },
+      "category_combinations": {
+        "none": 88,
+        "infrastructure": 47,
+        "transport": 44,
+        "infrastructure+transport": 42,
+        "identity": 33,
+        "infrastructure+structure": 20,
+        "structure": 12,
+        "structure+transport": 11,
+        "path_query": 5,
+        "infrastructure+path_query": 4,
+        "path_query+transport": 4,
+        "authentication": 2,
+        "authentication+infrastructure+transport": 1,
+        "authentication+structure": 1,
+        "authentication+transport": 1,
+        "path_query+structure": 1
+      },
+      "score_bands": {
+        "5-9": 104,
+        "0-4": 90,
+        "20-24": 68,
+        "25-29": 47,
+        "10-14": 3,
+        "15-19": 2,
+        "30-34": 1,
+        "35-39": 1
+      }
+    },
+    "true_positive": {
+      "count": 284,
+      "features": {
+        "shared_hosting": 257,
+        "high_entropy": 231,
+        "many_hyphens": 217,
+        "http": 162,
+        "high_digit_ratio": 63,
+        "brand_mismatch": 27,
+        "auth_hostname": 6,
+        "auth_path": 5,
+        "long_url": 4,
+        "shortener": 3,
+        "brand_typo": 2,
+        "redirect_parameter": 2,
+        "long_hostname": 1
+      },
+      "categories": {
+        "infrastructure": 260,
+        "structure": 249,
+        "transport": 162,
+        "path_query": 41,
+        "identity": 27,
+        "authentication": 6
+      },
+      "category_combinations": {
+        "infrastructure+structure+transport": 117,
+        "infrastructure+structure": 99,
+        "infrastructure+path_query+transport": 13,
+        "identity+transport": 10,
+        "infrastructure+path_query+structure": 8,
+        "infrastructure+path_query+structure+transport": 8,
+        "identity+path_query": 4,
+        "authentication+infrastructure+structure": 3,
+        "identity+infrastructure": 3,
+        "identity+structure+transport": 3,
+        "infrastructure+path_query": 3,
+        "path_query+structure+transport": 3,
+        "identity+infrastructure+structure+transport": 2,
+        "structure+transport": 2,
+        "authentication+identity+infrastructure": 1,
+        "authentication+identity+structure+transport": 1,
+        "authentication+infrastructure+structure+transport": 1,
+        "identity+infrastructure+path_query+structure+transport": 1,
+        "identity+infrastructure+transport": 1,
+        "identity+path_query+structure": 1
+      },
+      "score_bands": {
+        "35-39": 95,
+        "25-29": 78,
+        "30-34": 47,
+        "40-44": 45,
+        "45-49": 12,
+        "50-54": 2,
+        "60-64": 2,
+        "55-59": 1,
+        "70-74": 1,
+        "75-79": 1
+      }
+    },
+    "true_negative": {
+      "count": 598,
+      "features": {
+        "shared_hosting": 63,
+        "auth_path": 59,
+        "long_path": 45,
+        "punycode": 25,
+        "high_digit_ratio": 20,
+        "high_entropy": 13,
+        "long_url": 9,
+        "http": 5,
+        "many_subdomains": 4,
+        "many_hyphens": 3,
+        "auth_hostname": 1,
+        "brand_mismatch": 1,
+        "brand_typo": 1
+      },
+      "categories": {
+        "path_query": 104,
+        "infrastructure": 63,
+        "structure": 35,
+        "identity": 26,
+        "transport": 5,
+        "authentication": 1
+      },
+      "category_combinations": {
+        "none": 397,
+        "path_query": 94,
+        "infrastructure": 51,
+        "structure": 16,
+        "identity": 10,
+        "identity+structure": 8,
+        "infrastructure+structure": 7,
+        "identity+path_query+structure": 4,
+        "identity+path_query": 3,
+        "infrastructure+transport": 3,
+        "authentication+path_query": 1,
+        "identity+infrastructure": 1,
+        "infrastructure+path_query": 1,
+        "path_query+transport": 1,
+        "transport": 1
+      },
+      "score_bands": {
+        "0-4": 483,
+        "5-9": 74,
+        "15-19": 10,
+        "30-34": 10,
+        "20-24": 8,
+        "25-29": 4,
+        "40-44": 4,
+        "35-39": 3,
+        "10-14": 2
+      }
+    }
+  },
+  "page_corpus": {
+    "all": {
+      "count": 240,
+      "features": {
+        "page_evidence_localized": 240,
+        "page_password_fields": 31,
+        "page_credential_bundle": 30,
+        "page_sensitive_data": 13,
+        "uses_shared_hosting": 13,
+        "page_external_form": 12,
+        "authentication_in_pathname": 7,
+        "page_sensitive_external": 5,
+        "page_multiple_credential_forms": 4,
+        "nested_url": 3,
+        "authentication_in_hostname": 2,
+        "brand_mismatch": 2,
+        "unusual_port": 2,
+        "page_brand_mismatch": 1,
+        "page_credential_external": 1
+      },
+      "categories": {
+        "page.credentials": 80,
+        "url.structure": 29,
+        "url.path_query": 27,
+        "url.transport": 23,
+        "page.page_structure": 21,
+        "url.infrastructure": 15,
+        "page.sensitive_data": 13,
+        "page.form_destination": 10,
+        "url.authentication": 2,
+        "url.identity": 2,
+        "page.identity": 1
+      },
+      "category_combinations": {
+        "none": 89,
+        "page.credentials": 42,
+        "url.structure": 17,
+        "url.transport": 14,
+        "url.path_query": 10,
+        "page.credentials+url.path_query": 9,
+        "page.credentials+page.page_structure": 8,
+        "url.infrastructure": 8,
+        "page.credentials+page.page_structure+page.sensitive_data": 5,
+        "page.page_structure": 4,
+        "url.infrastructure+url.structure": 3,
+        "url.path_query+url.transport": 3,
+        "page.credentials+page.form_destination": 2,
+        "page.credentials+page.sensitive_data": 2,
+        "page.credentials+url.structure": 2,
+        "page.credentials+url.transport": 2,
+        "page.form_destination": 2,
+        "url.path_query+url.structure": 2,
+        "page.credentials+page.form_destination+page.identity+page.sensitive_data+url.infrastructure": 1,
+        "page.credentials+page.form_destination+page.page_structure+page.sensitive_data": 1,
+        "page.credentials+page.form_destination+page.sensitive_data+url.path_query+url.transport": 1,
+        "page.credentials+page.form_destination+page.sensitive_data+url.structure+url.transport": 1,
+        "page.credentials+page.page_structure+url.path_query": 1,
+        "page.credentials+page.page_structure+url.structure": 1,
+        "page.credentials+url.authentication": 1,
+        "page.credentials+url.infrastructure": 1,
+        "page.form_destination+page.page_structure+page.sensitive_data": 1,
+        "page.form_destination+url.transport": 1,
+        "page.sensitive_data": 1,
+        "url.authentication+url.infrastructure": 1,
+        "url.identity": 1,
+        "url.identity+url.structure": 1,
+        "url.infrastructure+url.path_query+url.structure": 1,
+        "url.structure+url.transport": 1
+      },
+      "score_bands": {
+        "0-4": 135,
+        "5-9": 47,
+        "10-14": 27,
+        "15-19": 10,
+        "20-24": 10,
+        "25-29": 8,
+        "30-34": 1,
+        "35-39": 1,
+        "80-84": 1
+      }
+    },
+    "legitimate": {
+      "count": 120,
+      "features": {
+        "page_evidence_localized": 120,
+        "page_credential_bundle": 19,
+        "page_password_fields": 19,
+        "page_sensitive_data": 9,
+        "page_external_form": 7,
+        "page_multiple_credential_forms": 4,
+        "authentication_in_pathname": 3,
+        "page_sensitive_external": 2,
+        "authentication_in_hostname": 1
+      },
+      "categories": {
+        "page.credentials": 44,
+        "page.page_structure": 18,
+        "url.path_query": 11,
+        "page.sensitive_data": 9,
+        "page.form_destination": 6,
+        "url.authentication": 1,
+        "url.structure": 1,
+        "url.transport": 1
+      },
+      "category_combinations": {
+        "none": 64,
+        "page.credentials": 20,
+        "page.credentials+page.page_structure": 7,
+        "page.credentials+url.path_query": 5,
+        "url.path_query": 5,
+        "page.credentials+page.page_structure+page.sensitive_data": 4,
+        "page.page_structure": 3,
+        "page.credentials+page.form_destination": 2,
+        "page.credentials+page.sensitive_data": 2,
+        "page.credentials+page.form_destination+page.page_structure+page.sensitive_data": 1,
+        "page.credentials+page.page_structure+url.path_query": 1,
+        "page.credentials+page.page_structure+url.structure": 1,
+        "page.credentials+url.authentication": 1,
+        "page.form_destination": 1,
+        "page.form_destination+page.page_structure+page.sensitive_data": 1,
+        "page.form_destination+url.transport": 1,
+        "page.sensitive_data": 1
+      },
+      "score_bands": {
+        "0-4": 89,
+        "10-14": 17,
+        "15-19": 7,
+        "20-24": 2,
+        "25-29": 2,
+        "5-9": 2,
+        "30-34": 1
+      }
+    },
+    "phishing": {
+      "count": 120,
+      "features": {
+        "page_evidence_localized": 120,
+        "uses_shared_hosting": 13,
+        "page_password_fields": 12,
+        "page_credential_bundle": 11,
+        "page_external_form": 5,
+        "authentication_in_pathname": 4,
+        "page_sensitive_data": 4,
+        "nested_url": 3,
+        "page_sensitive_external": 3,
+        "brand_mismatch": 2,
+        "unusual_port": 2,
+        "authentication_in_hostname": 1,
+        "page_brand_mismatch": 1,
+        "page_credential_external": 1
+      },
+      "categories": {
+        "page.credentials": 36,
+        "url.structure": 28,
+        "url.transport": 22,
+        "url.path_query": 16,
+        "url.infrastructure": 15,
+        "page.form_destination": 4,
+        "page.sensitive_data": 4,
+        "page.page_structure": 3,
+        "url.identity": 2,
+        "page.identity": 1,
+        "url.authentication": 1
+      },
+      "category_combinations": {
+        "none": 25,
+        "page.credentials": 22,
+        "url.structure": 17,
+        "url.transport": 14,
+        "url.infrastructure": 8,
+        "url.path_query": 5,
+        "page.credentials+url.path_query": 4,
+        "url.infrastructure+url.structure": 3,
+        "url.path_query+url.transport": 3,
+        "page.credentials+url.structure": 2,
+        "page.credentials+url.transport": 2,
+        "url.path_query+url.structure": 2,
+        "page.credentials+page.form_destination+page.identity+page.sensitive_data+url.infrastructure": 1,
+        "page.credentials+page.form_destination+page.sensitive_data+url.path_query+url.transport": 1,
+        "page.credentials+page.form_destination+page.sensitive_data+url.structure+url.transport": 1,
+        "page.credentials+page.page_structure": 1,
+        "page.credentials+page.page_structure+page.sensitive_data": 1,
+        "page.credentials+url.infrastructure": 1,
+        "page.form_destination": 1,
+        "page.page_structure": 1,
+        "url.authentication+url.infrastructure": 1,
+        "url.identity": 1,
+        "url.identity+url.structure": 1,
+        "url.infrastructure+url.path_query+url.structure": 1,
+        "url.structure+url.transport": 1
+      },
+      "score_bands": {
+        "0-4": 46,
+        "5-9": 45,
+        "10-14": 10,
+        "20-24": 8,
+        "25-29": 6,
+        "15-19": 3,
+        "35-39": 1,
+        "80-84": 1
+      }
+    },
+    "false_positive": {
+      "count": 0,
+      "features": {},
+      "categories": {},
+      "category_combinations": {},
+      "score_bands": {}
+    },
+    "false_negative": {
+      "count": 117,
+      "features": {
+        "page_evidence_localized": 117,
+        "uses_shared_hosting": 12,
+        "page_password_fields": 11,
+        "page_credential_bundle": 10,
+        "authentication_in_pathname": 4,
+        "page_external_form": 4,
+        "nested_url": 3,
+        "page_sensitive_data": 3,
+        "page_sensitive_external": 2,
+        "authentication_in_hostname": 1,
+        "brand_mismatch": 1,
+        "unusual_port": 1
+      },
+      "categories": {
+        "page.credentials": 35,
+        "url.structure": 26,
+        "url.transport": 22,
+        "url.path_query": 15,
+        "url.infrastructure": 13,
+        "page.form_destination": 3,
+        "page.page_structure": 3,
+        "page.sensitive_data": 3,
+        "url.authentication": 1,
+        "url.identity": 1
+      },
+      "category_combinations": {
+        "none": 25,
+        "page.credentials": 22,
+        "url.structure": 17,
+        "url.transport": 14,
+        "url.infrastructure": 8,
+        "url.path_query": 5,
+        "page.credentials+url.path_query": 4,
+        "url.infrastructure+url.structure": 3,
+        "url.path_query+url.transport": 3,
+        "page.credentials+url.structure": 2,
+        "page.credentials+url.transport": 2,
+        "url.path_query+url.structure": 2,
+        "page.credentials+page.form_destination+page.sensitive_data+url.path_query+url.transport": 1,
+        "page.credentials+page.form_destination+page.sensitive_data+url.structure+url.transport": 1,
+        "page.credentials+page.page_structure": 1,
+        "page.credentials+page.page_structure+page.sensitive_data": 1,
+        "page.credentials+url.infrastructure": 1,
+        "page.form_destination": 1,
+        "page.page_structure": 1,
+        "url.authentication+url.infrastructure": 1,
+        "url.identity": 1,
+        "url.structure+url.transport": 1
+      },
+      "score_bands": {
+        "0-4": 46,
+        "5-9": 45,
+        "10-14": 10,
+        "20-24": 8,
+        "25-29": 5,
+        "15-19": 3
+      }
+    },
+    "true_positive": {
+      "count": 3,
+      "features": {
+        "page_evidence_localized": 3,
+        "brand_mismatch": 1,
+        "page_brand_mismatch": 1,
+        "page_credential_bundle": 1,
+        "page_credential_external": 1,
+        "page_external_form": 1,
+        "page_password_fields": 1,
+        "page_sensitive_data": 1,
+        "page_sensitive_external": 1,
+        "unusual_port": 1,
+        "uses_shared_hosting": 1
+      },
+      "categories": {
+        "url.infrastructure": 2,
+        "url.structure": 2,
+        "page.credentials": 1,
+        "page.form_destination": 1,
+        "page.identity": 1,
+        "page.sensitive_data": 1,
+        "url.identity": 1,
+        "url.path_query": 1
+      },
+      "category_combinations": {
+        "page.credentials+page.form_destination+page.identity+page.sensitive_data+url.infrastructure": 1,
+        "url.identity+url.structure": 1,
+        "url.infrastructure+url.path_query+url.structure": 1
+      },
+      "score_bands": {
+        "25-29": 1,
+        "35-39": 1,
+        "80-84": 1
+      }
+    },
+    "true_negative": {
+      "count": 120,
+      "features": {
+        "page_evidence_localized": 120,
+        "page_credential_bundle": 19,
+        "page_password_fields": 19,
+        "page_sensitive_data": 9,
+        "page_external_form": 7,
+        "page_multiple_credential_forms": 4,
+        "authentication_in_pathname": 3,
+        "page_sensitive_external": 2,
+        "authentication_in_hostname": 1
+      },
+      "categories": {
+        "page.credentials": 44,
+        "page.page_structure": 18,
+        "url.path_query": 11,
+        "page.sensitive_data": 9,
+        "page.form_destination": 6,
+        "url.authentication": 1,
+        "url.structure": 1,
+        "url.transport": 1
+      },
+      "category_combinations": {
+        "none": 64,
+        "page.credentials": 20,
+        "page.credentials+page.page_structure": 7,
+        "page.credentials+url.path_query": 5,
+        "url.path_query": 5,
+        "page.credentials+page.page_structure+page.sensitive_data": 4,
+        "page.page_structure": 3,
+        "page.credentials+page.form_destination": 2,
+        "page.credentials+page.sensitive_data": 2,
+        "page.credentials+page.form_destination+page.page_structure+page.sensitive_data": 1,
+        "page.credentials+page.page_structure+url.path_query": 1,
+        "page.credentials+page.page_structure+url.structure": 1,
+        "page.credentials+url.authentication": 1,
+        "page.form_destination": 1,
+        "page.form_destination+page.page_structure+page.sensitive_data": 1,
+        "page.form_destination+url.transport": 1,
+        "page.sensitive_data": 1
+      },
+      "score_bands": {
+        "0-4": 89,
+        "10-14": 17,
+        "15-19": 7,
+        "20-24": 2,
+        "25-29": 2,
+        "5-9": 2,
+        "30-34": 1
+      }
+    }
+  }
+}
