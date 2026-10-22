@@ -1,0 +1,30 @@
+{
+  "algorithm": "SHA-256",
+  "artifacts": [
+    {
+      "name": "errors.csv",
+      "sha256": "ca0163f675111ce9074b746e2f3330d11d75e7c1cf881849681bdc5e7480f305",
+      "bytes": 34147
+    },
+    {
+      "name": "metrics.json",
+      "sha256": "734ac5425a9e475e3e3cfd171b54ae826b1c9ded3d62ae0ef0281757e14e3b43",
+      "bytes": 1173
+    },
+    {
+      "name": "predictions.csv",
+      "sha256": "421a7ef02ba2a6e6b7628e76897cff18777333bbb2821bad44018da645ce2016",
+      "bytes": 156627
+    },
+    {
+      "name": "run.json",
+      "sha256": "3c2ebd64bc9e285e4f55ed62aff07ad434fc8cb8703e7b7ab34b70f34ddaf410",
+      "bytes": 1626
+    },
+    {
+      "name": "score-distribution.csv",
+      "sha256": "805dce8dfd6726cebc4ddce7988c84d00cce1cbd66909e7abeb5cb862fb2077b",
+      "bytes": 141
+    }
+  ]
+}

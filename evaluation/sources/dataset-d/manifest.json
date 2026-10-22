@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "sealed-not-evaluated",
+  "status": "evaluated-once",
   "sealed_at": "2026-10-22T19:35:41.609Z",
   "seed": "phishpect-dataset-d-2026-10-22-v1",
   "detector_reference": {
@@ -165,5 +165,10 @@
     "evaluation/datasets/sample.csv",
     "evaluation/page-corpus/corpus-manifest.json"
   ],
-  "detector_executed": false
+  "detector_executed": true,
+  "official_result": {
+    "path": "evaluation/results/v4/dataset-d/official",
+    "executed_at": "2026-10-22T19:36:56.953Z",
+    "metrics_sha256": "734ac5425a9e475e3e3cfd171b54ae826b1c9ded3d62ae0ef0281757e14e3b43"
+  }
 }

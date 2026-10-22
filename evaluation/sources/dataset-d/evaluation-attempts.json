@@ -11,6 +11,17 @@
       "manifest_changed": false,
       "error": "ENOENT while creating evaluation/results/v4/dataset-d/official because parent directories did not exist",
       "remediation": "Create the output directory recursively; detector and Dataset D remain byte-identical."
+    },
+    {
+      "attempt": 2,
+      "status": "official-independent-validation-complete",
+      "executed_at": "2026-10-22T19:36:56.953Z",
+      "command": "node scripts/v4/evaluate-dataset-d.js --confirm-official",
+      "detector_invoked_in_memory": true,
+      "result_observed": true,
+      "manifest_changed": true,
+      "result_path": "evaluation/results/v4/dataset-d/official",
+      "note": "Deterministic rerun after output-directory-only repair; detector and Dataset D remained byte-identical."
     }
   ]
 }
