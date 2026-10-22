@@ -12,6 +12,11 @@ const safeCases = [
   "https://xn--bcher-kva.example/conta",
   "https://shop.example/checkout?utm_source=newsletter&utm_campaign=long-campaign-name",
   "https://crm.example/customer/account/verification/history",
+  "https://auth.company.example/sso/saml?return_to=https%3A%2F%2Fapp.company.example%2Fdashboard",
+  "https://checkout.example/pay?session=1234567890&currency=BRL",
+  "https://tenant.netlify.app/account",
+  "https://project.pages.dev/docs/signin",
+  "https://firebaseapp.example.example/profile",
   "https://[2001:db8::1]/status",
   "https://example.com:443/login"
 ];
@@ -26,7 +31,9 @@ const suspiciousCases = [
   "https://google-login.test/redirect?url=https%3A%2F%2Fevil.example%2Fsignin",
   "https://paypal.example@secure-login.test/account",
   "https://paypal.example@@secure-login.test/account",
-  "https://ledger-login-auth.tenant.pages.dev/verify"
+  "https://ledger-login-auth.tenant.pages.dev/verify",
+  "http://10.0.0.8/login/password",
+  "https://xn--paypa-4ve.test/login/verify"
 ];
 
 for (const url of suspiciousCases) {
@@ -43,6 +50,19 @@ assert.ok(nested.features.nested_urls.length === 1);
 const unusualPortOnly = analyzeUrlV4("https://example.com:8443/status");
 assert.strictEqual(unusualPortOnly.level, "safe");
 assert.strictEqual(unusualPortOnly.signals.unusual_port, true);
+
+const structuredHosting = analyzeUrlV4("https://account-security-login-7392-x9.tenant.pages.dev/");
+assert.strictEqual(structuredHosting.level, "suspicious");
+assert.ok(structuredHosting.relationships.some((item) => item.code === "authentication_structure"));
+
+const weakHosting = analyzeUrlV4("http://tenant.pages.dev/");
+assert.strictEqual(weakHosting.level, "safe");
+
+const brandAlone = analyzeUrlV4("https://paypal.example/");
+assert.strictEqual(brandAlone.level, "safe");
+
+const corroboratedBrand = analyzeUrlV4(`https://paypal.example/${"very-long-path-".repeat(8)}`);
+assert.strictEqual(corroboratedBrand.level, "suspicious");
 
 const blocked = analyzeUrlV4("https://phishing-test.invalid/");
 assert.strictEqual(blocked.level, "blocked");

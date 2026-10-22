@@ -98,6 +98,11 @@ function analyzeUrlV4(value) {
   const rawAuthority = v4RawAuthority(value);
   const atCount = (rawAuthority.match(/@/g) || []).length;
   const unusualPort = !v4DefaultPort(parsed.protocol, parsed.port);
+  const oauthLikeFlow = parsed.protocol === "https:" && redirectParameters.length > 0 &&
+    /\/(?:oauth2?|authorize|sso)(?:\/|$)/i.test(parsed.pathname) &&
+    base.signals?.brand_mismatch !== true && base.signals?.uses_userinfo !== true &&
+    base.signals?.uses_ip !== true && base.signals?.punycode !== true &&
+    base.signals?.uses_shared_hosting !== true && !unusualPort;
 
   const add = (entry) => {
     contributions.push(entry);
@@ -145,6 +150,9 @@ function analyzeUrlV4(value) {
       (categoryScores.authentication > 0 || codes.has("nested_url") || parsed.protocol === "http:")) {
     relationship("identity_auth_context", ["identity", "authentication"], "Identidade incompatível aparece junto de contexto de autenticação ou transporte inseguro");
   }
+  if (codes.has("brand_mismatch") && evidenceGroups.some((group) => group !== "identity")) {
+    relationship("brand_independent_context", ["identity", ...evidenceGroups.filter((group) => group !== "identity")], "Marca incompatível é corroborada por outra categoria independente");
+  }
   if (codes.has("direct_ip") && (categoryScores.authentication > 0 || authParameters.length > 0 || base.signals?.authentication_in_pathname === true)) {
     relationship("ip_auth_context", ["identity", "authentication"], "Endereço IP é combinado com contexto de autenticação");
   }
@@ -154,8 +162,14 @@ function analyzeUrlV4(value) {
   if (codes.has("punycode") && (codes.has("brand_mismatch") || codes.has("brand_typo"))) {
     relationship("punycode_brand", ["identity"], "Punycode aparece junto de possível imitação de marca");
   }
-  if (codes.has("nested_url") && (codes.has("brand_in_path") || codes.has("brand_mismatch") || categoryScores.authentication > 0)) {
+  if (!oauthLikeFlow && codes.has("nested_url") && (codes.has("brand_in_path") || codes.has("brand_mismatch") || categoryScores.authentication > 0)) {
     relationship("nested_identity", ["path_query", "identity"], "URL aninhada aparece junto de identidade ou autenticação");
+  }
+  if (codes.has("brand_in_path") && codes.has("shortener")) {
+    relationship("shortened_brand_path", ["path_query", "infrastructure"], "Marca no caminho aparece atrás de um encurtador");
+  } else if (codes.has("brand_in_path") && evidenceGroups.length >= 3 &&
+      (categoryScores.transport > 0 || categoryScores.infrastructure > 0 || categoryScores.authentication > 0)) {
+    relationship("brand_path_context", ["path_query", "transport", "infrastructure"], "Marca no caminho é corroborada por múltiplas categorias independentes");
   }
   if (codes.has("shared_hosting") && (codes.has("brand_mismatch") || codes.has("brand_typo") || categoryScores.authentication > 0)) {
     relationship("shared_hosting_context", ["infrastructure", "identity"], "Hospedagem compartilhada aparece com identidade ou autenticação incompatível", "moderate");
@@ -163,11 +177,21 @@ function analyzeUrlV4(value) {
 
   const structuralSignals = ["long_hostname", "many_subdomains", "many_hyphens", "high_digit_ratio", "high_entropy"]
     .filter((code) => codes.has(code));
+  if (codes.has("shared_hosting") && structuralSignals.length >= 2) {
+    relationship("structured_hosting", ["infrastructure", "structure"], "Hospedagem compartilhada coincide com múltiplas anomalias estruturais independentes");
+  }
+  if (categoryScores.authentication >= 8 && structuralSignals.length >= 1) {
+    relationship("authentication_structure", ["authentication", "structure"], "Autenticação no hostname coincide com estrutura anormal", "moderate");
+  }
+  if (categoryScores.transport > 0 && categoryScores.structure >= 8) {
+    relationship("insecure_abnormal_structure", ["transport", "structure"], "Transporte HTTP coincide com estrutura de hostname anormal");
+  }
   const weakDiversityEligible = evidenceGroups.length >= 3 && structuralSignals.length >= 1 &&
     (categoryScores.transport > 0 || categoryScores.path_query > 0) && categoryScores.infrastructure > 0;
   const relationshipEligible = relationships.some((item) => item.strength === "strong") ||
     relationships.filter((item) => item.strength === "moderate").length >= 2;
-  const score = Math.min(100, Object.values(categoryScores).reduce((sum, number) => sum + number, 0));
+  const diversityBonus = evidenceGroups.length >= 4 ? 18 : evidenceGroups.length === 3 ? 14 : evidenceGroups.length === 2 ? 10 : 0;
+  const score = Math.min(100, Object.values(categoryScores).reduce((sum, number) => sum + number, 0) + diversityBonus);
   const confirmedThreat = base.signals?.confirmed_threat === true;
   const level = confirmedThreat ? "blocked" :
     (score >= V4_URL_SUSPICIOUS_THRESHOLD && (relationshipEligible || weakDiversityEligible) ? "suspicious" : "safe");
@@ -188,6 +212,7 @@ function analyzeUrlV4(value) {
     category_scores: categoryScores,
     evidence_categories: evidenceGroups,
     evidence_groups: evidenceGroups,
+    diversity_bonus: diversityBonus,
     relationships,
     decision_basis: confirmedThreat ? "confirmed-local-threat" :
       (relationshipEligible ? "contextual-relationship" : (weakDiversityEligible ? "independent-diversity" : "insufficient-context")),
@@ -205,7 +230,8 @@ function analyzeUrlV4(value) {
       nested_urls: nestedUrls,
       redirect_parameters: redirectParameters,
       authentication_parameters: authParameters,
-      authority_at_count: atCount
+      authority_at_count: atCount,
+      oauth_like_flow: oauthLikeFlow
     }
   };
 }
