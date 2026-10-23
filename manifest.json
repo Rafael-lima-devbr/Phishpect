@@ -1,21 +1,21 @@
 {
   "manifest_version": 3,
   "name": "Phishpect MVP",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Integra URL, reputação e sinais pós-carregamento localmente para alertar sobre riscos de phishing.",
   "action": {
     "default_title": "Abrir testes do Phishpect",
     "default_popup": "test.html"
   },
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background-v41.js"
   },
   "permissions": ["storage", "webNavigation"],
   "host_permissions": ["http://*/*", "https://*/*"],
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["vendor/tldts.umd.min.js", "analysis.js", "analysis-v4.js", "page-analysis-v2.js", "page-analysis-v4.js", "navigation-policy.js", "content.js"],
+      "js": ["vendor/tldts.umd.min.js", "analysis.js", "analysis-v4.js", "analysis-v41.js", "page-analysis-v2.js", "page-analysis-v4.js", "navigation-policy.js", "content-v41.js"],
       "run_at": "document_start"
     }
   ]
