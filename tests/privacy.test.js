@@ -34,7 +34,7 @@ for (const collectPageSnapshot of [collectV1Snapshot, collectV2Snapshot, collect
   assert.equal(JSON.stringify(snapshot).includes(secret), false);
 }
 
-for (const file of ["page-analysis.js", "page-analysis-v2.js", "page-analysis-v4.js", "content.js", "background.js"]) {
+for (const file of ["page-analysis.js", "page-analysis-v2.js", "page-analysis-v4.js", "content.js", "background.js", "content-v41.js", "background-v41.js"]) {
   const source = fs.readFileSync(path.join(__dirname, "..", file), "utf8");
   assert.equal(/(?:input|textarea|field)\.value\b/.test(source), false, `${file} não pode ler valores digitados`);
   assert.equal(/outerHTML|innerHTML/.test(source), false, `${file} não pode serializar HTML bruto`);
@@ -45,7 +45,7 @@ assert.equal(JSON.stringify(manifest).includes("http://localhost"), false);
 assert.equal(JSON.stringify(manifest).includes("https://localhost"), false);
 assert.equal(Object.hasOwn(manifest, "externally_connectable"), false);
 
-for (const file of ["background.js", "content.js"]) {
+for (const file of ["background.js", "content.js", "background-v41.js", "content-v41.js"]) {
   const source = fs.readFileSync(path.join(__dirname, "..", file), "utf8");
   const logCalls = [...source.matchAll(/console\.(?:warn|error|log)\(([^\n]*)\)/g)].map((match) => match[1]);
   assert.ok(logCalls.every((call) => /^"[^"]*"$/.test(call.trim())), `${file} deve usar apenas mensagens de log constantes`);
