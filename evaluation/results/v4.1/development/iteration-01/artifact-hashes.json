@@ -1,0 +1,35 @@
+{
+  "algorithm": "SHA-256",
+  "artifacts": [
+    {
+      "name": "dataset-a-predictions.csv",
+      "sha256": "edee06a46c2b5d6e5611f4bbd1b4f55e882fbbb4ba37fb6d2467b3d3a580df1d",
+      "bytes": 148141
+    },
+    {
+      "name": "dataset-b-predictions.csv",
+      "sha256": "40ba5b5d5f73f274ee99fa3af28a880708588980392d46a7702850490dc401bc",
+      "bytes": 150002
+    },
+    {
+      "name": "dataset-c-predictions.csv",
+      "sha256": "1afbcc86bcc2e2d3d2d400f8ac1112f2e1c86a127bdfd03a4573f15907a4e2c6",
+      "bytes": 518995
+    },
+    {
+      "name": "dataset-d-predictions.csv",
+      "sha256": "1513498f5cc20079a60884260a8c59df9c46b12418a366179061f8b35dd0cb50",
+      "bytes": 172203
+    },
+    {
+      "name": "page-corpus-predictions.csv",
+      "sha256": "4a32075ff5a75f9823b3d4ca20df030576c42bd3efeabd8ae526ad304724e27b",
+      "bytes": 338659
+    },
+    {
+      "name": "summary.json",
+      "sha256": "9c85590ca168a240389f8548535fec485e63321138926af47616b712bc0ec1e1",
+      "bytes": 7230
+    }
+  ]
+}

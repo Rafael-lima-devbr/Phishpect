@@ -13,6 +13,8 @@
     "v4:regression:url": "node scripts/v4/evaluate-url-regression.js",
     "v4:regression:page": "node scripts/v4/evaluate-page-regression.js",
     "v4:benchmark": "node scripts/v4/benchmark-v4.js",
+    "v4.1:regression": "node scripts/v4.1/evaluate-development.js --iteration=final",
+    "v4.1:benchmark": "node scripts/v4.1/benchmark-v41.js",
     "dataset-d:collect": "node scripts/v4/prepare-dataset-d.js collect",
     "dataset-d:seal": "node scripts/v4/prepare-dataset-d.js seal",
     "dataset-d:evaluate": "node scripts/v4/evaluate-dataset-d.js",

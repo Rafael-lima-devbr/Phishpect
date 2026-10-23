@@ -1,0 +1,43 @@
+{
+  "status": "development-only; not independent validation",
+  "selected_iteration": "iteration-02",
+  "final_result_directory": "evaluation/results/v4.1/development/final",
+  "iterations": [
+    {
+      "number": 1,
+      "directory": "iteration-01",
+      "status": "accepted",
+      "change": "HTTP with shared hosting, moderate hostname structure or authentication path; corroborated hostname authentication; HTTP with password collection",
+      "C": { "TP": 201, "TN": 294, "FP": 6, "FN": 99, "recall": 0.67, "f1": 0.792899, "false_alert_rate": 0.02 },
+      "D": { "TP": 59, "TN": 100, "FP": 0, "FN": 41, "recall": 0.59, "f1": 0.742138, "false_alert_rate": 0.0 },
+      "page_corpus": { "TP": 7, "TN": 120, "FP": 0, "FN": 113 }
+    },
+    {
+      "number": 2,
+      "directory": "iteration-02",
+      "status": "accepted-final",
+      "change": "shared hosting with high hostname entropy or many hyphens",
+      "C": { "TP": 210, "TN": 292, "FP": 8, "FN": 90, "recall": 0.70, "f1": 0.810811, "false_alert_rate": 0.026667 },
+      "D": { "TP": 61, "TN": 98, "FP": 2, "FN": 39, "recall": 0.61, "f1": 0.748466, "false_alert_rate": 0.02 },
+      "page_corpus": { "TP": 9, "TN": 120, "FP": 0, "FN": 111 }
+    },
+    {
+      "number": 3,
+      "directory": "iteration-03-corroborated-entropy",
+      "status": "rejected",
+      "change": "require a third corroborator for shared hosting with high entropy",
+      "reason": "Removed four false alerts but lost fourteen recovered phishing; F1 decreased in B, C and D.",
+      "C": { "TP": 203, "TN": 294, "FP": 6, "FN": 97, "recall": 0.676667, "f1": 0.797642, "false_alert_rate": 0.02 },
+      "D": { "TP": 59, "TN": 100, "FP": 0, "FN": 41, "recall": 0.59, "f1": 0.742138, "false_alert_rate": 0.0 }
+    },
+    {
+      "number": 4,
+      "directory": "iteration-04-hosted-brand-path",
+      "status": "rejected",
+      "change": "shared hosting with a brand term in the path",
+      "reason": "Small recall gain introduced a known false alert on legitimate hosted API documentation and consumed the full preferred C FAR budget.",
+      "C": { "TP": 213, "TN": 291, "FP": 9, "FN": 87, "recall": 0.71, "f1": 0.816092, "false_alert_rate": 0.03 },
+      "D": { "TP": 61, "TN": 98, "FP": 2, "FN": 39, "recall": 0.61, "f1": 0.748466, "false_alert_rate": 0.02 }
+    }
+  ]
+}

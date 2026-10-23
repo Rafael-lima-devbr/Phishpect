@@ -1,0 +1,267 @@
+{
+  "status": "V4.1 development evaluation; not independent validation",
+  "iteration": "iteration-03-corroborated-entropy",
+  "executed_at": "2026-10-23T00:25:35.710Z",
+  "datasets": {
+    "A": {
+      "samples": 200,
+      "confusion_matrix": {
+        "TP": 40,
+        "TN": 100,
+        "FP": 0,
+        "FN": 60
+      },
+      "metrics": {
+        "recall": 0.4,
+        "precision": 1,
+        "f1": 0.5714285714285715,
+        "accuracy": 0.7,
+        "false_alert_rate": 0
+      },
+      "confidence_intervals_95": {
+        "recall": {
+          "estimate": 0.4,
+          "lower": 0.3094012864324589,
+          "upper": 0.4979974132089382,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "precision": {
+          "estimate": 1,
+          "lower": 0.9123783988027135,
+          "upper": 1,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "accuracy": {
+          "estimate": 0.7,
+          "lower": 0.6332093162728074,
+          "upper": 0.7592525531762859,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "false_alert_rate": {
+          "estimate": 0,
+          "lower": 3.469446951953614e-18,
+          "upper": 0.03699349820698568,
+          "confidence": 0.95,
+          "method": "Wilson"
+        }
+      },
+      "classifications": {
+        "safe": 160,
+        "suspicious": 40,
+        "blocked": 0
+      },
+      "prevalence_warning": "Conjunto artificialmente balanceado; precision e accuracy não estimam diretamente o desempenho esperado na web real."
+    },
+    "B": {
+      "samples": 200,
+      "confusion_matrix": {
+        "TP": 45,
+        "TN": 100,
+        "FP": 0,
+        "FN": 55
+      },
+      "metrics": {
+        "recall": 0.45,
+        "precision": 1,
+        "f1": 0.6206896551724138,
+        "accuracy": 0.725,
+        "false_alert_rate": 0
+      },
+      "confidence_intervals_95": {
+        "recall": {
+          "estimate": 0.45,
+          "lower": 0.3561453797951198,
+          "upper": 0.5475539700255787,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "precision": {
+          "estimate": 1,
+          "lower": 0.9213484012671117,
+          "upper": 1,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "accuracy": {
+          "estimate": 0.725,
+          "lower": 0.6593166064233035,
+          "upper": 0.7822029967069265,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "false_alert_rate": {
+          "estimate": 0,
+          "lower": 3.469446951953614e-18,
+          "upper": 0.03699349820698568,
+          "confidence": 0.95,
+          "method": "Wilson"
+        }
+      },
+      "classifications": {
+        "safe": 155,
+        "suspicious": 45,
+        "blocked": 0
+      },
+      "prevalence_warning": "Conjunto artificialmente balanceado; precision e accuracy não estimam diretamente o desempenho esperado na web real."
+    },
+    "C": {
+      "samples": 600,
+      "confusion_matrix": {
+        "TP": 203,
+        "TN": 294,
+        "FP": 6,
+        "FN": 97
+      },
+      "metrics": {
+        "recall": 0.6766666666666666,
+        "precision": 0.9712918660287081,
+        "f1": 0.7976424361493123,
+        "accuracy": 0.8283333333333334,
+        "false_alert_rate": 0.02
+      },
+      "confidence_intervals_95": {
+        "recall": {
+          "estimate": 0.6766666666666666,
+          "lower": 0.6217915462510746,
+          "upper": 0.7270746039162523,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "precision": {
+          "estimate": 0.9712918660287081,
+          "lower": 0.9387937755007709,
+          "upper": 0.9867777794562942,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "accuracy": {
+          "estimate": 0.8283333333333334,
+          "lower": 0.7960952941653718,
+          "upper": 0.8563938555022981,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "false_alert_rate": {
+          "estimate": 0.02,
+          "lower": 0.009197631557703617,
+          "upper": 0.042939620817860576,
+          "confidence": 0.95,
+          "method": "Wilson"
+        }
+      },
+      "classifications": {
+        "safe": 391,
+        "suspicious": 209,
+        "blocked": 0
+      },
+      "prevalence_warning": "Conjunto artificialmente balanceado; precision e accuracy não estimam diretamente o desempenho esperado na web real."
+    },
+    "D": {
+      "samples": 200,
+      "confusion_matrix": {
+        "TP": 59,
+        "TN": 100,
+        "FP": 0,
+        "FN": 41
+      },
+      "metrics": {
+        "recall": 0.59,
+        "precision": 1,
+        "f1": 0.7421383647798743,
+        "accuracy": 0.795,
+        "false_alert_rate": 0
+      },
+      "confidence_intervals_95": {
+        "recall": {
+          "estimate": 0.59,
+          "lower": 0.4920143005341078,
+          "upper": 0.6813268697886348,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "precision": {
+          "estimate": 1,
+          "lower": 0.9388706294732116,
+          "upper": 1,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "accuracy": {
+          "estimate": 0.795,
+          "lower": 0.7337430194757748,
+          "upper": 0.8451382379616379,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "false_alert_rate": {
+          "estimate": 0,
+          "lower": 3.469446951953614e-18,
+          "upper": 0.03699349820698568,
+          "confidence": 0.95,
+          "method": "Wilson"
+        }
+      },
+      "classifications": {
+        "safe": 141,
+        "suspicious": 59,
+        "blocked": 0
+      },
+      "prevalence_warning": "Conjunto artificialmente balanceado; precision e accuracy não estimam diretamente o desempenho esperado na web real."
+    },
+    "page_corpus": {
+      "samples": 240,
+      "confusion_matrix": {
+        "TP": 9,
+        "TN": 120,
+        "FP": 0,
+        "FN": 111
+      },
+      "metrics": {
+        "recall": 0.075,
+        "precision": 1,
+        "f1": 0.13953488372093023,
+        "accuracy": 0.5375,
+        "false_alert_rate": 0
+      },
+      "confidence_intervals_95": {
+        "recall": {
+          "estimate": 0.075,
+          "lower": 0.03995711539596028,
+          "upper": 0.1364091760599377,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "precision": {
+          "estimate": 1,
+          "lower": 0.7008549515804559,
+          "upper": 1,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "accuracy": {
+          "estimate": 0.5375,
+          "lower": 0.47432588319684194,
+          "upper": 0.5994925728075412,
+          "confidence": 0.95,
+          "method": "Wilson"
+        },
+        "false_alert_rate": {
+          "estimate": 0,
+          "lower": 0,
+          "upper": 0.031019166418703486,
+          "confidence": 0.95,
+          "method": "Wilson"
+        }
+      },
+      "classifications": {
+        "safe": 231,
+        "suspicious": 8,
+        "blocked": 1
+      },
+      "prevalence_warning": "Conjunto artificialmente balanceado; precision e accuracy não estimam diretamente o desempenho esperado na web real."
+    }
+  }
+}
