@@ -2,7 +2,7 @@
 
 Extensão experimental para Microsoft Edge que combina **análise local baseada em regras** com uma **base local de reputação** para identificar páginas potencialmente fraudulentas e intervir de acordo com o nível de risco.
 
-**Status:** V4 experimental — detector integrado, com validação independente versionada
+**Status:** V4.1 experimental — recuperação contextual de recall em desenvolvimento
 
 <p align="center">
   <img width="62%" alt="Phishpect browser extension interface" src="https://github.com/user-attachments/assets/d88ee44d-ad87-46ec-b604-99d0219cf3d9" />
@@ -12,7 +12,7 @@ Extensão experimental para Microsoft Edge que combina **análise local baseada 
 
 O Phishpect analisa URLs antes ou durante a navegação e acrescenta uma etapa local depois do carregamento:
 
-1. **Análise contextual da URL** — a V4 separa protocolo, hostname, domínio registrável, subdomínios, caminho e query e exige relações ou diversidade de evidências.
+1. **Análise contextual da URL** — a V4.1 preserva a análise por componentes da V4 e acrescenta relações corroboradas sem reduzir o threshold global.
 2. **Reputação local** — consulta uma base gerada a partir do feed ativo do projeto open source [Phishing.Database](https://github.com/Phishing-Database/Phishing.Database).
 3. **Análise estrutural da página** — observa o DOM após `DOMContentLoaded` e novamente 1,2 segundo depois, sem ler o conteúdo digitado pelo usuário.
 4. **Fusão contextual** — relaciona identidade, autenticação, infraestrutura, transporte, coleta e destino antes da decisão final.
@@ -59,12 +59,14 @@ Cliques são avaliados antes de sair da página. Outras navegações, incluindo 
   <img width="58%" alt="Phishpect navigation intervention screen" src="https://github.com/user-attachments/assets/59bca49c-ef6c-48df-9bce-f29b186029a7" />
 </p>
 
-A análise pós-carregamento usa duas observações locais e finitas, sem `MutationObserver` contínuo, e não lê valores preenchidos. `blocked` fica reservado a reputação ou ameaça confirmada e evidência crítica corroborada. Links com modificadores, clique do meio, downloads, novos targets e navegação apenas por fragmento mantêm o comportamento nativo. A arquitetura e os resultados estão em [`docs/v4.md`](docs/v4.md).
+A análise pós-carregamento usa duas observações locais e finitas, sem `MutationObserver` contínuo, e não lê valores preenchidos. `blocked` fica reservado a reputação ou ameaça confirmada e evidência crítica corroborada. Links com modificadores, clique do meio, downloads, novos targets e navegação apenas por fragmento mantêm o comportamento nativo. A arquitetura histórica está em [`docs/v4.md`](docs/v4.md) e o refinamento atual em [`docs/v4.1.md`](docs/v4.1.md).
 
 ## Arquitetura
 
 | Arquivo / diretório | Responsabilidade |
 |---|---|
+| `analysis-v41.js` | Relações contextuais adicionais da V4.1 |
+| `combined-analysis-v41.js` | Fusão contextual adicional da V4.1 |
 | `analysis-v4.js` | Evidências contextuais de URL da V4 |
 | `page-analysis-v4.js` | Dupla observação estrutural limitada |
 | `combined-analysis-v4.js` | Fusão contextual e classificação final |
@@ -77,8 +79,9 @@ A análise pós-carregamento usa duas observações locais e finitas, sem `Mutat
 | `combined-analysis.js` | Combinação histórica preservada |
 | `navigation-policy.js` | Regras testáveis de compatibilidade para interceptação de links |
 | `navigation-state.js` | TTL, validação e coordenação das exceções de navegação |
-| `content.js` | Interceptação compatível e observações finitas após o carregamento |
-| `background.js` | Reputação, combinação de evidências, navegação e controle de exceções |
+| `content-v41.js` | Runtime ativo da V4.1 no conteúdo da página |
+| `background-v41.js` | Runtime ativo da V4.1 no service worker |
+| `content.js` / `background.js` | Runtimes históricos preservados da V4 |
 | `warning.html` / `warning.js` | Interface de aviso e bloqueio |
 | `reputation/threat-db.json` | Snapshot local da base de reputação |
 | `scripts/` | Atualização da base e avaliação experimental |
@@ -114,7 +117,7 @@ Se a base local estiver ausente ou inválida, a extensão continua funcionando s
 npm test
 ```
 
-Os testes verificam V2, V3, V3.1, V4 integrada, privacidade, segurança, navegação, estado opaco do aviso e salvaguardas dos datasets. O popup também oferece páginas fictícias em `demo/` para inspeção manual.
+Os testes verificam V2, V3, V3.1, V4, V4.1, privacidade, segurança, navegação, estado opaco do aviso e salvaguardas dos datasets. O popup também oferece páginas fictícias em `demo/` para inspeção manual.
 
 ## Avaliação experimental
 
@@ -136,7 +139,7 @@ node scripts/evaluate-dataset.js --analyzer=v3.1 evaluation/datasets/dataset-a.c
 
 Os resultados registram score, classificação, reasons, contribuições, scores por categoria, diversidade, sinais, características, reputação e classificação final. O terminal apresenta TP, FN, FP, TN, recall, precision, F1, taxa de falso alerta e acurácia.
 
-Na V4, A/B/C e o corpus de páginas conhecido são regressão de desenvolvimento. O Dataset D foi construído somente depois do freeze e executado uma vez como validação independente da decisão inicial integrada (URL + reputação): TP 50, TN 100, FP 0, FN 50, recall 50%, F1 66,67% e FAR 0%. Como o conjunto é balanceado, precision e accuracy não devem ser extrapoladas para a web real. Consulte [`docs/v4.md`](docs/v4.md) e os [artefatos oficiais](evaluation/results/v4/dataset-d/official/metrics.json).
+Na V4, A/B/C e o corpus conhecido foram regressão; D foi validação independente da V4 congelada. Para desenvolver a V4.1, A/B/C/D e o corpus foram todos consultados e, portanto, **não são validação independente da V4.1**. Como regressão de desenvolvimento, a V4.1 obteve recall de 40%, 50%, 70% e 61% em A/B/C/D, com FAR de 0%, 0%, 2,67% e 2%. Consulte [`docs/v4.1.md`](docs/v4.1.md) e os [artefatos de desenvolvimento](evaluation/results/v4.1/development/final/summary.json).
 
 ## Evolução
 
@@ -145,6 +148,7 @@ Na V4, A/B/C e o corpus de páginas conhecido são regressão de desenvolvimento
 - **V3:** parsing por componentes e política conservadora.
 - **V3.1:** diversidade de categorias e relações contextuais, avaliada oficialmente no Dataset C.
 - **V4:** primeira versão integrada do pipeline completo: URL, reputação, página, fusão contextual e intervenção pertencem à mesma decisão.
+- **V4.1:** relações contextuais adicionais recuperam recall sem reduzir o threshold global; os resultados atuais são apenas de desenvolvimento.
 
 <!-- MEDIA: Quando os resultados finais estiverem consolidados, adicione aqui um gráfico ou tabela-resumo com as métricas principais. -->
 
@@ -154,13 +158,14 @@ Na V4, A/B/C e o corpus de páginas conhecido são regressão de desenvolvimento
 - A análise de página observa dois instantes finitos; conteúdo posterior, Shadow DOM e iframes fora do escopo podem escapar.
 - Nomes de campos não padronizados, canvas e imagens sem texto alternativo podem ocultar sinais.
 - A base de reputação pode conter falsos positivos, envelhece entre atualizações e não cobre ameaças ainda desconhecidas.
-- No Dataset D, metade do phishing não apresentou contexto lexical suficiente; shared hosting e HTTP isolados permaneceram deliberadamente insuficientes.
+- A/B/C/D e o corpus HTML foram usados no desenvolvimento da V4.1; uma nova validação independente ainda é necessária.
+- Mesmo após o refinamento, muitos phishing não apresentam contexto lexical ou estrutural suficiente; HTTP e shared hosting isolados permanecem deliberadamente insuficientes.
 - HTTPS não é tratado como garantia de segurança.
 - O Dataset D mede URL + reputação; ainda falta uma nova validação independente para a etapa pós-carregamento.
 
 ## Próximos passos
 
-- construir um corpus independente de HTML/snapshots inertes para a V4, sem visitar phishing;
+- construir novos conjuntos independentes para a V4.1, sem reutilizar A/B/C/D ou o corpus de desenvolvimento;
 - automatizar e versionar atualizações periódicas da reputação;
 - avaliar `declarativeNetRequest` para bloqueio prévio de domínios conhecidos;
 - avaliar com um corpus futuro de páginas HTML rotuladas, separado dos datasets de URL.
