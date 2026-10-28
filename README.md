@@ -170,6 +170,10 @@ Na V4, A/B/C e o corpus conhecido foram regressão; D foi validação independen
 - avaliar `declarativeNetRequest` para bloqueio prévio de domínios conhecidos;
 - avaliar com um corpus futuro de páginas HTML rotuladas, separado dos datasets de URL.
 
+## Transparência sobre uso de IA generativa
+
+O desenvolvimento utilizou ChatGPT e Codex, da OpenAI, como ferramentas de apoio técnico, de programação, testes supervisionados, documentação e recursos visuais. O registro de escopo, partes do código com assistência conhecida e resumo de instruções/respostas está em [`docs/AI_USAGE_FEBRACE.md`](docs/AI_USAGE_FEBRACE.md).
+
 ## Licença e terceiros
 
 O projeto é distribuído sob a licença MIT. Dependências e fontes de dados de terceiros são documentadas em [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
