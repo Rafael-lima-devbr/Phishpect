@@ -42,7 +42,7 @@ Versões anteriores do projeto receberam sugestões, revisões e apoio de progra
 | Testes e avaliação | Executar suítes e avaliações nos Datasets A/B/C/D e no corpus HTML e comparar V4 e V4.1. | Codex executou comandos e scripts e produziu artefatos. O estudante conferiu métricas, hashes e a distinção entre validação independente e resultados de desenvolvimento. |
 | Segurança e privacidade | Revisar navegação, tokens opacos, exceções temporárias, validação de mensagens, privacidade e comportamento fail-open. | A IA apontou riscos e alternativas; o estudante decidiu as alterações e verificou o comportamento pelos testes automatizados. |
 | Redação e documentação | Organizar/revisar clareza e coerência de conteúdo técnico já discutido e, em versões intermediárias, produzir rascunhos de apoio. | Rascunhos de IA foram tratados como material intermediário. Eles não constituem autoria do estudante e não devem ser reproduzidos como tal na versão submetida. |
-| Recursos visuais | Representar a arquitetura integrada e comparar recall/acurácia usando dados experimentais reais. | Diagrama e gráfico foram produzidos com apoio do ChatGPT. O artigo registra ferramenta, resumo do prompt e data de criação. |
+| Recursos visuais | Representar a arquitetura integrada do Phishpect, mostrando análise de URL, reputação local, análise da página e os níveis de intervenção safe, suspicious e blocked. | O diagrama de arquitetura foi produzido com apoio do ChatGPT e identificado no artigo com ferramenta, prompt resumido e data. O gráfico histórico foi elaborado no Excel pelo estudante. |
 
 ## Resultados experimentais
 
@@ -50,7 +50,7 @@ A IA não foi utilizada para inventar, estimar ou alterar métricas. Os resultad
 
 ## Recursos visuais
 
-As capturas de tela do protótipo são registros reais do software em funcionamento. O diagrama da arquitetura e o gráfico histórico presentes na versão preparada em 28/10/2026 foram produzidos com apoio do ChatGPT a partir, respectivamente, da arquitetura implementada e das métricas experimentais já verificadas. O artigo identifica explicitamente essa assistência.
+As capturas de tela do protótipo são registros reais do software em funcionamento. O diagrama da arquitetura presente na versão preparada em 28/10/2026 foi produzido com apoio do ChatGPT a partir da arquitetura implementada e revisada pelo estudante; o artigo identifica essa assistência. O gráfico histórico de recall e acurácia foi elaborado no Excel pelo estudante a partir das métricas experimentais do projeto e é identificado como autoria própria.
 
 ## Redação científica
 
